@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+<title>物智数ビューワー</title>
+<link rel="stylesheet" href="./css/screen.css">
+<script src="./js/lib/jquery.js"></script>
+<script src="./js/module/ButchiNumber.js"></script>
+<script src="./js/module/BNCanvas.js"></script>
+<script src="./js/main.js"></script>
+<script src="./js/downloader.js"></script>
+
+<style>
+.dl {
+	position: relative;
+	margin-top: 20px;
+	margin-left: 50px;
+}
+
+.btn-install {
+	display: none;
+}
+</style>
+</head>
+
+<body>
+<p><input id="num" type="number" value="1000"></p>
+<canvas id="display_butchi_number" width="256" height="256"></canvas>
+<canvas id="butchi_number" width="256" height="256"></canvas>
+
+<div class="area-tap">
+  <p class="btn up"></p>
+  <p class="btn down"></p>
+</div>
+
+<div class="dl">
+  <button class="btn btn-install">アプリをインストール</button>
+</div>
+
+</body>
+
+</html>

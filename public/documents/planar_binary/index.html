@@ -1,0 +1,1036 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style TYPE="text/css">
+<!--
+h1 {color:#000000; background:#99ccff; padding:20px}
+h2 {color:#ffffff; background:#336699; padding:5px}
+table.planar_binary{
+    border-top:0px;
+    border-left:0px;
+    border-bottom:1px solid #000000;
+    border-right:1px solid #000000;
+    display: inline-table;
+    vertical-align: bottom;
+}
+table.planar_binary td{
+    width:15px;
+    height:15px;
+    text-align:right
+}
+table.quatenary_tile{
+    border:1px solid #000000;
+    display: inline-table;
+    vertical-align: middle;
+}
+table.quatenary_tile td{
+    width:15px;
+    height:15px;
+    text-align:right
+}
+table.color{
+    width:15px;
+    height:15px;
+    border:2px solid #000000;
+    display: inline-table;
+    vertical-align: middle;
+}
+
+#num { height:30px; }
+#butchi_number { display:none }
+#display_butchi_number { border-bottom:solid 1px #999; border-right:solid 1px #999; }
+.stepperButton { height:15px; width:30px; font-size:5px; }
+.stepper { border-collapse:collapse;}
+.stepper td { padding:0px }
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=shift_jis" />
+<title>平面的2進数（Butchi数）</title>
+<script src="jquery-1.7.2.min.js"></script>
+<script language="JavaScript" type="text/javascript">
+<!--
+//v1.7
+// Flash Player Version Detection
+// Detect Client Browser type
+// Copyright 2005-2008 Adobe Systems Incorporated.  All rights reserved.
+var isIE  = (navigator.appVersion.indexOf("MSIE") != -1) ? true : false;
+var isWin = (navigator.appVersion.toLowerCase().indexOf("win") != -1) ? true : false;
+var isOpera = (navigator.userAgent.indexOf("Opera") != -1) ? true : false;
+function ControlVersion()
+{
+	var version;
+	var axo;
+	var e;
+	// NOTE : new ActiveXObject(strFoo) throws an exception if strFoo isn't in the registry
+	try {
+		// version will be set for 7.X or greater players
+		axo = new ActiveXObject("ShockwaveFlash.ShockwaveFlash.7");
+		version = axo.GetVariable("$version");
+	} catch (e) {
+	}
+	if (!version)
+	{
+		try {
+			// version will be set for 6.X players only
+			axo = new ActiveXObject("ShockwaveFlash.ShockwaveFlash.6");
+			
+			// installed player is some revision of 6.0
+			// GetVariable("$version") crashes for versions 6.0.22 through 6.0.29,
+			// so we have to be careful. 
+			
+			// default to the first public version
+			version = "WIN 6,0,21,0";
+			// throws if AllowScripAccess does not exist (introduced in 6.0r47)		
+			axo.AllowScriptAccess = "always";
+			// safe to call for 6.0r47 or greater
+			version = axo.GetVariable("$version");
+		} catch (e) {
+		}
+	}
+	if (!version)
+	{
+		try {
+			// version will be set for 4.X or 5.X player
+			axo = new ActiveXObject("ShockwaveFlash.ShockwaveFlash.3");
+			version = axo.GetVariable("$version");
+		} catch (e) {
+		}
+	}
+	if (!version)
+	{
+		try {
+			// version will be set for 3.X player
+			axo = new ActiveXObject("ShockwaveFlash.ShockwaveFlash.3");
+			version = "WIN 3,0,18,0";
+		} catch (e) {
+		}
+	}
+	if (!version)
+	{
+		try {
+			// version will be set for 2.X player
+			axo = new ActiveXObject("ShockwaveFlash.ShockwaveFlash");
+			version = "WIN 2,0,0,11";
+		} catch (e) {
+			version = -1;
+		}
+	}
+	
+	return version;
+}
+// JavaScript helper required to detect Flash Player PlugIn version information
+function GetSwfVer(){
+	// NS/Opera version >= 3 check for Flash plugin in plugin array
+	var flashVer = -1;
+	
+	if (navigator.plugins != null && navigator.plugins.length > 0) {
+		if (navigator.plugins["Shockwave Flash 2.0"] || navigator.plugins["Shockwave Flash"]) {
+			var swVer2 = navigator.plugins["Shockwave Flash 2.0"] ? " 2.0" : "";
+			var flashDescription = navigator.plugins["Shockwave Flash" + swVer2].description;
+			var descArray = flashDescription.split(" ");
+			var tempArrayMajor = descArray[2].split(".");			
+			var versionMajor = tempArrayMajor[0];
+			var versionMinor = tempArrayMajor[1];
+			var versionRevision = descArray[3];
+			if (versionRevision == "") {
+				versionRevision = descArray[4];
+			}
+			if (versionRevision[0] == "d") {
+				versionRevision = versionRevision.substring(1);
+			} else if (versionRevision[0] == "r") {
+				versionRevision = versionRevision.substring(1);
+				if (versionRevision.indexOf("d") > 0) {
+					versionRevision = versionRevision.substring(0, versionRevision.indexOf("d"));
+				}
+			}
+			var flashVer = versionMajor + "." + versionMinor + "." + versionRevision;
+		}
+	}
+	// MSN/WebTV 2.6 supports Flash 4
+	else if (navigator.userAgent.toLowerCase().indexOf("webtv/2.6") != -1) flashVer = 4;
+	// WebTV 2.5 supports Flash 3
+	else if (navigator.userAgent.toLowerCase().indexOf("webtv/2.5") != -1) flashVer = 3;
+	// older WebTV supports Flash 2
+	else if (navigator.userAgent.toLowerCase().indexOf("webtv") != -1) flashVer = 2;
+	else if ( isIE && isWin && !isOpera ) {
+		flashVer = ControlVersion();
+	}	
+	return flashVer;
+}
+// When called with reqMajorVer, reqMinorVer, reqRevision returns true if that version or greater is available
+function DetectFlashVer(reqMajorVer, reqMinorVer, reqRevision)
+{
+	versionStr = GetSwfVer();
+	if (versionStr == -1 ) {
+		return false;
+	} else if (versionStr != 0) {
+		if(isIE && isWin && !isOpera) {
+			// Given "WIN 2,0,0,11"
+			tempArray         = versionStr.split(" "); 	// ["WIN", "2,0,0,11"]
+			tempString        = tempArray[1];			// "2,0,0,11"
+			versionArray      = tempString.split(",");	// ['2', '0', '0', '11']
+		} else {
+			versionArray      = versionStr.split(".");
+		}
+		var versionMajor      = versionArray[0];
+		var versionMinor      = versionArray[1];
+		var versionRevision   = versionArray[2];
+        	// is the major.revision >= requested major.revision AND the minor version >= requested minor
+		if (versionMajor > parseFloat(reqMajorVer)) {
+			return true;
+		} else if (versionMajor == parseFloat(reqMajorVer)) {
+			if (versionMinor > parseFloat(reqMinorVer))
+				return true;
+			else if (versionMinor == parseFloat(reqMinorVer)) {
+				if (versionRevision >= parseFloat(reqRevision))
+					return true;
+			}
+		}
+		return false;
+	}
+}
+function AC_AddExtension(src, ext)
+{
+  if (src.indexOf('?') != -1)
+    return src.replace(/\?/, ext+'?'); 
+  else
+    return src + ext;
+}
+function AC_Generateobj(objAttrs, params, embedAttrs) 
+{ 
+  var str = '';
+  if (isIE && isWin && !isOpera)
+  {
+    str += '<object ';
+    for (var i in objAttrs)
+    {
+      str += i + '="' + objAttrs[i] + '" ';
+    }
+    str += '>';
+    for (var i in params)
+    {
+      str += '<param name="' + i + '" value="' + params[i] + '" /> ';
+    }
+    str += '</object>';
+  }
+  else
+  {
+    str += '<embed ';
+    for (var i in embedAttrs)
+    {
+      str += i + '="' + embedAttrs[i] + '" ';
+    }
+    str += '> </embed>';
+  }
+  document.write(str);
+}
+function AC_FL_RunContent(){
+  var ret = 
+    AC_GetArgs
+    (  arguments, ".swf", "movie", "clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
+     , "application/x-shockwave-flash"
+    );
+  AC_Generateobj(ret.objAttrs, ret.params, ret.embedAttrs);
+}
+function AC_SW_RunContent(){
+  var ret = 
+    AC_GetArgs
+    (  arguments, ".dcr", "src", "clsid:166B1BCA-3F9C-11CF-8075-444553540000"
+     , null
+    );
+  AC_Generateobj(ret.objAttrs, ret.params, ret.embedAttrs);
+}
+function AC_GetArgs(args, ext, srcParamName, classid, mimeType){
+  var ret = new Object();
+  ret.embedAttrs = new Object();
+  ret.params = new Object();
+  ret.objAttrs = new Object();
+  for (var i=0; i < args.length; i=i+2){
+    var currArg = args[i].toLowerCase();    
+    switch (currArg){	
+      case "classid":
+        break;
+      case "pluginspage":
+        ret.embedAttrs[args[i]] = args[i+1];
+        break;
+      case "src":
+      case "movie":	
+        args[i+1] = AC_AddExtension(args[i+1], ext);
+        ret.embedAttrs["src"] = args[i+1];
+        ret.params[srcParamName] = args[i+1];
+        break;
+      case "onafterupdate":
+      case "onbeforeupdate":
+      case "onblur":
+      case "oncellchange":
+      case "onclick":
+      case "ondblclick":
+      case "ondrag":
+      case "ondragend":
+      case "ondragenter":
+      case "ondragleave":
+      case "ondragover":
+      case "ondrop":
+      case "onfinish":
+      case "onfocus":
+      case "onhelp":
+      case "onmousedown":
+      case "onmouseup":
+      case "onmouseover":
+      case "onmousemove":
+      case "onmouseout":
+      case "onkeypress":
+      case "onkeydown":
+      case "onkeyup":
+      case "onload":
+      case "onlosecapture":
+      case "onpropertychange":
+      case "onreadystatechange":
+      case "onrowsdelete":
+      case "onrowenter":
+      case "onrowexit":
+      case "onrowsinserted":
+      case "onstart":
+      case "onscroll":
+      case "onbeforeeditfocus":
+      case "onactivate":
+      case "onbeforedeactivate":
+      case "ondeactivate":
+      case "type":
+      case "codebase":
+      case "id":
+        ret.objAttrs[args[i]] = args[i+1];
+        break;
+      case "width":
+      case "height":
+      case "align":
+      case "vspace": 
+      case "hspace":
+      case "class":
+      case "title":
+      case "accesskey":
+      case "name":
+      case "tabindex":
+        ret.embedAttrs[args[i]] = ret.objAttrs[args[i]] = args[i+1];
+        break;
+      default:
+        ret.embedAttrs[args[i]] = ret.params[args[i]] = args[i+1];
+    }
+  }
+  ret.objAttrs["classid"] = classid;
+  if (mimeType) ret.embedAttrs["type"] = mimeType;
+  return ret;
+}
+// -->
+</script>
+</head>
+<body bgcolor="#ffffff">
+<h1>平面的2進数（Butchi数）</h1>
+<h2>概要</h2>
+<p>2進数は以下のような繰り上がり規則をもつ。</p>
+<p>1<sub>2</sub> + 1<sub>2</sub> = 10<sub>2</sub></p>
+
+<p>これを平面的に拡張して、以下のような繰り上がり規則を考える。</p>
+<p>
+  <table class="planar_binary"><tr><td>1</td></tr></table>
++
+  <table class="planar_binary"><tr><td>1</td></tr></table>
+=
+  <table class="planar_binary"><tr><td>0</td><td>1</td></tr><tr><td>1</td><td>0</td></tr></table>
+</p>
+
+<p>こうすると、例えば4は以下のように表される。</p>
+<p>
+<table class="planar_binary"><tr><td>4</td></tr></table>
+=
+<table class="planar_binary"><tr><td>3</td></tr></table>
++
+<table class="planar_binary"><tr><td>1</td></tr></table>
+=
+<table class="planar_binary">
+  <tr>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+</table>
++
+<table class="planar_binary">
+  <tr>
+    <td>1</td>
+  </tr>
+</table>
+=
+<table class="planar_binary">
+  <tr>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td><b>2</b></td>
+  </tr>
+</table>
+=
+<table class="planar_binary">
+  <tr>
+    <td>0</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td><b>2</b></td>
+    <td>0</td>
+  </tr>
+</table>
+=
+<table class="planar_binary">
+  <tr>
+    <td>0</td>
+    <td>1</td>
+    <td><b>2</b></td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+</table>
+=
+<table class="planar_binary">
+  <tr>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td><b>2</b></td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+</table>
+=
+<table class="planar_binary">
+  <tr>
+    <td>0</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+</table>
+</p>
+
+<p>このようにして表される数を<i>平面的2進数（Butchi数）</i>と呼ぶ。</p>
+
+<p>0から10までのButchi数を以下に示す。</p>
+
+0=<table class="planar_binary">
+  <tr>
+    <td>0</td>
+  </tr>
+</table>
+
+1=<table class="planar_binary">
+  <tr>
+    <td>1</td>
+  </tr>
+</table>
+
+2=<table class="planar_binary">
+  <tr>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>0</td>
+  </tr>
+</table>
+
+3=<table class="planar_binary">
+  <tr>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+</table>
+
+4=<table class="planar_binary">
+  <tr>
+    <td>0</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+</table>
+
+5=<table class="planar_binary">
+  <tr>
+    <td>0</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+</table>
+
+6=<table class="planar_binary">
+  <tr>
+    <td>0</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+  </tr>
+</table>
+
+7=<table class="planar_binary">
+  <tr>
+    <td>0</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+</table>
+
+8=<table class="planar_binary">
+  <tr>
+    <td>0</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+</table>
+
+9=<table class="planar_binary">
+  <tr>
+    <td>0</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+</table>
+
+10=<table class="planar_binary">
+  <tr>
+    <td>0</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+  </tr>
+</table>
+
+<p>
+なお、
+<table class="planar_binary"><tr><td>1</td><td>0</td></tr></table>
+や
+<table class="planar_binary"><tr><td>1</td><td>1</td></tr><tr><td>1</td><td>1</td></tr></table>
+など、自然数としては意味を持たないものもButchi数として考える。
+</p>
+
+<h2>Butchi数ビューワー</h2>
+<script>
+var number=0;
+var width = 512;
+var height = 512;
+var canvas;
+var ctx;
+var bmp;
+var dispCtx;
+var max = 19000;
+var min = 0;
+var isDown = false;
+var isUp = false;
+var stepUpTimer;
+var stepDownTimer;
+$(function() {
+	$('#num').keydown(function(e){
+		switch(e.keyCode){
+			case 13: // Enter
+				parseNumber(this.value);
+				break;
+			case 38: // ↑キー
+				stepUp1();
+				break;
+			case 40: // ↓キー
+				stepDown1();
+				break;
+			default:
+				break;
+		}
+	});
+	canvas = document.getElementById('butchi_number');
+	ctx = canvas.getContext('2d');
+	bmp = ctx.createImageData(width, height);
+	dispCanvas = document.getElementById('display_butchi_number');
+	dispCtx = dispCanvas.getContext('2d');
+	dispCtx.transform(-1, 0, 0, -1, 0, 0);
+	dispCtx.translate(-width, -height);
+	var initNumber = $('#num').val();
+	setButchiNumber(initNumber);
+	draw();
+	number = initNumber;
+});
+function setNumber(num) {
+	$('#num').val(num);
+}
+function stepUp1() {
+	if(number<max) {
+		number++;
+		incr();
+		draw();
+	}
+	setNumber(number);
+	if(isUp) {
+		stepUpTimer = setTimeout(stepUp1, 10);
+	} else {
+		if(stepUpTimer) clearTimeout(stepUpTimer);
+	}
+}
+function stepDown1() {
+	if(number>min) {
+		number--;
+		decr();
+		draw();
+	}
+	setNumber(number);
+	if(isDown) {
+		stepDownTimer = setTimeout(stepDown1, 10);
+	} else {
+		if(stepDownTimer) clearTimeout(stepDownTimer);
+	}
+}
+function parseNumber(val) {
+	var newNumber = parseInt(val);
+	if(!isFinite(newNumber)) {
+		newNumber = min;
+	}
+	if(newNumber>max) {
+		newNumber = max;
+	}
+	if(newNumber<min) {
+		newNumber = min;
+	}
+	setNumber(newNumber);
+	setButchiNumber(newNumber);
+	number = newNumber;
+}
+
+function setButchiNumber(newNumber) {
+	if(newNumber > number) {
+		while(number<newNumber) {
+			incr();
+			number++;
+		}
+	} else if(newNumber < number) {
+		while(number>newNumber) {
+			decr();
+			number--;
+		}
+	}
+	draw();
+}
+
+function setDigit(x, y, flag) {
+	bmp.data[4 * (y*width + x) + 3] = (flag==1)?255:0;
+}
+
+function getDigit(x, y) {
+	return (bmp.data[4 * (y*width + x) + 3]==255)?1:0;
+}
+
+function draw() {
+	ctx.putImageData(bmp,0,0);
+	dispCtx.clearRect(0,0,width,height);
+	dispCtx.drawImage(ctx.canvas, 0, 0);
+}
+
+// インクリメント則に従って1を加算。オーバーフロー時は2を返して正常に加算されない
+function incr() {
+	var i1,i2,j1,j2;
+	
+	if (getDigit(0,0)==0) {
+		setDigit(0,0,1);
+		return 0;
+	}
+	setDigit(0,0,0);
+
+	i1=1,j1=0,i2=0,j2=1;
+	while (i1!=i2 || j1!=j2) {
+		while (j1<j2) {
+			if (getDigit(i1,j1)==1) {
+				if (i1<width){
+					setDigit(i1,j1,0);
+					i1++;
+				} else {
+					return 2;
+				}
+			} else {
+				if (j1<height){
+					setDigit(i1,j1,1);
+					j1++;
+				} else {
+					return 2;
+				}
+			}
+		}
+		while (i2<i1) {
+			if (getDigit(i2,j2)==1) {
+				if (j2<height){
+					setDigit(i2,j2,0);
+					j2++;
+				} else {
+					return 2;
+				}
+			} else {
+				if (i2<width){
+					setDigit(i2,j2,1);
+					i2++;
+				} else {
+					return 2;
+				}
+			}
+		}
+	}
+	return 0;
+};
+
+// デクリメント則に従って1を減算。負の数には対応していない
+function decr() {
+	var i1,i2,j1,j2;
+
+	if (getDigit(0,0)==1) {
+		setDigit(0,0,0);
+		return 0;
+	}
+	setDigit(0,0,1);
+
+	i1=1,j1=0,i2=0,j2=1;
+	while (i1!=i2 || j1!=j2) {
+		while (j1<j2) {
+			if (getDigit(i1,j1)==0) {
+				if (i1<width){
+					setDigit(i1,j1,1);
+					i1++;
+				} else {
+					return 2;
+				}
+			} else {
+				if (j1<height){
+					setDigit(i1,j1,0);
+					j1++;
+				} else {
+					return 2;
+				}
+			}
+		}
+		while (i2<i1) {
+			if (getDigit(i2,j2)==0) {
+				if (j2<height){
+					setDigit(i2,j2,1);
+					j2++;
+				} else {
+					return 2;
+				}
+			} else {
+				if (i2<width){
+					setDigit(i2,j2,0);
+					i2++;
+				} else {
+					return 2;
+				}
+			}
+		}
+	}
+	return 0;
+};
+
+</script>
+<p>
+<table class="color" bgcolor="#FFFFFF"><tr><td></td></tr></table>…0
+<table class="color" bgcolor="#000000"><tr><td></td></tr></table>…1
+</p>
+<table class="stepper"><tr>
+	<td rowspan="2"><input id="num" type="text" size="10" value="1000" /></td>
+	<td><input id="stepUpButton" class="stepperButton" type="button" value="▲" onMouseDown="stepUp1(); isUp=true; stepUpTimer = setTimeout(stepUp1, 500);" onMouseUp="isUp=false;" onMouseOut="isUp=false;" /></td>
+</tr>
+<tr>
+	<td><input id="stepDownButton" class="stepperButton" type="button" value="▼"  onMouseDown="stepDown1(); isDown=true; stepUpTimer = setTimeout(stepDown1, 500);" onMouseUp="isDown=false;" onMouseOut="isDown=false;" /></td>
+</tr>
+</table>
+<canvas id="display_butchi_number" width="512" height="512"></canvas>
+<canvas id="butchi_number" width="512" height="512"></canvas>
+<div><a href="planar_binary_viewer02_for_android.html">Flash版（PC / Android用）</a></div>
+
+<h2>文献</h2>
+<ul>
+ <li>「2進数の平面的表現に関する考察」(2007)</li>
+  <small>
+  <a href="../b-thesis.pdf">[論文(PDF)]</a>
+  <a href="../b-thesis.html">[発表スライド(Flashページ)]</a>
+  </small>
+ <li>Yuuki IWABUCHI, Junichi AKITA, "Properties of “Planar Binary (Butchi Number)”," <a href="http://arn.local.frs.riken.jp/UC10/" target="_blank">Unconventional Computation (UC)</a>, 2010.6.</li>
+  <small>
+  <a href="../uc2010poster.pdf">[poster (PDF)]</a>
+  </small>
+ </ul>
+
+<h1><a name="quatenary_tile">4進タイル</a></h1>
+<h2>概要</h2>
+<p>以下の繰り上がり規則を考える。</p>
+<p>
+  <table class="quatenary_tile">
+    <tr><td>0</td><td>0</td><td>0</td></tr>
+    <tr><td>0</td><td>3</td><td>0</td></tr>
+    <tr><td>0</td><td>0</td><td>0</td></tr>
+  </table>
++
+  <table class="quatenary_tile">
+    <tr><td>0</td><td>0</td><td>0</td></tr>
+    <tr><td>0</td><td>1</td><td>0</td></tr>
+    <tr><td>0</td><td>0</td><td>0</td></tr>
+  </table>
+=
+  <table class="quatenary_tile">
+    <tr><td>0</td><td>1</td><td>0</td></tr>
+    <tr><td>1</td><td>0</td><td>1</td></tr>
+    <tr><td>0</td><td>1</td><td>0</td></tr>
+  </table>
+</p>
+
+<p>このような繰り上がり規則で表現されるパターンを<i>4進タイル</i>と呼ぶ。</p>
+
+<p>なお、以下のような繰り上がり規則を適用した<i>8-近傍8進タイル</i>も考えられる。
+</p>
+
+<p>
+  <table class="quatenary_tile">
+    <tr><td>0</td><td>0</td><td>0</td></tr>
+    <tr><td>0</td><td>7</td><td>0</td></tr>
+    <tr><td>0</td><td>0</td><td>0</td></tr>
+  </table>
++
+  <table class="quatenary_tile">
+    <tr><td>0</td><td>0</td><td>0</td></tr>
+    <tr><td>0</td><td>1</td><td>0</td></tr>
+    <tr><td>0</td><td>0</td><td>0</td></tr>
+  </table>
+=
+  <table class="quatenary_tile">
+    <tr><td>1</td><td>1</td><td>1</td></tr>
+    <tr><td>1</td><td>0</td><td>1</td></tr>
+    <tr><td>1</td><td>1</td><td>1</td></tr>
+  </table>
+</p>
+
+<p>しかしながら、この場合は複数の安定状態を確認しているため、一意的に表すことができない。</p>
+
+<p><table><caption align="bottom">8-近傍8進タイル(512)の2つの安定状態</caption><tr><td><img src="octal_tile_512_2.png" width="110" height="110" alt="8進タイルにおける256(1)"></td><td><img src="octal_tile_512_3.png" width="110" height="110" alt="8進タイルにおける256(2)"></td></tr></table></p>
+
+<h2>4進タイルビューワー</h2>
+<p>
+<table class="color" bgcolor="#FFFFFF"><tr><td></td></tr></table>…0
+<table class="color" bgcolor="#AAAAAA"><tr><td></td></tr></table>…1
+<table class="color" bgcolor="#555555"><tr><td></td></tr></table>…2
+<table class="color" bgcolor="#000000"><tr><td></td></tr></table>…3
+</p>
+<!--ムービーで使用されている URL-->
+<!--ムービーで使用されているテキスト-->
+<!-- saved from url=(0013)about:internet -->
+<script language="JavaScript" type="text/javascript">
+	AC_FL_RunContent(
+		'codebase', 'http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0',
+		'width', '800',
+		'height', '600',
+		'src', 'quatenary_tile',
+		'quality', 'high',
+		'pluginspage', 'http://www.adobe.com/go/getflashplayer_jp',
+		'align', 'middle',
+		'play', 'true',
+		'loop', 'true',
+		'scale', 'showall',
+		'wmode', 'window',
+		'devicefont', 'false',
+		'id', 'quatenary_tile',
+		'bgcolor', '#ffffff',
+		'name', 'quatenary_tile',
+		'menu', 'true',
+		'allowFullScreen', 'false',
+		'allowScriptAccess','sameDomain',
+		'movie', 'quatenary_tile',
+		'salign', ''
+		); //end AC code
+</script>
+<noscript>
+	<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="800" height="600" id="quatenary_tile" align="middle">
+	<param name="allowScriptAccess" value="sameDomain" />
+	<param name="allowFullScreen" value="false" />
+	<param name="movie" value="quatenary_tile.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#ffffff" />	<embed src="quatenary_tile.swf" quality="high" bgcolor="#ffffff" width="800" height="600" name="quatenary_tile" align="middle" allowScriptAccess="sameDomain" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer_jp" />
+	</object>
+</noscript>
+
+<h2>3進タイルビューワー</h2>
+<p>
+<table class="color" bgcolor="#FFFFFF"><tr><td></td></tr></table>…0
+<table class="color" bgcolor="#808080"><tr><td></td></tr></table>…1
+<table class="color" bgcolor="#000000"><tr><td></td></tr></table>…2
+</p>
+<!--ムービーで使用されている URL-->
+<!--ムービーで使用されているテキスト-->
+<!-- saved from url=(0013)about:internet -->
+<script language="JavaScript" type="text/javascript">
+	AC_FL_RunContent(
+		'codebase', 'http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0',
+		'width', '800',
+		'height', '600',
+		'src', 'ternary_tile',
+		'quality', 'high',
+		'pluginspage', 'http://www.adobe.com/go/getflashplayer_jp',
+		'align', 'middle',
+		'play', 'true',
+		'loop', 'true',
+		'scale', 'noscale',
+		'wmode', 'window',
+		'devicefont', 'false',
+		'id', 'ternary_tile',
+		'bgcolor', '#ffffff',
+		'name', 'ternary_tile',
+		'menu', 'true',
+		'allowFullScreen', 'false',
+		'allowScriptAccess','sameDomain',
+		'movie', 'ternary_tile',
+		'salign', ''
+		); //end AC code
+</script>
+<noscript>
+	<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0" width="800" height="600" id="ternary_tile" align="middle">
+	<param name="allowScriptAccess" value="sameDomain" />
+	<param name="allowFullScreen" value="false" />
+	<param name="movie" value="ternary_tile.swf" /><param name="quality" value="high" /><param name="scale" value="noscale" /><param name="bgcolor" value="#ffffff" />	<embed src="ternary_tile.swf" quality="high" scale="noscale" bgcolor="#ffffff" width="800" height="600" name="ternary_tile" align="middle" allowScriptAccess="sameDomain" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer_jp" />
+	</object>
+</noscript>
+
+
+<br>
+<a href="../../">Home</a>
+
+<!--Google Analystics--><script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-2779957-2");
+pageTracker._trackPageview();
+} catch(err) {}</script><!--/Google Analystics-->
+
+
+</body>
+</html>

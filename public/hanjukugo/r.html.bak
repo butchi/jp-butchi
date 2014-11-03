@@ -1,0 +1,62 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../style.css" type="text/css" />
+<title>半熟語</title>
+</head>
+
+<body>
+<h1>半熟語</h1>
+<p><img alt="半熟語ロゴ" src="logo.png" /></p>
+右の人メニュー<br>
+<p><a href="readme.html">概要</a></p>
+
+<h2>二字熟語</h2>
+<ul>
+<li><a href="01_r.png">01</a></li>
+<li><a href="02_r.png">02</a></li>
+<li><a href="03_r.png">03</a></li>
+<li><a href="04_r.png">04</a></li>
+<li><a href="05_r.png">05</a></li>
+<li><a href="06_r.png">06</a></li>
+<li><a href="07_r.png">07</a></li>
+<li><a href="08_r.png">08</a></li>
+<li><a href="09_r.png">09</a></li>
+<li><a href="10_r.png">10</a></li>
+<li><a href="11_r.png">11</a></li>
+<li><a href="12_r.png">12</a></li>
+<li><a href="13_r.png">13</a></li>
+<li><a href="14_r.png">14</a></li>
+<li><a href="15_r.png">15</a></li>
+</ul>
+
+<h2>三字熟語</h2>
+<ul>
+<li><a href="16_r.png">16</a></li>
+<li><a href="17_r.png">17</a></li>
+<li><a href="18_r.png">18</a></li>
+<li><a href="19_r.png">19</a></li>
+</ul>
+
+<h2>四字熟語</h2>
+<ul>
+<li><a href="20_r.png">20</a></li>
+<li><a href="21_r.png">21</a></li>
+<li><a href="22_r.png">22</a></li>
+</ul>
+<br>
+<a href="l.html">左の人メニュー</a><br><img src="qr_l.png" /><br>
+<a href="http://6314.teacup.com/butchi_y/bbs">感想・不具合</a><br>
+<a href="./">作品トップページ</a><br>
+<a href="http://butchi.jp/m/">公式サイト</a>
+
+<!--Google Analystics--><script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2779957-3";
+urchinTracker();
+</script><!--/Google Analystics-->
+
+</body>
+
+</html>

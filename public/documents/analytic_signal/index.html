@@ -1,0 +1,342 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style TYPE="text/css">
+<!--
+h1 {color:#000000; background:#99ccff; padding:20px}
+h2 {color:#ffffff; background:#336699; padding:5px}
+-->
+</style>
+<title>
+解析信号ギャラリー
+</title>
+<link rel="shortcut icon" href="../../favicon.ico">
+</head>
+
+<body>
+
+<h1>解析信号ギャラリー</h1>
+
+<h2>概要</h2>
+<p>音声信号の正周波数成分を2倍、負周波数成分を0倍にした信号を解析信号と呼びます。
+また、音声信号の正周波数成分を-<i>i</i> 倍、負周波数成分を<i>i</i> 倍する変換をヒルベルト変換と呼びます（<i>i</i> は虚数単位）。これは、解析信号の虚部に等しくなります。</p>
+
+<p><a href="http://www7a.biglobe.ne.jp/~yobology/text/Hilbert_Transform/Hilbert_transform.htm" target="_blank">参考サイト</a></p>
+
+<p>当ページでは、さまざまな音色の解析信号の、時間軸を潰して複素平面上に投影した画像を載せています。</p>
+
+<p>音色の名前にリンクしているWAVファイルは、Lチャンネルが原信号、Rチャンネルが原信号をヒルベルト変換した信号となっており、フリーソフトの<a href="http://www.vector.co.jp/soft/win95/art/se085448.html" target="_blank">WaveSpectra</a>などのソフトで「リサジュー」で両チャンネルの波形をプロットすると解析信号を複素平面上に投影した信号を見ることができます。
+</p>
+
+<p>筆者は、解析信号を利用したシンセサイザを開発しています。最後の<a href="#references">参考文献</a>のリンクからデモを利用できます。</p>
+
+
+<h2>プリミティブな音</h2>
+<table>
+<tr height="450">
+<td><p align="center"><a href="sine.wav">正弦波</a></p><p align="center"><img src="sine_part.png" alt="正弦波の解析信号"></p></td>
+<td><p align="center"><a href="trianglar.wav">三角波</a></p><p align="center"><img src="trianglar_part.png" alt="三角波の解析信号"></p></td>
+<td><p align="center"><a href="sawlike.wav">のこぎり波</a></p><p align="center"><img src="sawlike_part.png" alt="のこぎり波の解析信号"></p></td>
+</tr>
+<tr height="450">
+<td><p align="center"><a href="rectangle.wav">矩形波</a></p><p align="center"><img src="rectangle_part.png" alt="矩形波の解析信号"></p></td>
+<td><p align="center"><a href="zenpa.wav">正弦波全波整流波</a></p><p align="center"><img src="zenpa_part.png" alt="正弦波全波整流波の解析信号"></p></td>
+<td><p align="center"><a href="hanpa.wav">正弦波半波整流波</a></p><p align="center"><img src="hanpa_part.png" alt="正弦波半波整流波"></p></td>
+</tr>
+<tr>
+<td><p align="center"><a href="sinc.wav">Sinc関数</a></p><p align="center"><img src="sinc_all.png" alt="Sinc関数の解析信号"></p></td>
+</tr>
+</table>
+
+<h2>MIDI音</h2>
+MIDI音はMicrosoft GS Wavetable SW Synthのものを利用しました。
+<table>
+<caption><a href="005.wav">005 El. Piano</a></caption>
+<tr>
+<td><img src="005_all.png" alt="005 El. Pianoの解析信号（全体音）"><p align="center">全体音</p></td>
+<td><img src="005_part.png" alt="005 El. Pianoの解析信号（部分音）"><p align="center">部分音</p></td>
+</tr>
+</table>
+
+<br><br>
+
+<table>
+<caption><a href="023.wav">023 Harmonica</a></caption>
+<tr>
+<td><img src="023_all.png" alt="023 Harmonicaの解析信号（全体音）"><p align="center">全体音</p></td>
+<td><img src="023_part.png" alt="023 Harmonicaの解析信号（部分音）"><p align="center">部分音</p></td>
+</tr>
+</table>
+
+<br><br>
+
+<table>
+<caption><a href="025.wav">025 Nylon Guitar</a></caption>
+<tr>
+<td><img src="025_all.png" alt="025 Nylon Guitarの解析信号（全体音）"><p align="center">全体音</p></td>
+<td><img src="025_part.png" alt="025 Nylon Guitarの解析信号（部分音）"><p align="center">部分音</p></td>
+</tr>
+</table>
+
+<br><br>
+
+<table>
+<caption><a href="027.wav">027 Jazz Guitar</a></caption>
+<tr>
+<td><img src="027_all.png" alt="027 Jazz Guitarの解析信号（全体音）"><p align="center">全体音</p></td>
+<td><img src="027_part.png" alt="027 Jazz Guitarの解析信号（部分音）"><p align="center">部分音</p></td>
+</tr>
+</table>
+
+<br><br>
+
+<table>
+<caption><a href="041.wav">041 Violin</a></caption>
+<tr>
+<td><img src="041_all.png" alt="041 Violinの解析信号（全体音）"><p align="center">全体音</p></td>
+<td><img src="041_part.png" alt="041 Violinの解析信号（部分音）"><p align="center">部分音</p></td>
+</tr>
+</table>
+
+<br><br>
+
+<table>
+<caption><a href="047.wav">047 OrchestraHarp</a></caption>
+<tr>
+<td><img src="047_all.png" alt="047 OrchestraHarpの解析信号（全体音）"><p align="center">全体音</p></td>
+<td><img src="047_part.png" alt="047 OrchestraHarpの解析信号（部分音）"><p align="center">部分音</p></td>
+</tr>
+</table>
+
+<br><br>
+
+<table>
+<caption><a href="049.wav">049 Strings 1</a></caption>
+<tr>
+<td><img src="049_all.png" alt="049 Strings 1の解析信号（全体音）"><p align="center">全体音</p></td>
+<td><img src="049_part.png" alt="049 Strings 1の解析信号（部分音）"><p align="center">部分音</p></td>
+</tr>
+</table>
+
+<br><br>
+
+<table>
+<caption><a href="053.wav">053 Choir Aahs</a></caption>
+<tr>
+<td><img src="053_all.png" alt="053 Choir Aahsの解析信号（全体音）"><p align="center">全体音</p></td>
+<td><img src="053_part.png" alt="053 Choir Aahsの解析信号（部分音）"><p align="center">部分音</p></td>
+</tr>
+</table>
+
+<br><br>
+
+<table>
+<caption><a href="081.wav">081 Square Lead</a></caption>
+<tr>
+<td><img src="081_all.png" alt="081 Square Leadの解析信号（全体音）"><p align="center">全体音</p></td>
+<td><img src="081_part.png" alt="081 Square Leadの解析信号（部分音）"><p align="center">部分音</p></td>
+</tr>
+</table>
+
+<br><br>
+
+<table>
+<caption><a href="082.wav">082 Saw Lead</a></caption>
+<tr>
+<td><img src="082_all.png" alt="082 Saw Leadの解析信号（全体音）"><p align="center">全体音</p></td>
+<td><img src="082_part.png" alt="082 Saw Leadの解析信号（部分音）"><p align="center">部分音</p></td>
+</tr>
+</table>
+
+<h2>楽器音</h2>
+桂田祐史氏が提供していただいた音声ファイルを用いました。
+桂田先生と松山周五郎氏に感謝します。
+
+<br><br>
+
+<table>
+<caption><a href="cheresta.wav">チェレスタ</a></caption>
+<tr>
+<td><img src="cheresta_all.png" alt="チェレスタの解析信号（全体音）"><p align="center">全体音</p></td>
+<td><img src="cheresta_part.png" alt="チェレスタの解析信号（部分音）"><p align="center">部分音</p></td>
+</tr>
+</table>
+
+<br><br>
+
+<table>
+<caption><a href="guitar.wav">ギター</a></caption>
+<tr>
+<td><img src="guitar_all.png" alt="ギターの解析信号（全体音）"><p align="center">全体音</p></td>
+<td><img src="guitar_part.png" alt="ギターの解析信号（部分音）"><p align="center">部分音</p></td>
+</tr>
+</table>
+
+<br><br>
+
+<table>
+<caption><a href="guitar-high.wav">ギター（高）</a></caption>
+<tr>
+<td><img src="guitar-high_all.png" alt="ギター（高）の解析信号（全体音）"><p align="center">全体音</p></td>
+<td><img src="guitar-high_part.png" alt="ギター（高）の解析信号（部分音）"><p align="center">部分音</p></td>
+</tr>
+</table>
+
+<br><br>
+
+<table>
+<caption><a href="harmonika.wav">ハーモニカ</a></caption>
+<tr>
+<td><img src="harmonika_all.png" alt="ハーモニカの解析信号（全体音）"><p align="center">全体音</p></td>
+<td><img src="harmonika_part.png" alt="ハーモニカの解析信号（部分音）"><p align="center">部分音</p></td>
+</tr>
+</table>
+
+<br><br>
+
+<table>
+<caption><a href="harmonika-high.wav">ハーモニカ（高）</a></caption>
+<tr>
+<td><img src="harmonika-high_all.png" alt="ハーモニカ（高）の解析信号（全体音）"><p align="center">全体音</p></td>
+<td><img src="harmonika-high_part.png" alt="ハーモニカ（高）の解析信号（部分音）"><p align="center">部分音</p></td>
+</tr>
+</table>
+
+<br><br>
+
+<table>
+<caption><a href="piano.wav">ピアノ</a></caption>
+<tr>
+<td><img src="piano_all.png" alt="ピアノの解析信号（全体音）"><p align="center">全体音</p></td>
+<td><img src="piano_part.png" alt="ピアノの解析信号（部分音）"><p align="center">部分音</p></td>
+</tr>
+</table>
+
+<br><br>
+
+<table>
+<caption><a href="piano-high.wav">ピアノ（高）</a></caption>
+<tr>
+<td><img src="piano-high_all.png" alt="ピアノ（高）の解析信号（全体音）"><p align="center">全体音</p></td>
+<td><img src="piano-high_part.png" alt="ピアノ（高）の解析信号（部分音）"><p align="center">部分音</p></td>
+</tr>
+</table>
+
+<br><br>
+
+<table>
+<caption><a href="riko-da-.wav">リコーダー</a></caption>
+<tr>
+<td><img src="riko-da-_all.png" alt="リコーダーの解析信号（全体音）"><p align="center">全体音</p></td>
+<td><img src="riko-da-_part.png" alt="リコーダーの解析信号（部分音）"><p align="center">部分音</p></td>
+</tr>
+</table>
+
+<br><br>
+
+<table>
+<caption><a href="riko-da-high.wav">リコーダー（高）</a></caption>
+<tr>
+<td><img src="riko-da-high_all.png" alt="リコーダー（高）の解析信号（全体音）"><p align="center">全体音</p></td>
+<td><img src="riko-da-high_part.png" alt="リコーダー（高）の解析信号（部分音）"><p align="center">部分音</p></td>
+</tr>
+</table>
+
+<br><br>
+
+<table>
+<caption><a href="shamisen.wav">三味線</a></caption>
+<tr>
+<td><img src="shamisen_all.png" alt="三味線の解析信号（全体音）"><p align="center">全体音</p></td>
+<td><img src="shamisen_part.png" alt="三味線の解析信号（部分音）"><p align="center">部分音</p></td>
+</tr>
+</table>
+
+<br><br>
+
+<table>
+<caption><a href="shamisen-high.wav">三味線（高）</a></caption>
+<tr>
+<td><img src="shamisen-high_all.png" alt="三味線（高）の解析信号（全体音）"><p align="center">全体音</p></td>
+<td><img src="shamisen-high_part.png" alt="三味線（高）の解析信号（部分音）"><p align="center">部分音</p></td>
+</tr>
+</table>
+
+<br><br>
+
+<table>
+<caption><a href="toranpetto.wav">トランペット</a></caption>
+<tr>
+<td><img src="toranpetto_all.png" alt="トランペットの解析信号（全体音）"><p align="center">全体音</p></td>
+<td><img src="toranpetto_part.png" alt="トランペットの解析信号（部分音）"><p align="center">部分音</p></td>
+</tr>
+</table>
+
+<br><br>
+
+<table>
+<caption><a href="toranpetto-high.wav">トランペット（高）</a></caption>
+<tr>
+<td><img src="toranpetto-high_all.png" alt="トランペット（高）の解析信号（全体音）"><p align="center">全体音</p></td>
+<td><img src="toranpetto-high_part.png" alt="トランペット（高）の解析信号（部分音）"><p align="center">部分音</p></td>
+</tr>
+</table>
+
+<br><br>
+
+<table>
+<caption><a href="violin.wav">ヴァイオリン</a></caption>
+<tr>
+<td><img src="violin_all.png" alt="ヴァイオリンの解析信号（全体音）"><p align="center">全体音</p></td>
+<td><img src="violin_part.png" alt="ヴァイオリンの解析信号（部分音）"><p align="center">部分音</p></td>
+</tr>
+</table>
+
+<br><br>
+
+<table>
+<caption><a href="violin-high.wav">ヴァイオリン（高）</a></caption>
+<tr>
+<td><img src="violin-high_all.png" alt="ヴァイオリン（高）の解析信号（全体音）"><p align="center">全体音</p></td>
+<td><img src="violin-high_part.png" alt="ヴァイオリン（高）の解析信号（部分音）"><p align="center">部分音</p></td>
+</tr>
+</table>
+
+<h2>参考文献</h2>
+<a name="references">
+<ul>
+ <li>岩淵勇樹・秋田純一・北川章夫, 「閉曲線図形に基づいた音色生成方法の検討」, <a href="http://www.dc-meiji.jp/ec2008/" target="_blank">エンタテインメントコンピューティング2008</a>論文集, pp.143-146, 2008.10.</li>
+  <small>
+  <a href="../ec2008iwabuchi.pdf">[論文(PDF)<sup>※</sup>]</a>※本著作物の著作権は（社）情報処理学会に帰属します。本著作物は著作権者である情報処理学会の許可のもとに掲載するものです。ご利用に当たっては「著作権法」ならびに「<a href="http://www.ipsj.or.jp/03somu/ipsjcode/ipsjcode.html" target="_blank">情報処理学会倫理綱領</a>」に従うことをお願いいたします。
+  <a href="../ec2008presentation.html">[発表資料(Flashページ)]</a>
+  </small>
+ <li>岩淵勇樹・秋田純一・北川章夫, 「閉曲線図形の特性に基づいた音色生成の一手法」, <a href="http://www.wiss.org/WISS2008/" target="_blank">第16回インタラクティブシステムとソフトウェアに関するワークショップ（WISS2008）</a>論文集, pp.149-150, 2008.11.</li>
+  <small>
+  <a href="http://www.wiss.org/WISS2008Proceedings/posters/paper0057.pdf">[論文(PDF)]</a>
+  <a href="../wiss2008poster.pdf">[ポスター(PDF)]</a>
+  <a href="../wiss2008demo.html">[デモ（Flashページ）<b>※音が出ます</b>]</a>
+  </small>
+ <li>岩淵勇樹・秋田純一・北川章夫, 「閉曲線を利用した音色操作方法の検討と実装」, <a href="http://www.sigmus.jp/SIG/sig201005program.html" target="_blank">第85回音楽情報科学研究会</a>, 2010.5.</li>
+  <small>
+  <a href="../mus85paper.pdf">[論文(PDF)<sup>※</sup>]</a>※本著作物の著作権は（社）情報処理学会に帰属します。本著作物は著作権者である情報処理学会の許可のもとに掲載するものです。ご利用に当たっては「著作権法」ならびに「<a href="http://www.ipsj.or.jp/03somu/ipsjcode/ipsjcode.html" target="_blank">情報処理学会倫理綱領</a>」に従うことをお願いいたします。
+  <a href="../mus85presentation.pdf">[発表資料(PDF)]</a>
+  <a href="../mus85demo/">[デモ（Flashページ）]</a>
+  </small>
+ <li>博士論文「図形と音声の変換手法とその応用に関する研究」(2012)</li>
+  <small><a href="../d-thesis">[特設ページ]</a></small>
+</ul>
+
+<br>
+<a href="../../">Home</a>
+<!--Google Analystics--><script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-2779957-3");
+pageTracker._trackPageview();
+} catch(err) {}</script><!--/Google Analystics-->
+
+</body>
+</html>

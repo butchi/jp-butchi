@@ -1,0 +1,4 @@
+cantor_function.png: from mydata/log/MeRL_diary_public/20101027_Cantor_function.png
+koch.gif: from mydoc/research/math/fractal/kochmap243_fixed.gif
+broccoli_all.jpg: from mydata/picture/re/SN3F0453.JPG
+broccoli_part.jpg: from mydata/picture/re/SN3F0454.JPG

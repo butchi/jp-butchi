@@ -1,0 +1,61 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../style.css" type="text/css" />
+<title>半熟語</title>
+</head>
+
+<body>
+<h1>岩淵勇樹「半熟語」</h1>
+<p><img alt="半熟語ロゴ" src="logo.png" /><img alt="半熟語QRコード" src="qr_top.png" /></p>
+<p><a href="readme.html">概要</a></p>
+<h2>二字熟語</h2>
+<ul>
+<li>01 <a href="01_l.png">左</a> <a href="01_r.png">右</a> <a href="01_all.png">熟語</a></li>
+<li>02 <a href="02_l.png">左</a> <a href="02_r.png">右</a> <a href="02_all.png">熟語</a></li>
+<li>03 <a href="03_l.png">左</a> <a href="03_r.png">右</a> <a href="03_all.png">熟語</a></li>
+<li>04 <a href="04_l.png">左</a> <a href="04_r.png">右</a> <a href="04_all.png">熟語</a></li>
+<li>05 <a href="05_l.png">左</a> <a href="05_r.png">右</a> <a href="05_all.png">熟語</a></li>
+<li>06 <a href="06_l.png">左</a> <a href="06_r.png">右</a> <a href="06_all.png">熟語</a></li>
+<li>07 <a href="07_l.png">左</a> <a href="07_r.png">右</a> <a href="07_all.png">熟語</a></li>
+<li>08 <a href="08_l.png">左</a> <a href="08_r.png">右</a> <a href="08_all.png">熟語</a></li>
+<li>09 <a href="09_l.png">左</a> <a href="09_r.png">右</a> <a href="09_all.png">熟語</a></li>
+<li>10 <a href="10_l.png">左</a> <a href="10_r.png">右</a> <a href="10_all.png">熟語</a></li>
+<li>11 <a href="11_l.png">左</a> <a href="11_r.png">右</a> <a href="11_all.png">熟語</a></li>
+<li>12 <a href="12_l.png">左</a> <a href="12_r.png">右</a> <a href="12_all.png">熟語</a></li>
+<li>13 <a href="13_l.png">左</a> <a href="13_r.png">右</a> <a href="13_all.png">熟語</a></li>
+<li>14 <a href="14_l.png">左</a> <a href="14_r.png">右</a> <a href="14_all.png">熟語</a></li>
+<li>15 <a href="15_l.png">左</a> <a href="15_r.png">右</a> <a href="15_all.png">熟語</a></li>
+</ul>
+
+<h2>三字熟語</h2>
+<ul>
+<li>16 <a href="16_l.png">左</a> <a href="16_r.png">右</a> <a href="16_all.png">熟語</a></li>
+<li>17 <a href="17_l.png">左</a> <a href="17_r.png">右</a> <a href="17_all.png">熟語</a></li>
+<li>18 <a href="18_l.png">左</a> <a href="18_r.png">右</a> <a href="18_all.png">熟語</a></li>
+<li>19 <a href="19_l.png">左</a> <a href="19_r.png">右</a> <a href="19_all.png">熟語</a></li>
+</ul>
+
+<h2>四字熟語</h2>
+<ul>
+<li>20 <a href="20_l.png">左</a> <a href="20_r.png">右</a> <a href="20_all.png">熟語</a></li>
+<li>21 <a href="21_l.png">左</a> <a href="21_r.png">右</a> <a href="21_all.png">熟語</a></li>
+<li>22 <a href="22_l.png">左</a> <a href="22_r.png">右</a> <a href="22_all.png">熟語</a></li>
+</ul>
+
+<a href="l.html">左の人メニュー</a><br><img src="qr_l.png" /><br>
+<a href="r.html">右の人メニュー</a><br><img src="qr_r.png" /><br>
+<br>
+<a href="http://6314.teacup.com/butchi_y/bbs">感想・不具合</a><br>
+<a href="http://butchi.jp/m/">公式サイト</a>
+
+<!--Google Analystics--><script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2779957-3";
+urchinTracker();
+</script><!--/Google Analystics-->
+
+</body>
+
+</html>

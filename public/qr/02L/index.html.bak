@@ -1,0 +1,25 @@
+<html>
+
+<body>
+
+<a href="img.gif">ダウンロード</a><br>
+<small>GIF形式, 2KB</small><br>
+<br>
+<br>
+<a href="img.jpg">ダウンロード(代替)</a><br>
+<small>JPG形式, 10KB</small><br>
+<br>
+<a href="http://6314.teacup.com/butchi_y/bbs">感想・不具合</a><br>
+<a href="../l.html">メニューへ</a><br>
+<a href="http://butchi.aboutme.jp/">about me</a>
+
+<!--Google Analystics--><script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2779957-3";
+urchinTracker();
+</script><!--/Google Analystics-->
+
+</body>
+
+</html>

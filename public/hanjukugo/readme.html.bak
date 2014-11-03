@@ -1,0 +1,47 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../style.css" type="text/css" />
+<title>半熟語</title>
+</head>
+
+<body>
+<h1>岩淵勇樹「半熟語」概要</h1>
+<h2>概要</h2>
+<p>
+半熟語は「遠隣～OnLin～」というシリーズの中の1作品です。
+右脳と左脳をフル活用して熟語を推測する脳トレコンテンツとなっております。
+2人で楽しむ場合は、お互いのディスプレイ同士を横に並べると答えを確認できるようになっています。
+</p>
+
+<h2>遊び方</h2>
+<a href="introduction.png">遊び方画像</a>
+<h3>一人で楽しむ</h3>
+<ol>
+  <li><a href="./">トップページ</a>にアクセス</li>
+  <li>左か右のどちらかを選び、合体した漢字を推測します。</li>
+  <li>「熟語」を選択し、答えを確認します。</li>
+</ol>
+
+<h3>二人で楽しむ</h3>
+<ol>
+  <li>左の人は<a href="l.html">左の人メニュー</a>、右の人は<a href="r.html">右の人メニュー</a>にアクセス</li>
+  <li>お互い同じ項目を選び、お互いのパーツを推測します。</li>
+  <li>携帯電話の画面を合わせて合体漢字、完成！</li>
+</ol>
+
+<br>
+<a href="./">作品トップページ</a><br>
+<a href="http://6314.teacup.com/butchi_y/bbs">感想・不具合</a><br>
+<a href="http://butchi.jp/m/">公式サイト</a>
+
+<!--Google Analystics--><script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2779957-3";
+urchinTracker();
+</script><!--/Google Analystics-->
+
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+h1 {color:#000000; background:#99ccff; padding:20px}
+h2 {color:#ffffff; background:#336699; padding:5px; clear:both}
+img {border:0px}
+img.icon {border:3px solid #cccccc; padding:4px; margin:12px; float:left}
+a:link img.icon {border: 3px #0000ff solid;}
+a:visited img.icon {border: 3px #663399 solid;}
+.relation {font-size:small; color:#999999}
+.item {clear:both; vertical-align:middle}
+.description {font-size:small; margin-left:2em; clear:both}

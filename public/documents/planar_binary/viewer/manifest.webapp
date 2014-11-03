@@ -1,0 +1,13 @@
+{
+  "name": "BNViewer",
+  "description": "Butchi number viewer",
+  "launch_path": "/documents/planar_binary/viewer/index.html",
+  "icons": {
+    "128": "/documents/planar_binary/viewer/img/icon-128.png"
+  },
+  "developer": {
+    "name": "IWABUCHI Yu(u)ki",
+    "url": "http://butchi.jp"
+  },
+  "default_locale": "ja"
+}

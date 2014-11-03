@@ -1,0 +1,51 @@
+body {
+	background-color: #fff;
+}
+#num {
+	height:30px;
+	font-size: 20px;
+}
+#butchi_number {
+	display:none;
+}
+#display_butchi_number {
+	border-bottom:solid 1px #999; border-right:solid 1px #999;
+}
+.stepperButton {
+	height:15px; width:30px; font-size:5px;
+}
+.stepper {
+	border-collapse:collapse;
+}
+.stepper td {
+	padding:0px
+}
+
+.area-tap {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.area-tap .btn {
+	background-color: #eee;
+	width: 50px;
+	height: 50px;
+	padding: 0;
+	margin: 0;
+
+	text-align: center;
+	line-height: 50px;
+
+	color: #666;
+
+	border: 1px solid #ddd;
+}
+.area-tap .btn:hover {
+	background-color: #ddd;
+}
+.area-tap .up:after {
+	content: "▲";
+}
+.area-tap .down:after {
+	content: "▼";
+}
