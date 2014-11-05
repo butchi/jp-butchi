@@ -2,7 +2,8 @@ doctype 5
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', media='screen, projection' href='/css/screen.css')
+    link(rel='stylesheet', media='print' href='/css/print.css')
   body
     block content
     //- include socketio

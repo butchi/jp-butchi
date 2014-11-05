@@ -6,5 +6,9 @@
     "express": "3.0.5",
     "jade": "0.27.7",
     "socket.io": "0.9.13"
+  },
+  "devDependencies": {
+    "compass": "~0.1.0",
+    "node-compass": "~0.2.3"
   }
 }

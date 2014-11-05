@@ -4,6 +4,7 @@
  */
 
 var express = require('express')
+  , compass = require('node-compass')
   , routes = require('./routes')
   , http = require('http')
   , sockets = require('socket.io')
@@ -18,6 +19,11 @@ app.configure(function(){
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
   app.locals.pretty = true;
+  app.use(compass({
+    mode: 'expanded',
+    sass: 'sass',
+    css: 'css'
+  }));
   app.use(express.favicon());
   app.use(express.logger('dev'));
   app.use(express.bodyParser());
