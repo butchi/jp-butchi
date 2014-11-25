@@ -4,3 +4,38 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
+
+h1 {
+    color: #000;
+    background: #9cf;
+    padding: 20px;
+
+    font-size: 30px;
+}
+
+h2 {
+    color: #fff;
+    background: #369;
+    padding: 5px;
+
+    font-size: 20px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+img.icon {
+    border:3px solid #ccc;
+    padding: 4px;
+    margin: 12px;
+}
+
+a {
+    &:link img {
+        border: 3px #00f solid;
+    }
+    &:visited img {
+        border: 3px #639 solid;
+    }
+}
