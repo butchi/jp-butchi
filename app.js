@@ -69,16 +69,16 @@ app.get('/profile.html', function(req, res) {
 app.get('/people/', function(req, res) {
   res.redirect("/person/people/");
 });
-app.get('/design/', function(req, res) {
-  res.redirect("/works/design");
+app.get('/documents/design/', function(req, res) {
+  res.redirect("/works/design/");
 });
-app.get('/character/', function(req, res) {
-  res.redirect("/works/character");
+app.get('/documents/character/', function(req, res) {
+  res.redirect("/works/character/");
 });
-app.get('/music/', function(req, res) {
+app.get('/documents/music/', function(req, res) {
   res.redirect("/works/music/");
 });
-app.get('/poem/', function(req, res) {
+app.get('/documents/poem/', function(req, res) {
   res.redirect("/works/poem/");
 });
 app.get('/documents/planar_binary/', function(req, res) {
@@ -113,15 +113,6 @@ app.get('/documents/qr/', function(req, res) {
 });
 app.get('/documents/waraken/', function(req, res) {
   res.redirect("/projects/waraken/");
-});
-app.get('/documents//', function(req, res) {
-  res.redirect("/projects//");
-});
-app.get('/documents//', function(req, res) {
-  res.redirect("/projects//");
-});
-app.get('/documents//', function(req, res) {
-  res.redirect("/projects//");
 });
 
 io.configure(function () { 
