@@ -82,7 +82,7 @@ app.get('/documents/poem/', function(req, res) {
   res.redirect("/works/poem/");
 });
 app.get('/documents/planar_binary/', function(req, res) {
-  res.redirect("/butchi-number/");
+  res.redirect("/documents/butchi-number/");
 });
 app.get('/documents/mus85demo/', function(req, res) {
   res.redirect("/documents/publication/sigmus85/demo/");
