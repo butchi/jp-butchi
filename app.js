@@ -41,6 +41,89 @@ app.get('/robots.txt', function(req, res){
     res.sendfile(__dirname+ '/public/pages/robots.txt');
 }); 
 
+// redirect
+app.get('/documents/analytic_signal/', function(req, res) {
+  res.redirect("/documents/analytic-signal/");
+});
+app.get('/documents/b-thesis.html', function(req, res) {
+  res.redirect("/affiliate/ku/b-thesis/");
+});
+app.get('/documents/d-thesis/', function(req, res) {
+  res.redirect("/affiliate/ku/d-thesis/");
+});
+app.get('/documents/reading_seminar/', function(req, res) {
+  res.redirect("/affiliate/ku/reading-seminar/");
+});
+app.get('/documents/tte/', function(req, res) {
+  res.redirect("/affiliate/ku/tte/");
+});
+app.get('/documents/closynth_scanned_synthesis/', function(req, res) {
+  res.redirect("/projects/closynth/closynth-scanned-synthesis/");
+});
+app.get('/creed.html', function(req, res) {
+  res.redirect("/person/creed/");
+});
+app.get('/profile.html', function(req, res) {
+  res.redirect("/person/profile/");
+});
+app.get('/people/', function(req, res) {
+  res.redirect("/person/people/");
+});
+app.get('/design/', function(req, res) {
+  res.redirect("/works/design");
+});
+app.get('/character/', function(req, res) {
+  res.redirect("/works/character");
+});
+app.get('/music/', function(req, res) {
+  res.redirect("/works/music/");
+});
+app.get('/poem/', function(req, res) {
+  res.redirect("/works/poem/");
+});
+app.get('/documents/planar_binary/', function(req, res) {
+  res.redirect("/butchi-number/");
+});
+app.get('/documents/mus85demo/', function(req, res) {
+  res.redirect("/documents/publication/sigmus85/demo/");
+});
+app.get('/documents/mus105/', function(req, res) {
+  res.redirect("/documents/publication/sigmus105/");
+});
+app.get('/documents/The_Labyrinth_of_Cubic_Puzzle/', function(req, res) {
+  res.redirect("/affiliate/ku/cubic-puzzle/");
+});
+app.get('/documents/webclappad/', function(req, res) {
+  res.redirect("/projects/webclappad/");
+});
+app.get('/documents/graphicalpad/', function(req, res) {
+  res.redirect("/projects/graphicalpad/");
+});
+app.get('/documents/hanjukugo/', function(req, res) {
+  res.redirect("/projects/hanjukugo/");
+});
+app.get('/documents/magic/', function(req, res) {
+  res.redirect("/projects/magic/");
+});
+app.get('/documents/pokemon/', function(req, res) {
+  res.redirect("/projects/pokemon/");
+});
+app.get('/documents/qr/', function(req, res) {
+  res.redirect("/projects/qr/");
+});
+app.get('/documents/waraken/', function(req, res) {
+  res.redirect("/projects/waraken/");
+});
+app.get('/documents//', function(req, res) {
+  res.redirect("/projects//");
+});
+app.get('/documents//', function(req, res) {
+  res.redirect("/projects//");
+});
+app.get('/documents//', function(req, res) {
+  res.redirect("/projects//");
+});
+
 io.configure(function () { 
   io.set("transports", ["xhr-polling"]); 
   io.set("polling duration", 10); 
