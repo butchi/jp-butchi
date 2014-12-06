@@ -18,6 +18,7 @@ app.configure(function(){
   app.set('port', process.env.PORT || 3000);
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
+  // app.locals.basedir = app.get('views');　// Jade内で絶対パスで呼べない？
   app.locals.pretty = true;
   app.use(compass({
     mode: 'expanded',
@@ -40,6 +41,68 @@ app.get('/', routes.index);
 app.get('/robots.txt', function(req, res){
     res.sendfile(__dirname+ '/public/pages/robots.txt');
 }); 
+
+var pageList = [
+  '/affiliate/kayac/portfolio/',
+
+  '/affiliate/ku/b-thesis/',
+  '/affiliate/ku/b3-research/',
+  '/affiliate/ku/m-thesis/',
+  '/affiliate/ku/d-thesis/',
+  '/affiliate/ku/chaos/',
+  '/affiliate/ku/tte/',
+  '/affiliate/ku/reading-seminar/',
+  '/affiliate/ku/cubic-puzzle/',
+
+  '/affiliate/kep/as-graph/',
+  '/affiliate/kep/banner/',
+
+  '/affiliate/melomelo/donmai/',
+  '/affiliate/melomelo/mv5/',
+
+  '/works/design/',
+  '/works/character/',
+  '/works/music/',
+  '/works/poem/',
+
+  '/documents/fractal/',
+  '/documents/symbol/',
+  '/documents/number-table/',
+  '/documents/analytic-signal/',
+  '/documents/bit-reversal-plane/',
+  '/documents/oracle/',
+  '/documents/butchi-number/',
+  '/documents/yugen-20120826/',
+
+  '/documents/publication/icd200707/',
+  '/documents/publication/ec2008/',
+  '/documents/publication/wiss2008/',
+  '/documents/publication/mus85/',
+  '/documents/publication/mus105/',
+  '/documents/publication/uc2010/',
+  '/documents/publication/interaction2011/',
+
+  '/projects/closynth/',
+  '/projects/webclappad/',
+  '/projects/graphicalpad/',
+  '/projects/hanjukugo/',
+  '/projects/magic/',
+  '/projects/pokemon/',
+  '/projects/qr/',
+  '/projects/waraken/',
+
+  '/item/gray-code-counter/',
+
+  '/person/creed/',
+  '/person/people/',
+  '/person/profile/'
+];
+
+pageList.forEach(function(elm, i) {
+  app.get(elm, function(req, res) {
+    res.render(elm.slice(1));
+  });
+});
 
 // redirect
 app.get('/documents/analytic_signal/', function(req, res) {
