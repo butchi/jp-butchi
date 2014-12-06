@@ -1,9 +1,0 @@
-extends ../../../layout
-
-block vars
-  - title = ''
-
-block main
-  main(class='page-person-creed')
-    h1
-      test
