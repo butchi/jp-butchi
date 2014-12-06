@@ -1,0 +1,34 @@
+extends ../../layout
+
+block vars
+  - title = '音楽'
+
+block main
+  main(class='page-works-music')
+
+  h1 音楽
+  ol
+    li
+      a(href='/documents/works/music/newgo.mp3') 1(仮)
+    li
+      a(href='/documents/works/music/world.mp3') トラベり(仮)
+    li
+      a(href='/documents/works/music/prime.mp3') prime(仮)
+    li
+      a(href='/documents/works/music/jp.mp3') dot jp(仮)
+    li
+      a(href='/documents/works/music/selection.mp3') selection(仮)
+    li
+      a(href='/documents/works/music/first_battle.mp3') First Battle(仮)
+    li
+      a(href='/documents/works/music/dungeon.mp3') 場末のダンジョン(仮)
+    li
+      a(href='suzumi.mp3') suz(仮)
+
+  article
+    h1 グレイコードカウンタの歌
+    object(width='425', height='344')
+      param(name='movie', value='http://www.youtube.com/v/v64F7YaY27U&hl=ja_JP&fs=1&')
+      param(name='allowFullScreen', value='true')
+      param(name='allowscriptaccess', value='always')
+      embed(src='http://www.youtube.com/v/v64F7YaY27U&hl=ja_JP&fs=1&', type='application/x-shockwave-flash', allowscriptaccess='always', allowfullscreen='true', width='425', height='344')

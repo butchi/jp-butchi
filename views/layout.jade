@@ -5,10 +5,11 @@ block vars
 html
   head
     meta(charset='UTF-8')
-    if title
-      title= title + ' | ' + '岩淵勇樹'
-    else
-      title 岩淵勇樹
+    block title
+      if title
+        title= title + ' | ' + 'butchi.jp'
+      else
+        title butchi.jp
     link(rel='shortcut icon', href='/favicon.ico')
     //- link(rel='stylesheet', href='http://mplus-fonts.sourceforge.jp/webfonts/mplus_webfonts.css')
     link(rel='stylesheet', media='screen, projection', href='/css/screen.css')
