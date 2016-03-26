@@ -19,7 +19,7 @@ app.configure(function(){
   app.set('view engine', 'jade');
   // app.locals.basedir = app.get('views');　// Jade内で絶対パスで呼べない？
   app.locals.pretty = true;
-  app.use(express.favicon());
+  app.use(express.favicon(path.join(__dirname, 'public/favicon.ico')));
   app.use(express.logger('dev'));
   app.use(express.bodyParser());
   app.use(express.methodOverride());
