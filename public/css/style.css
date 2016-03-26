@@ -1,0 +1,137 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+  blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+h1 {
+  color: #000;
+  background: #9cf;
+  padding: 40px 20px;
+  font-size: 30px;
+  font-weight: bold; }
+
+h2 {
+  color: #000;
+  background: #9cf;
+  padding: 40px 20px;
+  font-size: 30px;
+  font-weight: bold; }
+
+section > h2, article > h2 {
+  color: #fff;
+  background: #369;
+  padding: 10px 20px;
+  font-size: 20px; }
+
+section > section > h2, article > section > h2 {
+  color: #fff;
+  background: #69c;
+  padding: 10px 20px;
+  font-size: 15px; }
+
+section + section, article + section {
+  padding-bottom: 20px; }
+
+p, li {
+  line-height: 1.6;
+  padding: 5px 10px; }
+
+ul {
+  list-style: disc inside; }
+
+ol {
+  list-style: decimal inside; }
+
+a:link img {
+  border: 3px #00f solid; }
+
+a:visited img {
+  border: 3px #639 solid; }
+
+.page-top .icon {
+  display: inline-block;
+  border: 3px solid;
+  padding: 4px;
+  margin: 12px;
+  font-size: 0;
+  border-color: #ccc; }
+  .page-top .icon:link {
+    border-color: #00f; }
+  .page-top .icon:visited {
+    border-color: #551A8B; }
+  .page-top .icon img {
+    border: none; }
+
+.page-top .butchi-feed ul li {
+  list-style: none;
+  font-size: small; }
+  .page-top .butchi-feed ul li .source {
+    background-color: #000;
+    color: #fff;
+    border-radius: 2px;
+    padding: 2px 5px;
+    font-size: x-small;
+    margin-right: 10px; }
+    .page-top .butchi-feed ul li .source a {
+      color: inherit; }
+  .page-top .butchi-feed ul li .date {
+    font-size: x-small;
+    color: #999;
+    margin-left: 0.5em; }
+    .page-top .butchi-feed ul li .date a {
+      color: inherit; }
+
+.page-top .e-mail {
+  text-align: right; }
+  .page-top .e-mail .delete-me {
+    display: inline-block;
+    color: #fff;
+    font-size: 0;
+    text-indent: -9999px;
+    overflow: hidden; }
+  .page-top .e-mail .attention {
+    color: #999; }
