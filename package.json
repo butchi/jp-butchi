@@ -1,14 +1,43 @@
 {
-  "name": "Elastic-Beanstalk-Sample-App",
+  "name": "butchi.jp",
   "version": "0.0.1",
-  "private": true,
-  "dependencies": {
-    "express": "3.0.5",
-    "jade": "0.27.7",
-    "socket.io": "0.9.13"
+  "private": false,
+  "main": "app.js",
+  "engines": {
+    "node": ">=4.2.4"
+  },
+  "scripts": {
+    "start": "gulp",
+    "serve": "gulp serve",
+    "build": "gulp build",
+    "watch": "gulp watch"
   },
   "devDependencies": {
-    "compass": "~0.1.0",
-    "node-compass": "~0.2.3"
+    "babel-preset-es2015": "^6.1.18",
+    "babelify": "^7.2.0",
+    "browser-sync": "^2.11.1",
+    "browserify": "^13.0.0",
+    "coffee-script": "^1.10.0",
+    "debowerify": "^1.3.1",
+    "gulp": "git://github.com/gulpjs/gulp.git#4.0",
+    "gulp-babel": "^6.1.0",
+    "gulp-decodecode": "^0.1.0",
+    "gulp-nodemon": "^2.0.6",
+    "gulp-pleeease": "^2.0.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.2.0",
+    "gulp-uglify": "^1.5.1",
+    "gulp-webserver": "^0.9.1",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "dependencies": {
+    "express": "^3.0.5",
+    "jade": "^0.27.7",
+    "socket.io": "^0.9.13"
   }
 }
