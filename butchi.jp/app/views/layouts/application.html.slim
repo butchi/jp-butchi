@@ -8,11 +8,13 @@ html
     / = display_meta_tags default_meta_tags
     = stylesheet_link_tag 'application', media: 'all'
     / = csrf_meta_tags
+    script[src="assets/vendor/lodash.min.js"]
 
-  body
-    / = render 'partial/fb_root'
+  - @body_class = "page-#{controller_name}-#{action_name}"
+  body[class="#{@body_class}"]
+    = render 'partial/fb_root'
     .wrapper
       = yield
 
     = javascript_include_tag 'application'
-    / = render 'partial/ga'
+    = render 'partial/ga'

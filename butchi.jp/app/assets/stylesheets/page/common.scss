@@ -1,0 +1,8 @@
+body {
+  &::before {
+    content: "Hello, world!";
+  }
+  &::after {
+    content: "Thanks, world!";
+  }
+}
