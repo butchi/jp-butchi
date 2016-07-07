@@ -1,0 +1,2 @@
+module AnalyticSignalHelper
+end

@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>フラクタル | butchi.jp</title>
+    <!-- meta-->
+    <meta name="description" content="岩淵勇樹の個人による公式サイトです。">
+    <meta name="keywords" content="ぶっち, ブッチ, butchi, bucchi, butti, buchi, butchy, 岩渕">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <!-- smartphone meta-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
+    <!-- ogp-->
+    <meta property="fb:app_id" content="1539136399715307">
+    <meta property="og:url" content="http://butchi.jp">
+    <meta property="og:image" content="http://butchi.jp/ogp.png">
+    <meta property="og:image:width" content="128">
+    <meta property="og:image:height" content="128">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="フラクタル">
+    <meta property="og:site_name" content="butchi.jp">
+    <meta property="og:description" content="岩淵勇樹の個人による公式サイトです。">
+    <meta property="og:locale" content="ja_JP">
+    <!-- twitter card-->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="フラクタル">
+    <meta property="twitter:description" content="岩淵勇樹の個人による公式サイトです。">
+    <meta property="twitter:image" content="http://butchi.jp/ogp.png">
+    <!-- stylesheet-->
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/lib/jquery.min.js">;</script>
+    <script src="/js/lib/lodash.min.js">;</script>
+  </head>
+  <body>
+    <!-- 岩淵勇樹のホームページへようこそ！-->
+    <div class="wrapper">
+      <main class="page__documents__fractal">
+        <h1>フラクタル</h1>
+        <p>フラクタル (fractal) について、名のあるフラクタル図形を知っている限り列挙。</p>
+        <p><a href="http://commons.wikimedia.org/wiki/Fractal">Wikimedia CommonsのFractalのギャラリー</a>でほとんど網羅されてますけど…。</p>
+        <section>
+          <h1>再帰的処理によるもの</h1>
+          <p>曲線に対して再帰的処理を施したものは特に再帰曲線と呼ばれる。</p>
+          <section>
+            <h1>コッホ曲線（Koch curve）</h1>
+            <p><img alt="コッホ曲線" src="koch.gif"></p>
+          </section>
+          <section>
+            <section>
+              <h1>コッホ雪片（Koch snowflake）</h1>
+              <p>コッホ曲線を3つ繋げた図形。内部の面積は有限だが境界線の長さは無限大。</p>
+              <p><img alt="コッホ雪片" src="koch_snowflake.png"></p>
+            </section>
+            <section>
+              <h1>Quadratic von Koch curve (type 1)</h1>
+              <p><a href="#vicsek">Vicsek fractal</a>の一部。</p>
+              <p><img alt="Quadratic von Koch curve (type 1)" src="quadratic_type1_4.png"></p>
+            </section>
+            <section>
+              <h1>Quadratic von Koch curve (type 2)</h1>
+              <p>ミンコフスキーのソーセージ(Minkowski sausage)とも。</p>
+              <p><img alt="Quadratic von Koch curve (type 2)" src="quadratic_type2_3.png"></p>
+            </section>
+            <section>
+              <h1>Cesaro fractal</h1>
+              <p><img alt="Cesaro fractal" src="cesaro_6.png"></p>
+            </section>
+            <section>
+              <h1>コッホ曲線の亜種</h1><img alt="コッホ曲線の亜種" src="4_6.png"><img alt="コッホ曲線の亜種" src="5_6.png"><img alt="コッホ曲線の亜種" src="6_6.png">
+            </section>
+          </section>
+          <section>
+            <h1>カントール集合（Cantor set）</h1>
+            <p>0～1の実数を3進数で表現したとき、その文字列の中に1を含まない点（0.20020222<sub>3</sub>など）の集合として定義することができる。そのため、このように定義した場合はカントールの3進集合（Cantor ternary set）とも呼ばれる。</p>
+            <p>cf) 悪魔の階段（Devil's staircase、カントール関数（Cantor function））</p><img alt="悪魔の階段（カントール関数）" src="cantor_function.png">
+          </section>
+          <section>
+            <h1 id="cantor_dust">カントールの塵（Cantor dust）</h1>
+            <p>カントール集合の2次元への拡張。</p><a href="cantor_dust_large.png"><img alt="シェルピンスキーのギャスケット" src="cantor_dust.png"></a>
+          </section>
+          <section>
+            <h1>Cantor Square Fractal</h1>
+            <p><a href="#cantor_dust">カントールの塵</a>の補集合</p><a href="cantor_square_fractal_large.png"><img alt="シェルピンスキーのギャスケット" src="cantor_square_fractal.png"></a>
+          </section>
+          <section>
+            <h1>シェルピンスキーのギャスケット（Sierpiński gasket）</h1>
+            <p><small>「シェルピンスキーのガスケット」や「シルピンスキーのギャスケット」、「シェルピンスキーの三角形（Sierpiński triangle）」などとも。</small></p><a href="sierpinski_gasket.svg"><img alt="シェルピンスキーのギャスケット" src="sierpinski_gasket.png"></a>
+            <p>点（図示では円）を初期集合として表すこともできる。</p><a href="sierpinski_gasket_with_point.svg"><img alt="シェルピンスキーのギャスケット" src="sierpinski_gasket_with_point.png"></a>
+            <p>線分を初期集合として表すこともできる。</p><a href="sierpinski_gasket_with_line.svg"><img alt="シェルピンスキーのギャスケット" src="sierpinski_gasket_with_line.png"></a>
+            <p>三角形を初期集合として表すこともできる。これが一番よく知られている方法である。</p><a href="sierpinski_gasket_with_triangle.svg"><img alt="シェルピンスキーのギャスケット" src="sierpinski_gasket_with_triangle.png"></a>
+            <p>ビットマップに合う簡単な形としてせん断された状態で描かれることもある。下図はセルオートマトンのルール60である。</p><a href="sierpinski_gasket_rule60_large.png"><img alt="シェルピンスキーのギャスケット" src="sierpinski_gasket_rule60.png"></a>
+            <p>下図のセルオートマトンのルール90としても知られている。</p><a href="sierpinski_gasket_rule90_large.png"><img alt="シェルピンスキーのギャスケット" src="sierpinski_gasket_rule90.png"></a>
+          </section>
+          <section>
+            <h1>シェルピンスキーのカーペット（Sierpiński carpet）</h1>
+            <p>シェルピンスキーのギャスケットの外形が正三角形であるのに対し、こちらは正方形。</p><a href="sierpinski_carpet_large.png"><img alt="シェルピンスキーのカーペット" src="sierpinski_carpet.png"></a>
+          </section>
+          <section>
+            <h1>メンガーのスポンジ（Menger sponge）</h1>
+            <p>シェルピンスキーのカーペットの3次元拡張。</p>
+          </section>
+          <section>
+            <h1 id="vicsek">Vicsek fractal</h1>
+            <p>「Vicsek snowflake」や「box fractal」、「quadraflake」とも。</p>
+            <p>X字(saltire)の作り方と+字(cross)の作り方がある。</p><a href="vicsek_saltire_large.png"><img alt="シェルピンスキーのカーペット" src="vicsek_saltire.png"></a><a href="vicsek_cross_large.png"><img alt="シェルピンスキーのカーペット" src="vicsek_cross.png"></a>
+          </section>
+          <section>
+            <h1><i>n</i>-flake</h1>
+            <p>n=3でシェルピンスキーのギャスケット、n=4でVicsek fractalになる。</p>
+            <section>
+              <section>
+                <h1>Pentaflake</h1>
+              </section>
+              <section>
+                <h1>Hexaflake</h1><a href="hexaflake.svg"><img alt="Hexaflake" src="hexaflake.png"></a>
+                <p>ビットマップに合う簡単な形としてせん断された状態でも描ける。</p><a href="hexaflake_carpet_large.png"><img alt="Hexaflake" src="hexaflake_carpet.png"></a>
+              </section>
+              <section>
+                <h1>Polyflake</h1>
+              </section>
+              <section>
+                <h1>Sierpinski tetrahedron</h1>
+              </section>
+              <section>
+                <h1>Hexahedron flake</h1>
+              </section>
+              <section>
+                <h1>Octahedron flake</h1>
+              </section>
+              <section>
+                <h1>Dodecahedron flake</h1>
+              </section>
+              <section>
+                <h1>Icosahedron flake</h1>
+              </section>
+            </section>
+            <section>
+              <h1>T-square</h1>
+            </section>
+            <section>
+              <h1>空間充填曲線（Space-filling curves）</h1>
+              <p>平面充填曲線としては以下のような曲線が挙げられる。</p>
+              <ul>
+                <li>ペアノ曲線（Peano curve）
+                  <ul>
+                    <li><a href="http://en.wikipedia.org/wiki/File:Greek_cross_fractal_stage_4.svg" target="_blank">2D Greek cross fractal (?)</a>
+                      <p><img alt="2D Greek cross fractal (?)" src="1_3.png"></p>
+                    </li>
+                  </ul>
+                </li>
+                <li>ヒルベルト曲線（Hilbert curve）</li>
+                <li>シェルピンスキー曲線（Sierpiński curve）</li>
+                <li>ムーア曲線（Moore curve）</li>
+                <li>ゴスパー曲線（Gosper curve）</li>
+                <li>ルベーグ曲線（Lebesgue curve）（Z曲線（z-order curve）とも）</li>
+              </ul>
+              <p>極限は平面図形そのものであるため、フラクタルの定義からは外れるが、自己相似性は有するためフラクタル図形として数えられることが多い。</p>
+            </section>
+          </section>
+          <section>
+            <h1>ドラゴン曲線（dragon curve）</h1><img alt="ドラゴン曲線" src="dragon.gif">
+            <p>これも空間充填曲線の一種である。境界線のハウスドルフ次元は非整数である。</p>
+            <p>Heighway dragon、Harter–Heighway dragon、Jurassic Park dragonとも。</p>
+            <p>Twindragon曲線（Davis-Knuth dragon）は2つのドラゴン曲線を点対称に繋ぎ合わせた形であり、複素数を<i>i</i>-1 進数で表したときに見つけられる形である。</p><a href="twindragon_large.png"><img alt="Twindragon曲線" src="twindragon.png"></a>
+            <p>派生形としてTerdragon曲線もある。</p><img alt="Terdragon曲線" src="terdragon_8.png">
+          </section>
+          <section>
+            <h1>レヴィのC曲線（Lévy C curve）</h1>
+            <p>ドラゴン曲線と似た方法で作られ、Lévy dragonとも呼ばれる。<small>（個人的にはあまり好きじゃないかたち…。）</small></p><img alt="レヴィのC曲線" src="c_13.png">
+          </section>
+          <section>
+            <h1>ミンコフスキー曲線（Minkowski curve）</h1><img alt="ミンコフスキー曲線" src="minkowski_6.png">
+          </section>
+          <section>
+            <h1>無名の再帰曲線</h1>
+            <p>名前を知っている方がいればご一報ください。</p>
+            <p><img alt="無名の再帰曲線" src="3_6.png"></p>
+            <p><img alt="無名の再帰曲線" src="7_5.png"></p>
+          </section>
+        </section>
+        <section>
+          <h1>複素数</h1>
+          <section>
+            <h1>マンデルブロ集合（Mandelbrot set）</h1><img alt="マンデルブロ集合" src="mandelbrot.gif">
+          </section>
+          <section>
+            <h1>ジュリア集合（Julia set）</h1>
+          </section>
+          <section>
+            <h1>Burning Ship fractal</h1>
+          </section>
+        </section>
+        <section>
+          <h1>自己相似性をもつ関数</h1>
+          <section>
+            <h1>高木曲線（Takagi curve）</h1>
+            <p>海外ではブラマンジェ曲線（blancmange curve）として知られている。</p>
+          </section>
+          <section>
+            <h1>ワイエルシュトラス関数（Weierstrass function）</h1>
+          </section>
+        </section>
+        <section>
+          <h1>自然界におけるフラクタル</h1>
+          <section>
+            <h1>拡散律速凝集（DLA, Diffusion-limited aggregation）</h1>
+            <p>→<a href="http://en.wikipedia.org/wiki/Diffusion-limited_aggregation">Wikipedia（英語）</a></p>
+          </section>
+          <section>
+            <h1>ロマネスコ（Broccoflower）</h1>
+          </section>
+          <section>
+            <h1>ブロッコリー（Broccoli）</h1><img alt="ブロッコリーの束" src="broccoli_all.jpg"><img alt="ブロッコリーのかけら" src="broccoli_part.jpg"><!--
+            <h2>フラクタル次元</h2>
+            フラクタル図形の次元一覧は<a href="http://en.wikipedia.org/wiki/List_of_fractals_by_Hausdorff_dimension">Wikipediaの記事（英語）</a>を参照。
+            <table>
+            <tr><th>位相次元</th><th>フラクタル次元（近似値）</th><th>フラクタル次元（具体値）</th><th>図形</th></tr>
+            <tr><td></td><td>0.631</td><td>log<sub>3</sub>2</td><td>カントール集合</td></tr>
+            <tr><td></td><td>1.262</td><td>log<sub>3</sub>4</td><td>Cantor dust</td></tr>
+            <tr><td></td><td>1.262</td><td>log<sub>3</sub>4</td><td>コッホ曲線</td></tr>
+            <tr><td></td><td>1.524</td><td>log<sub>2</sub>{(1+(73-6√87)<sup>1/3</sup>+(73+6√87)<sup>1/3</sup>)/3}</td><td>ドラゴン曲線の境界線</td></tr>
+            <tr><td></td><td>1.585</td><td>log<sub>2</sub>3</td><td>シェルピンスキーのギャスケット</td></tr>
+            <tr><td></td><td>1.893</td><td>log<sub>3</sub>8</td><td>シェルピンスキーのカーペット</td></tr>
+            <tr><td></td><td>2.000</td><td>2<td>マンデルブロ集合の境界線</td></tr>
+            <tr><td></td><td>2.727</td><td>log<sub>3</sub>20</td><td>メンガーのスポンジ</td></tr>
+            </table>-->
+          </section>
+        </section>
+        <section>
+          <h1>参考リンク</h1>
+          <ul>
+            <li><a href="http://en.wikipedia.org/wiki/List_of_fractals_by_Hausdorff_dimension">フラクタル図形のハウスドルフ次元一覧（Wikipedia英語版）</a></li>
+            <li><a href="http://sorauta.bufsiz.jp/">そらはうたたね</a>
+              <p>フラクタルについての解説がわかりやすい。（最近更新してないみたいだけど…。）フリーソフトのSwingCurveがお薦め！</p>
+            </li>
+          </ul>
+        </section>
+      </main><a href="/">Home</a>
+    </div>
+    <script src="/js/main.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-2779957-5', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>

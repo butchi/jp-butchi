@@ -1,0 +1,2 @@
+class AnalyticSignalController < ApplicationController
+end
