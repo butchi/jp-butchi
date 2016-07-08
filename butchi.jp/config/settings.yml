@@ -1,0 +1,31 @@
+meta:
+  url: http://butchi.jp/
+
+  title: butchi.jp
+
+  description:
+    岩淵勇樹の個人による公式サイトです。
+
+  keywords:
+    - 岩淵勇樹
+    - 岩淵
+    - 勇樹
+    - ぶっち
+    - ブッチ
+    - butchi
+    - bucchi
+    - butti
+    - buchi
+    - butchy
+    - butchiy
+    - 岩渕
+    - 岩渕勇樹
+
+  share_image: http://butchi.jp/ogp.png
+  favicon: /favicon.ico
+  webclip: /webclip-icon.png
+
+
+  share_text: 岩淵勇樹
+
+  contact_url: mailto:k38647@gmail.com

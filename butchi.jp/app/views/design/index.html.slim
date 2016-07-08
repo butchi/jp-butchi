@@ -1,3 +1,16 @@
+- ogp = "http://butchi.jp#{design_path}/ogp.png"
+- set_meta_tags title: "デザイン | butchi.jp",
+  description: "岩淵勇樹デザインの意匠たちです。",
+  keywords: "デザイン, 岩淵勇樹",
+  og: {title: :title,
+    site_name: :title,
+    url: "http://butchi.jp#{design_path}",
+    description: :description,
+    image: ogp},
+  twitter: {title: "ttl",
+    description: "description",
+    image: ogp}
+
 doctype html
 html[lang="ja"]
   head
