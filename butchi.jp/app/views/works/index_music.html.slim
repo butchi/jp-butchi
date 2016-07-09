@@ -1,0 +1,37 @@
+- ogp = "http://butchi.jp#{works_music_path}/ogp.png"
+- set_meta_tags title: "音楽 | butchi.jp",
+  description: "岩淵勇樹作曲の音楽たちです。",
+  keywords: "音楽, 岩淵勇樹",
+  og: {title: :title,
+    site_name: :title,
+    url: "http://butchi.jp#{works_music_path}",
+    description: :description,
+    image: ogp},
+  twitter: {title: "ttl",
+    description: "description",
+    image: ogp}
+
+main
+  h1 音楽
+  ol
+    li
+      = link_to '1(仮)', '/assets/works/music/newgo.mp3'
+    li
+      = link_to 'トラベり(仮)', '/assets/works/music/world.mp3'
+    li
+      = link_to 'prime(仮)', '/assets/works/music/prime.mp3'
+    li
+      = link_to 'dot jp(仮)', '/assets/works/music/jp.mp3'
+    li
+      = link_to 'selection(仮)', '/assets/works/music/selection.mp3'
+    li
+      = link_to 'First Battle(仮)', '/assets/works/music/first_battle.mp3'
+    li
+      = link_to '場末のダンジョン(仮)', '/assets/works/music/dungeon.mp3'
+    li
+      = link_to 'suz(仮)', '/assets/works/music/suzumi.mp3'
+
+  article
+    h1 グレイコードカウンタの歌
+    .video
+      iframe[width="420" height="315" src="https://www.youtube.com/embed/v64F7YaY27U" frameborder="0" allowfullscreen]

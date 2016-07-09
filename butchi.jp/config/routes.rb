@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
   root 'home#index'
 
+  get 'works/design' => 'works#index_design'
+  get 'works/music' => 'works#index_music'
+  get 'works/words' => 'works#index_words'
+
   get 'fractal' => 'fractal#index'
-  get 'design' => 'design#index'
   get 'analytic-signal' => 'analytic_signal#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
