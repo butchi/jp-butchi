@@ -49,8 +49,9 @@ html(lang="ja")
   head
     meta(charset="utf-8")
     // meta
-    block title
-      = page_name ? [page_name, site_name].join(' | ') : site_name
+    title
+      block title
+        = page_name ? [page_name, site_name].join(' | ') : site_name
     if description
       meta(name="description", content=description)
     if keywords && keywords.length
