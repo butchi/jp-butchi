@@ -84,7 +84,7 @@ var Router = function () {
       this.pageCommon = new _Common2.default();
 
       if ($body.hasClass('page-root')) {
-        this.pageRoot = new PageRoot();
+        this.pageRoot = new _Root2.default();
       }
     }
   }]);
