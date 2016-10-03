@@ -1,6 +1,6 @@
 import ns from './ns';
 import PageCommon from '../page/Common';
-import PageIndex from '../page/Index';
+import PageIndex from '../page/Root';
 
 export default class Router {
   constructor() {
@@ -12,8 +12,8 @@ export default class Router {
 
     this.pageCommon = new PageCommon();
 
-    if($body.hasClass('page-index')) {
-      this.pageIndex = new PageIndex();
+    if($body.hasClass('page-root')) {
+      this.pageRoot = new PageRoot();
     }
   }
 }

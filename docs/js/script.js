@@ -17,7 +17,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 var Main = function () {
   function Main() {
-    var opts = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+    var opts = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
     _classCallCheck(this, Main);
 
@@ -61,9 +61,9 @@ var _Common = require('../page/Common');
 
 var _Common2 = _interopRequireDefault(_Common);
 
-var _Index = require('../page/Index');
+var _Root = require('../page/Root');
 
-var _Index2 = _interopRequireDefault(_Index);
+var _Root2 = _interopRequireDefault(_Root);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -83,8 +83,8 @@ var Router = function () {
 
       this.pageCommon = new _Common2.default();
 
-      if ($body.hasClass('page-index')) {
-        this.pageIndex = new _Index2.default();
+      if ($body.hasClass('page-root')) {
+        this.pageRoot = new PageRoot();
       }
     }
   }]);
@@ -94,7 +94,7 @@ var Router = function () {
 
 exports.default = Router;
 
-},{"../page/Common":4,"../page/Index":5,"./ns":3}],3:[function(require,module,exports){
+},{"../page/Common":4,"../page/Root":5,"./ns":3}],3:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -128,7 +128,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 var Common = function () {
   function Common() {
-    var opts = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+    var opts = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
     _classCallCheck(this, Common);
 
@@ -187,7 +187,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 var Index = function () {
   function Index() {
-    var opts = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+    var opts = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
     _classCallCheck(this, Index);
 

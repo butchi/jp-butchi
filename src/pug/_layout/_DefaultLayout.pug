@@ -1,14 +1,15 @@
 block ConfigBlock
   - pageId = 'undefined'
   - rootPath = '.'
-  - title = page_name ? [page_name, site_name].join(' | ') : site_name
+  - title = 'butchi.jp'
 
 doctype html
 html(lang="ja")
   head
     meta(charset="utf-8")
     // meta
-    title= title
+    block title
+      = page_name ? [page_name, site_name].join(' | ') : site_name
     if description
       meta(name="description", content=description)
     if keywords && keywords.length
@@ -67,11 +68,15 @@ html(lang="ja")
       link(rel="stylesheet", href="css/style.css")
 
   body(class= 'page-' + pageId)
+    // 岩淵勇樹のホームページへようこそ！
     //- appId指定を忘れないように
-    //- include ../_partial/fb-sdk.html
+    include ../_partial/fb-sdk.html
 
     .wrapper
+      block header
       block ContentBlock
+      block footer
+        a(href= rootPath) Home
 
     // javascript
     block JavascriptBlock
@@ -79,7 +84,7 @@ html(lang="ja")
       script(src='js/lib/lodash.min.js')
       script(src="js/script.js")
 
-    //- include ../_partial/gplus-platform.html
+    include ../_partial/gplus-platform.html
 
     //- トラッキングID指定を忘れないように
-    //- include ../_partial/ga.html
+    include ../_partial/ga.html
