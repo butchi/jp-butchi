@@ -102,7 +102,7 @@ gulp.task('pug', () => {
 
   locals.bib = readConfig(`${CONFIG}/bib.yml`);
 
-  return gulp.src([`${SRC}/pug/**/*.pug`, `${SRC}/pug/[!_]*.pug`])
+  return gulp.src([`${SRC}/pug/**/[!_]*.pug`, `!${SRC}/pug/_**/*`])
     .pipe(pug({
       locals: locals,
       pretty: true,
