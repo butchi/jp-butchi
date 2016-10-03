@@ -68,7 +68,10 @@ html.is-pc .wrapper {
   min-width: 6.4rem;
   overflow: hidden; }
 
-.page-root .delete-me {
+.page-root .e-mail .material-icons {
+  vertical-align: middle; }
+
+.page-root .e-mail .delete-me {
   display: inline-block;
   width: 1px;
   height: 1px;

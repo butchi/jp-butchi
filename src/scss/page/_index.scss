@@ -1,11 +1,17 @@
 .page-root {
-  .delete-me {
-    display: inline-block;
+  .e-mail {
+    .material-icons {
+      vertical-align: middle;
+    }
 
-    width: 1px;
-    height: 1px;
+    .delete-me {
+      display: inline-block;
 
-    text-indent: -9999px;
+      width: 1px;
+      height: 1px;
+
+      text-indent: -9999px;
+    }
   }
 
   .sec-link {
