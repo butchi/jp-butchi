@@ -50,6 +50,8 @@ main {
 a {
   color: inherit;
   text-decoration: underline; }
+  a.hover, a:hover {
+    text-decoration: none; }
 
 .list-share {
   font-size: 0; }
