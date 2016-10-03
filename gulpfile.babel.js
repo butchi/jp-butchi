@@ -34,7 +34,7 @@ gulp.task('copy-bower-fonts', () => {
     ], {
     cwd: 'bower_components',
   })
-    .pipe(gulp.dest(`${DEST}/fonts/lib`))
+    .pipe(gulp.dest(`${DEST}/fonts`))
   ;
 });
 
@@ -51,7 +51,7 @@ gulp.task('copy-bower-css', () => {
     ], {
     cwd: 'bower_components',
   })
-    .pipe(gulp.dest(`${DEST}/css/lib`))
+    .pipe(gulp.dest(`${DEST}/css`))
   ;
 });
 
