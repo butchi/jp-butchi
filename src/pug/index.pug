@@ -146,6 +146,10 @@ block ContentBlock
                 a(href='documents/uc2010poster.pdf') [poster (PDF)]
 
         section
+          mixin ipsj
+            sup
+              a(href="#footnote-ipsj") 注1
+
           h4 国内発表
           ul
             li
@@ -156,12 +160,8 @@ block ContentBlock
               +bib('ec--2008--iwabuchi-yuki')
               small
                 a(href='documents/ec2008iwabuchi.pdf')
-                  | [論文(PDF)
-                  sup ※
-                  | ]
-                | ※本著作物の著作権は（社）情報処理学会に帰属します。本著作物は著作権者である情報処理学会の許可のもとに掲載するものです。ご利用に当たっては「著作権法」ならびに「
-                a(href='http://www.ipsj.or.jp/ipsjcode.html', target='_blank') 情報処理学会倫理綱領
-                | 」に従うことをお願いいたします。
+                  | [論文(PDF)]
+                +ipsj
                 a(href='documents/ec2008presentation.html') [発表資料(Flashページ)]
             li
               +bib('wiss--2008--iwabuchi-yuki')
@@ -178,24 +178,16 @@ block ContentBlock
               +bib('mus-85--iwabuchi-yuki')
               small
                 a(href='documents/mus85paper.pdf')
-                  | [論文(PDF)
-                  sup ※
-                  | ]
-                | ※本著作物の著作権は（社）情報処理学会に帰属します。本著作物は著作権者である情報処理学会の許可のもとに掲載するものです。ご利用に当たっては「著作権法」ならびに「
-                a(href='http://www.ipsj.or.jp/ipsjcode.html', target='_blank') 情報処理学会倫理綱領
-                | 」に従うことをお願いいたします。
+                  | [論文(PDF)]
+                +ipsj
                 a(href='documents/mus85presentation.pdf') [発表資料(PDF)]
                 a(href='documents/mus85demo/') [デモ（Flashページ）]
             li
               +bib('interaction--2011--iwabuchi-yuki')
               small
                 a(href='documents/interaction2011paper.pdf')
-                  | [論文(PDF)
-                  sup ※
-                  | ]
-                | ※本著作物の著作権は（社）情報処理学会に帰属します。本著作物は著作権者である情報処理学会の許可のもとに掲載するものです。ご利用に当たっては「著作権法」ならびに「
-                a(href='http://www.ipsj.or.jp/ipsjcode.html', target='_blank') 情報処理学会倫理綱領
-                | 」に従うことをお願いいたします。
+                  | [論文(PDF)]
+                +ipsj
                 a(href='documents/interaction2011poster.pdf') [ポスター(PDF)]
                 a(href='documents/mus85demo/') [デモ（Flashページ、第85回音楽情報科学研究会と同じ）]
             li
@@ -208,6 +200,12 @@ block ContentBlock
               small
                 a(href='documents/math_soft_intro.pdf') [ポスター(PDF)]
                 a(href='documents/graphicalpad') [デモ（Flashページ）]
+
+            .footnote#footnote-ipsj
+              small
+                | 注1: 本著作物の著作権は（社）情報処理学会に帰属します。本著作物は著作権者である情報処理学会の許可のもとに掲載するものです。ご利用に当たっては「著作権法」ならびに「
+                a(href='http://www.ipsj.or.jp/ipsjcode.html', target='_blank') 情報処理学会倫理綱領
+                | 」に従うことをお願いいたします。
 
         section
           h4 学内発表・講義関連
