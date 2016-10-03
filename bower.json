@@ -23,6 +23,7 @@
     "jquery": "~2.2.2",
     "lodash": "~4.7.0",
     "reset-css": "2.0.*",
-    "material-design-lite": "^1.2.1"
+    "material-design-lite": "^1.2.1",
+    "mdi": "^1.7.22"
   }
 }

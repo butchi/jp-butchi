@@ -22,13 +22,32 @@ const SRC = './src';
 const CONFIG = './src/config';
 const DEST = './docs';
 
+// font
+gulp.task('copy-bower-fonts', () => { 
+  return gulp.src(
+    [
+      'mdi/fonts/materialdesignicons-webfont.eot',
+      'mdi/fonts/materialdesignicons-webfont.svg',
+      'mdi/fonts/materialdesignicons-webfont.ttf',
+      'mdi/fonts/materialdesignicons-webfont.woff',
+      'mdi/fonts/materialdesignicons-webfont.woff2'
+    ], {
+    cwd: 'bower_components',
+  })
+    .pipe(gulp.dest(`${DEST}/fonts/lib`))
+  ;
+});
+
+gulp.task('font', gulp.series('copy-bower-fonts'));
 
 // css
 gulp.task('copy-bower-css', () => { 
   return gulp.src(
     [
       'material-design-lite/material.min.css',
-      'material-design-lite/material.min.css.map'
+      'material-design-lite/material.min.css.map',
+      'mdi/css/materialdesignicons.min.css',
+      'mdi/css/materialdesignicons.min.css.map'
     ], {
     cwd: 'bower_components',
   })
@@ -45,7 +64,7 @@ gulp.task('sass', () => {
   ;
 });
 
-gulp.task('css', gulp.series('sass'));
+gulp.task('css', gulp.parallel('sass', 'copy-bower-css'));
 
 
 // js
@@ -93,7 +112,7 @@ gulp.task('deco', () => {
 });
 
 // gulp.task 'js', gulp.parallel('browserify', 'copy-bower-js')
-gulp.task('js', gulp.series(gulp.parallel('browserify', 'copy-bower-js'), gulp.parallel('minify', 'deco')));
+gulp.task('js', gulp.parallel('copy-bower-js', gulp.series('browserify', gulp.parallel('minify', 'deco'))));
 
 
 // html
@@ -131,5 +150,5 @@ gulp.task('browser-sync' , () => {
 
 gulp.task('serve', gulp.series('browser-sync'));
 
-gulp.task('build', gulp.parallel('css', 'js', 'html'));
+gulp.task('build', gulp.parallel('font', 'css', 'js', 'html'));
 gulp.task('default', gulp.series('build', 'serve'));
