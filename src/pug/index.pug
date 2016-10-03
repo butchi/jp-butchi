@@ -28,48 +28,30 @@ block ContentBlock
 
   section.section-icon#icon
     h2 ICON
-    a.icon
-      img(width='128', height='128', src='img/myavg.jpg', alt='平均自画像', title='平均自画像')
-    a.icon(href='m/')
-      img(width='128', height='128', src='img/qr.png', alt='モバイルサイト', title='モバイルサイト')
-    a.icon
-      img(width='128', height='128', src='img/chinese_character.png', alt='Butchi', title='Butchi')
-    a.icon(href='documents/music/')
-      img(width='128', height='128', src='img/music.png', alt='♪', title='♪')
-    a.icon(href='documents/planar_binary/')
-      img(width='128', height='128', src='img/planar_binary.png', alt='平面的2進数（Butchi数）', title='平面的2進数（Butchi数）')
-    a.icon(href='documents/planar_binary/#quatenary_tile')
-      img(width='128', height='128', src='img/quatenary_tile.png', alt='4進タイル（1000）', title='4進タイル（1000）')
-    a.icon(href='http://ci.nii.ac.jp/naid/110006380829/', target='_blank')
-      img(width='128', height='128', src='img/bit_reversal_plane.png', alt='ビット逆転平面', title='ビット逆転平面')
-    a.icon
-      img(width='128', height='128', src='img/dragon_tapestry_red.png', alt='ドラゴン曲線のタペストリー', title='ドラゴン曲線のタペストリー')
-    a.icon(href='http://reference.wolfram.com/mathematica/ref/BitXor.html', target='_blank')
-      img(width='128', height='128', src='img/bitwise_xor.png', alt='ビット毎の排他的論理和（see also: Mathematicaヘルプ BitXorの項目）', title='ビット毎の排他的論理和')
-    a.icon(href='documents/design/')
-      img(width='128', height='128', src='img/bion.png', alt='両対数極座標', title='両対数極座標')
-    a.icon(href='http://www.youtube.com/watch?v=v64F7YaY27U', target='_blank')
-      img(width='128', height='128', src='img/gray_code_counter.gif', alt='グレイコードカウンタ', title='グレイコードカウンタ')
-    a.icon(href='documents/fractal')
-      img(width='128', height='128', src='img/fractal.png', alt='フラクタル', title='フラクタル')
-    a.icon(href='documents/analytic-signal/')
-      img(width='128', height='128', src='img/analytic_signal_harmonica.png', alt='解析信号（ハーモニカ）', title='解析信号（ハーモニカ）')
-    a.icon(href='documents/analytic-signal/')
-      img(width='128', height='128', src='img/analytic_signal_whistle.png', alt='解析信号（口笛）', title='解析信号（口笛）')
-    a.icon
-      img(width='128', height='128', src='img/regular_icosahedron.png', alt='正20面体', title='正20面体')
-    a.icon(href='documents/design/')
-      img(width='128', height='128', src='img/delta.png', alt='DeltaΔPulse', title='DeltaΔPulse')
-    a.icon(href='documents/design/')
-      img(width='128', height='128', src='img/star.png', alt='star', title='star')
-    a.icon(href='documents/character/')
-      img(width='128', height='128', src='img/notoryu.png', alt='ノトリュー', title='ノトリュー')
-    a.icon(href='hanjukugo/')
-      img(width='128', height='128', src='img/hanjukugo.png', alt='半熟語', title='半熟語')
-    a.icon(href='http://butchi.jp/magic/')
-      img(width='128', height='128', src='img/nandemo_magic.png', alt='なんでも魔法。', title='なんでも魔法。')
-    a.icon(href='http://butchi.jp/iiknock/')
-      img(width='128', height='128', src='img/door.png', alt='いいノック', title='いいノック')
+
+    mixin icon(src, title, href)
+      a.icon(href= href)
+        img(width='128', height='128', src= rootPath + 'img/icon/' + src, alt= title, title= title)
+
+    +icon('myavg.jpg', '平均自画像')
+    +icon('chinese-character.png', 'Butchi')
+    +icon('music.png', '♪', 'documents/music/')
+    +icon('butchi-number.png', '平面的2進数（物智数）', 'documents/planar_binary/')
+    +icon('bit-reversal-plane.png', 'ビット逆転平面', 'http://ci.nii.ac.jp/naid/110006380829/')
+    +icon('dragon-tapestry--red.png', 'ドラゴン曲線のタペストリー', 'documents/fractal/')
+    +icon('bitwise-xor.png', 'ビット毎の排他的論理和', 'http://reference.wolfram.com/mathematica/ref/BitXor.html')
+    +icon('bion.png', 'bion (両対数極座標)', 'documents/design/')
+    +icon('gray-code-counter.gif', 'グレイコードカウンタ', 'http://www.youtube.com/watch?v=v64F7YaY27U')
+    +icon('fractal.png', 'フラクタル', 'documents/fractal')
+    +icon('analytic-signal--harmonica.png', '解析信号（ハーモニカ）', 'documents/analytic-signal/')
+    +icon('analytic-signal--whistle.png', '解析信号（口笛）', 'documents/analytic-signal/')
+    +icon('regular-icosahedron.png', '正20面体')
+    +icon('delta.png', 'DeltaΔPulse', 'documents/design/')
+    +icon('star.png', 'star', 'documents/design/')
+    +icon('notoryu.png', 'ノトリュー', 'documents/design/')
+    +icon('hanjukugo.png', '半熟語', 'hanjukugo/')
+    +icon('nandemo-magic.png', 'なんでも魔法。', 'http://butchi.jp/magic/')
+    +icon('door.png', 'いいノック', 'http://butchi.jp/iiknock/')
 
   section.section-feed#feed
     h2 FEED
@@ -96,9 +78,9 @@ block ContentBlock
       li
         | 2012年4月～ 
         a(href='http://www.kayac.com/', target='_blank') 面白法人カヤック
-    a(href='profile.html') →略さない歴
-    a(href='creed.html') →者是
-    a(href='people/') →関連人物
+    a(href= rootPath + 'profile/') →略さない歴
+    a(href= rootPath + 'creed/') →者是
+    a(href= rootPath + 'people/') →関連人物
 
     section#research_theme
       h2 研究テーマ
@@ -109,25 +91,25 @@ block ContentBlock
     h2 諸々
     ul
       li
-        a(href='documents/planar_binary/') 平面的2進数（Butchi数）
+        a(href= rootPath + 'documents/planar_binary/') 平面的2進数（Butchi数）
       li
-        a(href='documents/music/') 音楽
+        a(href= rootPath + 'documents/music/') 音楽
       li
-        a(href='documents/poem/') 詩
+        a(href= rootPath + 'documents/poem/') 詩
       li
-        a(href='documents/analytic-signal/') 解析信号ギャラリー
+        a(href= rootPath + 'documents/analytic-signal/') 解析信号ギャラリー
       li
-        a(href='documents/character/') キャラクター
+        a(href= rootPath + 'documents/character/') キャラクター
       li
-        a(href='documents/design/') デザイン
+        a(href= rootPath + 'documents/design/') デザイン
       li
-        a(href='documents/fractal/') フラクタル図形一覧
+        a(href= rootPath + 'documents/fractal/') フラクタル図形一覧
       li
-        a(href='documents/graphicalpad/') GraphiCalPad
+        a(href= rootPath + 'documents/graphicalpad/') GraphiCalPad
       li
-        a(href='documents/symbol/') 記号辞典〜コンピューターにおける記号の意味と使われ方〜
+        a(href= rootPath + 'documents/symbol/') 記号辞典〜コンピューターにおける記号の意味と使われ方〜
       li
-        a(href='documents/webclappad/') WebClapPad
+        a(href= rootPath + 'documents/webclappad/') WebClapPad
       li
         a(href='http://butchi.jp/magic/') なんでも魔法。
       li

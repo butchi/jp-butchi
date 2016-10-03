@@ -97,7 +97,7 @@ main {
 
 a {
   color: inherit;
-  text-decoration: inherit; }
+  text-decoration: underline; }
 
 html.is-sp .wrapper {
   overflow: hidden; }
