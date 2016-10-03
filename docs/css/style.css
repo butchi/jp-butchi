@@ -67,3 +67,9 @@ html.is-pc .wrapper {
   min-width: 640px;
   min-width: 6.4rem;
   overflow: hidden; }
+
+.page-root .delete-me {
+  display: inline-block;
+  width: 1px;
+  height: 1px;
+  text-indent: -9999px; }
