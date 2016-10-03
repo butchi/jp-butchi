@@ -73,18 +73,31 @@ block ContentBlock
       section.section-bibliogfraphy#bibliography
         h3 略歴
         ul
-          li 1984年 福井県大野市生まれ
-          li 2007年 金沢大学 工学部 情報システム工学科 卒業
-          li 2009年 金沢大学大学院 自然科学研究科 電子情報工学専攻 博士前期課程修了
-          li 2012年 金沢大学大学院 自然科学研究科 電子情報科学専攻 博士後期課程修了・博士（工学） 
           li
-            | 2012年4月～ 
-            a(href='http://www.kayac.com/', target='_blank') 面白法人カヤック
+            time(datetime="1984") 1984年
+            | 福井県大野市生まれ
+          li
+            time(datetime="2007") 2007年
+            | 金沢大学 工学部 情報システム工学科 卒業
+          li
+            time(datetime="2009") 2009年
+            | 金沢大学大学院 自然科学研究科 電子情報工学専攻 博士前期課程修了
+          li
+            time(datetime="2012") 2012年
+            | 金沢大学大学院 自然科学研究科 電子情報科学専攻 博士後期課程修了・博士（工学） 
+          li
+            time(datetime="2012-04") 2012年4月
+            | ～ 
+            a(href="http://www.kayac.com/", target="_blank")
+              | 面白法人カヤック
+
         a(href= rootPath + 'profile/') →略さない歴
+        br
         a(href= rootPath + 'creed/') →者是
+        br
         a(href= rootPath + 'people/') →関連人物
 
-        section#research_theme
+        section#research-theme
           h4 研究テーマ
           p 数学的特性に基づくインターフェースや、美しい画像表現のためのハードウェア、効率的な処理を行う演算器など。
           p 数学モデルの集積回路・インタラクティブシステムなどへの応用に関する研究に従事。
