@@ -2,7 +2,9 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8">
-    <!-- meta-->butchi.jp
+    <!-- meta-->
+    <title>butchi.jp
+    </title>
     <meta name="description" content="岩淵勇樹の個人による公式サイトです。">
     <meta name="keywords" content="岩淵 勇樹 ぶっち ブッチ butchi_y butchi bucchi butti buchi butchy butchiy 岩渕">
     <link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
@@ -31,6 +33,7 @@
     <script src="../js/ua-switch.js"></script>
     <!-- stylesheet-->
     <link rel="stylesheet" href="../css/lib/material.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="../css/style.css">
   </head>
   <body class="page-sub">
@@ -45,12 +48,25 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 
     <div class="wrapper">
-      <header>
-        <h1>Sub Page</h1>
-      </header>
-      <main>
-        <p>content</p>
-      </main><a href="../">Home</a>
+      <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+          <div class="mdl-layout__header-row"><span class="mdl-layout-title">butchi.jp</span>
+            <div class="mdl-layout-spacer"></div>
+            <nav class="mdl-navigation mdl-layout--large-screen-only"><a class="mdl-navigation__link" href="">Link</a><a class="mdl-navigation__link" href="">Link</a><a class="mdl-navigation__link" href="">Link</a><a class="mdl-navigation__link" href="">Link</a></nav>
+          </div>
+        </header>
+        <div class="mdl-layout__drawer"><span class="mdl-layout-title">Title</span>
+          <nav class="mdl-navigation"><a class="mdl-navigation__link" href="">Link</a><a class="mdl-navigation__link" href="">Link</a><a class="mdl-navigation__link" href="">Link</a><a class="mdl-navigation__link" href="">Link</a></nav>
+        </div>
+        <main class="mdl-layout__content">
+          <header>
+            <h1>Sub Page</h1>
+          </header>
+          <main>
+            <p>content</p>
+          </main>
+        </main><a href="../">Home</a>
+      </div>
     </div>
     <!-- javascript-->
     <script src="../js/lib/jquery.min.js"></script>
