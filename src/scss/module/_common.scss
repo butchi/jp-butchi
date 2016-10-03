@@ -66,3 +66,16 @@ a {
   color: inherit;
   text-decoration: underline;
 }
+
+.list-share {
+  font-size: 0;
+
+  .item-share {
+    display: block;
+
+    margin-top: 10px;
+    padding-left: 20px;
+
+    text-align: left;
+  }
+}
