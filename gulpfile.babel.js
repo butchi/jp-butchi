@@ -55,7 +55,8 @@ gulp.task('copy-bower-js', () => {
       'jquery/dist/jquery.min.js',
       'jquery/dist/jquery.min.map',
       'lodash/dist/lodash.min.js',
-      'material-design-lite/material.min.css'
+      'material-design-lite/material.min.js',
+      'material-design-lite/material.min.js.map'
     ], {
     cwd: 'bower_components',
   })
