@@ -14,19 +14,6 @@
   }
 }
 
-body {
-  @include mq-sp {
-    font-size: $base-font-size--sp;
-  }
-  @include mq-pc {
-    font-size: $base-font-size--pc;
-  }
-
-  font-family: $sans-serif;
-  line-height: 1.618;
-}
-
-
 html {
   font-size: #{$px-per-rem}px;
 
@@ -75,14 +62,33 @@ a {
   }
 }
 
+.inner-block {
+  @include mq-sp {
+    position: relative;
+
+    padding-left: px(10);
+    padding-right: px(10);
+  }
+
+  @include mq-pc {
+    position: relative;
+
+    // width: px($inner-width--pc);
+
+    // margin: 0 auto;
+
+    padding: 0 px(15);
+  }
+}
+
 .list-share {
   font-size: 0;
 
   .item-share {
     display: block;
 
-    margin-top: 10px;
-    padding-left: 20px;
+    margin-top: px(10);
+    padding-left: px(20);
 
     text-align: left;
   }

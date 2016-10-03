@@ -1,5 +1,7 @@
 .page-root {
   .e-mail {
+    text-align: right;
+
     .material-icons {
       vertical-align: middle;
     }
@@ -7,10 +9,15 @@
     .delete-me {
       display: inline-block;
 
+      position: absolute;
+
       width: 1px;
       height: 1px;
 
-      text-indent: -9999px;
+      left: -9999px;
+      top: 0;
+
+      opacity: 0;
     }
   }
 

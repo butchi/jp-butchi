@@ -1,0 +1,35 @@
+.btc-heading {
+  &[data-heading-level="1"] {
+  }
+
+  // page title
+  &[data-heading-level="2"] {
+    position: relative;
+
+    padding-left: px(10);
+  }
+
+  // sectioning
+  &[data-heading-level="3"] {
+    position: relative;
+
+    width: 100%;
+
+    margin-left: 0rem;
+
+    padding: px(5) px(15);
+    background-color: $main-color;
+
+    color: $white;
+  }
+
+  // sub section
+  &[data-heading-level="4"] {
+  }
+
+  &[data-heading-level="5"] {
+  }
+
+  &[data-heading-level="6"] {
+  }
+}

@@ -8,16 +8,6 @@ html.is-pc .pc-none {
 html.is-sp .sp-none {
   display: none; }
 
-body {
-  font-family: YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Meiryo, "メイリオ", sans-serif;
-  line-height: 1.618; }
-  html.is-sp body {
-    font-size: 15px;
-    font-size: 0.15rem; }
-  html.is-pc body {
-    font-size: 15px;
-    font-size: 0.15rem; }
-
 html {
   font-size: 100px; }
   html.is-sp html {
@@ -35,11 +25,11 @@ body {
   html.is-sp body {
     font-size: 15px;
     font-size: 0.15rem;
-    line-height: 1.5; }
+    line-height: 1.618; }
   html.is-pc body {
     font-size: 15px;
     font-size: 0.15rem;
-    line-height: 1.5; }
+    line-height: 1.618; }
 
 main {
   display: block; }
@@ -53,12 +43,26 @@ a {
   a.hover, a:hover {
     text-decoration: none; }
 
+html.is-sp .inner-block {
+  position: relative;
+  padding-left: 10px;
+  padding-left: 0.1rem;
+  padding-right: 10px;
+  padding-right: 0.1rem; }
+
+html.is-pc .inner-block {
+  position: relative;
+  padding: 0 15px;
+  padding: 0 0.15rem; }
+
 .list-share {
   font-size: 0; }
   .list-share .item-share {
     display: block;
     margin-top: 10px;
+    margin-top: 0.1rem;
     padding-left: 20px;
+    padding-left: 0.2rem;
     text-align: left; }
 
 html.is-sp .wrapper {
@@ -70,14 +74,34 @@ html.is-pc .wrapper {
   min-width: 6.4rem;
   overflow: hidden; }
 
-.page-root .e-mail .material-icons {
-  vertical-align: middle; }
+.btc-heading[data-heading-level="2"] {
+  position: relative;
+  padding-left: 10px;
+  padding-left: 0.1rem; }
 
-.page-root .e-mail .delete-me {
-  display: inline-block;
-  width: 1px;
-  height: 1px;
-  text-indent: -9999px; }
+.btc-heading[data-heading-level="3"] {
+  position: relative;
+  width: 100%;
+  margin-left: 0px;
+  margin-left: 0rem;
+  padding: 5px 15px;
+  padding: 0.05rem 0.15rem;
+  background-color: #3f51b5;
+  color: #ffffff; }
+
+.page-root .e-mail {
+  text-align: right; }
+  .page-root .e-mail .material-icons {
+    vertical-align: middle; }
+  .page-root .e-mail .delete-me {
+    display: inline-block;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    left: -9999px;
+    top: 0;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; }
 
 .page-root .sec-link ul {
   padding-left: 20px;

@@ -8,9 +8,9 @@ append ConfigBlock
 //- append JavascriptBlock
 
 block ContentBlock
-  .mdl-grid
+  .mdl-grid.mdl-grid--no-spacing
     .mdl-cell--12-col
-      h2
+      h2.btc-heading(data-heading-level="2")
         span(lang="ja")
         ruby
           mixin ruby(kanji, hiragana)
@@ -29,358 +29,387 @@ block ContentBlock
         a(href='index-e.html') English version
 
       section.section-icon#icon
-        h3 ICON
+        h3.btc-heading(data-heading-level="3")
+          | Icon
 
         mixin icon(src, title, href)
           a.icon(href= href)
             img(width='128', height='128', src= rootPath + 'img/icon/' + src, alt= title, title= title)
 
-        +icon('myavg.jpg', '平均自画像')
-        +icon('chinese-character.png', 'Butchi')
-        +icon('music.png', '♪', 'documents/music/')
-        +icon('butchi-number.png', '平面的2進数（物智数）', 'documents/planar_binary/')
-        +icon('bit-reversal-plane.png', 'ビット逆転平面', 'http://ci.nii.ac.jp/naid/110006380829/')
-        +icon('dragon-tapestry--red.png', 'ドラゴン曲線のタペストリー', 'documents/fractal/')
-        +icon('bitwise-xor.png', 'ビット毎の排他的論理和', 'http://reference.wolfram.com/mathematica/ref/BitXor.html')
-        +icon('bion.png', 'bion (両対数極座標)', 'documents/design/')
-        +icon('gray-code-counter.gif', 'グレイコードカウンタ', 'http://www.youtube.com/watch?v=v64F7YaY27U')
-        +icon('fractal.png', 'フラクタル', 'documents/fractal')
-        +icon('analytic-signal--harmonica.png', '解析信号（ハーモニカ）', 'documents/analytic-signal/')
-        +icon('analytic-signal--whistle.png', '解析信号（口笛）', 'documents/analytic-signal/')
-        +icon('regular-icosahedron.png', '正20面体')
-        +icon('delta.png', 'DeltaΔPulse', 'documents/design/')
-        +icon('star.png', 'star', 'documents/design/')
-        +icon('notoryu.png', 'ノトリュー', 'documents/design/')
-        +icon('hanjukugo.png', '半熟語', 'hanjukugo/')
-        +icon('nandemo-magic.png', 'なんでも魔法。', 'http://butchi.jp/magic/')
-        +icon('door.png', 'いいノック', 'http://butchi.jp/iiknock/')
+        .inner-block
+          +icon('myavg.jpg', '平均自画像')
+          +icon('chinese-character.png', 'Butchi')
+          +icon('music.png', '♪', 'documents/music/')
+          +icon('butchi-number.png', '平面的2進数（物智数）', 'documents/planar_binary/')
+          +icon('bit-reversal-plane.png', 'ビット逆転平面', 'http://ci.nii.ac.jp/naid/110006380829/')
+          +icon('dragon-tapestry--red.png', 'ドラゴン曲線のタペストリー', 'documents/fractal/')
+          +icon('bitwise-xor.png', 'ビット毎の排他的論理和', 'http://reference.wolfram.com/mathematica/ref/BitXor.html')
+          +icon('bion.png', 'bion (両対数極座標)', 'documents/design/')
+          +icon('gray-code-counter.gif', 'グレイコードカウンタ', 'http://www.youtube.com/watch?v=v64F7YaY27U')
+          +icon('fractal.png', 'フラクタル', 'documents/fractal')
+          +icon('analytic-signal--harmonica.png', '解析信号（ハーモニカ）', 'documents/analytic-signal/')
+          +icon('analytic-signal--whistle.png', '解析信号（口笛）', 'documents/analytic-signal/')
+          +icon('regular-icosahedron.png', '正20面体')
+          +icon('delta.png', 'DeltaΔPulse', 'documents/design/')
+          +icon('star.png', 'star', 'documents/design/')
+          +icon('notoryu.png', 'ノトリュー', 'documents/design/')
+          +icon('hanjukugo.png', '半熟語', 'hanjukugo/')
+          +icon('nandemo-magic.png', 'なんでも魔法。', 'http://butchi.jp/magic/')
+          +icon('door.png', 'いいノック', 'http://butchi.jp/iiknock/')
 
       section.section-feed#feed
-        h3 FEED
-        .butchi-feed
+        h3.btc-heading(data-heading-level="3")
+          | Feed
+
+        .inner-block
+          .butchi-feed
 
       section.section-news#news
-        h3 NEWS
-        ul
-          li
-            | 岩淵勇樹による博士論文公聴会「図形と音声の変換手法とその応用に関する研究」が2012年2月8日 15:00-16:00 金沢大学自然科学研究科2B716にて行われます。(2012年1月30日)
-          li
-            a(href='http://www.atmj.co.jp/contest/main.html', target='_blank') ATMJコンテスト
-            | で
-            a(href='http://www.atmj.co.jp/contest/result.html', target='_blank') アイデア賞
-            | を受賞しました！(2011年11月28日)
+        h3.btc-heading(data-heading-level="3")
+          | News
+
+        .inner-block
+          ul
+            li
+              | 岩淵勇樹による博士論文公聴会「図形と音声の変換手法とその応用に関する研究」が2012年2月8日 15:00-16:00 金沢大学自然科学研究科2B716にて行われます。(2012年1月30日)
+            li
+              a(href='http://www.atmj.co.jp/contest/main.html', target='_blank') ATMJコンテスト
+              | で
+              a(href='http://www.atmj.co.jp/contest/result.html', target='_blank') アイデア賞
+              | を受賞しました！(2011年11月28日)
 
       section.section-bibliogfraphy#bibliography
-        h3 略歴
-        ul
-          li
-            time(datetime="1984") 1984年
-            | 福井県大野市生まれ
-          li
-            time(datetime="2007") 2007年
-            | 金沢大学 工学部 情報システム工学科 卒業
-          li
-            time(datetime="2009") 2009年
-            | 金沢大学大学院 自然科学研究科 電子情報工学専攻 博士前期課程修了
-          li
-            time(datetime="2012") 2012年
-            | 金沢大学大学院 自然科学研究科 電子情報科学専攻 博士後期課程修了・博士（工学） 
-          li
-            time(datetime="2012-04") 2012年4月
-            | ～ 
-            a(href="http://www.kayac.com/", target="_blank")
-              | 面白法人カヤック
+        h3.btc-heading(data-heading-level="3")
+          | 略歴
 
-        a(href= rootPath + 'profile/') →略さない歴
-        br
-        a(href= rootPath + 'creed/') →者是
-        br
-        a(href= rootPath + 'people/') →関連人物
-
-        section#research-theme
-          h4 研究テーマ
-          p 数学的特性に基づくインターフェースや、美しい画像表現のためのハードウェア、効率的な処理を行う演算器など。
-          p 数学モデルの集積回路・インタラクティブシステムなどへの応用に関する研究に従事。
-
-      section.section-document#document
-        h3 諸々
-        ul
-          li
-            a(href= rootPath + 'documents/planar_binary/') 平面的2進数（Butchi数）
-          li
-            a(href= rootPath + 'documents/music/') 音楽
-          li
-            a(href= rootPath + 'documents/poem/') 詩
-          li
-            a(href= rootPath + 'documents/analytic-signal/') 解析信号ギャラリー
-          li
-            a(href= rootPath + 'documents/character/') キャラクター
-          li
-            a(href= rootPath + 'documents/design/') デザイン
-          li
-            a(href= rootPath + 'documents/fractal/') フラクタル図形一覧
-          li
-            a(href= rootPath + 'documents/graphicalpad/') GraphiCalPad
-          li
-            a(href= rootPath + 'documents/symbol/') 記号辞典〜コンピューターにおける記号の意味と使われ方〜
-          li
-            a(href= rootPath + 'documents/webclappad/') WebClapPad
-          li
-            a(href='http://butchi.jp/magic/') なんでも魔法。
-          li
-            a(href='http://butchi.jp/pokemon/') ポポポポケモン！
-          li
-            a(href='http://butchi.jp/iiknock/') いいノック
-          li
-            a(href='http://butchi.jp/secondly_happy/') 秒刊ハッピー
-
-      section.section-publication#publication
-        h3 発表文献
-
-        section
-          h4 国際発表
+        .inner-block
           ul
             li
-              +bib('butchi-number--2010-06--iwabuchi-yuki')
-              small
-                a(href='documents/uc2010poster.pdf') [poster (PDF)]
-
-        section
-          mixin ipsj
-            sup
-              a(href="#footnote-ipsj") 注1
-
-          h4 国内発表
-          ul
+              time(datetime="1984") 1984年
+              | 福井県大野市生まれ
             li
-              +bib('icd--2007-07--iwabuchi-yuki')
-              small
-                a(href='documents/icd200707presentation.html') [発表資料(Flashページ)]
+              time(datetime="2007") 2007年
+              | 金沢大学 工学部 情報システム工学科 卒業
             li
-              +bib('ec--2008--iwabuchi-yuki')
-              small
-                a(href='documents/ec2008iwabuchi.pdf')
-                  | [論文(PDF)]
-                +ipsj
-                a(href='documents/ec2008presentation.html') [発表資料(Flashページ)]
+              time(datetime="2009") 2009年
+              | 金沢大学大学院 自然科学研究科 電子情報工学専攻 博士前期課程修了
             li
-              +bib('wiss--2008--iwabuchi-yuki')
-              small
-                a(href='http://www.wiss.org/WISS2008Proceedings/posters/paper0057.pdf') [論文(PDF)]
-                a(href='documents/wiss2008poster.pdf') [ポスター(PDF)]
-                a(href='documents/wiss2008demo.html')
-                  | [デモ（Flashページ）
-                  b ※音が出ます
-                  | ]
+              time(datetime="2012") 2012年
+              | 金沢大学大学院 自然科学研究科 電子情報科学専攻 博士後期課程修了・博士（工学） 
             li
-              +bib('ite--2008--maeda-yui')
-            li
-              +bib('mus-85--iwabuchi-yuki')
-              small
-                a(href='documents/mus85paper.pdf')
-                  | [論文(PDF)]
-                +ipsj
-                a(href='documents/mus85presentation.pdf') [発表資料(PDF)]
-                a(href='documents/mus85demo/') [デモ（Flashページ）]
-            li
-              +bib('interaction--2011--iwabuchi-yuki')
-              small
-                a(href='documents/interaction2011paper.pdf')
-                  | [論文(PDF)]
-                +ipsj
-                a(href='documents/interaction2011poster.pdf') [ポスター(PDF)]
-                a(href='documents/mus85demo/') [デモ（Flashページ、第85回音楽情報科学研究会と同じ）]
-            li
-              +bib('art-science--2011--iwabuchi-yuki')
-              small
-                a(href='http://art-science.org/journal/v10n3/v10n3pp157/artsci-v10n3pp157.pdf') [論文(PDF)]
-                a(href='http://art-science.org/journal/v10n3/v10n3pp157/demo.html') [デモ（Flashページ）]
-            li
-              +bib('lams--2013--iwabuchi-yuki')
-              small
-                a(href='documents/math_soft_intro.pdf') [ポスター(PDF)]
-                a(href='documents/graphicalpad') [デモ（Flashページ）]
-
-            .footnote#footnote-ipsj
-              small
-                | 注1: 本著作物の著作権は（社）情報処理学会に帰属します。本著作物は著作権者である情報処理学会の許可のもとに掲載するものです。ご利用に当たっては「著作権法」ならびに「
-                a(href='http://www.ipsj.or.jp/ipsjcode.html', target='_blank') 情報処理学会倫理綱領
-                | 」に従うことをお願いいたします。
-
-        section
-          h4 学内発表・講義関連
-          ul
-            li 自主課題研究「偏角関数を用いた曲線の研究」(2006)
-              small
-                a(href='documents/b3-research.pdf') [レポート(PDF)]
-                a(href='documents/b3-research.ppt') [発表スライド(.ppt)]
-            li 卒業論文「2進数の平面的表現に関する考察」(2007)
-              small
-                a(href='documents/b-thesis.pdf') [論文(PDF)]
-                a(href='documents/b-thesis.html') [発表スライド(Flashページ)]
-            li カオスとその応用「研究紹介 ～フラクタルと絡めて～」(2007)
-              small
-                //
-                  <a href="documents/Chaotic_Dynamics_and_Its_Applications.htm">[発表スライド(HTML)]</a>
-                a(href='documents/Chaotic_Dynamics_and_Its_Applications.ppt') [発表スライド(.ppt)]
-            li 修士論文「閉曲線図形を利用した音色生成法」(2009)
-              small
-                a(href='documents/m-thesis.ppt') [発表スライド(.ppt)]
-            li 博士論文「図形と音声の変換手法とその応用に関する研究」(2012)
-              small
-                a(href='documents/d-thesis/') [特設ページ]
-            li
-              a(href='documents/reading_seminar/') 論文輪講
-            li
-              a(href='documents/tte/') テクノロジトレンド工学
-            li
-              a(href='documents/The_Labyrinth_of_Cubic_Puzzle/') キュービックパズルの迷宮
-            li 記数法のさまざまな拡張～2進数からButchi数まで～（2012年）
-              small
-                a(href='documents/yugen20120826') [発表スライド(HTMLページ)]
-
-      section.section-institution#institution
-        h3 所属学会
-        ul
-          li
-            a(href='http://www.ieice.or.jp/', target='_blank') 電子情報通信学会(IEICE)
-      
-      section.section-link#link
-        h3 リンク
-
-        section
-          h4 所属
-          ul
-            li
+              time(datetime="2012-04") 2012年4月
+              | ～ 
               a(href="http://www.kayac.com/", target="_blank")
                 | 面白法人カヤック
-            li
-              a(href="http://wbawakate.jp/", target="_blank")
-                | 全脳アーキテクチャ若手の会
-            li
-              a(href="http://pzkn.seesaa.net/", target="_blank")
-                | パズル懇話会
-            li
-              a(href="http://www.yugen.org/", target="_blank")
-                | 湧源クラブ
-            li
-              a(href="http://www.geocities.jp/nanigashiitai/", target="_blank")
-                | アカペラグループ「某隊」
 
-        section
-          h3 過去の所属
+          a(href= rootPath + 'profile/') →略さない歴
+          br
+          a(href= rootPath + 'creed/') →者是
+          br
+          a(href= rootPath + 'people/') →関連人物
+
+          section#research-theme
+            h4.btc-heading(data-heading-level="4")
+              | 研究テーマ
+            p 数学的特性に基づくインターフェースや、美しい画像表現のためのハードウェア、効率的な処理を行う演算器など。
+            p 数学モデルの集積回路・インタラクティブシステムなどへの応用に関する研究に従事。
+
+      section.section-document#document
+        h3.btc-heading(data-heading-level="3")
+          | 諸々
+
+        .inner-block
           ul
             li
-              a(href="http://www.kanazawa-u.ac.jp/", target="_blank")
-                | 金沢大学
+              a(href= rootPath + 'documents/planar_binary/') 平面的2進数（Butchi数）
             li
-              a(href="http://www.merl.jp/", target="_blank")
-                | 金沢大学 工学部 情報システム工学科 集積回路工学研究室
+              a(href= rootPath + 'documents/music/') 音楽
             li
-              a(href="http://fdict.el.kanazawa-u.ac.jp/", target="_blank")
-                | 金沢大学 FD・ICT教育推進室
+              a(href= rootPath + 'documents/poem/') 詩
             li
-              a(href="http://melomelo-acappella.com/", target="_blank")
-                | 金沢大学アカペラサークル “MeloMelo”
+              a(href= rootPath + 'documents/analytic-signal/') 解析信号ギャラリー
             li
-              a(href="http://www.geocities.jp/kinndai_art/", target="_blank")
-                | 金沢大学美術部
+              a(href= rootPath + 'documents/character/') キャラクター
+            li
+              a(href= rootPath + 'documents/design/') デザイン
+            li
+              a(href= rootPath + 'documents/fractal/') フラクタル図形一覧
+            li
+              a(href= rootPath + 'documents/graphicalpad/') GraphiCalPad
+            li
+              a(href= rootPath + 'documents/symbol/') 記号辞典〜コンピューターにおける記号の意味と使われ方〜
+            li
+              a(href= rootPath + 'documents/webclappad/') WebClapPad
+            li
+              a(href='http://butchi.jp/magic/') なんでも魔法。
+            li
+              a(href='http://butchi.jp/pokemon/') ポポポポケモン！
+            li
+              a(href='http://butchi.jp/iiknock/') いいノック
+            li
+              a(href='http://butchi.jp/secondly_happy/') 秒刊ハッピー
 
-        section.sec-link
-          h3 関連リンク
+      section.section-publication#publication
+        h3.btc-heading(data-heading-level="3")
+          | 発表文献
+
+        .inner-block
+          section
+            h4.btc-heading(data-heading-level="4")
+              | 国際発表
+            ul
+              li
+                +bib('butchi-number--2010-06--iwabuchi-yuki')
+                small
+                  a(href='documents/uc2010poster.pdf') [poster (PDF)]
+
+          section
+            mixin ipsj
+              sup
+                a(href="#footnote-ipsj") 注1
+
+            h4.btc-heading(data-heading-level="4")
+              | 国内発表
+            ul
+              li
+                +bib('icd--2007-07--iwabuchi-yuki')
+                small
+                  a(href='documents/icd200707presentation.html') [発表資料(Flashページ)]
+              li
+                +bib('ec--2008--iwabuchi-yuki')
+                small
+                  a(href='documents/ec2008iwabuchi.pdf')
+                    | [論文(PDF)]
+                  +ipsj
+                  a(href='documents/ec2008presentation.html') [発表資料(Flashページ)]
+              li
+                +bib('wiss--2008--iwabuchi-yuki')
+                small
+                  a(href='http://www.wiss.org/WISS2008Proceedings/posters/paper0057.pdf') [論文(PDF)]
+                  a(href='documents/wiss2008poster.pdf') [ポスター(PDF)]
+                  a(href='documents/wiss2008demo.html')
+                    | [デモ（Flashページ）
+                    b ※音が出ます
+                    | ]
+              li
+                +bib('ite--2008--maeda-yui')
+              li
+                +bib('mus-85--iwabuchi-yuki')
+                small
+                  a(href='documents/mus85paper.pdf')
+                    | [論文(PDF)]
+                  +ipsj
+                  a(href='documents/mus85presentation.pdf') [発表資料(PDF)]
+                  a(href='documents/mus85demo/') [デモ（Flashページ）]
+              li
+                +bib('interaction--2011--iwabuchi-yuki')
+                small
+                  a(href='documents/interaction2011paper.pdf')
+                    | [論文(PDF)]
+                  +ipsj
+                  a(href='documents/interaction2011poster.pdf') [ポスター(PDF)]
+                  a(href='documents/mus85demo/') [デモ（Flashページ、第85回音楽情報科学研究会と同じ）]
+              li
+                +bib('art-science--2011--iwabuchi-yuki')
+                small
+                  a(href='http://art-science.org/journal/v10n3/v10n3pp157/artsci-v10n3pp157.pdf') [論文(PDF)]
+                  a(href='http://art-science.org/journal/v10n3/v10n3pp157/demo.html') [デモ（Flashページ）]
+              li
+                +bib('lams--2013--iwabuchi-yuki')
+                small
+                  a(href='documents/math_soft_intro.pdf') [ポスター(PDF)]
+                  a(href='documents/graphicalpad') [デモ（Flashページ）]
+
+              .footnote#footnote-ipsj
+                small
+                  | 注1: 本著作物の著作権は（社）情報処理学会に帰属します。本著作物は著作権者である情報処理学会の許可のもとに掲載するものです。ご利用に当たっては「著作権法」ならびに「
+                  a(href='http://www.ipsj.or.jp/ipsjcode.html', target='_blank') 情報処理学会倫理綱領
+                  | 」に従うことをお願いいたします。
+
+          section
+            h4.btc-heading(data-heading-level="4")
+              | 学内発表・講義関連
+            ul
+              li 自主課題研究「偏角関数を用いた曲線の研究」(2006)
+                small
+                  a(href='documents/b3-research.pdf') [レポート(PDF)]
+                  a(href='documents/b3-research.ppt') [発表スライド(.ppt)]
+              li 卒業論文「2進数の平面的表現に関する考察」(2007)
+                small
+                  a(href='documents/b-thesis.pdf') [論文(PDF)]
+                  a(href='documents/b-thesis.html') [発表スライド(Flashページ)]
+              li カオスとその応用「研究紹介 ～フラクタルと絡めて～」(2007)
+                small
+                  //
+                    <a href="documents/Chaotic_Dynamics_and_Its_Applications.htm">[発表スライド(HTML)]</a>
+                  a(href='documents/Chaotic_Dynamics_and_Its_Applications.ppt') [発表スライド(.ppt)]
+              li 修士論文「閉曲線図形を利用した音色生成法」(2009)
+                small
+                  a(href='documents/m-thesis.ppt') [発表スライド(.ppt)]
+              li 博士論文「図形と音声の変換手法とその応用に関する研究」(2012)
+                small
+                  a(href='documents/d-thesis/') [特設ページ]
+              li
+                a(href='documents/reading_seminar/') 論文輪講
+              li
+                a(href='documents/tte/') テクノロジトレンド工学
+              li
+                a(href='documents/The_Labyrinth_of_Cubic_Puzzle/') キュービックパズルの迷宮
+              li 記数法のさまざまな拡張～2進数からButchi数まで～（2012年）
+                small
+                  a(href='documents/yugen20120826') [発表スライド(HTMLページ)]
+
+      section.section-institution#institution
+        h3.btc-heading(data-heading-level="3")
+          | 所属学会
+
+        .inner-block
           ul
             li
-              i.mdi.mdi-facebook-box
-              |  
-              a(href="https://www.facebook.com/yuuki.iwabuchi.9", target="_blank")
-                | 岩淵 勇樹
-            li
-              i.mdi.mdi-twitter-box
-              |  
-              a(href="https://twitter.com/butchi_y", target="_blank")
-                | butchi_y （公式アカウント）
-            li
-              i.mdi.mdi-twitter-box
-              |  
-              a(href="https://twitter.com/butchi_x", target="_blank")
-                | butchi_x（半公式アカウント）
-            li
-              i.mdi.mdi-twitter-box
-              |  
-              a(href="https://twitter.com/zougoroku", target="_blank")
-                | zougoroku （造語録）
-            li
-              i.mdi.mdi-twitter-box
-              |  
-              a(href="https://twitter.com/nandemo_magic", target="_blank")
-                | nandemo_magic （なんでも魔法BOT）
-            li
-              i.mdi.mdi-tumblr
-              |  
-              a(href="http://butchiy.tumblr.com/", target="_blank")
-                | butchiy
-            li
-              i.material-icons web
-              |  
-              a(href="http://qiita.com/butchi_y", target="_blank")
-                | Qiita (ID: butchi_y)
-            li
-              i.material-icons web
-              |  
-              a(href="http://butchi.blog42.fc2.com/", target="_blank")
-                | ブッチブログ
-            li
-              i.material-icons web
-              |  
-              a(href="http://mixi.jp/show_profile.pl?id=3213231", target="_blank")
-                | mixi (ID:3213231)
-            li
-              i.material-icons web
-              |  
-              a(href="http://www.lastfm.jp/user/butchi_y", target="_blank")
-                | Last.fm (id=butchi_y)
-            li
-              i.material-icons web
-              |  
-              a(href="http://www.pixiv.net/member.php?id=119", target="_blank")
-                | pixiv (id=119)
-            li
-              i.material-icons web
-              |  
-              a(href="http://geek-house-yokohama.webnode.jp/", target="_blank")
-                | ギークハウス横浜
-            li
-              i.material-icons web
-              |  
-              a(href="https://www.facebook.com/mathcafejapan/", target="_blank")
-                | 数学カフェ
-            li
-              i.material-icons web
-              |  
-              a(href="", target="_blank")
-                | 日曜数学会
-            li
-              i.material-icons web
-              |  
-              a(href="http://maths4pg.connpass.com/", target="_blank")
-                | プログラマのための数学勉強会
-            li
-              i.material-icons web
-              |  
-              a(href= `https://twitter.com/search?q=${encodeURIComponent('伝道師になろう')}`, target="_blank")
-                | 伝道師になろう
+              a(href='http://www.ieice.or.jp/', target='_blank') 電子情報通信学会(IEICE)
+      
+      section.section-link#link
+        h3.btc-heading(data-heading-level="3")
+          | リンク
 
-            //- li
-              a(href='http://merl.ec.t.kanazawa-u.ac.jp/diary_public/index.php?butchi', target='_blank')
-                | 研究室作業日誌
+        .inner-block
+          section
+            h4.btc-heading(data-heading-level="4")
+              | 所属
+            ul
+              li
+                a(href="http://www.kayac.com/", target="_blank")
+                  | 面白法人カヤック
+              li
+                a(href="http://wbawakate.jp/", target="_blank")
+                  | 全脳アーキテクチャ若手の会
+              li
+                a(href="http://pzkn.seesaa.net/", target="_blank")
+                  | パズル懇話会
+              li
+                a(href="http://www.yugen.org/", target="_blank")
+                  | 湧源クラブ
+              li
+                a(href="http://www.geocities.jp/nanigashiitai/", target="_blank")
+                  | アカペラグループ「某隊」
 
-      .e-mail
-        p.address
-          i.material-icons email
-          | e-mail:
-          | k38647
-          span.delete-me (deleteme:スパム対策)
-          | @gmail.com
-        p.attention (テキストコピー時注意↑)
+          section
+            h5.btc-heading(data-heading-level="5")
+              | 過去の所属
+            ul
+              li
+                a(href="http://www.kanazawa-u.ac.jp/", target="_blank")
+                  | 金沢大学
+              li
+                a(href="http://www.merl.jp/", target="_blank")
+                  | 金沢大学 工学部 情報システム工学科 集積回路工学研究室
+              li
+                a(href="http://fdict.el.kanazawa-u.ac.jp/", target="_blank")
+                  | 金沢大学 FD・ICT教育推進室
+              li
+                a(href="http://melomelo-acappella.com/", target="_blank")
+                  | 金沢大学アカペラサークル “MeloMelo”
+              li
+                a(href="http://www.geocities.jp/kinndai_art/", target="_blank")
+                  | 金沢大学美術部
+
+          section.sec-link
+            h5.btc-heading(data-heading-level="5")
+              | 関連リンク
+            ul
+              li
+                i.mdi.mdi-facebook-box
+                |  
+                a(href="https://www.facebook.com/yuuki.iwabuchi.9", target="_blank")
+                  | 岩淵 勇樹
+              li
+                i.mdi.mdi-twitter-box
+                |  
+                a(href="https://twitter.com/butchi_y", target="_blank")
+                  | butchi_y （公式アカウント）
+              li
+                i.mdi.mdi-twitter-box
+                |  
+                a(href="https://twitter.com/butchi_x", target="_blank")
+                  | butchi_x（半公式アカウント）
+              li
+                i.mdi.mdi-twitter-box
+                |  
+                a(href="https://twitter.com/zougoroku", target="_blank")
+                  | zougoroku （造語録）
+              li
+                i.mdi.mdi-twitter-box
+                |  
+                a(href="https://twitter.com/nandemo_magic", target="_blank")
+                  | nandemo_magic （なんでも魔法BOT）
+              li
+                i.mdi.mdi-tumblr
+                |  
+                a(href="http://butchiy.tumblr.com/", target="_blank")
+                  | butchiy
+              li
+                i.material-icons web
+                |  
+                a(href="http://qiita.com/butchi_y", target="_blank")
+                  | Qiita (ID: butchi_y)
+              li
+                i.material-icons web
+                |  
+                a(href="http://butchi.blog42.fc2.com/", target="_blank")
+                  | ブッチブログ
+              li
+                i.material-icons web
+                |  
+                a(href="http://mixi.jp/show_profile.pl?id=3213231", target="_blank")
+                  | mixi (ID:3213231)
+              li
+                i.material-icons web
+                |  
+                a(href="http://www.lastfm.jp/user/butchi_y", target="_blank")
+                  | Last.fm (id=butchi_y)
+              li
+                i.material-icons web
+                |  
+                a(href="http://www.pixiv.net/member.php?id=119", target="_blank")
+                  | pixiv (id=119)
+              li
+                i.material-icons web
+                |  
+                a(href="http://geek-house-yokohama.webnode.jp/", target="_blank")
+                  | ギークハウス横浜
+              li
+                i.material-icons web
+                |  
+                a(href="https://www.facebook.com/mathcafejapan/", target="_blank")
+                  | 数学カフェ
+              li
+                i.material-icons web
+                |  
+                a(href="", target="_blank")
+                  | 日曜数学会
+              li
+                i.material-icons web
+                |  
+                a(href="http://maths4pg.connpass.com/", target="_blank")
+                  | プログラマのための数学勉強会
+              li
+                i.material-icons web
+                |  
+                a(href= `https://twitter.com/search?q=${encodeURIComponent('伝道師になろう')}`, target="_blank")
+                  | 伝道師になろう
+
+              //- li
+                a(href='http://merl.ec.t.kanazawa-u.ac.jp/diary_public/index.php?butchi', target='_blank')
+                  | 研究室作業日誌
+
+      .inner-block
+        .e-mail
+          p.address
+            i.material-icons email
+            | e-mail:
+            | k38647
+            span.delete-me (deleteme:スパム対策)
+            | @gmail.com
+          p.attention (テキストコピー時注意↑)
 
 block footer

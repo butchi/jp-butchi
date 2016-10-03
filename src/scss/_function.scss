@@ -3,6 +3,10 @@
 }
 
 // rem hack
+@function unit($px) {
+  @return $px / 100;
+}
+
 @function px($size) {
-  @return #{$size / 100}rem;
+  @return #{unit($size)}rem;
 }
