@@ -3,6 +3,47 @@ block ConfigBlock
   - rootPath = './'
   - title = 'butchi.jp'
 
+mixin bib(key)
+  - bibitem = bib[key]
+  - author = bibitem.author
+  - title = bibitem.title
+  - journal = bibitem.journal
+  - volume = bibitem.volume
+  - number = bibitem.number
+  - pages = bibitem.pages
+  - date = bibitem.date
+  span.btc-bib
+    if author instanceof Array
+      != author.join(', ')
+    else
+      = author
+
+    | . 
+    != title
+    | . 
+    != journal
+    | . 
+
+    if volume
+      | Vol.#{bibitem.volume}, 
+
+    if number
+      | No.#{bibitem.number}, 
+
+    if pages
+      if pages instanceof Array
+        | pp. 
+        = pages.join('--')
+      else
+        | p. 
+        = pages
+      | , 
+
+    time.date
+      = date
+    | .
+
+
 doctype html
 html(lang="ja")
   head

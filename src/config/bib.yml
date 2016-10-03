@@ -1,0 +1,160 @@
+# iwabuchi-yuki--2016-10-03:
+#   author:
+#     Yuuki IWABUCHI
+#   title:
+#     Title
+#   journal:
+#     Butchi conference
+#   volume:
+#     1
+#   number:
+#     1
+#   pages
+#     101
+#     102
+#   date:
+#     "2010-06"
+
+butchi-number--2010-06--iwabuchi-yuki:
+  author: [
+    Yuuki IWABUCHI,
+    Junichi AKITA
+  ]
+  title:
+    Properties of “Planar Binary (Butchi Number)”
+  journal:
+    '<a href="http://arn.local.frs.riken.jp/UC10/" target="_blank">Unconventional Computation (UC)</a>'
+  date:
+    "2010-06"
+
+icd--2007-07--iwabuchi-yuki:
+  author: [
+    岩淵 勇樹,
+    秋田 純一
+  ]
+  title:
+    '<a href="http://ci.nii.ac.jp/naid/110006380829/" target="_blank">非周期的な画素配置を持つCMOSイメージセンサの基礎検討</a>'
+  journal:
+    電子情報通信学会技術研究報告
+  volume:
+    107
+  number:
+    163
+  pages: [
+    165,
+    170
+  ]
+  date:
+    "2007-07"
+
+ec--2008--iwabuchi-yuki:
+  author: [
+    岩淵 勇樹,
+    秋田 純一,
+    北川 章夫
+  ]
+  title:
+    閉曲線図形に基づいた音色生成方法の検討
+  journal:
+    '<a href="http://www.dc-meiji.jp/ec2008/" target="_blank">エンタテインメントコンピューティング2008</a>論文集'
+  pages: [
+    143,
+    146
+  ]
+  date:
+    "2008-10"
+
+wiss--2008--iwabuchi-yuki:
+  author: [
+    岩淵 勇樹,
+    秋田 純一,
+    北川 章夫
+  ]
+  title:
+    閉曲線図形の特性に基づいた音色生成の一手法
+  journal: 
+    '<a href="http://www.wiss.org/WISS2008/" target="_blank">第16回インタラクティブシステムとソフトウェアに関するワークショップ（WISS2008）</a>論文集'
+  pages: [
+    149,
+    150
+  ]
+  date:
+    "2008-11"
+
+ite--2008--maeda-yui:
+  author: [
+    前田 唯,
+    岩淵 勇樹,
+    秋田 純一
+  ]
+  title:
+    '<a href="http://ci.nii.ac.jp/naid/40016434231">空間スペクトルを用いたジャギー評価に関する一考察～擬似的不規則画素配置によるジャギーの解消効果～</a>'
+  journal:
+    映像情報メディア学会技術報告
+  volume:
+    32
+  number:
+    57
+  pages: [
+    29,
+    32
+  ]
+  date:
+    "2008-12"
+
+mus-85--iwabuchi-yuki:
+  author: [
+    岩淵勇樹,
+    秋田純一,
+    北川章夫
+  ]
+  title:
+    閉曲線を利用した音色操作方法の検討と実装
+  journal:
+    '<a href="http://www.sigmus.jp/SIG/sig201005program.html" target="_blank">第85回音楽情報科学研究会</a>'
+  date:
+    '2010-05'
+
+interaction--2011--iwabuchi-yuki:
+  author: [
+    岩淵勇樹,
+    秋田純一,
+    北川章夫
+  ]
+  title:
+    閉曲線を利用した音色の操作方法
+  journal:
+    '<a href="http://www.interaction-ipsj.org/2011/" target="_blank">インタラクション2011</a>'
+  date:
+    '2011-03'
+
+art-science--2011--iwabuchi-yuki:
+  author: [
+    岩淵勇樹,
+    秋田純一,
+    北川章夫
+  ]
+  title:
+    閉曲線を利用した音色の操作法
+  journal:
+    '<a href="http://art-science.org/journal/" target="_blank">芸術科学会論文誌</a>'
+  volume:
+    10
+  number:
+    3
+  pages: [
+    157,
+    166
+  ]
+  date:
+    '2011-09'
+
+lams--2013--iwabuchi-yuki:
+  author:
+    岩淵勇樹
+  title:
+    GraphiCalPad
+  journal:
+    '<a href="http://imi.kyushu-u.ac.jp/~waki/lams/" target="_blank">数学ソフトウェア紹介</a>'
+  date:
+    '2013'
