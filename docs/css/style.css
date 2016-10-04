@@ -125,6 +125,22 @@ html.is-pc .wrapper {
 .page-root .sec-link .mdi-tumblr {
   color: #35465c; }
 
+html.is-sp .page-person-profile .sec-history .item-history {
+  font-size: 15px;
+  font-size: 0.15rem; }
+
+html.is-pc .page-person-profile .sec-history .item-history {
+  font-size: 15px;
+  font-size: 0.15rem; }
+
+.page-person-profile .sec-history .item-history .heading {
+  margin: 0;
+  font-size: inherit;
+  margin-right: 0.5em; }
+
+.page-person-profile .sec-history .heading {
+  display: inline-block; }
+
 .page-person-profile .sec-interest .interest-category {
   display: block; }
   .page-person-profile .sec-interest .interest-category .heading {
