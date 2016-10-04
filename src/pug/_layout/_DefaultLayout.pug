@@ -1,6 +1,6 @@
 block ConfigBlock
   - pageId = 'undefined'
-  - rootPath = './'
+  - rootPath = '/'
   - title = 'butchi.jp'
 
 mixin bib(key)
@@ -161,7 +161,8 @@ html(lang="ja")
           block ContentBlock
 
         block footer
-          a(href= rootPath) Home
+          footer
+            a(href= rootPath) Home
 
     // javascript
     block JavascriptBlock

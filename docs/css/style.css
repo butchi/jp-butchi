@@ -124,3 +124,12 @@ html.is-pc .wrapper {
 
 .page-root .sec-link .mdi-tumblr {
   color: #35465c; }
+
+.page-person-profile .sec-interest .interest-category {
+  display: block; }
+  .page-person-profile .sec-interest .interest-category .heading {
+    display: inline-block;
+    margin: 0; }
+  .page-person-profile .sec-interest .interest-category .keyword {
+    display: inline-block;
+    margin: 0; }

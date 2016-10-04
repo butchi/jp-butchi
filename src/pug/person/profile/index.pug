@@ -1,24 +1,33 @@
-extends ../../layout
+extends ../../_layout/_DefaultLayout
 
-block append vars
+append ConfigBlock
+  - pageId = 'person-profile'
+  - rootPath = '../../'
   - title = '生い立ち'
 
-block main
-  main(class='page-person-profile')
-    h1
-      ruby
-        | 岩淵
+block ContentBlock
+  h2.btc-heading(data-heading-level="2")
+    span(lang="ja")
+    ruby
+      mixin ruby(kanji, hiragana)
+        = kanji
         rp (
-        rt いわぶち
+        rt= hiragana
         rp )
-        | 勇樹
-        rp (
-        rt ゆうき
-        rp )
+
+      +ruby('岩淵', 'いわぶち')
+      +ruby('勇樹', 'ゆうき')
+
+    |  
+
+    span(lang="en")
       | (IWABUCHI Yu(u)ki)
 
-    section
-      h2 生い立ち
+  section
+    h3.btc-heading(data-heading-level="3")
+      | 生い立ち
+
+    .inner-block
       ul
         li 1984年9月13日午前6時18分 福井県大野市生まれ
         li 1991年 大野市有終西小学校 入学
@@ -56,8 +65,11 @@ block main
           a(href="http://wbawakate.jp/", target="_blank")
             | 全脳アーキテクチャ若手の会
 
-    section
-      h2 昔取った杵柄
+  section
+    h3.btc-heading(data-heading-level="3")
+      | 昔取った杵柄
+
+    .inner-block
       ul
         li 大野市開成中学校 漢字博士(2000年)(1997度入学生としては単独での認定)
         li 漢字検定2級(2000年ごろ)
@@ -77,57 +89,30 @@ block main
             | 受賞作品
           | ）
 
-    section
-      h2 興味キーワード
-
-      section
-        h2 研究
-        p.keyword
-          | 画像処理, 曲線, ベクタ画像, アンチエイリアシング,
-          br
-          | サンプリング, フーリエ変換, 解析信号, ヒルベルト変換,
-          br
-          | 数式処理, Mathematica, プロット, 2進数, 記数法, 演算器,
-          br
-          | 4次元, フラクタル, 再帰曲線, ドラゴン曲線,
-          br
-          | 黄金比, フィボナッチ数,
-          br
-          | 哲学, 心理学, 認知科学, 顔,
-          br
-          | 人工知能, 言語理解,
-          br
-          | グラフ理論, 巡回セールスマン問題, コラッツ問題（3n+1問題）,
-          br
-          | JSON, XML, MathML, SVG,
+  section.sec-interest
+    mixin interest-list(key)
+      h4.btc-heading(data-heading-level="4")
+        = key
+        each row, rowTitle in interest[key]
+          .interest-category
+            //- h5.heading
+              = rowTitle
+              | : 
+            p.keyword
+              = row.join(', ')
+              | , 
+        p
           | …
 
-      section
-        h2 アート
-        p.keyword
-          | デジタルアート, メディアアート, トリックアート,
-          br
-          | Flash (ActionScript), Illustrator,
-          br
-          | テクノ(Electronic), ドラムンベース, IDM, Chiptune,
-          br
-          | Autechre, Aphex Twin, Underworld, µ-Ziq, 電気グルーヴ, DE DE MOUSE,
-          br
-          | Final Fantasy, 植松伸夫, 崎元仁, 野村哲也, 吉田明彦,
-          br
-          | フォント,
-          br
-          | …
+    h3.btc-heading(data-heading-level="3")
+      | 興味キーワード
+
+    .inner-block
+      section.sec-interest-research
+        +interest-list('研究')
+
+      section.sec-interest-art
+        +interest-list('アート')
 
       section
-        h2 その他趣味
-        p.keyword
-          | アイスクリーム, 甘味,
-          br
-          | お笑い,
-          br
-          | 漢字,
-          br
-          | ライフログ, SNS,
-          br
-          | …
+        +interest-list('その他趣味')

@@ -2,6 +2,7 @@ extends _layout/_DefaultLayout
 
 append ConfigBlock
   - pageId = 'root'
+  - rootPath = './'
 
 //- append StylesheetBlock
 
@@ -21,6 +22,8 @@ block ContentBlock
 
           +ruby('岩淵', 'いわぶち')
           +ruby('勇樹', 'ゆうき')
+
+        |  
 
         span(lang="en")
           | (IWABUCHI Yu(u)ki)
@@ -102,11 +105,11 @@ block ContentBlock
               a(href="http://www.kayac.com/", target="_blank")
                 | 面白法人カヤック
 
-          a(href= rootPath + 'profile/') →略さない歴
+          a(href= rootPath + 'person/profile/') →略さない歴
           br
-          a(href= rootPath + 'creed/') →者是
+          a(href= rootPath + 'person/creed/') →者是
           br
-          a(href= rootPath + 'people/') →関連人物
+          a(href= rootPath + 'person/people/') →関連人物
 
           section#research-theme
             h4.btc-heading(data-heading-level="4")
