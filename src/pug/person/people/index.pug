@@ -1,16 +1,19 @@
-extends ../../layout
+extends ../../_layout/_DefaultLayout
 
-block append vars
+block append ConfigBlock
+  - pageId = 'person-people'
+  - rootPath = '../../'
   - title = '関連人物'
 
-block css
-  link(rel='stylesheet', media='screen, projection', href='/person/people/style.css')
+block ContentBlock
+  h3.btc-heading(data-heading-level="3")
+    | 岩淵勇樹の関連人物
 
-block main
-  main(class='page-person-people')
-    h1 岩淵勇樹の関連人物
+  .inner-block
     section
-      h1 家族
+      h4.btc-heading(data-heading-level="4")
+        | 家族
+
       .item
         a(href='http://www.facebook.com/profile.php?id=100000331648419')
           img.icon(width='48', height='48', src='picture/naoki.jpg')
@@ -19,7 +22,7 @@ block main
         .name 直樹
         .link
           a(href='http://www.facebook.com/profile.php?id=100000331648419')
-            img(src='icon_fb_s.png')
+            i.mdi.mdi-facebook-box
         .description 温厚でユーモアのある父。
       .item
         img.icon(width='48', height='48', src='picture/female.gif')
@@ -65,7 +68,8 @@ block main
         .description ゴールデンレトリバーのオス。人懐っこくて従順。
 
     section
-      h1 親戚
+      h4.btc-heading(data-heading-level="4")
+        | 親戚
       .item
         img.icon(width='48', height='48', src='picture/male.gif')
         br
@@ -115,7 +119,8 @@ block main
         .description 姉の息子。車が大好き。
 
     section
-      h1 親友
+      h4.btc-heading(data-heading-level="4")
+        | 親友
       .item
         a(href='http://mixi.jp/show_friend.pl?id=2456805')
           img.icon(width='48', height='48', src='picture/tomo.jpg')
@@ -134,15 +139,16 @@ block main
         .name 脇本健弘
         .link
           a(href='http://twitter.com/wakitake')
-            img(src='icon_tw_s.png')
+            i.mdi.mdi-twitter-box
           a(href='http://mixi.jp/show_friend.pl?id=330822')
             img(src='icon_mx_s.png')
           a(href='http://www.facebook.com/profile.php?id=100001513852939')
-            img(src='icon_fb_s.png')
+            i.mdi.mdi-facebook-box
         .description 高校時代のパソコン部の先輩。優秀な研究者。
 
     section
-      h1 尊敬する人
+      h4.btc-heading(data-heading-level="4")
+        | 尊敬する人
       .item
         a(href='http://ja.wikipedia.org/wiki/%E3%83%89%E3%83%8A%E3%83%AB%E3%83%89%E3%83%BB%E3%82%AF%E3%83%8C%E3%83%BC%E3%82%B9')
           img.icon(width='48', height='48', src='picture/knuth.jpg')
@@ -150,7 +156,7 @@ block main
         .name ドナルド・クヌース
         .link
           a(href='http://ja.wikipedia.org/wiki/%E3%83%89%E3%83%8A%E3%83%AB%E3%83%89%E3%83%BB%E3%82%AF%E3%83%8C%E3%83%BC%E3%82%B9')
-            img(src='icon_wp_s.png')
+            .mdi.mdi-wikipedia
         .description 2進数の拡張をやったりTeXを開発したりと、個人的な嗜好にジャストミートな研究者。
       .item
         a(href='http://akita11.jp/')
@@ -160,11 +166,11 @@ block main
         .name 秋田純一
         .link
           a(href='http://twitter.com/akita11')
-            img(src='icon_tw_s.png')
+            i.mdi.mdi-twitter-box
           a(href='http://mixi.jp/show_friend.pl?id=37061')
             img(src='icon_mx_s.png')
           a(href='http://www.facebook.com/profile.php?id=100002043415315')
-            img(src='icon_fb_s.png')
+            i.mdi.mdi-facebook-box
         .description 大学・大学院で6年間お世話になった先生。研究者としての生き字引。
       .item
         a(href='http://www.homei.com/')
@@ -173,11 +179,12 @@ block main
         .name 宮下芳明
         .link
           a(href='http://twitter.com/HomeiMiyashita')
-            img(src='icon_tw_s.png')
+            i.mdi.mdi-twitter-box
         .description 映像・音楽もプロ級で研究も独創的なマルチクリエイター研究者。
 
     section
-      h1 憧れの社員
+      h4.btc-heading(data-heading-level="4")
+        | 憧れの社員
       .item
         a(href='http://www.kayac.com/member/kobayashi-taro')
           img.icon(width='48', height='48', src='picture/kobayashi-taro.jpg')
@@ -200,7 +207,8 @@ block main
         .description 頭のキレがかなり凄い上に、ファッションセンスも抜群。
 
     section
-      h1 お気に入りのアーティスト
+      h4.btc-heading(data-heading-level="4")
+        | お気に入りのアーティスト
       .item
         a(href='http://ja.wikipedia.org/wiki/%E3%82%A8%E3%82%A4%E3%83%95%E3%82%A7%E3%83%83%E3%82%AF%E3%82%B9%E3%83%BB%E3%83%84%E3%82%A4%E3%83%B3')
           img.icon(width='48', height='48', src='picture/aphex_twin.jpg')
@@ -209,7 +217,7 @@ block main
         .name リチャード・D・ジェームス（Aphex Twin）
         .link
           a(href='http://ja.wikipedia.org/wiki/%E3%82%A8%E3%82%A4%E3%83%95%E3%82%A7%E3%83%83%E3%82%AF%E3%82%B9%E3%83%BB%E3%83%84%E3%82%A4%E3%83%B3')
-            img(src='icon_wp_s.png')
+            .mdi.mdi-wikipedia
         .description ドラムンベースの巨匠。
       .item
         a(href='http://dedemouse.com/')
@@ -219,9 +227,9 @@ block main
         .name 遠藤大介（DE DE MOUSE）
         .link
           a(href='http://ja.wikipedia.org/wiki/DE_DE_MOUSE')
-            img(src='icon_wp_s.png')
+            .mdi.mdi-wikipedia
           a(href='http://twitter.com/DEDEMOUSE')
-            img(src='icon_tw_s.png')
+            i.mdi.mdi-twitter-box
         .description アルバム『A journey to freedom』がかなりツボ。
       .item
         a(href='http://ja.wikipedia.org/wiki/%E9%87%8E%E6%9D%91%E5%93%B2%E4%B9%9F')
@@ -231,7 +239,7 @@ block main
         .name 野村哲也
         .link
           a(href='http://ja.wikipedia.org/wiki/%E9%87%8E%E6%9D%91%E5%93%B2%E4%B9%9F')
-            img(src='icon_wp_s.png')
+            .mdi.mdi-wikipedia
         .description ファイナルファンタジーVIIのキャラクターデザインなどを手がけており、画風がかなり好み。
       .item
         a(href='http://ja.wikipedia.org/wiki/%E4%B8%AD%E5%B3%B6%E4%BF%A1%E4%B9%9F')
@@ -241,7 +249,7 @@ block main
         .name 中島信也
         .link
           a(href='http://ja.wikipedia.org/wiki/%E4%B8%AD%E5%B3%B6%E4%BF%A1%E4%B9%9F')
-            img(src='icon_wp_s.png')
+            .mdi.mdi-wikipedia
         .description
           | CMディレクターで、有名なCMを数々手掛けている。
           a(href='http://www.eat-kanazawa.jp/') eAT KANAZAWA
@@ -254,9 +262,9 @@ block main
         .name 土佐信道（明和電機）
         .link
           a(href='http://ja.wikipedia.org/wiki/%E6%98%8E%E5%92%8C%E9%9B%BB%E6%A9%9F')
-            img(src='icon_wp_s.png')
+            .mdi.mdi-wikipedia
           a(href='http://twitter.com/MaywaDenki')
-            img(src='icon_tw_s.png')
+            i.mdi.mdi-twitter-box
         .description
           a(href='http://www.maywadenki.com/otamatone/') オタマトーン
           | や
