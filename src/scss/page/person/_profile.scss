@@ -1,4 +1,27 @@
 .page-person-profile {
+  .sec-history {
+    .item-history {
+      @include mq-sp {
+        font-size: px($base-font-size--pc);
+      }
+      @include mq-pc {
+        font-size: px($base-font-size--pc);
+      }
+
+      .heading {
+        margin: 0;
+
+        font-size: inherit;
+
+        margin-right: 0.5em;
+      }
+    }
+
+    .heading {
+      display: inline-block;
+    }
+  }
+
   .sec-interest {
     .interest-category {
       display: block;
