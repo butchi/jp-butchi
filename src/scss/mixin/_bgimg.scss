@@ -11,13 +11,13 @@
   background-repeat: no-repeat;
   background-position: 50% 0; // hoverタイプスプライトは縦積みしかしない前提！widthを100%にしたら中央寄せになるように
 
-  &.button_state-type_three {
+  &.button--state-type--three {
     &:active {
       background-position: 50% 50%; 
     }
   }
 
-  &.button_state-type_four {
+  &.button--state-type--four {
     &:active {
       background-position: 50% (100% / 3 * 2); 
     }
@@ -34,7 +34,7 @@
     }
   }
 
-  &.bgimg_hover_active {
+  &.bgimg--hover--active {
     &:hover {
       background-position: 50% 100%;
     }
