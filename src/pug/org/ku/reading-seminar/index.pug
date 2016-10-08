@@ -2,6 +2,7 @@ extends ../../../_layout/_default-layout
 
 append config-block
   - pageId = 'org--ku--reading-seminar'
+  - title = '論文輪講'
   - rootPath = '../../../'
   - path = 'org/ku/reading-seminar/'
   - dataPath = `${rootPath}data/${path}`
@@ -12,7 +13,7 @@ append config-block
 
 block content-block
   h3.btc-heading(data-heading-level="3")
-    | 論文輪講
+    = title
 
   .inner-block
     p 日付のリンクには要約のPDFファイルがリンクされています。
