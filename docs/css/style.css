@@ -110,11 +110,11 @@ html.is-pc .wrapper {
   color: #ffffff;
   text-transform: uppercase; }
 
-.page-root .e-mail {
+body.page---root .e-mail {
   text-align: right; }
-  .page-root .e-mail .material-icons {
+  body.page---root .e-mail .material-icons {
     vertical-align: middle; }
-  .page-root .e-mail .delete-me {
+  body.page---root .e-mail .delete-me {
     display: inline-block;
     position: absolute;
     width: 1px;
@@ -124,70 +124,70 @@ html.is-pc .wrapper {
     opacity: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; }
 
-.page-root .sec-link ul {
+body.page---root .sec-link ul {
   padding-left: 20px;
   padding-left: 0.2rem; }
 
-.page-root .sec-link li {
+body.page---root .sec-link li {
   list-style: none; }
 
-.page-root .sec-link .mdi, .page-root .sec-link .material-icons {
+body.page---root .sec-link .mdi, body.page---root .sec-link .material-icons {
   vertical-align: middle;
   font-size: 18px;
   font-size: 0.18rem; }
 
-html.is-sp .page-person-profile .sec-history .item-history {
+html.is-sp body.page---person--profile .sec-history .item-history {
   font-size: 15px;
   font-size: 0.15rem; }
 
-html.is-pc .page-person-profile .sec-history .item-history {
+html.is-pc body.page---person--profile .sec-history .item-history {
   font-size: 15px;
   font-size: 0.15rem; }
 
-.page-person-profile .sec-history .item-history .heading {
+body.page---person--profile .sec-history .item-history .heading {
   margin: 0;
   font-size: inherit;
   margin-right: 0.5em; }
 
-.page-person-profile .sec-history .heading {
+body.page---person--profile .sec-history .heading {
   display: inline-block; }
 
-.page-person-profile .sec-interest .interest-category {
+body.page---person--profile .sec-interest .interest-category {
   display: block; }
-  .page-person-profile .sec-interest .interest-category .heading {
+  body.page---person--profile .sec-interest .interest-category .heading {
     display: inline-block;
     margin: 0; }
-  .page-person-profile .sec-interest .interest-category .keyword {
+  body.page---person--profile .sec-interest .interest-category .keyword {
     display: inline-block;
     margin: 0; }
 
-.page-person-people .card {
+body.page---person--people .card {
   margin-top: 30px;
   margin-top: 0.3rem;
   width: 256px;
   width: 2.56rem; }
-  .page-person-people .card .face {
+  body.page---person--people .card .face {
     width: 256px;
     width: 2.56rem;
     height: 256px;
     height: 2.56rem;
     background-position: center center;
     background-size: cover; }
-  .page-person-people .card .mdl-card__title {
+  body.page---person--people .card .mdl-card__title {
     padding: 0; }
-  .page-person-people .card .mdl-card__title-text {
+  body.page---person--people .card .mdl-card__title-text {
     padding: 8px;
     padding: 0.08rem; }
-  .page-person-people .card .mdl-card__title-text {
+  body.page---person--people .card .mdl-card__title-text {
     background-color: rgba(255, 255, 255, 0.5); }
-  .page-person-people .card .relation {
+  body.page---person--people .card .relation {
     padding-top: 16px;
     padding-top: 0.16rem;
     font-weight: bold; }
-    .page-person-people .card .relation + .description {
+    body.page---person--people .card .relation + .description {
       padding-top: 0px;
       padding-top: 0rem; }
-  .page-person-people .card .item-link {
+  body.page---person--people .card .item-link {
     padding: 0;
     min-width: 36px;
     min-width: 0.36rem;
@@ -196,15 +196,15 @@ html.is-pc .page-person-profile .sec-history .item-history {
     font-size: 24px;
     font-size: 0.24rem; }
 
-html.is-sp .page-org--ku--tte .description blockquote {
+html.is-sp body.page---org--ku--tte .description blockquote {
   font-size: 15px;
   font-size: 0.15rem; }
 
-html.is-pc .page-org--ku--tte .description blockquote {
+html.is-pc body.page---org--ku--tte .description blockquote {
   font-size: 15px;
   font-size: 0.15rem; }
 
-.page-org--ku--b-thesis--presentation .mdl-layout__content {
+body.page-org--ku--b-thesis--presentation .mdl-layout__content {
   width: 100%;
   height: 100%;
   margin-top: 30px;

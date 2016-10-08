@@ -1,4 +1,4 @@
-.page-person-people {
+@include with-page(page---person--people) {
   .card {
     margin-top: px(30);
 
