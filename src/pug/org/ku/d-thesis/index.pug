@@ -1,0 +1,141 @@
+extends ../../../_layout/_default-layout
+
+append config-block
+  - pageId = 'org--ku--d-thesis'
+  - rootPath = '../../../'
+  - dataPath = `${rootPath}data/org/ku/d-thesis/`
+
+//- append stylesheet-block
+
+//- append javascript-block
+
+block content-block
+  h3.btc-heading(data-heading-level="3")
+    | 岩淵勇樹 博士論文
+
+  .inner-block
+    section.sec-address
+      h4.btc-heading#address(data-heading-level="4")
+        | 所在
+
+      p
+        | 新: 
+        a(href='http://butchi.jp/org/ku/d-thesis/') http://butchi.jp/org/ku/d-thesis/
+      p
+        | 旧: 
+        a(href='http://butchi.jp/documents/d-thesis/') http://butchi.jp/documents/d-thesis/
+
+    section.sec-body
+      h4.btc-heading#body(data-heading-level="4")
+        | 論文
+
+      ul
+        li
+          a(href= `${dataPath}document/d-thesis_20120327.pdf`) 論文（PDF）
+          a(href= `${dataPath}document/d-thesis_20120327.zip`) （ZIP圧縮）
+        li
+          a(href= `${dataPath}document/abstract_20120110.pdf`) 論文要旨（PDF）
+          a(href= `${dataPath}document/abstract_20120110.zip`) （ZIP圧縮）
+
+    section.sec-program
+      h4.btc-heading#program(data-heading-level="4")
+        | プログラム
+
+      ul
+        li
+          a(href= `${dataPath}program/soundView_export2.nb`)
+            | Waveファイルの解析信号をプロットするプログラム（Mathematica 8.0）
+        li
+          a(href= `${dataPath}program/dir_wind.m`)
+            | Waveファイルから解析信号化したWaveファイルを出力するプログラム（MATLAB R2009a）
+        li
+          a(href= `${dataPath}program/analytic_signal.maxpat`)
+            | リアルタイムに解析信号をプロットするプログラム（Max 5）
+        li
+          a(href= `${dataPath}program/ExtendedAnalyticSignal.nb`)
+            | 拡張した解析信号をプロットするプログラム（Mathematica 8.0）
+        li
+          a(href= `${dataPath}program/RandomAnalyticSignal_Plot2.nb`)
+            | ランダムな解析信号から曲線の特徴量を求めるプログラム（Mathematica 8.0）
+        li
+          a(href= `${dataPath}program/AnalyticSignalSynthesizer.nb`)
+            | Mathematica版CloSynth（Mathematica 8.0）
+        li
+          a(href= `${dataPath}program/synthesizer01.fla`)
+            | 簡易シンセサイザ（Flash CS4／ActionScript 3.0）
+        li
+          a(href= `${dataPath}program/analytic_signal_synthesizer10.fla`)
+            | CloSynth for PC（Flash CS4／ActionScript 3.0）
+          |  →
+          a(href='http://butchi.jp/documents/mus85demo')
+            | デモ
+        li
+          a(href= `${dataPath}program/analytic_signal_synthesizer11.fla`)
+            | CloSynth for PC（Scanned Synthesis拡張版）（Flash CS4／ActionScript 3.0）
+          |  →
+          a(href= `${dataPath}http://butchi.jp/documents/closynth_scanned_synthesis`)
+            | デモ
+        li
+          a(href= `${dataPath}program/closynth03.fla`)
+            | CloSynth for Android（Flash CS4／AIR for Android）
+          |  →
+          a(href='http://market.android.com/search?q=pname:air.jp.butchi.closynth')
+            | Androidマーケット
+
+    section.sec-program
+      h4.btc-heading#page(data-heading-level="4")
+        | 関連ページ
+
+      ul
+        li
+          a(href='http://butchi.jp/documents/analytic_signal/index.html')
+            | 解析信号ギャラリー
+
+    //- FIXME: デモ等のURLを直す
+    section.sec-reference
+      mixin ipsj
+        sup
+          a(href="#footnote-ipsj") 注1
+
+      h4.btc-heading#reference(data-heading-level="4")
+        | 参考文献
+      ol
+        li
+          +bib('ec--2008--iwabuchi-yuki')
+          .appendix
+            a(href='http://butchi.jp/documents/ec2008iwabuchi.pdf')
+              | [論文(PDF)]
+              +ipsj
+        li
+          +bib('wiss--2008--iwabuchi-yuki')
+          .appendix
+            a(href='http://www.wiss.org/WISS2008Proceedings/posters/paper0057.pdf') [論文(PDF)]
+            a(href='http://butchi.jp/documents/wiss2008demo.html')
+              | [デモ（Flashページ）
+              b ※音が出ます
+              | ]
+        li
+          +bib('mus-85--iwabuchi-yuki')
+          .appendix
+            a(href='http://butchi.jp/documents/mus85paper.pdf') [論文(PDF)]
+              +ipsj
+            a(href='http://butchi.jp/documents/mus85presentation.pdf') [発表資料(PDF)]
+            a(href='http://butchi.jp/documents/mus85demo/') [デモ（Flashページ）]
+        li
+          +bib('interaction--2011--iwabuchi-yuki')
+          .appendix
+            a(href='http://butchi.jp/documents/interaction2011paper.pdf') [論文(PDF)]
+              +ipsj
+            a(href='http://butchi.jp/documents/interaction2011poster.pdf') [ポスター(PDF)]
+            a(href='http://butchi.jp/documents/mus85demo/') [デモ（Flashページ、第85回音楽情報科学研究会と同じ）]
+        li
+          +bib('art-science--2011--iwabuchi-yuki')
+          .appendix
+            a(href='http://art-science.org/journal/v10n3/v10n3pp157/artsci-v10n3pp157.pdf') [論文(PDF)]
+            a(href='http://art-science.org/journal/v10n3/v10n3pp157/demo.html') [デモ（Flashページ）]
+
+      .footnote#footnote-ipsj
+        small
+          | 注1: 本著作物の著作権は（社）情報処理学会に帰属します。本著作物は著作権者である情報処理学会の許可のもとに掲載するものです。ご利用に当たっては「著作権法」ならびに「
+          a(href='http://www.ipsj.or.jp/ipsjcode.html', target='_blank') 情報処理学会倫理綱領
+          | 」に従うことをお願いいたします。
