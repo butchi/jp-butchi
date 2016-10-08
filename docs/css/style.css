@@ -195,3 +195,11 @@ html.is-pc .page-person-profile .sec-history .item-history {
     min-height: 0.36rem;
     font-size: 24px;
     font-size: 0.24rem; }
+
+html.is-sp .page-org--ku--tte .description blockquote {
+  font-size: 15px;
+  font-size: 0.15rem; }
+
+html.is-pc .page-org--ku--tte .description blockquote {
+  font-size: 15px;
+  font-size: 0.15rem; }

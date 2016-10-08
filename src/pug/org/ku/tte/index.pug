@@ -1,0 +1,137 @@
+extends ../../../_layout/_default-layout
+
+append config-block
+  - pageId = 'org--ku--tte'
+  - title = 'テクノロジトレンド工学'
+  - rootPath = '../../../'
+  - path = 'org/ku/tte/'
+  - dataPath = `${rootPath}data/${path}`
+
+//- append stylesheet-block
+
+//- append javascript-block
+
+block content-block
+  h3.btc-heading(data-heading-level="3")
+    = title
+
+  .inner-block
+    .description
+      h5
+        | 講義概要
+      blockquote
+        | みなさんの多くは、いずれ技術者(engineer)や研究者(researcher)として社会に出て行くことになると思いますが、そこで大切なのは、「技術に対する感受性(sense)」のように思います。 理論は、あとからいくらでも勉強できますが、世の中にいまどんな技術があって、それがおおよそどんなもので、どんな特徴があり、他のものと比べてどうか、さらには、それに「乗る」のはいいことか悪いことか(得か損か)、ということを「感じとる」感受性は、 日ごろから「技術の傾向に触れる」習慣をもつことが 非常に大切だと考えます。
+      blockquote
+        | この講義では、みなさんに、そのような「技術に対する感受性」を養う機会になれば、と思います。
+
+      p
+        | （
+        a(href="http://ifdl.jp/akita/class/tte/", target="_blank")
+          | テクノロジトレンド工学のページ
+        | より）
+
+    section.sec-2010
+      h4.btc-heading(data-heading-level="4")
+        | 2010年度
+
+      ul
+        li
+          | 2010年12月6日（自主テーマ: Flash、プログラミング）
+        ul
+          li
+            a(href='http://japanese.engadget.com/2010/09/03/iphone-flash-skyfire-app-store/')
+              | iPhone で Flashが見られるブラウザSkyfire、App Storeに提出
+          li
+            a(href='http://www.itmedia.co.jp/news/articles/1011/12/news063.html')
+              | iPhoneでFlash動画再生できるモバイルブラウザ、週末に30万本販売
+          h5.btc-heading(data-heading-level="5")
+            | 議論
+          ul
+            li Flashでは消費電力が高いというのは本当か？
+          li
+            a(href='http://www.itmedia.co.jp/news/articles/1008/19/news082.html') ドラッグ＆ドロップで簡単プログラミング　文科省が子ども向けに公開、まとめサイトも登場
+          h5.btc-heading(data-heading-level="5")
+            | 議論
+          ul
+            li for文とかwhile文とかが子供にわかるのか
+            li LEGOのマインドストームに似ている
+            li
+              a(href='http://www.viscuit.com/', target='_blank') Viscuit
+              | とか
+              a(href='http://squeakland.jp/', target='_blank') Squeak
+              | との差別化が難しい
+            li 関数呼び出しをできるかどうかが難しさ・言語としての完成度の分岐点
+            li ダウンロード・インストールせずにブラウザで操作できるのがいい
+            li ブログパーツにできるなどの優位性はあるが、そういったweb2.0的な部分とは切り離して考えるべき
+      ul
+        li
+          | 2011年1月24日（自主テーマ: 音楽）
+        ul
+          li
+            a(href='http://japan.cnet.com/news/media/20409597/\
+            ') 音楽編集もクラウドで--ヤマハ、「クラウド型VST」を公開
+          li
+            a(href='http://plusd.itmedia.co.jp/lifestyle/articles/1011/22/news015.html\
+            ') 3Dだけじゃない：「音展」で見つけた個性派オーディオ
+          li
+            a(href='http://www.itmedia.co.jp/news/articles/1011/09/news066.html\
+            ') パッチングもアナログシーケンサーも――KORGのiPad楽器、第2弾は名器MS-20＋SQ-10＝「iMS-20」
+
+            h5.btc-heading(data-heading-level="5")
+              | 議論
+            ul
+              li アナログのツマミのほうが操作性がいい？
+              li タッチパッドならではのアプリはまだ少ない
+              li ビートマニアは独特なインターフェイスを持っている
+          li
+            a(href='http://journal.mycom.co.jp/news/2011/01/20/015/\
+            ') Amidio、iPadでギターのような演奏が楽しめる楽器アプリ「OMGuitar」発売
+            h5.btc-heading(data-heading-level="5")
+              | 議論
+            ul
+              li タッチパッドだと感触がないのが問題
+              li ギターの弦を真似る必要があるのか？
+
+    section.sec-2007
+      h4.btc-heading(data-heading-level="4")
+        | 2007年度
+
+      ul
+        li
+          | 2007年10月11日（自主テーマ: SNS）
+        ul
+          li
+            a(href='http://www.itmedia.co.jp/anchordesk/articles/0709/18/news038.html') (1)レコメンデーションの虚実（2）～レコメンデーションの分類
+            | (
+            a(href='http://www.itmedia.co.jp/anchordesk/sasaki.html') シリーズ
+            | )
+          li
+            a(href='http://www.nttdocomo.co.jp/info/news_release/page/070928_00.html') (2)行動支援型レコメンドシステムの開発-利用者一人一人に合わせた情報提供の実現に向けた取り組み-
+          li
+            a(href='http://itpro.nikkeibp.co.jp/article/NEWS/20070508/270272/') (3-1)Any，自社SNSサイトをリニューアル，相性が合いそうな会員を紹介
+          li
+            a(href='http://www.nikkeibp.co.jp/news/net07q3/541886/') (3-2)オープン型SNS「Any」、日記と関連性の高いブログ記事や動画を自動表示
+          li
+            a(href='http://www.socialnetworking.jp/archives/2007/03/snslocu.html') (4)出会い系SNSのLocu（ロキュ）の仕組みが凄い
+      ul
+        li
+          | 2007年11月8日（自主テーマ: 画像）
+        ul
+          li
+            a(href='http://japan.cnet.com/news/ent/story/0,2000056022,20355855,00.htm') 勢いても大丈夫…オムロン「笑顔度」測定技術を開発
+          li
+            a(href='http://www.sony.jp/CorporateCruise/Press/200709/07-0904/') 笑顔を検出し、自動で撮影する、「スマイルシャッター」新搭載 "サイバーショット"Tシリーズ2機種発売
+          li
+            a(href='http://plusd.itmedia.co.jp/pcuser/articles/0709/21/news021.html') 新カラリオは「小顔」と「美白」の効果あり――エプソンの複合機／プリンタ発表会
+          li
+            a(href='http://japan.cnet.com/news/ent/story/0,2000056022,20358390,00.htm') グランプリは顔ちぇきの画像処理技術、NTTデータのHinemosも受賞--SPOTY 2007
+      ul
+        li
+          | 2008年1月17日（自主テーマ: 顔・Web）
+        ul
+          li
+            a(href='http://japan.cnet.com/news/media/story/0,2000056023,20363398,00.htm') グーグル、「Wikipedia」対抗サービスを開発中
+          li
+            a(href='http://www.itmedia.co.jp/news/articles/0801/10/news093.html') 映像から登場人物の顔一覧を自動作成　NECが新技術
+          li
+            a(href='http://www.itmedia.co.jp/news/articles/0801/15/news057.html') 富士フイルム、顔検出技術をWebアプリに　APIも公開

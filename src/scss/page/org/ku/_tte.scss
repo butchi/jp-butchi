@@ -1,0 +1,12 @@
+.page-org--ku--tte {
+  .description {
+    blockquote {
+      @include mq-sp {
+        font-size: px($base-font-size--sp)
+      }
+      @include mq-pc {
+        font-size: px($base-font-size--pc)
+      }
+    }
+  }
+}
