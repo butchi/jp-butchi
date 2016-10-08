@@ -1,4 +1,12 @@
 @charset "UTF-8";
+html.is-sp .mdl-card__supporting-text {
+  font-size: 15px;
+  font-size: 0.15rem; }
+
+html.is-pc .mdl-card__supporting-text {
+  font-size: 15px;
+  font-size: 0.15rem; }
+
 .display-none {
   display: none; }
 
@@ -152,3 +160,31 @@ html.is-pc .page-person-profile .sec-history .item-history {
   .page-person-profile .sec-interest .interest-category .keyword {
     display: inline-block;
     margin: 0; }
+
+.page-person-people .card {
+  margin-top: 30px;
+  margin-top: 0.3rem;
+  width: 256px;
+  width: 2.56rem; }
+  .page-person-people .card .face {
+    width: 256px;
+    width: 2.56rem;
+    height: 256px;
+    height: 2.56rem;
+    background-position: center center;
+    background-size: cover; }
+  .page-person-people .card .mdl-card__title {
+    padding: 0; }
+  .page-person-people .card .mdl-card__title-text {
+    padding: 8px;
+    padding: 0.08rem; }
+  .page-person-people .card .mdl-card__title-text {
+    background-color: rgba(255, 255, 255, 0.5); }
+  .page-person-people .card .item-link {
+    padding: 0;
+    min-width: 36px;
+    min-width: 0.36rem;
+    min-height: 36px;
+    min-height: 0.36rem;
+    font-size: 24px;
+    font-size: 0.24rem; }

@@ -1,0 +1,39 @@
+.page-person-people {
+  .card {
+    margin-top: px(30);
+
+    width: px(256);
+
+    .face {
+      width: px(256);
+      height: px(256);
+
+      background-position: center center;
+      background-size: cover;
+    }
+
+    .mdl-card__title {
+      padding: 0;
+    }
+
+    .mdl-card__title-text {
+      padding: px(8);
+    }
+
+    .mdl-card__title-text {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .list-link {
+    }
+
+    .item-link {
+      padding: 0;
+
+      min-width: px(36);
+      min-height: px(36);
+
+      font-size: px(24);
+    }
+  }
+}

@@ -5,6 +5,7 @@
 @import 'function', 'variable', 'mixin', 'keyframes';
 
 // modules
+@import 'module/mdl-reset';
 @import 'module/common';
 @import 'module/wrapper';
 @import 'module/btc-heading';
@@ -13,3 +14,4 @@
 @import 'page/root';
 
 @import 'page/person/profile';
+@import 'page/person/people';

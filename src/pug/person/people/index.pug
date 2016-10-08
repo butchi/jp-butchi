@@ -9,27 +9,34 @@ block append ConfigBlock
 mixin people(profileLi)
   - name = profileLi.name
   - sex = profileLi.sex
+  - facebookId = profileLi.facebookId
   - picture = profileLi.picture
   - relation = profileLi.relation
   - description = profileLi.description
   - linkLi = profileLi.linkLi
   - linkKey = profileLi.linkKey
-  .item
-    a(href= linkLi && linkLi[linkKey], target="_blank")
-      if !picture
-        if sex == 'male'
-          - picture = 'male.gif';
-        if sex == 'female'
-          - picture = 'female.gif';
-      img.icon(width='48', height='48', src= `${imgPath}/picture/${picture}`)
+  if picture
+    - pictureUrl = `${imgPath}/picture/${picture}`
+  else
+    if facebookId
+      - pictureUrl = `https://graph.facebook.com/${facebookId}/picture?width=512&amp;height=512`
+    else if sex == 'male'
+      - pictureUrl = `${imgPath}/picture/male.png`
+    else if sex == 'female'
+      - pictureUrl = `${imgPath}/picture/female.png`
+
+  .card.mdl-card.mdl-shadow--2dp
+    .face.mdl-card__title(style= `background-image: url(${pictureUrl})`)
+      if name
+        h5.mdl-card__title-text= name
     if relation
-      .relation= relation
-    if name
-      .name= name
+      .mdl-card__supporting-text= relation
+    if description
+      .mdl-card__supporting-text!= description
     if linkLi
-      .link
+      .list-link.mdl-card__actions.mdl-card--border
         each url, key in linkLi
-          a(href= url, target="_blank")
+          a.item-link.mdl-button.mdl-button--colored.mdl-js-button.mdl-js-ripple-effect(href= url, target="_blank")
             if key == null
             else if key === 'wikipedia'
               i.mdi.mdi-wikipedia
@@ -44,8 +51,6 @@ mixin people(profileLi)
             else
               i.material-icons web
 
-    .description!= description
-
 block ContentBlock
   h3.btc-heading(data-heading-level="3")
     | 岩淵 勇樹  の関連人物
@@ -58,7 +63,7 @@ block ContentBlock
       +people({
         name: '直樹',
         sex: 'male',
-        picture: 'naoki.jpg',
+        facebookId: '100000331648419',
         relation: '父',
         description: '温厚でユーモアのある父。',
         linkLi: {
@@ -76,7 +81,7 @@ block ContentBlock
       +people({
         name: '加那子',
         sex: 'female',
-        picture: 'kanako.jpg',
+        facebookId: '100002967867122',
         relation: '姉',
         description: '元自衛隊員の一児の母。B\'zの大ファン。',
       })
@@ -182,7 +187,7 @@ block ContentBlock
       +people({
         name: 'Tomo',
         sex: 'male',
-        picture: 'tomo.jpg',
+        facebookId: '100004066425823',
         relation: '大学・サークル同輩',
         description: '同じ学科の友人で、アカペラサークルで何度もグループを組んだ仲。よく兄弟と間違われた同胞。',
         linkLi: {
@@ -193,7 +198,7 @@ block ContentBlock
       +people({
         name: '脇本 健弘',
         sex: 'male',
-        picture: 'wakimoto.jpg',
+        facebookId: '100001513852939',
         relation: '高校時代の先輩',
         description: '高校時代のパソコン部の先輩。優秀な研究者。',
         linkLi: {
@@ -223,7 +228,7 @@ block ContentBlock
       +people({
         name: '秋田 純一',
         sex: 'male',
-        picture: 'akita.jpg',
+        facebookId: '100002043415315',
         relation: '指導教員',
         description: '大学・大学院で6年間お世話になった先生。研究者としての生き字引。',
         linkLi: {
@@ -238,7 +243,7 @@ block ContentBlock
       +people({
         name: '宮下 芳明',
         sex: 'male',
-        picture: 'homei.jpg',
+        facebookId: '100000104425995',
         relation: '',
         description: '映像・音楽もプロ級で研究も独創的なマルチクリエイター研究者。',
         linkLi: {
@@ -255,7 +260,7 @@ block ContentBlock
       +people({
         name: '綿引 啓太',
         sex: 'male',
-        picture: 'watahiki-keita.jpg',
+        facebookId: '100000908576388',
         relation: '同僚',
         description: '頭のキレがかなり凄い上に、ファッションセンスも抜群。',
         linkLi: {
@@ -282,7 +287,7 @@ block ContentBlock
       +people({
         name: '遠藤 大介 （DE DE MOUSE）',
         sex: 'male',
-        picture: 'de-de-mouse.jpg',
+        facebookId: '100000084938713',
         description: 'アルバム『A journey to freedom』がかなりツボ。',
         linkLi: {
           web: 'http://dedemouse.com/',
@@ -306,7 +311,7 @@ block ContentBlock
       +people({
         name: '中島 信也',
         sex: 'male',
-        picture: 'nakajima-shinya.jpg',
+        facebookId: '100009459666495',
         relation: '',
         description: `CMディレクターで、有名なCMを数々手掛けている。<a href="http://eat-project.jp/" target="_blank">eAT KANAZAWA</a>の実行委員長。`,
         linkLi: {
@@ -318,7 +323,7 @@ block ContentBlock
       +people({
         name: '土佐信道（明和電機）',
         sex: 'male',
-        picture: 'tosa.jpg',
+        facebookId: '1698800852',
         description: `<a href="http://www.maywadenki.com/otamatone/" target="_blank">オタマトーン</a>や<a href="http://bbu.kayac.com/" target="_blank">YUREX</a>などを開発したマルチクリエイター。<a href="http://eat-project.jp/" target="_blank">eAT KANAZAWA</a>の常連。`,
         linkLi: {
           web: 'http://www.maywadenki.com/',
