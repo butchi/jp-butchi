@@ -180,6 +180,13 @@ html.is-pc .page-person-profile .sec-history .item-history {
     padding: 0.08rem; }
   .page-person-people .card .mdl-card__title-text {
     background-color: rgba(255, 255, 255, 0.5); }
+  .page-person-people .card .relation {
+    padding-top: 16px;
+    padding-top: 0.16rem;
+    font-weight: bold; }
+    .page-person-people .card .relation + .description {
+      padding-top: 0px;
+      padding-top: 0rem; }
   .page-person-people .card .item-link {
     padding: 0;
     min-width: 36px;

@@ -24,6 +24,16 @@
       background-color: rgba(255, 255, 255, 0.5);
     }
 
+    .relation {
+      padding-top: px(16);
+
+      font-weight: bold;
+
+      + .description {
+        padding-top: px(0);
+      }
+    }
+
     .list-link {
     }
 

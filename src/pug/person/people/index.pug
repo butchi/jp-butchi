@@ -30,9 +30,9 @@ mixin people(profileLi)
       if name
         h5.mdl-card__title-text= name
     if relation
-      .mdl-card__supporting-text= relation
+      .relation.mdl-card__supporting-text= relation
     if description
-      .mdl-card__supporting-text!= description
+      .description.mdl-card__supporting-text!= description
     if linkLi
       .list-link.mdl-card__actions.mdl-card--border
         each url, key in linkLi
