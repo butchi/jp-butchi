@@ -1,0 +1,132 @@
+extends ../../../_layout/_default-layout
+
+append config-block
+  - pageId = 'org--ku--reading-seminar'
+  - rootPath = '../../../'
+  - path = 'org/ku/reading-seminar/'
+  - dataPath = `${rootPath}data/${path}`
+
+//- append stylesheet-block
+
+//- append javascript-block
+
+block content-block
+  h3.btc-heading(data-heading-level="3")
+    | 論文輪講
+
+  .inner-block
+    p 日付のリンクには要約のPDFファイルがリンクされています。
+
+    ul
+      li
+        a(href= `${dataPath}061109.pdf`) 2006年11月9日
+        ul
+          li
+            +bib('wang--2001--unified')
+      li
+        a(href= `${dataPath}070529.pdf`) 2007年5月29日
+        ul
+          li
+            +bib('siggraph--hybrid-images')
+      li
+        a(href= `${dataPath}070717.pdf`) 2007年7月17日
+        ul
+          li
+            +bib('spie--random-sampling')
+      li
+        a(href= `${dataPath}071022.pdf`) 2007年10月22日
+        ul
+          li
+            +bib('japanese-psychological-research--tilt-illusions--kitaoka-akiyoshi')
+      li
+        a(href= `${dataPath}080107.pdf`) 2008年1月7日
+        ul
+          li
+            +bib('ieee--gha')
+      li
+        a(href= `${dataPath}080521.pdf`) 2008年5月21日
+        ul
+          li
+            +bib('nime--tenori-on')
+      li
+        a(href= `${dataPath}080618.pdf`) 2008年6月18日
+        ul
+          li
+            +bib('nime--manual-input-sessions--levin-golan')
+      li
+        a(href= `${dataPath}081022.pdf`) 2008年10月22日「空間情報を用いた音声生成に関する研究動向」
+        | （
+        a(href= `${dataPath}081022.ppt`) 補足資料(.ppt)
+        | ）
+        ul
+          li
+            +bib('ipsj--voice-interface--eto-koichiro')
+          li
+            +bib('upic')
+          li
+            +bib('kaossilator')
+          li
+            +bib('nime--tenori-on')
+          li
+            +bib('aphex-face')
+          li
+            +bib('mam')
+          li
+            +bib('ec--2008--iwabuchi-yuki')
+          li
+            +bib('rsj--transforming-image-into-sound')
+      li
+        a(href= `${dataPath}100205.pdf`) 2010年2月5日
+        ul
+          li
+            +bib('nime--lifegorch')
+      li
+        a(href= `${dataPath}100615.pdf`) 2010年6月15日
+        ul
+          li
+            +bib('ieee--room-acoustics--miyoshi-masato')
+      li
+        a(href= `${dataPath}100803.pdf`) 2010年8月3日
+        ul
+          li
+            +bib('ipsj--voice-drummer--nakano-tomoyasu')
+          li
+            +bib('asj--music-information-processing')
+      li
+        a(href= `${dataPath}101116.pdf`) 2010年11月16日
+        ul
+          li
+            +bib('iswc--wearable-musical-instruments')
+      li
+        a(href= `${dataPath}110201.pdf`) 2011年2月1日
+        ul
+          li
+            +bib('interaction--electrical-finger-rub-instrument')
+          li
+            +bib('make--ano-gakki-imakoko--nojiri-hosuke')
+          li
+            +bib('make--ano-gakki-kasuga-model')
+          li
+            +bib('make--ano-gakki-sasao-model--sasao-kazuhiro')
+          li
+            +bib('')
+      li
+        a(href= `${dataPath}110607.pdf`) 2011年6月7日
+        ul
+          li
+            +bib('icmc--scanned-synthesis')
+      li
+        a(href= `${dataPath}110726.pdf`) 2011年7月26日
+        ul
+          li
+            +bib('icmc--compath')
+      li
+        a(href= `${dataPath}111109.pdf`) 2011年11月9日
+        ul
+          li
+            +bib('dae--raster-scanning-sonification')
+      li
+        a(href= `${dataPath}120111.pptx`) 2012年1月11日
+        ul
+          li
+            +bib('icad--auditory-display')
