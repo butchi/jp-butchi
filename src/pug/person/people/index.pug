@@ -1,6 +1,6 @@
 extends ../../_layout/_default-layout
 
-block append ConfigBlock
+append config-block
   - pageId = 'person-people'
   - rootPath = '../../'
   - imgPath = `${rootPath}img/person/people`
@@ -51,7 +51,7 @@ mixin people(profileLi)
             else
               i.material-icons web
 
-block ContentBlock
+block content-block
   h3.btc-heading(data-heading-level="3")
     | 岩淵 勇樹  の関連人物
 

@@ -1,4 +1,4 @@
-block ConfigBlock
+block config-block
   - pageId = 'undefined'
   - rootPath = '/'
   - title = 'butchi.jp'
@@ -106,7 +106,7 @@ html(lang="ja")
     script(src= rootPath + 'js/ua-switch.js')
 
     // stylesheet
-    block StylesheetBlock
+    block stylesheet-block
       link(rel="stylesheet", href= rootPath + 'css/material.min.css')
       link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
       link(rel='stylesheet', href= rootPath + 'css/materialdesignicons.min.css')
@@ -158,14 +158,14 @@ html(lang="ja")
                   .g-plusone(data-size='medium')
 
         main.mdl-layout__content
-          block ContentBlock
+          block content-block
 
         block footer
           footer
             a(href= rootPath) Home
 
     // javascript
-    block JavascriptBlock
+    block javascript-block
       script(src= rootPath + 'js/lib/jquery.min.js')
       script(src= rootPath + 'js/lib/lodash.min.js')
       script(src= rootPath + 'js/lib/material.min.js')
