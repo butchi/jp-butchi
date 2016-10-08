@@ -203,3 +203,9 @@ html.is-sp .page-org--ku--tte .description blockquote {
 html.is-pc .page-org--ku--tte .description blockquote {
   font-size: 15px;
   font-size: 0.15rem; }
+
+.page-org--ku--b-thesis--presentation .mdl-layout__content {
+  width: 100%;
+  height: 100%;
+  margin-top: 30px;
+  margin-top: 0.3rem; }

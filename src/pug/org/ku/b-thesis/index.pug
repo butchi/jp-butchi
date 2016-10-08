@@ -1,0 +1,48 @@
+extends ../../../_layout/_default-layout
+
+append config-block
+  - pageId = 'org--ku--b-thesis'
+  - title = '学位論文'
+  - rootPath = '../../../'
+  - path = 'org/ku/b-thesis/'
+  - dataPath = `${rootPath}data/${path}`
+
+//- append stylesheet-block
+
+//- append javascript-block
+
+block content-block
+  h3.btc-heading(data-heading-level="3")
+    | 岩淵勇樹 学位論文
+
+  .inner-block
+    section.sec-body
+      h4.btc-heading#body(data-heading-level="4")
+        | 論文
+
+      ul
+        li
+          a(href= `${dataPath}b-thesis.pdf`) 論文（PDF）
+
+    section.sec-presentation
+      h4.btc-heading#body(data-heading-level="4")
+        | 資料
+
+      ul
+        li
+          a(href="presentation/")
+            | 発表スライド(Flashページ)
+
+    //- FIXME: デモ等のURLを直す
+    section.sec-reference
+      mixin ipsj
+        sup
+          a(href="#footnote-ipsj") 注1
+
+      h4.btc-heading#reference(data-heading-level="4")
+        | 参考文献
+      ol
+        li
+          +bib('butchi-number--2010-06--iwabuchi-yuki')
+          .appendix
+            a(href= `${rootPath}documents/uc2010poster.pdf`) [poster (PDF)]
