@@ -3,6 +3,7 @@ extends ../../_layout/_DefaultLayout
 block append ConfigBlock
   - pageId = 'person-people'
   - rootPath = '../../'
+  - imgPath = `${rootPath}img/person/people`
   - title = '関連人物'
 
 mixin people(profileLi)
@@ -20,7 +21,7 @@ mixin people(profileLi)
           - picture = 'male.gif';
         if sex == 'female'
           - picture = 'female.gif';
-      img.icon(width='48', height='48', src= `picture/${picture}`)
+      img.icon(width='48', height='48', src= `${imgPath}/picture/${picture}`)
     if relation
       .relation= relation
     if name
