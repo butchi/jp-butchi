@@ -5,280 +5,324 @@ block append ConfigBlock
   - rootPath = '../../'
   - title = '関連人物'
 
+mixin people(profileLi)
+  - name = profileLi.name
+  - sex = profileLi.sex
+  - picture = profileLi.picture
+  - relation = profileLi.relation
+  - description = profileLi.description
+  - linkLi = profileLi.linkLi
+  - linkKey = profileLi.linkKey
+  .item
+    a(href= linkLi && linkLi[linkKey], target="_blank")
+      if !picture
+        if sex == 'male'
+          - picture = 'male.gif';
+        if sex == 'female'
+          - picture = 'female.gif';
+      img.icon(width='48', height='48', src= `picture/${picture}`)
+    if relation
+      .relation= relation
+    if name
+      .name= name
+    if linkLi
+      .link
+        each url, key in linkLi
+          a(href= url, target="_blank")
+            if key == null
+            else if key === 'wikipedia'
+              i.mdi.mdi-wikipedia
+            else if key === 'facebook'
+              i.mdi.mdi-facebook-box
+            else if key === 'twitter'
+              i.mdi.mdi-twitter-box
+            else if key === 'mixi'
+              img(src='icon_mx_s.png')
+            else if key === 'kayac'
+              img(src='kayac_icon.gif')
+            else
+              i.material-icons web
+
+    .description!= description
+
 block ContentBlock
   h3.btc-heading(data-heading-level="3")
-    | 岩淵勇樹の関連人物
+    | 岩淵 勇樹  の関連人物
 
   .inner-block
     section
       h4.btc-heading(data-heading-level="4")
         | 家族
 
-      .item
-        a(href='http://www.facebook.com/profile.php?id=100000331648419')
-          img.icon(width='48', height='48', src='picture/naoki.jpg')
-        br
-        .relation 父
-        .name 直樹
-        .link
-          a(href='http://www.facebook.com/profile.php?id=100000331648419')
-            i.mdi.mdi-facebook-box
-        .description 温厚でユーモアのある父。
-      .item
-        img.icon(width='48', height='48', src='picture/female.gif')
-        br
-        .relation 母
-        .name 和子
-        .link
-        .description 絵を描くのが上手（最近描いてないけど）な母。
-      .item
-        img.icon(width='48', height='48', src='picture/kanako.jpg')
-        br
-        .relation 姉
-        .name 加那子
-        .link
-        .description 元自衛隊員の一児の母。B'zの大ファン。
-      .item
-        img.icon(width='48', height='48', src='picture/oolong.jpg')
-        br
-        .relation ペット
-        .name 烏龍
-        .link
-        .description トイプードルのオス。エサをなかなか食べてくれない。
-      .item
-        img.icon(width='48', height='48', src='picture/male.gif')
-        br
-        .relation 祖父（故人）
-        .name 利夫
-        .link
-        .description 相撲が強かった祖父。
-      .item
-        img.icon(width='48', height='48', src='picture/female.gif')
-        br
-        .relation 祖母（故人）
-        .name 町子
-        .link
-        .description スナック「コンパル」を経営していた。背が高い。
-      .item
-        img.icon(width='48', height='48', src='picture/ron.jpg')
-        br
-        .relation ペット（故犬）
-        .name ロン
-        .link
-        .description ゴールデンレトリバーのオス。人懐っこくて従順。
+      +people({
+        name: '直樹',
+        sex: 'male',
+        picture: 'naoki.jpg',
+        relation: '父',
+        description: '温厚でユーモアのある父。',
+        linkLi: {
+          facebook: 'http://www.facebook.com/profile.php?id=100000331648419',
+        },
+      })
+
+      +people({
+        name: '和子',
+        sex: 'female',
+        relation: '母',
+        description: '絵を描くのが上手（最近描いてないけど）な母。',
+      })
+
+      +people({
+        name: '加那子',
+        sex: 'female',
+        picture: 'kanako.jpg',
+        relation: '姉',
+        description: '元自衛隊員の一児の母。B\'zの大ファン。',
+      })
+
+      +people({
+        name: '烏龍',
+        sex: 'male',
+        picture: 'oolong.jpg',
+        relation: 'ペット',
+        description: 'トイプードルのオス。エサをなかなか食べてくれない。',
+      })
+
+      +people({
+        name: '利夫',
+        sex: 'male',
+        relation: '祖父（故人）',
+        description: '相撲が強かった祖父。',
+      })
+
+      +people({
+        name: '町子',
+        sex: 'female',
+        relation: '祖母（故人）',
+        description: 'スナック「コンパル」を経営していた。背が高い。',
+      })
+
+      +people({
+        name: 'ロン',
+        sex: 'male',
+        picture: 'ron.jpg',
+        relation: 'ペット（故犬）',
+        description: 'ゴールデンレトリバーのオス。人懐っこくて従順。',
+      })
 
     section
       h4.btc-heading(data-heading-level="4")
         | 親戚
-      .item
-        img.icon(width='48', height='48', src='picture/male.gif')
-        br
-        .relation 祖父
-        .name 新太郎
-        .link
-      .item
-        img.icon(width='48', height='48', src='picture/female.gif')
-        br
-        .relation 祖母
-        .name 茂子
-        .link
-      .item
-        img.icon(width='48', height='48', src='picture/male.gif')
-        br
-        .relation 伯父（故人）
-        .name 邦彦
-        .link
-        .description 父の兄。
-      .item
-        img.icon(width='48', height='48', src='picture/male.gif')
-        br
-        .relation 伯父
-        .name 英樹
-        .link
-        .description 父の双子の兄。
-      .item
-        img.icon(width='48', height='48', src='picture/female.gif')
-        br
-        .relation 叔母
-        .name 勝代
-        .link
-        .description 母の妹。
-      .item
-        img.icon(width='48', height='48', src='picture/male.gif')
-        br
-        .relation 義兄
-        .name 帆真
-        .link
-        .description 姉の夫。自衛隊員。
-      .item
-        img.icon(width='48', height='48', src='picture/male.gif')
-        br
-        .relation 甥
-        .name 樹武
-        .link
-        .description 姉の息子。車が大好き。
+
+      +people({
+        name: '新太郎',
+        sex: 'male',
+        relation: '祖父',
+      })
+
+      +people({
+        name: '茂子',
+        sex: 'female',
+        relation: '祖母',
+      })
+
+      +people({
+        name: '邦彦',
+        sex: 'male',
+        relation: '伯父（故人）',
+      })
+
+      +people({
+        name: '英樹',
+        sex: 'male',
+        relation: '伯父',
+        description: '父の双子の兄。',
+      })
+
+      +people({
+        name: '勝代',
+        sex: 'female',
+        relation: '叔母',
+        description: '母の妹。',
+      })
+
+      +people({
+        name: '帆真',
+        sex: 'male',
+        relation: '義兄',
+        description: '姉の夫。自衛隊員。',
+      })
+
+      +people({
+        name: '樹武',
+        sex: 'male',
+        relation: '甥',
+        description: '姉の息子。車が大好き。',
+      })
+
+      +people({
+        name: '龍志',
+        sex: 'male',
+        relation: '甥',
+        description: '姉の息子。恐竜が大好き。',
+      })
+
+      +people({
+        name: '和誠',
+        sex: 'male',
+        relation: '甥',
+        description: '姉の息子。',
+      })
 
     section
       h4.btc-heading(data-heading-level="4")
         | 親友
-      .item
-        a(href='http://mixi.jp/show_friend.pl?id=2456805')
-          img.icon(width='48', height='48', src='picture/tomo.jpg')
-        br
-        .relation 大学・サークル同輩
-        .name Tomo
-        .link
-          a(href='http://mixi.jp/show_friend.pl?id=2456805')
-            img(src='icon_mx_s.png')
-        .description 同じ学科の友人で、アカペラサークルで何度もグループを組んだ仲。よく兄弟と間違われた同胞。
-      .item
-        a(href='http://www.wakimoto-lab.net/')
-          img.icon(width='48', height='48', src='picture/wakimoto.jpg')
-        br
-        .relation 高校時代の先輩
-        .name 脇本健弘
-        .link
-          a(href='http://twitter.com/wakitake')
-            i.mdi.mdi-twitter-box
-          a(href='http://mixi.jp/show_friend.pl?id=330822')
-            img(src='icon_mx_s.png')
-          a(href='http://www.facebook.com/profile.php?id=100001513852939')
-            i.mdi.mdi-facebook-box
-        .description 高校時代のパソコン部の先輩。優秀な研究者。
+
+      +people({
+        name: 'Tomo',
+        sex: 'male',
+        picture: 'tomo.jpg',
+        relation: '大学・サークル同輩',
+        description: '同じ学科の友人で、アカペラサークルで何度もグループを組んだ仲。よく兄弟と間違われた同胞。',
+        linkLi: {
+          mixi: 'http://mixi.jp/show_friend.pl?id=2456805',
+        }
+      })
+
+      +people({
+        name: '脇本 健弘',
+        sex: 'male',
+        picture: 'wakimoto.jpg',
+        relation: '大学・サークル同輩',
+        description: '同じ学科の友人で、アカペラサークルで何度もグループを組んだ仲。よく兄弟と間違われた同胞。',
+        linkLi: {
+          web: 'http://www.wakimoto-lab.net/',
+          twitter: 'http://twitter.com/wakitake',
+          mixi: 'http://mixi.jp/show_friend.pl?id=2456805',
+          facebook: 'http://www.facebook.com/profile.php?id=100001513852939',
+        },
+        linkKey: 'web',
+      })
 
     section
       h4.btc-heading(data-heading-level="4")
         | 尊敬する人
-      .item
-        a(href='http://ja.wikipedia.org/wiki/%E3%83%89%E3%83%8A%E3%83%AB%E3%83%89%E3%83%BB%E3%82%AF%E3%83%8C%E3%83%BC%E3%82%B9')
-          img.icon(width='48', height='48', src='picture/knuth.jpg')
-        br
-        .name ドナルド・クヌース
-        .link
-          a(href='http://ja.wikipedia.org/wiki/%E3%83%89%E3%83%8A%E3%83%AB%E3%83%89%E3%83%BB%E3%82%AF%E3%83%8C%E3%83%BC%E3%82%B9')
-            i.mdi.mdi-wikipedia
-        .description 2進数の拡張をやったりTeXを開発したりと、個人的な嗜好にジャストミートな研究者。
-      .item
-        a(href='http://akita11.jp/')
-          img.icon(width='48', height='48', src='picture/akita.jpg')
-        br
-        .relation 指導教員
-        .name 秋田純一
-        .link
-          a(href='http://twitter.com/akita11')
-            i.mdi.mdi-twitter-box
-          a(href='http://mixi.jp/show_friend.pl?id=37061')
-            img(src='icon_mx_s.png')
-          a(href='http://www.facebook.com/profile.php?id=100002043415315')
-            i.mdi.mdi-facebook-box
-        .description 大学・大学院で6年間お世話になった先生。研究者としての生き字引。
-      .item
-        a(href='http://www.homei.com/')
-          img.icon(width='48', height='48', src='picture/homei.jpg')
-        br
-        .name 宮下芳明
-        .link
-          a(href='http://twitter.com/HomeiMiyashita')
-            i.mdi.mdi-twitter-box
-        .description 映像・音楽もプロ級で研究も独創的なマルチクリエイター研究者。
+
+      +people({
+        name: 'ドナルド・クヌース',
+        sex: 'male',
+        picture: 'knuth.jpg',
+        description: '2進数の拡張をやったりTeXを開発したりと、個人的な嗜好にジャストミートな研究者。',
+        linkLi: {
+          wikipedia: 'http://ja.wikipedia.org/wiki/%E3%83%89%E3%83%8A%E3%83%AB%E3%83%89%E3%83%BB%E3%82%AF%E3%83%8C%E3%83%BC%E3%82%B9',
+        },
+        linkKey: 'wikipedia',
+      })
+
+      +people({
+        name: '秋田 純一',
+        sex: 'male',
+        picture: 'akita.jpg',
+        relation: '指導教員',
+        description: '大学・大学院で6年間お世話になった先生。研究者としての生き字引。',
+        linkLi: {
+          web: 'http://akita11.jp',
+          twitter: 'http://twitter.com/akita11',
+          facebook: 'http://www.facebook.com/profile.php?id=100002043415315',
+          mixi: 'http://mixi.jp/show_friend.pl?id=37061',
+        },
+        linkKey: 'web',
+      })
+
+      +people({
+        name: '宮下 芳明',
+        sex: 'male',
+        picture: 'homei.jpg',
+        relation: '',
+        description: '映像・音楽もプロ級で研究も独創的なマルチクリエイター研究者。',
+        linkLi: {
+          web: 'http://www.homei.com/',
+          twitter: 'http://twitter.com/HomeiMiyashita',
+        },
+        linkKey: 'web',
+      })
 
     section
       h4.btc-heading(data-heading-level="4")
-        | 憧れの社員
-      .item
-        a(href='http://www.kayac.com/member/kobayashi-taro')
-          img.icon(width='48', height='48', src='picture/kobayashi-taro.jpg')
-        br
-        .relation
-        .name 小林太郎
-        .link
-          a(href='http://www.kayac.com/member/kobayashi-taro')
-            img(src='kayac_icon.gif')
-        .description 数学が得意でプログラミング言語にも相当詳しい変態的な方。
-      .item
-        a(href='http://www.kayac.com/member/watahiki-keita')
-          img.icon(width='48', height='48', src='picture/watahiki-keita.jpg')
-        br
-        .relation
-        .name 綿引啓太
-        .link
-          a(href='http://www.kayac.com/member/watahiki-keita')
-            img(src='kayac_icon.gif')
-        .description 頭のキレがかなり凄い上に、ファッションセンスも抜群。
+        | 憧れのカヤック社員
+
+      +people({
+        name: '綿引 啓太',
+        sex: 'male',
+        picture: 'watahiki-keita.jpg',
+        relation: '同僚',
+        description: '頭のキレがかなり凄い上に、ファッションセンスも抜群。',
+        linkLi: {
+          kayac: 'http://www.kayac.com/member/watahiki-keita',
+        },
+        linkKey: 'kayac',
+      })
 
     section
       h4.btc-heading(data-heading-level="4")
         | お気に入りのアーティスト
-      .item
-        a(href='http://ja.wikipedia.org/wiki/%E3%82%A8%E3%82%A4%E3%83%95%E3%82%A7%E3%83%83%E3%82%AF%E3%82%B9%E3%83%BB%E3%83%84%E3%82%A4%E3%83%B3')
-          img.icon(width='48', height='48', src='picture/aphex_twin.jpg')
-        br
-        .relation
-        .name リチャード・D・ジェームス（Aphex Twin）
-        .link
-          a(href='http://ja.wikipedia.org/wiki/%E3%82%A8%E3%82%A4%E3%83%95%E3%82%A7%E3%83%83%E3%82%AF%E3%82%B9%E3%83%BB%E3%83%84%E3%82%A4%E3%83%B3')
-            i.mdi.mdi-wikipedia
-        .description ドラムンベースの巨匠。
-      .item
-        a(href='http://dedemouse.com/')
-          img.icon(width='48', height='48', src='picture/de_de_mouse.jpg')
-        br
-        .relation
-        .name 遠藤大介（DE DE MOUSE）
-        .link
-          a(href='http://ja.wikipedia.org/wiki/DE_DE_MOUSE')
-            i.mdi.mdi-wikipedia
-          a(href='http://twitter.com/DEDEMOUSE')
-            i.mdi.mdi-twitter-box
-        .description アルバム『A journey to freedom』がかなりツボ。
-      .item
-        a(href='http://ja.wikipedia.org/wiki/%E9%87%8E%E6%9D%91%E5%93%B2%E4%B9%9F')
-          img.icon(width='48', height='48', src='picture/nomura.jpg')
-        br
-        .relation
-        .name 野村哲也
-        .link
-          a(href='http://ja.wikipedia.org/wiki/%E9%87%8E%E6%9D%91%E5%93%B2%E4%B9%9F')
-            i.mdi.mdi-wikipedia
-        .description ファイナルファンタジーVIIのキャラクターデザインなどを手がけており、画風がかなり好み。
-      .item
-        a(href='http://ja.wikipedia.org/wiki/%E4%B8%AD%E5%B3%B6%E4%BF%A1%E4%B9%9F')
-          img.icon(width='48', height='48', src='picture/nakajima.jpg')
-        br
-        .relation
-        .name 中島信也
-        .link
-          a(href='http://ja.wikipedia.org/wiki/%E4%B8%AD%E5%B3%B6%E4%BF%A1%E4%B9%9F')
-            i.mdi.mdi-wikipedia
-        .description
-          | CMディレクターで、有名なCMを数々手掛けている。
-          a(href='http://www.eat-kanazawa.jp/') eAT KANAZAWA
-          | の実行委員長。
-      .item
-        a(href='http://www.maywadenki.com/')
-          img.icon(width='48', height='48', src='picture/tosa.jpg')
-        br
-        .relation
-        .name 土佐信道（明和電機）
-        .link
-          a(href='http://ja.wikipedia.org/wiki/%E6%98%8E%E5%92%8C%E9%9B%BB%E6%A9%9F')
-            i.mdi.mdi-wikipedia
-          a(href='http://twitter.com/MaywaDenki')
-            i.mdi.mdi-twitter-box
-        .description
-          a(href='http://www.maywadenki.com/otamatone/') オタマトーン
-          | や
-          a(href='http://bbu.kayac.com/') YUREX
-          | などを開発したマルチクリエイター。
-          a(href='http://www.eat-kanazawa.jp/') eAT KANAZAWA
-          | の常連。
 
-      //
-        <div class="item">
-        <img class="icon" width="48" height="48" src=".jpg" />
-        <br>
-        <div class="relation"></div>
-        <div class="name"></div>
-        <div class="link"><a href=""><img src="icon_tw_s.png" /></a> <a href=""><img src="icon_mx_s.png" /></a> <a href=""><img src="icon_fb_s.png" /></a></div>
-        <div class="description"></div>
-        </div>
+      +people({
+        name: 'リチャード・D・ジェームス（Aphex Twin）',
+        sex: 'male',
+        picture: 'aphex_twin.jpg',
+        description: 'ドラムンベースの巨匠。',
+        linkLi: {
+          wikipedia: 'http://ja.wikipedia.org/wiki/%E3%82%A8%E3%82%A4%E3%83%95%E3%82%A7%E3%83%83%E3%82%AF%E3%82%B9%E3%83%BB%E3%83%84%E3%82%A4%E3%83%B3',
+        },
+        linkKey: 'wikipedia',
+      })
+
+      +people({
+        name: '遠藤 大介 （DE DE MOUSE）',
+        sex: 'male',
+        picture: 'de-de-mouse.jpg',
+        description: 'アルバム『A journey to freedom』がかなりツボ。',
+        linkLi: {
+          web: 'http://dedemouse.com/',
+          wikipedia: 'http://ja.wikipedia.org/wiki/DE_DE_MOUSE',
+          twitter: 'http://twitter.com/DEDEMOUSE',
+        },
+        linkKey: 'web',
+      })
+
+      +people({
+        name: '野村 哲也',
+        sex: 'male',
+        picture: 'nomura-tetsuya.jpg',
+        description: 'ファイナルファンタジーVIIのキャラクターデザインなどを手がけており、画風がかなり好み。',
+        linkLi: {
+          wikipedia: 'http://ja.wikipedia.org/wiki/%E9%87%8E%E6%9D%91%E5%93%B2%E4%B9%9F',
+        },
+        linkKey: 'wikipedia',
+      })
+
+      +people({
+        name: '中島 信也',
+        sex: 'male',
+        picture: 'nakajima-shinya.jpg',
+        relation: '',
+        description: `CMディレクターで、有名なCMを数々手掛けている。<a href="http://eat-project.jp/" target="_blank">eAT KANAZAWA</a>の実行委員長。`,
+        linkLi: {
+          wikipedia: 'http://ja.wikipedia.org/wiki/%E4%B8%AD%E5%B3%B6%E4%BF%A1%E4%B9%9F',
+        },
+        linkKey: 'wikipedia',
+      })
+
+      +people({
+        name: '',
+        sex: 'male',
+        picture: '',
+        relation: '',
+        description: `<a href="http://www.maywadenki.com/otamatone/" target="_blank">オタマトーン</a>や<a href="http://bbu.kayac.com/" target="_blank">YUREX</a>などを開発したマルチクリエイター。<a href="http://eat-project.jp/" target="_blank">eAT KANAZAWA</a>の常連。`,
+        linkLi: {
+          web: 'http://www.maywadenki.com/',
+          wikipedia: 'http://ja.wikipedia.org/wiki/%E6%98%8E%E5%92%8C%E9%9B%BB%E6%A9%9F',
+        },
+        linkKey: 'web',
+      })
