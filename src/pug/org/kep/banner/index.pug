@@ -1,0 +1,46 @@
+extends ../../../_layout/_default-layout
+
+mixin card-media(fileName)
+  .mdl-card__media
+    object(id= fileName, classid='clsid:d27cdb6e-ae6d-11cf-96b8-444553540000', codebase='http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0', width='610', height='377', align='middle')
+      param(name='allowScriptAccess', value='sameDomain')
+      param(name='allowFullScreen', value='false')
+      param(name='movie', value= `${fileName}.swf`)
+      param(name='quality', value='high')
+      param(name='bgcolor', value='#ffffff')
+      embed(src= `${swfPath}${fileName}.swf`, quality='high', bgcolor='#ffffff', width='610', height='377', name= fileName, align='middle', allowscriptaccess='sameDomain', allowfullscreen='false', type='application/x-shockwave-flash', pluginspage='http://www.adobe.com/go/getflashplayer_jp')
+
+mixin card-link(file, type= 'data', title= null)
+  if type === 'swf'
+    - filePath= swfPath
+  else
+    - filePath= dataPath
+  a.mdl-button.mdl-button--colored.mdl-js-button.mdl-js-ripple-effect(href= `${filePath}${file}`)
+    i.material-icons file_download
+    if title
+      = title
+
+
+append config-block
+  - pageId = 'org--kep--banner'
+  - title = '金沢電子出版広告バナー'
+  - rootPath = '../../../'
+  - path = 'org/kep/banner/'
+  - swfPath = `${rootPath}swf/${path}`
+
+//- append stylesheet-block
+
+//- append javascript-block
+
+block content-block
+  h3.btc-heading(data-heading-level="3")
+    = title
+
+  .inner-block
+    object#banner-05(classid='clsid:d27cdb6e-ae6d-11cf-96b8-444553540000', codebase='http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0', width='529', height='110', align='middle')
+      param(name='allowScriptAccess', value='sameDomain')
+      param(name='allowFullScreen', value='false')
+      param(name='movie', value='banner-05.swf')
+      param(name='quality', value='high')
+      param(name='bgcolor', value='#ffffff')
+      embed(src=`${swfPath}banner-05.swf`, quality='high', bgcolor='#ffffff', width='529', height='110', name='banner-05', align='middle', allowscriptaccess='sameDomain', allowfullscreen='false', type='application/x-shockwave-flash', pluginspage='http://www.adobe.com/go/getflashplayer_jp')
