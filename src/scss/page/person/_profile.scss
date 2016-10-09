@@ -1,4 +1,4 @@
-@include with-page(page---person--profile) {
+@include with-page(person--profile) {
   .sec-history {
     .item-history {
       @include mq-sp {

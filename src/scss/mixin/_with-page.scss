@@ -1,5 +1,5 @@
-@mixin with-page($selector) {
-  body.#{$selector} {
+@mixin with-page($page-id) {
+  body.page---#{$page-id} {
     @content;
   }
 }
