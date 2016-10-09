@@ -22,7 +22,9 @@
 
     color: $white;
 
-    text-transform: uppercase;
+    &.is-uppercase {
+      text-transform: uppercase;
+    }
   }
 
   // sub section

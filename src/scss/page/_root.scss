@@ -1,4 +1,10 @@
 @include with-page(page---root) {
+  .btc-heading {
+    &[data-heading-level="3"] {
+      @extend .is-uppercase;
+    }
+  }
+
   .e-mail {
     text-align: right;
 
