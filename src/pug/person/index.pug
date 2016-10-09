@@ -1,0 +1,25 @@
+extends ../_layout/_default-layout
+
+append config-block
+  - pageId = 'person'
+  - rootPath = '../'
+  - title = '岩淵 勇樹'
+
+block content-block
+  section.sec-history
+    h3.btc-heading(data-heading-level="3")
+      = title
+
+    .inner-block
+      ul
+        li
+          a(href="profile/")
+            | 生い立ち
+
+        li
+          a(href="creed/")
+            | 者是
+
+        li
+          a(href="people/")
+            | 関連人物
