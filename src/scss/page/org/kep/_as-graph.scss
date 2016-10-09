@@ -1,0 +1,16 @@
+@include with-page(page---org--kep--as-graph) {
+  .card {
+    width: px(610);
+
+    margin-top: px(30);
+
+    .mdl-card__title {
+      margin-top: 0;
+    }
+
+    .mdl-card__media {
+      width: px(610);
+      height: px(377);
+    }
+  }
+}
