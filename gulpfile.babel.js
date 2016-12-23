@@ -2,6 +2,7 @@
 
 // import
 import gulp from 'gulp';
+import _ from 'lodash';
 import source from 'vinyl-source-stream';
 import sass from 'gulp-sass';
 import pleeease from 'gulp-pleeease';
@@ -114,6 +115,60 @@ gulp.task('deco', () => {
 // gulp.task 'js', gulp.parallel('browserify', 'copy-bower-js')
 gulp.task('js', gulp.parallel('copy-bower-js', gulp.series('browserify', gulp.parallel('minify', 'deco'))));
 
+gulp.task('works', () => {
+  const worksLi = readConfig(`${CONFIG}/works.yml`);
+
+  let ret;
+
+  _.map(worksLi, (item, name) => {
+    item.name = name;
+  });
+
+  let tagArr = _.union(...(_.map(worksLi, 'tag')));
+
+  tagArr.forEach((tag) => {
+    const locals = {};
+
+    let destination;
+    if(tag === 'works') {
+      destination = `${DEST}/works`;
+    } else {
+      destination = `${DEST}/works/tag/${tag}`;
+    }
+
+    let filteredArr = _.filter(worksLi, (item, name) => {
+      return item.tag.includes(tag);
+    });
+
+    locals.tagName = tag;
+    locals.workArr = filteredArr;
+
+    ret = gulp.src([`${SRC}/pug/_works-tag/index.pug`])
+      .pipe(pug({
+        locals: locals,
+        pretty: true,
+      }))
+      .pipe(gulp.dest(destination))
+    ;
+  });
+
+  // TODO: /tags/
+
+  Object.keys(worksLi).forEach((name) => {
+    let locals = worksLi[name];
+
+    ret = gulp.src([`${SRC}/pug/_works-item/index.pug`])
+      .pipe(pug({
+        locals: locals,
+        pretty: true,
+      }))
+      .pipe(gulp.dest(`${DEST}/works/${name}`))
+    ;
+  });
+
+  return ret;
+});
+
 
 // html
 gulp.task('pug', () => {
@@ -121,6 +176,7 @@ gulp.task('pug', () => {
 
   locals.bib = readConfig(`${CONFIG}/bib.yml`);
   locals.interest = readConfig(`${CONFIG}/interest.yml`);
+  locals.works = readConfig(`${CONFIG}/works.yml`);
 
   return gulp.src([`${SRC}/pug/**/[!_]*.pug`, `!${SRC}/pug/_**/*`])
     .pipe(pug({
@@ -132,7 +188,6 @@ gulp.task('pug', () => {
 });
 
 gulp.task('html', gulp.series('pug'));
-
 
 gulp.task('browser-sync' , () => {
   browserSync({

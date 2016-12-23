@@ -1,0 +1,33 @@
+@include with-page(works--tag) {
+  .list {
+    display: block;
+
+    list-style: none;
+  }
+
+  .item {
+    display: inline-block;
+
+    margin-left: px(10);
+    margin-top: px(15);
+  }
+
+  .card {
+    width: px(256);
+    height: px(256);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .mdl-card__actions {
+    height: px(52);
+    padding: px(16);
+    background: rgba(255, 255, 255, 0.5);
+  }
+
+  .title {
+    color: $black;
+    font-size: px(14);
+    font-weight: 500;
+  }
+}

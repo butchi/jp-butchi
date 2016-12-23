@@ -4,7 +4,7 @@
   "description": "description",
   "main": "gulpfile.babel.js",
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=6.9.1"
   },
   "scripts": {
     "start": "gulp",
@@ -13,7 +13,8 @@
     "watch": "gulp watch",
     "build-css": "gulp css",
     "build-js": "gulp js",
-    "build-html": "gulp html"
+    "build-html": "gulp html",
+    "build-works": "gulp works"
   },
   "keywords": [
     "starterkit"
@@ -36,6 +37,7 @@
     "gulp-sass": "^2.2.0",
     "gulp-uglify": "^1.5.1",
     "gulp-watch": "^4.3.9",
+    "lodash": "^4.17.2",
     "read-config": "^2.0.0",
     "vinyl-source-stream": "^1.1.0"
   },

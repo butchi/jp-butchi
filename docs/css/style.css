@@ -223,3 +223,35 @@ body.page---org--kep--as-graph .card {
     width: 6.1rem;
     height: 377px;
     height: 3.77rem; }
+
+body.page---works--tag .list {
+  display: block;
+  list-style: none; }
+
+body.page---works--tag .item {
+  display: inline-block;
+  margin-left: 10px;
+  margin-left: 0.1rem;
+  margin-top: 15px;
+  margin-top: 0.15rem; }
+
+body.page---works--tag .card {
+  width: 256px;
+  width: 2.56rem;
+  height: 256px;
+  height: 2.56rem;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+body.page---works--tag .mdl-card__actions {
+  height: 52px;
+  height: 0.52rem;
+  padding: 16px;
+  padding: 0.16rem;
+  background: rgba(255, 255, 255, 0.5); }
+
+body.page---works--tag .title {
+  color: #000000;
+  font-size: 14px;
+  font-size: 0.14rem;
+  font-weight: 500; }
