@@ -70,7 +70,11 @@ html(lang="ja")
   body
     .wrapper
       main
-        | 移動しました。
+        p
+          a(href= url)
+            = url
+        p
+          | 移動しました。
 
       block footer
         footer
