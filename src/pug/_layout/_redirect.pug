@@ -64,8 +64,8 @@ html(lang="ja")
       link(rel="canonical" href=url)
 
     block redirect
-      script.
-        location.replace('/')
+      script
+        | location.replace('#{redirectPath}');
 
   body
     .wrapper
