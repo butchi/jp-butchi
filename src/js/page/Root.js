@@ -1,4 +1,5 @@
 import ns from '../module/ns';
+import BtcNews from '../module/BtcNews';
 
 export default class Index {
   constructor(opts = {}) {
@@ -7,5 +8,7 @@ export default class Index {
 
   initialize() {
     console.log('index page');
+
+    this.btcNews = new BtcNews();
   }
 }
