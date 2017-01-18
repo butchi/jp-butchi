@@ -1,0 +1,74 @@
+extends /_layout/_default-layout
+
+append config-block
+  - pageId = 'symbol'
+  - title = '記号辞典〜コンピューターにおける記号の意味と使われ方〜'
+  - rootPath = '../../'
+  - path = 'documents/symbol/'
+
+//- append stylesheet-block
+
+//- append javascript-block
+
+block content-block
+  h3.btc-heading(data-heading-level="3")
+    = title
+
+  .inner-block
+    h4.btc-heading(data-heading-level="4")
+      | はじめに
+    p
+      | キーボードではアルファベットの他に、記号が約30種類打てるようになっています。それらは元々は文書での特定の役割を持っていましたが、プログラミング言語などに用いられるようになってから意味合いが変化しています。このページでは、それぞれの記号の意味・使われ方を説明します。
+
+    section.sec-dictionary
+      each symbol in dataPageSymbol
+        section
+          h5.btc-heading(data-heading-level="5")
+            | #{symbol.symbol}
+            if symbol.name
+              | （#{symbol.name}）
+
+          ul
+            if symbol.tips
+              each tip in symbol.tips
+                li
+                  != tip
+
+    h4.btc-heading(data-heading-level="4")
+      | 固有名詞への利用
+
+    ul
+      li 本田美奈子.
+      li KABA.ちゃん
+      li モーニング娘。
+      li ミニモニ。
+      li ほっしゃん。 
+      li ハッピハッピー。
+      li なか。たつや
+      li 藤岡弘、
+      li Jｪﾁ~ｯじo™ｳ
+      li 喪＠CェNｺ瑠ｦｭWｧ
+      li ハロー!プロジェクト
+      li けいおん!
+      li もってけ!セーラーふく
+      li かえして!ニーソックス
+      li つのだ☆ひろ
+      li 漫☆画太郎
+      li 長島☆自演乙☆雄一郎
+      li らき☆すた
+      li みくみくにしてあげる♪【してやんよ】
+      li ベッキー♪♯
+      li まっがーれ↓スペクタクル
+      li つんく♂
+
+    section.sec-reference
+      h4.btc-heading(data-heading-level="4")
+        | 参考文献
+
+      ul
+        li
+          a(href="http://hiramatu-hifuka.com/onyak/onyak2/kigo-1.html", target="_blank")
+            | 記号の読み方辞典（音訳の部屋）
+        li
+          a(href="http://www.geocities.jp/k1_kazamax/kigou2.html", target="_blank")
+            | 特殊記号一覧

@@ -180,6 +180,7 @@ gulp.task('pug', () => {
   locals.bib = readConfig(`${CONFIG}/bib.yml`);
   locals.interest = readConfig(`${CONFIG}/interest.yml`);
   locals.works = readConfig(`${CONFIG}/works.yml`);
+  locals.dataPageSymbol = readConfig(`${CONFIG}/symbol.yml`);
 
   return gulp.src([`${SRC}/pug/**/[!_]*.pug`, `!${SRC}/pug/_**/*`])
     .pipe(pug({
