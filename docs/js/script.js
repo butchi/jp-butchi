@@ -7,6 +7,135 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _BtcSpreadSheet = require('../module/BtcSpreadSheet');
+
+var _BtcSpreadSheet2 = _interopRequireDefault(_BtcSpreadSheet);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var BtcNews = function () {
+  function BtcNews() {
+    var opts = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+    _classCallCheck(this, BtcNews);
+
+    this.initialize(opts);
+  }
+
+  _createClass(BtcNews, [{
+    key: 'initialize',
+    value: function initialize() {
+      var _this = this;
+
+      var opts = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+      this.$elm = opts.$elm || $('.btc-news');
+
+      this.btcSpreadSheet = new _BtcSpreadSheet2.default({
+        sheetId: '18Vf0-hu_ho6vdRSSrsQAy793OqdVpn6OCE9XCMsmtns',
+        callback: function callback(data) {
+          var $list = $('<ul></ul>');
+          $list.addClass('list');
+
+          data.forEach(function (item) {
+            var date = item.date;
+            var body = item.body;
+            var tag = item.tag;
+
+            var $item = $('<li></li>');
+            $item.addClass('item');
+
+            $item.text('\n            [' + tag + '] ' + body + ' ( ' + date + ' )\n          ');
+
+            $list.append($item);
+          });
+
+          _this.$elm.append($list);
+        }
+      });
+    }
+  }]);
+
+  return BtcNews;
+}();
+
+exports.default = BtcNews;
+
+},{"../module/BtcSpreadSheet":2}],2:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var BtcSpreadSheet = function () {
+  function BtcSpreadSheet() {
+    var opts = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+    _classCallCheck(this, BtcSpreadSheet);
+
+    this.initialize(opts);
+  }
+
+  _createClass(BtcSpreadSheet, [{
+    key: 'initialize',
+    value: function initialize() {
+      var _this = this;
+
+      var opts = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+      this.sheetId = opts.sheetId;
+      this.callback = opts.callback || _.noop;
+      this.failed = opts.failed || _.noop;
+
+      $.ajax({
+        url: 'https://spreadsheets.google.com/feeds/list/' + this.sheetId + '/od6/public/basic?alt=json-in-script',
+        type: 'GET',
+        dataType: 'jsonp'
+      }).then(function (data) {
+        var entryArr = data.feed.entry;
+
+        var ret = [];
+
+        entryArr.forEach(function (entry) {
+          var rowArr = entry.content.$t.split(', ');
+          var obj = {};
+
+          rowArr.forEach(function (row) {
+            var keyVal = row.split(': ');
+            obj[keyVal[0]] = keyVal.slice(1);
+          });
+
+          ret.push(obj);
+        });
+
+        _this.callback(ret);
+      }).fail(function (err) {
+        _this.failed(err);
+      });
+    }
+  }]);
+
+  return BtcSpreadSheet;
+}();
+
+exports.default = BtcSpreadSheet;
+
+},{}],3:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _Router = require('./Router');
 
 var _Router2 = _interopRequireDefault(_Router);
@@ -44,7 +173,7 @@ var Main = function () {
 
 exports.default = Main;
 
-},{"./Router":2}],2:[function(require,module,exports){
+},{"./Router":4}],4:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -83,7 +212,7 @@ var Router = function () {
 
       this.pageCommon = new _Common2.default();
 
-      if ($body.hasClass('page-root')) {
+      if ($body.hasClass('page---root')) {
         this.pageRoot = new _Root2.default();
       }
     }
@@ -94,7 +223,7 @@ var Router = function () {
 
 exports.default = Router;
 
-},{"../page/Common":4,"../page/Root":5,"./ns":3}],3:[function(require,module,exports){
+},{"../page/Common":6,"../page/Root":7,"./ns":5}],5:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -109,7 +238,7 @@ window.App = window.App || {};
 var ns = window.App;
 exports.default = ns;
 
-},{}],4:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -168,7 +297,7 @@ var Common = function () {
 
 exports.default = Common;
 
-},{"../module/ns":3}],5:[function(require,module,exports){
+},{"../module/ns":5}],7:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -180,6 +309,10 @@ var _createClass = function () { function defineProperties(target, props) { for 
 var _ns = require('../module/ns');
 
 var _ns2 = _interopRequireDefault(_ns);
+
+var _BtcNews = require('../module/BtcNews');
+
+var _BtcNews2 = _interopRequireDefault(_BtcNews);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -198,6 +331,8 @@ var Index = function () {
     key: 'initialize',
     value: function initialize() {
       console.log('index page');
+
+      this.btcNews = new _BtcNews2.default();
     }
   }]);
 
@@ -206,7 +341,7 @@ var Index = function () {
 
 exports.default = Index;
 
-},{"../module/ns":3}],6:[function(require,module,exports){
+},{"../module/BtcNews":1,"../module/ns":5}],8:[function(require,module,exports){
 'use strict';
 
 var _ns = require('./module/ns');
@@ -223,4 +358,4 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 _ns2.default.main = new _Main2.default();
 
-},{"./module/Main":1,"./module/ns":3}]},{},[6]);
+},{"./module/Main":3,"./module/ns":5}]},{},[8]);
