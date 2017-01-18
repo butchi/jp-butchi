@@ -12,7 +12,7 @@ export default class Router {
 
     this.pageCommon = new PageCommon();
 
-    if($body.hasClass('page-root')) {
+    if($body.hasClass('page---root')) {
       this.pageRoot = new PageRoot();
     }
   }
