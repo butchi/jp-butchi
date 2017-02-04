@@ -5,16 +5,19 @@ append config-block
   - title = '卒業研究'
   - rootPath = '../../../../'
   - path = 'org/ku/b-thesis/'
-  - swfPath = `${rootPath}swf/${path}`
+  - dataPath = `${rootPath}data/${path}`
 
-//- append stylesheet-block
+prepend javascript-block
+  script(src=`${rootPath}js/lib/swfobject.js`)
 
-//- append javascript-block
+append javascript-block
+  script
+    | var el = document.querySelector(".swf-object");
+    | swfobject.embedSWF("#{dataPath}/b-thesis.swf", el, 640, 480, 10);
 
 block content-block
-  object#b-thesis(classid='clsid:d27cdb6e-ae6d-11cf-96b8-444553540000', codebase='http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0', width='100%', height='100%', align='middle')
-    param(name='allowScriptAccess', value='sameDomain')
-    param(name='movie', value='b-thesis.swf')
-    param(name='quality', value='high')
-    param(name='bgcolor', value='#ffffff')
-    embed(src=`${swfPath}b-thesis.swf`, quality='high', bgcolor='#ffffff', width='100%', height='100%', name='b-thesis', align='middle', allowscriptaccess='sameDomain', type='application/x-shockwave-flash', pluginspage='http://www.macromedia.com/go/getflashplayer')
+  h3.btc-heading(data-heading-level="3")
+    | 卒業研究
+
+  .inner-block
+    .swf-object

@@ -75,22 +75,24 @@
           </nav>
         </div>
         <main class="mdl-layout__content">
-          <object id="b-thesis" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="100%" height="100%" align="middle">
-            <param name="allowScriptAccess" value="sameDomain">
-            <param name="movie" value="b-thesis.swf">
-            <param name="quality" value="high">
-            <param name="bgcolor" value="#ffffff">
-            <embed src="../../../../swf/org/ku/b-thesis/b-thesis.swf" quality="high" bgcolor="#ffffff" width="100%" height="100%" name="b-thesis" align="middle" allowscriptaccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">
-          </object>
+          <h3 class="btc-heading" data-heading-level="3">卒業研究</h3>
+          <div class="inner-block">
+            <div class="swf-object"></div>
+          </div>
         </main>
         <footer><a href="../../../../">Home</a></footer>
       </div>
     </div>
     <!-- javascript-->
+    <script src="../../../../js/lib/swfobject.js"></script>
     <script src="../../../../js/lib/jquery.min.js"></script>
     <script src="../../../../js/lib/lodash.min.js"></script>
     <script src="../../../../js/lib/material.min.js"></script>
     <script src="../../../../js/script.js"></script>
+    <script>
+      var el = document.querySelector(".swf-object");
+      swfobject.embedSWF("../../../../data/org/ku/b-thesis//b-thesis.swf", el, 640, 480, 10);
+    </script>
 <script src="https://apis.google.com/js/platform.js" async defer>
   {lang: 'ja'}
 </script>
