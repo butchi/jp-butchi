@@ -1,0 +1,24 @@
+list:
+  - 
+    title: '2進数の平面的表現に関する考察'
+    path: '/documents/'
+    filename: 'b-thesis.html'
+    dest: '/org/ku/b-thesis/presentation/'
+
+  -
+    title: 'エンタテインメントコンピューティング2008発表資料'
+    path: '/documents/'
+    filename: 'ec2008presentation.html'
+    dest: '/publication/ec2008/'
+
+  -
+    title: '非周期的な画素配置を持つCMOSイメージセンサの基礎検討'
+    path: '/documents/'
+    filename: 'icd200707presentation.html'
+    dest: '/publication/icd200707/'
+
+  -
+    title: 'WISS2008デモ'
+    path: '/documents/'
+    filename: 'wiss2008demo.html'
+    dest: '/publication/wiss2008/'

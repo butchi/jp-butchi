@@ -1,0 +1,30 @@
+- site = 'http://butchi.jp'
+- url = site + dest
+
+doctype html
+html(lang="ja")
+  head
+    meta(charset="utf-8")
+    // meta
+    title
+      = title
+
+    block redirect
+      script
+        | location.replace('#{url}');
+
+  body
+    .wrapper
+      main
+        p
+          a(href= dest)
+            = url
+        p
+          | 移動しました。
+
+      block footer
+        footer
+          a(href= "/") Home
+
+    //- トラッキングID指定を忘れないように
+    include /_partial/ga.html

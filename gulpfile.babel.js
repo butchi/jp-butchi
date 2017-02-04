@@ -209,7 +209,35 @@ gulp.task('browser-sync' , () => {
   ], gulp.series('pug', browserSync.reload));
 });
 
+
+gulp.task('redirect', () => {
+  const redirectLi = readConfig(`${CONFIG}/redirect.yml`);
+
+  let redirectArr = redirectLi.list
+
+  let ret;
+
+  redirectArr.forEach((item) => {
+    const locals = item;
+
+    let filename = item.filename || 'index.html';
+
+    ret = gulp.src(`${SRC}/pug/_redirect/index.pug`)
+      .pipe(pug({
+        locals: locals,
+        pretty: true,
+        basedir: `${SRC}/pug`,
+      }))
+      .pipe(rename(filename))
+      .pipe(gulp.dest(`${DEST}${item.path}`))
+    ;
+  });
+
+  return ret;
+});
+
+
 gulp.task('serve', gulp.series('browser-sync'));
 
-gulp.task('build', gulp.parallel('font', 'css', 'js', 'html'));
+gulp.task('build', gulp.parallel('font', 'css', 'js', 'html', 'redirect'));
 gulp.task('default', gulp.series('build', 'serve'));
