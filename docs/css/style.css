@@ -137,58 +137,60 @@ body.page---root .sec-link .mdi, body.page---root .sec-link .material-icons {
   font-size: 18px;
   font-size: 0.18rem; }
 
-.page---documents--analytic-signal .list-as .item-as {
-  list-style: none;
-  margin: 0; }
-  .page---documents--analytic-signal .list-as .item-as .btc-analytic-signal-viewer {
-    position: relative;
-    width: 256px;
-    width: 2.56rem;
-    height: 256px;
-    height: 2.56rem;
-    display: inline-block;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    cursor: pointer; }
-    .page---documents--analytic-signal .list-as .item-as .btc-analytic-signal-viewer .elm-canvas {
-      display: none; }
-    .page---documents--analytic-signal .list-as .item-as .btc-analytic-signal-viewer .cover {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.3); }
-    .page---documents--analytic-signal .list-as .item-as .btc-analytic-signal-viewer .btn-play {
-      position: absolute;
-      width: 100px;
-      width: 1rem;
-      height: 100px;
-      height: 1rem;
-      left: 50%;
-      top: 50%;
-      font-size: 100px;
-      font-size: 1rem;
-      text-align: center;
-      line-height: 100px;
-      line-height: 1rem;
-      margin-left: -50px;
-      margin-left: -0.5rem;
-      margin-top: -50px;
-      margin-top: -0.5rem;
-      color: #c00; }
-    .page---documents--analytic-signal .list-as .item-as .btc-analytic-signal-viewer:hover .btn-play {
-      color: #f33; }
-    .page---documents--analytic-signal .list-as .item-as .btc-analytic-signal-viewer.is-play {
-      background: none !important;
-      cursor: default; }
-      .page---documents--analytic-signal .list-as .item-as .btc-analytic-signal-viewer.is-play .elm-canvas {
-        display: block; }
-      .page---documents--analytic-signal .list-as .item-as .btc-analytic-signal-viewer.is-play .cover {
+.page---documents--analytic-signal .list-as {
+  margin: 0;
+  padding: 0; }
+  .page---documents--analytic-signal .list-as .item-as {
+    list-style: none; }
+    .page---documents--analytic-signal .list-as .item-as .btc-analytic-signal-viewer {
+      position: relative;
+      width: 256px;
+      width: 2.56rem;
+      height: 256px;
+      height: 2.56rem;
+      display: inline-block;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      cursor: pointer; }
+      .page---documents--analytic-signal .list-as .item-as .btc-analytic-signal-viewer .elm-canvas {
         display: none; }
-      .page---documents--analytic-signal .list-as .item-as .btc-analytic-signal-viewer.is-play .btn-play {
-        display: none; }
+      .page---documents--analytic-signal .list-as .item-as .btc-analytic-signal-viewer .cover {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3); }
+      .page---documents--analytic-signal .list-as .item-as .btc-analytic-signal-viewer .btn-play {
+        position: absolute;
+        width: 100px;
+        width: 1rem;
+        height: 100px;
+        height: 1rem;
+        left: 50%;
+        top: 50%;
+        font-size: 100px;
+        font-size: 1rem;
+        text-align: center;
+        line-height: 100px;
+        line-height: 1rem;
+        margin-left: -50px;
+        margin-left: -0.5rem;
+        margin-top: -50px;
+        margin-top: -0.5rem;
+        color: #c00; }
+      .page---documents--analytic-signal .list-as .item-as .btc-analytic-signal-viewer:hover .btn-play {
+        color: #f33; }
+      .page---documents--analytic-signal .list-as .item-as .btc-analytic-signal-viewer.is-play {
+        background: none !important;
+        cursor: default; }
+        .page---documents--analytic-signal .list-as .item-as .btc-analytic-signal-viewer.is-play .elm-canvas {
+          display: block; }
+        .page---documents--analytic-signal .list-as .item-as .btc-analytic-signal-viewer.is-play .cover {
+          display: none; }
+        .page---documents--analytic-signal .list-as .item-as .btc-analytic-signal-viewer.is-play .btn-play {
+          display: none; }
 
 body.page---org--kep--as-graph .card {
   width: 610px;
