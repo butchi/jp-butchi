@@ -9,9 +9,11 @@ html(lang="ja")
     title
       = title
 
+    include /_partial/ga.html
+
     block redirect
       script
-        | location.replace('#{url}');
+        | location.replace('#{dest}');
 
   body
     .wrapper
@@ -25,6 +27,3 @@ html(lang="ja")
       block footer
         footer
           a(href= "/") Home
-
-    //- トラッキングID指定を忘れないように
-    include /_partial/ga.html
