@@ -56,9 +56,8 @@ block content-block
           +icon('delta.png', 'DeltaΔPulse', 'documents/design/')
           +icon('star.png', 'star', 'documents/design/')
           +icon('notoryu.png', 'ノトリュー', 'documents/design/')
-          +icon('hanjukugo.png', '半熟語', 'hanjukugo/')
-          +icon('nandemo-magic.png', 'なんでも魔法。', 'http://butchi.jp/magic/')
-          +icon('door.png', 'いいノック', 'http://butchi.jp/iiknock/')
+          +icon('hanjukugo.png', '半熟語', `${rootPath}project/hanjukugo/`)
+          +icon('nandemo-magic.png', 'なんでも魔法。', `${rootPath}project/nandemo-magic/`)
 
       section.section-feed#feed
         h3.btc-heading(data-heading-level="3")
@@ -135,15 +134,13 @@ block content-block
             li
               a(href= rootPath + 'documents/symbol/') 記号辞典〜コンピューターにおける記号の意味と使われ方〜
             li
-              a(href= rootPath + 'documents/webclappad/') WebClapPad
+              a(href= `${rootPath}project/webclappad/`) WebClapPad
             li
-              a(href='http://butchi.jp/magic/') なんでも魔法。
+              a(href= `${rootPath}project/nandemo-magic/`) なんでも魔法。
             li
-              a(href='http://butchi.jp/pokemon/') ポポポポケモン！
+              a(href= `${rootPath}project/po3pokemon/`) ポポポポケモン！
             li
-              a(href='http://butchi.jp/iiknock/') いいノック
-            li
-              a(href='http://butchi.jp/secondly_happy/') 秒刊ハッピー
+              a(href= `https://butchi.github.io/secondly-happy/`) 秒刊ハッピー
 
       section.section-publication#publication
         h3.btc-heading(data-heading-level="3")

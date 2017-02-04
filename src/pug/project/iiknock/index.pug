@@ -1,0 +1,20 @@
+extends /_layout/_default-layout
+
+append config-block
+  - pageId = 'project--iiknock'
+  - title = 'いいノック'
+  - rootPath = '../../'
+  - path = 'project/iiknock/'
+
+block content-block
+  h3.btc-heading(data-heading-level="3")
+    = title
+
+  .inner-block
+    .movie
+      script(type="text/javascript", src="http://ext.nicovideo.jp/thumb_watch/sm14497162?w=490&h=307")
+      noscript
+        a(href="http://www.nicovideo.jp/watch/sm14497162") 【ニコニコ動画】いいノック
+
+    p
+      | 現在サービス停止中
