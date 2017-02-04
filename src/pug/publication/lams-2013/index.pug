@@ -1,0 +1,24 @@
+extends /_layout/_default-layout
+
+append config-block
+  - pageId = 'publication--lams-2013'
+  - title = '数学ソフトウェア紹介'
+  - rootPath = '../../'
+  - path = 'publication/lams-2013/'
+  - dataPath = `${rootPath}data/${path}`
+
+block content-block
+  h3.btc-heading(data-heading-level="3")
+    = title
+
+  .inner-block
+    a(href= `${dataPath}lams-2013--poster.pdf`)
+      | ポスター
+
+    h4 参考文献
+    ol
+      li
+        +bib('lams--2013--iwabuchi-yuki')
+      li
+        a(href= `${rootPath}project/graphicalpad/`)
+          | GraphiCalPad

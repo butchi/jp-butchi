@@ -1,0 +1,42 @@
+extends /_layout/_default-layout
+
+append config-block
+  - pageId = 'project--webclappad'
+  - title = 'WebClapPad'
+  - rootPath = '../../'
+  - path = 'project/webclappad/'
+  - dataPath = `${rootPath}data/${path}`
+
+prepend javascript-block
+  script(src=`${rootPath}js/lib/swfobject.js`)
+
+append javascript-block
+  script
+    | var el = document.querySelector(".swf-object");
+    | swfobject.embedSWF("#{dataPath}/webclappad-04.swf", el, 640, 480, 10);
+
+block content-block
+  h3.btc-heading(data-heading-level="3")
+    = title
+
+  .inner-block
+    .swf-object
+
+    p
+      a(href= `${dataPath}webclappad-04.fla`) flaファイル
+    p
+      a(href= `${dataPath}webclappad-04.swf`) swfファイル
+    h2 概要
+    p コンサートでの曲の演奏の後や、講演の後などに、拍手は必ず起こります。本プログラムは、リアルな拍手により近づけることを目標に作られています。
+    p 現在ある「Web拍手」と呼ばれるシステムは、mixiの「イイネ！」ボタンと同じで、ページの評価を行っているに過ぎません。
+    p
+      | 本プログラムでは、KORG社が開発している
+      a(href="http://www.korg.co.jp/Product/Dance/mini-KP/", target="_blank") KAOSS PAD
+      | のようなインターフェースを用いてよりリアルな拍手を実現しています。
+    p それにより、音声による新たなコミュニケーションが発生します。
+    p 動画の再生後や、ブログパーツとしての利用を想定しています。
+    h2 使い方
+    ol
+      li 右上の録音・再生ボタンまたは、左のパッドをクリックします。
+      li シークバーが動いている間に、左のパッドの好きな部分を好きなだけクリックします。上下は音量が異なり、左右は拍手のこもり具合が異なります。
+      li 録音終了後、再び録音・再生ボタンまたは左のパッドをクリックすると、保存した拍手が再生されます。このとき、重ねて拍手することができます。

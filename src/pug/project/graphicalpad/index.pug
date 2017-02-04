@@ -1,0 +1,45 @@
+extends /_layout/_default-layout
+
+append config-block
+  - pageId = 'project--graphicalpad'
+  - title = 'GraphiCalPad'
+  - rootPath = '../../'
+  - path = 'project/graphicalpad/'
+  - dataPath = `${rootPath}data/${path}`
+
+prepend javascript-block
+  script(src=`${rootPath}js/lib/swfobject.js`)
+
+append javascript-block
+  script
+    | var el = document.querySelector(".swf-object");
+    | swfobject.embedSWF("#{dataPath}calc.swf", el, 640, 480, 10);
+
+block content-block
+  h3.btc-heading(data-heading-level="3")
+    = title
+
+  .inner-block
+    .swf-object
+
+    p
+      a(href= `${dataPath}06.fla`) flaファイル
+    p
+      a(href= `${dataPath}calc.swf`) swfファイル
+    h4 概要
+    p 画像処理ソフトのような操作性を求めて、テキストベースでない新たな数式処理システムを作りたい、という理念を基にこのアプリケーションを作りました。
+    p
+      | 表計算やグラフとの連動で新たな操作感を創り出すことが目標です。
+      | e-Learningの補助ツールとして活用できるほか、Mathematicaなどにはない操作性で研究ツールとしても実力を発揮できると思われます。
+    p Version 2 はビジュアルプログラミング環境として鋭意制作中。
+    h4 受賞歴
+    | 2007年 学生e-Learning作品コンテスト（金沢大学
+    a(href="http://www.el.kanazawa-u.ac.jp/") IT教育推進プログラム（現FD・ICT教育推進室）
+    | 主催）
+    b 優秀賞受賞
+    h4 発表
+    ul
+      li
+        | 岩淵勇樹, 「GraphiCalPad」, 
+        a(href="http://imi.kyushu-u.ac.jp/~waki/lams/index.html", target="_blank") 数学ソフトウェア紹介
+        | (2013年)

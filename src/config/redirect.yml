@@ -1,5 +1,35 @@
 list:
-  - 
+  -
+    title: '半熟語'
+    path: '/hanjukugo/'
+    dest: '/project/hanjukugo/'
+
+  -
+    title: 'GraphiCalPad'
+    path: '/documents/graphicalpad/'
+    dest: '/project/graphicalpad/'
+
+  -
+    title: 'WebClapPad'
+    path: '/documents/webclappad/'
+    dest: '/project/webclappad/'
+
+  -
+    title: 'waraken'
+    path: '/waraken/'
+    dest: '/project/waraken/'
+
+  -
+    title: 'なんでも魔法。'
+    path: '/magic/'
+    dest: '/project/nandemo-magic/'
+
+  -
+    title: 'ポポポポケモン！'
+    path: '/pokemon/'
+    dest: '/project/po3pokemon/'
+
+  -
     title: '2進数の平面的表現に関する考察'
     path: '/documents/'
     filename: 'b-thesis.html'
