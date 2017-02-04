@@ -35,6 +35,11 @@ list:
     dest: '/project/iiknock'
 
   -
+    title: '物智数'
+    path: '/planar_binary/'
+    dest: '/documents/butchi-number/'
+
+  -
     title: '2進数の平面的表現に関する考察'
     path: '/documents/'
     filename: 'b-thesis.html'

@@ -43,7 +43,7 @@ block content-block
           +icon('myavg.jpg', '平均自画像')
           +icon('chinese-character.png', 'Butchi')
           +icon('music.png', '♪', 'documents/music/')
-          +icon('butchi-number.png', '平面的2進数（物智数）', 'documents/planar_binary/')
+          +icon('butchi-number.png', '平面的2進数（物智数）', `${rootPath}documents/butchi-number/`)
           +icon('bit-reversal-plane.png', 'ビット逆転平面', 'http://ci.nii.ac.jp/naid/110006380829/')
           +icon('dragon-tapestry--red.png', 'ドラゴン曲線のタペストリー', 'documents/fractal/')
           +icon('bitwise-xor.png', 'ビット毎の排他的論理和', 'http://reference.wolfram.com/mathematica/ref/BitXor.html')
@@ -116,7 +116,7 @@ block content-block
         .inner-block
           ul
             li
-              a(href= rootPath + 'documents/planar_binary/') 平面的2進数（Butchi数）
+              a(href= `${rootPath}documents/butchi-number/`) 平面的2進数（Butchi数）
             li
               a(href= rootPath + 'documents/music/') 音楽
             li
