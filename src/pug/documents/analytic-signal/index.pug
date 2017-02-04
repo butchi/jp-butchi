@@ -1,0 +1,287 @@
+extends /_layout/_default-layout
+
+mixin audio-list(category)
+  each audio in audioArr
+    if audio.category === category
+      li.item-as
+        h5= audio.name
+        .btc-analytic-signal-viewer(data-src= `${dataPath}${audio.filename}.mp3`, style= `background-image: url(${imgPath}${audio.filename}.png)`)
+          .cover
+          .btn-play
+            i.mdi.mdi-play-circle
+
+append config-block
+  - pageId = 'documents--analytic-signal'
+  - title = '解析信号'
+  - rootPath = '../../'
+  - path = 'documents/analytic-signal/'
+  - imgPath = `${rootPath}img/${path}`
+  - dataPath = `${rootPath}data/${path}`
+  -
+    var audioArr = [
+      {
+        category: 'プリミティブな音',
+        name: '正弦波',
+        filename: 'sine',
+      },
+      {
+        category: 'プリミティブな音',
+        name: '三角波',
+        filename: 'trianglar',
+      },
+      {
+        category: 'プリミティブな音',
+        name: 'のこぎり波',
+        filename: 'sawlike',
+      },
+      {
+        category: 'プリミティブな音',
+        name: '矩形波',
+        filename: 'rectangle',
+      },
+      // {
+      //   category: 'プリミティブな音',
+      //   name: '正弦波全波整流波',
+      //   filename: 'zenpa',
+      // },
+      // {
+      //   category: 'プリミティブな音',
+      //   name: '正弦波半波整流波',
+      //   filename: 'hanpa',
+      // },
+      {
+        category: 'プリミティブな音',
+        name: 'Sinc関数',
+        filename: 'sinc',
+      },
+      {
+        category: 'MIDI音',
+        name: '005 El. Piano',
+        filename: 'midi-005',
+      },
+      {
+        category: 'MIDI音',
+        name: '023 Harmonica',
+        filename: 'midi-023',
+      },
+      {
+        category: 'MIDI音',
+        name: '025 Nylon Guitar',
+        filename: 'midi-025',
+      },
+      {
+        category: 'MIDI音',
+        name: '027 Jazz Guitar',
+        filename: 'midi-027',
+      },
+      {
+        category: 'MIDI音',
+        name: '041 Violin',
+        filename: 'midi-041',
+      },
+      {
+        category: 'MIDI音',
+        name: '047 OrchestraHarp',
+        filename: 'midi-047',
+      },
+      {
+        category: 'MIDI音',
+        name: '049 Strings 1',
+        filename: 'midi-049',
+      },
+      {
+        category: 'MIDI音',
+        name: '053 Choir Aahs',
+        filename: 'midi-053',
+      },
+      {
+        category: 'MIDI音',
+        name: '081 Square Lead',
+        filename: 'midi-081',
+      },
+      {
+        category: 'MIDI音',
+        name: '082 Saw Lead',
+        filename: 'midi-082',
+      },
+      {
+        category: '楽器音',
+        name: 'チェレスタ',
+        filename: 'cheresta',
+      },
+      {
+        category: '楽器音',
+        name: 'ギター',
+        filename: 'guitar',
+      },
+      {
+        category: '楽器音',
+        name: 'ギター（高）',
+        filename: 'guitar-high',
+      },
+      {
+        category: '楽器音',
+        name: 'ハーモニカ',
+        filename: 'harmonika',
+      },
+      {
+        category: '楽器音',
+        name: 'ハーモニカ（高）',
+        filename: 'harmonika-high',
+      },
+      {
+        category: '楽器音',
+        name: 'ピアノ',
+        filename: 'piano',
+      },
+      {
+        category: '楽器音',
+        name: 'ピアノ（高）',
+        filename: 'piano-high',
+      },
+      {
+        category: '楽器音',
+        name: 'リコーダー',
+        filename: 'riko-da-',
+      },
+      {
+        category: '楽器音',
+        name: 'リコーダー（高）',
+        filename: 'riko-da-high',
+      },
+      {
+        category: '楽器音',
+        name: '三味線',
+        filename: 'shamisen',
+      },
+      {
+        category: '楽器音',
+        name: '三味線（高）',
+        filename: 'shamisen-high',
+      },
+      {
+        category: '楽器音',
+        name: 'トランペット',
+        filename: 'toranpetto',
+      },
+      {
+        category: '楽器音',
+        name: 'トランペット（高）',
+        filename: 'toranpetto-high',
+      },
+      {
+        category: '楽器音',
+        name: 'ヴァイオリン',
+        filename: 'violin',
+      },
+      {
+        category: '楽器音',
+        name: 'ヴァイオリン（高）',
+        filename: 'violin-high',
+      }
+    ]
+
+block content-block
+  h3.btc-heading(data-heading-level="3")
+    = title
+
+  h4 プリミティブな音
+
+  ul.list-as
+    +audio-list('プリミティブな音')
+
+  h4 MIDI音
+  | MIDI音はMicrosoft GS Wavetable SW Synthのものを利用しました。
+
+  ul.list-as
+    +audio-list('MIDI音')
+
+  h4 楽器音
+  | 桂田祐史氏が提供していただいた音声ファイルを用いました。
+  | 桂田先生と松山周五郎氏に感謝します。
+
+  ul.list-as
+    +audio-list('楽器音')
+
+
+  .inner-block
+    h4 解析信号ギャラリー
+    h5 概要
+    p
+      | 音声信号の正周波数成分を2倍、負周波数成分を0倍にした信号を解析信号と呼びます。
+      | また、音声信号の正周波数成分を-
+      i i
+      |  倍、負周波数成分を
+      i i
+      |  倍する変換をヒルベルト変換と呼びます（
+      i i
+      |  は虚数単位）。これは、解析信号の虚部に等しくなります。
+    p
+      a(href="http://www7a.biglobe.ne.jp/~yobology/text/Hilbert_Transform/Hilbert_transform.htm", target="_blank") 参考サイト
+    p 当ページでは、さまざまな音色の解析信号の、時間軸を潰して複素平面上に投影した画像を載せています。
+    p
+      | 音色の名前にリンクしているWAVファイルは、Lチャンネルが原信号、Rチャンネルが原信号をヒルベルト変換した信号となっており、フリーソフトの
+      a(href="http://www.vector.co.jp/soft/win95/art/se085448.html", target="_blank") WaveSpectra
+      | などのソフトで「リサジュー」で両チャンネルの波形をプロットすると解析信号を複素平面上に投影した信号を見ることができます。
+    p
+      | 筆者は、解析信号を利用したシンセサイザを開発しています。最後の
+      a(href="#references") 参考文献
+      | のリンクからデモを利用できます。
+
+
+    h2 参考文献
+    a(name="references")
+      ul
+        li
+          | 岩淵勇樹・秋田純一・北川章夫, 「閉曲線図形に基づいた音色生成方法の検討」, 
+          a(href="http://www.dc-meiji.jp/ec2008/", target="_blank") エンタテインメントコンピューティング2008
+          | 論文集, pp.143-146, 2008.10.
+        |   
+        small
+          a(href="../ec2008iwabuchi.pdf")
+            | [論文(PDF)
+            sup ※
+            | ]
+          | ※本著作物の著作権は（社）情報処理学会に帰属します。本著作物は著作権者である情報処理学会の許可のもとに掲載するものです。ご利用に当たっては「著作権法」ならびに「
+          a(href="http://www.ipsj.or.jp/03somu/ipsjcode/ipsjcode.html", target="_blank") 情報処理学会倫理綱領
+          | 」に従うことをお願いいたします。
+          |   
+          a(href="../ec2008presentation.html") [発表資料(Flashページ)]
+        |  
+        li
+          | 岩淵勇樹・秋田純一・北川章夫, 「閉曲線図形の特性に基づいた音色生成の一手法」, 
+          a(href="http://www.wiss.org/WISS2008/", target="_blank") 第16回インタラクティブシステムとソフトウェアに関するワークショップ（WISS2008）
+          | 論文集, pp.149-150, 2008.11.
+        |   
+        small
+          a(href="http://www.wiss.org/WISS2008Proceedings/posters/paper0057.pdf") [論文(PDF)]
+          |   
+          a(href="../wiss2008poster.pdf") [ポスター(PDF)]
+          |   
+          a(href="../wiss2008demo.html")
+            | [デモ（Flashページ）
+            b ※音が出ます
+            | ]
+        |  
+        li
+          | 岩淵勇樹・秋田純一・北川章夫, 「閉曲線を利用した音色操作方法の検討と実装」, 
+          a(href="http://www.sigmus.jp/SIG/sig201005program.html", target="_blank") 第85回音楽情報科学研究会
+          | , 2010.5.
+        |   
+        small
+          a(href="../mus85paper.pdf")
+            | [論文(PDF)
+            sup ※
+            | ]
+          | ※本著作物の著作権は（社）情報処理学会に帰属します。本著作物は著作権者である情報処理学会の許可のもとに掲載するものです。ご利用に当たっては「著作権法」ならびに「
+          a(href="http://www.ipsj.or.jp/03somu/ipsjcode/ipsjcode.html", target="_blank") 情報処理学会倫理綱領
+          | 」に従うことをお願いいたします。
+          |   
+          a(href="../mus85presentation.pdf") [発表資料(PDF)]
+          |   
+          a(href="../mus85demo/") [デモ（Flashページ）]
+        |  
+        li 博士論文「図形と音声の変換手法とその応用に関する研究」(2012)
+        |   
+        small
+          a(href="../d-thesis") [特設ページ]

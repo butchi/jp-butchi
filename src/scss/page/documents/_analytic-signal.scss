@@ -1,0 +1,83 @@
+.page---documents--analytic-signal {
+  .list-as {
+    .item-as {
+      list-style: none;
+      margin: 0;
+
+      .btc-analytic-signal-viewer {
+        position: relative;
+
+        width: px(256);
+        height: px(256);
+
+        display: inline-block;
+
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+
+        cursor: pointer;
+
+        .elm-canvas {
+          display: none;
+        }
+
+        .cover {
+          position: absolute;
+
+          left: 0;
+          top: 0;
+
+          width: 100%;
+          height: 100%;
+
+          background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-play {
+          position: absolute;
+
+          width: px(100);
+          height: px(100);
+
+          left: 50%;
+          top: 50%;
+
+          font-size: px(100);
+
+          text-align: center;
+          line-height: px(100);
+
+          margin-left: px(-50);
+          margin-top: px(-50);
+
+          color: #c00;
+        }
+
+        &:hover {
+          .btn-play {
+            color: #f33;
+          }
+        }
+
+        &.is-play {
+          background: none !important;
+
+          cursor: default;
+
+          .elm-canvas {
+            display: block;
+          }
+
+          .cover {
+            display: none;
+          }
+
+          .btn-play {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

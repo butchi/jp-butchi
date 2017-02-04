@@ -7,6 +7,256 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+// from [Web Audio APIを利用してオーディオビジュアライザを作成する ~その2 再生中の音から波形データを取得して描画する~ - Qiita](http://qiita.com/soarflat/items/4aa001dac115a4af6dbe)
+
+// requestAnimationFrameを多くのブラウザで利用するためにprefixの記載
+var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+window.requestAnimationFrame = requestAnimationFrame;
+
+// AudioNodeを管理するAudioContextの生成
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+function inv(n) {
+  if (n === 0) {
+    return 0;
+  } else {
+    return 1 / (n * Math.PI);
+  }
+}
+
+/**
+ * 音声ファイルローダー
+ */
+
+var Loader = function () {
+  function Loader() {
+    var opts = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+    _classCallCheck(this, Loader);
+
+    this.url = opts.url; // 読み込む音声データのURL
+    this.elm = opts.elm;
+    this.ctx = opts.ctx;
+    this.amp = opts.amp;
+    this.kernelLen = opts.kernelLen;
+    this.width = opts.width;
+    this.height = opts.height;
+  }
+
+  // XMLHttpRequestを利用して音声データ(バッファ)を読み込む。
+
+
+  _createClass(Loader, [{
+    key: 'loadBuffer',
+    value: function loadBuffer() {
+      var loader = void 0,
+          request = void 0;
+      loader = this;
+      request = new XMLHttpRequest();
+      request.open('GET', this.url, true);
+      request.responseType = 'arraybuffer';
+
+      var _this = this;
+
+      request.onload = function () {
+        // 取得したデータをデコードする。
+        audioCtx.decodeAudioData(this.response, function (buffer) {
+          if (!buffer) {
+            console.log('error');
+            return;
+          }
+
+          $(_this.elm).on('click', function (_evt) {
+            $(_this.elm).addClass('is-play');
+
+            loader.playSound(buffer); // デコードされたデータを再生する。
+          });
+        }, function (error) {
+          console.log('decodeAudioData error');
+        });
+      };
+
+      request.onerror = function () {
+        console.log('Loader: XHR error');
+      };
+
+      request.send();
+    }
+  }, {
+    key: 'playSound',
+
+
+    // 読み込んだ音声データ(バッファ)を再生と波形データの描画を開始する。
+    value: function playSound(buffer) {
+      var visualizer = new Visualizer(buffer, {
+        elm: this.elm,
+        width: this.width,
+        height: this.height,
+        ctx: this.ctx,
+        amp: this.amp,
+        kernelLen: this.kernelLen
+      });
+    }
+  }]);
+
+  return Loader;
+}();
+
+;
+
+/**
+ * ビジュアライザー
+ */
+
+var Visualizer = function () {
+  function Visualizer(buffer) {
+    var _this2 = this;
+
+    var opts = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+    _classCallCheck(this, Visualizer);
+
+    this.elm = opts.elm;
+
+    this.playFlag = true;
+
+    this.ctx = opts.ctx;
+
+    this.amp = opts.amp;
+    this.kernelLen = opts.kernelLen;
+
+    this.width = opts.width || 256;
+    this.height = opts.height || 256;
+
+    this.sourceNode = audioCtx.createBufferSource(); // AudioBufferSourceNodeを作成
+    this.sourceNode.buffer = buffer; // 取得した音声データ(バッファ)を音源に設定
+    this.analyserNode = audioCtx.createAnalyser(); // AnalyserNodeを作成
+    this.times = new Float32Array(this.analyserNode.frequencyBinCount); // 時間領域の波形データを格納する配列を生成 
+    this.sourceNode.connect(this.analyserNode); // AudioBufferSourceNodeをAnalyserNodeに接続
+    this.analyserNode.connect(audioCtx.destination); // AnalyserNodeをAudioDestinationNodeに接続
+    this.sourceNode.start(0); // 再生開始
+    this.draw(); // 描画開始
+
+    this.sourceNode.onended = function () {
+      $(_this2.elm).removeClass('is-play');
+
+      _this2.playFlag = false;
+    };
+  }
+
+  _createClass(Visualizer, [{
+    key: 'draw',
+    value: function draw() {
+      var _this3 = this;
+
+      // 0~1まで設定でき、0に近いほど描画の更新がスムーズになり, 1に近いほど描画の更新が鈍くなる。
+      this.analyserNode.smoothingTimeConstant = 0.5;
+
+      // FFTサイズを指定する。デフォルトは2048。
+      this.analyserNode.fftSize = 2048;
+
+      // 時間領域の波形データを引数の配列に格納するメソッド。
+      // analyserNode.fftSize / 2の要素がthis.timesに格納される。今回の配列の要素数は1024。
+      this.analyserNode.getFloatTimeDomainData(this.times);
+
+      this.ctx.clearRect(0, 0, this.width, this.height);
+      this.ctx.beginPath();
+
+      var len = this.analyserNode.frequencyBinCount - this.kernelLen;
+      for (var i = this.kernelLen; i < len; i++) {
+        var hilbTmp = 0;
+        for (var k = -this.kernelLen; k <= this.kernelLen; k++) {
+          hilbTmp += inv(k) * (this.times[i + k] || 0);
+        }
+        var x = this.width / 2 + this.amp * this.times[i];
+        var y = this.height / 2 - this.amp * hilbTmp;
+        this.ctx.lineTo(x, y);
+      }
+      this.ctx.stroke();
+
+      window.requestAnimationFrame(function () {
+        if (_this3.playFlag) {
+          _this3.draw();
+        }
+      });
+    }
+  }]);
+
+  return Visualizer;
+}();
+
+;
+
+var BtcAnalyticSignalViewer = function () {
+  function BtcAnalyticSignalViewer() {
+    var opts = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+    _classCallCheck(this, BtcAnalyticSignalViewer);
+
+    this.initialize(opts);
+  }
+
+  _createClass(BtcAnalyticSignalViewer, [{
+    key: 'initialize',
+    value: function initialize() {
+      var opts = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+      this.elm = opts.elm || document.querySelector('.btc-analytic-signal-viewer');
+
+      var url = $(this.elm).attr('data-src');
+
+      this.$canvas = $('<canvas class="elm-canvas"></canvas>');
+
+      $(this.elm).append(this.$canvas);
+
+      this.canvasElm = this.$canvas.get(0);
+      this.canvasElm.width = 256;
+      this.canvasElm.height = 256;
+
+      this.audioElm = this.elm.querySelector('.elm-audio');
+
+      this.kernelLen = opts.kernelLen || 127;
+      this.amp = opts.amp || 128;
+
+      this.width = opts.width || 256;
+      this.height = opts.height || 256;
+
+      this.ctx = this.canvasElm.getContext("2d");
+
+      this.canvasElm.width = this.width;
+      this.canvasElm.height = this.height;
+
+      this.analyser = audioCtx.createAnalyser();
+
+      var loader = new Loader({
+        elm: this.elm,
+        ctx: this.ctx,
+        width: this.width,
+        height: this.height,
+        url: url,
+        amp: 256,
+        kernelLen: this.kernelLen
+      });
+      loader.loadBuffer();
+    }
+  }]);
+
+  return BtcAnalyticSignalViewer;
+}();
+
+exports.default = BtcAnalyticSignalViewer;
+
+},{}],2:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _BtcSpreadSheet = require('../module/BtcSpreadSheet');
 
 var _BtcSpreadSheet2 = _interopRequireDefault(_BtcSpreadSheet);
@@ -63,7 +313,7 @@ var BtcNews = function () {
 
 exports.default = BtcNews;
 
-},{"../module/BtcSpreadSheet":2}],2:[function(require,module,exports){
+},{"../module/BtcSpreadSheet":3}],3:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -127,7 +377,7 @@ var BtcSpreadSheet = function () {
 
 exports.default = BtcSpreadSheet;
 
-},{}],3:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -173,7 +423,7 @@ var Main = function () {
 
 exports.default = Main;
 
-},{"./Router":4}],4:[function(require,module,exports){
+},{"./Router":5}],5:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -193,6 +443,10 @@ var _Common2 = _interopRequireDefault(_Common);
 var _Root = require('../page/Root');
 
 var _Root2 = _interopRequireDefault(_Root);
+
+var _analyticSignal = require('../page/documents/analytic-signal');
+
+var _analyticSignal2 = _interopRequireDefault(_analyticSignal);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -215,6 +469,10 @@ var Router = function () {
       if ($body.hasClass('page---root')) {
         this.pageRoot = new _Root2.default();
       }
+
+      if ($body.hasClass('page---documents--analytic-signal')) {
+        this.pageDocumentsAnalyticSignal = new _analyticSignal2.default();
+      }
     }
   }]);
 
@@ -223,7 +481,7 @@ var Router = function () {
 
 exports.default = Router;
 
-},{"../page/Common":6,"../page/Root":7,"./ns":5}],5:[function(require,module,exports){
+},{"../page/Common":7,"../page/Root":8,"../page/documents/analytic-signal":9,"./ns":6}],6:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -238,7 +496,7 @@ window.App = window.App || {};
 var ns = window.App;
 exports.default = ns;
 
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -297,7 +555,7 @@ var Common = function () {
 
 exports.default = Common;
 
-},{"../module/ns":5}],7:[function(require,module,exports){
+},{"../module/ns":6}],8:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -341,7 +599,55 @@ var Index = function () {
 
 exports.default = Index;
 
-},{"../module/BtcNews":1,"../module/ns":5}],8:[function(require,module,exports){
+},{"../module/BtcNews":2,"../module/ns":6}],9:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _ns = require('../../module/ns');
+
+var _ns2 = _interopRequireDefault(_ns);
+
+var _BtcAnalyticSignalViewer = require('../../module/BtcAnalyticSignalViewer');
+
+var _BtcAnalyticSignalViewer2 = _interopRequireDefault(_BtcAnalyticSignalViewer);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var PageDocumentsAnalyticSignal = function () {
+  function PageDocumentsAnalyticSignal() {
+    var opts = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+    _classCallCheck(this, PageDocumentsAnalyticSignal);
+
+    this.initialize();
+  }
+
+  _createClass(PageDocumentsAnalyticSignal, [{
+    key: 'initialize',
+    value: function initialize() {
+      var _this = this;
+
+      $('.item-as').each(function (i, elm) {
+        _this.btcAnalyticSignalViewer = new _BtcAnalyticSignalViewer2.default({
+          elm: elm.querySelector('.btc-analytic-signal-viewer')
+        });
+      });
+    }
+  }]);
+
+  return PageDocumentsAnalyticSignal;
+}();
+
+exports.default = PageDocumentsAnalyticSignal;
+
+},{"../../module/BtcAnalyticSignalViewer":1,"../../module/ns":6}],10:[function(require,module,exports){
 'use strict';
 
 var _ns = require('./module/ns');
@@ -358,4 +664,4 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 _ns2.default.main = new _Main2.default();
 
-},{"./module/Main":3,"./module/ns":5}]},{},[8]);
+},{"./module/Main":4,"./module/ns":6}]},{},[10]);
