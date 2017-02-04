@@ -4,13 +4,20 @@ append config-block
   - pageId = 'publication--ec2008'
   - title = ''
   - rootPath = '../../'
-  - path = 'publication/ec2008'
+  - path = 'publication/ec2008/'
   - dataPath = `${rootPath}data/${path}`
 
-//- append stylesheet-block
+prepend javascript-block
+  script(src=`${rootPath}js/lib/swfobject.js`)
 
-//- append javascript-block
+append javascript-block
+  script
+    | var el = document.querySelector(".swf-object");
+    | swfobject.embedSWF("#{dataPath}/ec2008presentation.swf", el, 640, 480, 10);
 
 block content-block
   h3.btc-heading(data-heading-level="3")
-    | no title
+    | エンタテインメントコンピューティング2008
+
+  .inner-block
+    .swf-object

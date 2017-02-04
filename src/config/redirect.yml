@@ -22,3 +22,13 @@ list:
     path: '/documents/'
     filename: 'wiss2008demo.html'
     dest: '/publication/wiss2008/'
+
+  -
+    title: '第85回音楽情報科学研究会デモ'
+    path: '/documents/mus85demo/'
+    dest: '/publication/sigmus85/'
+
+  -
+    title: '第105回 音楽情報科学研究会'
+    path: '/documents/mus105/'
+    dest: '/publication/sigmus105/'

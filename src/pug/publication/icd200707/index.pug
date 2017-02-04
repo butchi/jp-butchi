@@ -2,15 +2,22 @@ extends /_layout/_default-layout
 
 append config-block
   - pageId = 'publication--icd200707'
-  - title = ''
+  - title = '非周期的な画素配置を持つCMOSイメージセンサの基礎検討'
   - rootPath = '../../'
-  - path = 'publication/icd200707'
+  - path = 'publication/icd200707/'
   - dataPath = `${rootPath}data/${path}`
 
-//- append stylesheet-block
+prepend javascript-block
+  script(src=`${rootPath}js/lib/swfobject.js`)
 
-//- append javascript-block
+append javascript-block
+  script
+    | var el = document.querySelector(".swf-object");
+    | swfobject.embedSWF("#{dataPath}/icd200707presentation.swf", el, 640, 480, 10);
 
 block content-block
   h3.btc-heading(data-heading-level="3")
-    | no title
+    = title
+
+  .inner-block
+    .swf-object

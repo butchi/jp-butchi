@@ -2,15 +2,91 @@ extends /_layout/_default-layout
 
 append config-block
   - pageId = 'publication--wiss2008'
-  - title = ''
+  - title = 'WISS2008'
   - rootPath = '../../'
-  - path = 'publication/wiss2008'
+  - path = 'publication/wiss2008/'
   - dataPath = `${rootPath}data/${path}`
 
-//- append stylesheet-block
+prepend javascript-block
+  script(src=`${rootPath}js/lib/swfobject.js`)
 
-//- append javascript-block
+append javascript-block
+  script
+    | var el = document.querySelector(".swf-object");
+    | swfobject.embedSWF("#{dataPath}/wiss2008demo.swf", el, 610, 377, 10);
 
 block content-block
   h3.btc-heading(data-heading-level="3")
-    | no title
+    = title
+
+  .inner-block
+
+    h4 概要
+    p WISS2008のデモ用に制作したプログラムを掲載しています。
+    p 「解析信号」を複素平面上で操作することにより、リアルタイムで音色を生成します。
+    p
+      | プログラム実行には
+      a(href="http://get.adobe.com/jp/flashplayer/", target="_blank") Adobe Flash Player
+      | が必要です。
+
+    p 開発環境：Adobe Flash CS4 / ActionScript 3.0
+
+    h4 デモプログラム
+
+    .swf-object
+
+    p
+      a(href=`${dataPath}wiss2008demo.swf`) swfファイル
+
+    h4 操作説明
+    ul
+      li 初期状態では灰色で「VCO」と表示されている部分の周りに黒い円形が表示されています。同時に「ポー」という440Hzの正弦波音が鳴っています。
+      li 円形は黒い点（制御点）が集まって構成されています。制御点をドラッグすると音が変化します。（点が外れすぎると音割れが生じるので注意してください。）
+      li 左上の「zero」ボタンを押すと無音に、「sine」ボタンを押すと元の正弦波になります。
+      li 右側の青い線が実際生成される音の時間波形（2周期分）です。左側の図形の縦座標と一致します。
+      li
+        | 上部のスライダーをスライドするか、数値ボックスに数字を入力して周波数を変えることができます。（音出力の実装が甘いので、プツプツとノイズが入ったり、エイリアス音が含まれたりすることがあります。）
+      li 下部のボタンをクリックするか、ドラッグ中にマウスのホイールを操作すると、ctrlModeが変わってドラッグ時の影響が変化します。
+      li 「LFO」も同様に操作できます。
+
+    h4 特徴
+    ul
+      li
+        a(href="http://www.vector.co.jp/soft/win95/art/se085448.html", target="_blank") WaveSpectra
+        | などのソフトで生波形を見てみてください
+        span(style="font-weight:bold;") （これでこのプログラムの魅力が倍増します！）
+        | 。「リサジュー」で両チャンネルの波形をプロットすると、VCOで操作している閉曲線図形と同じ形が見えると思います。
+      li
+        | これは実際に音声のLチャンネルとRチャンネルにそれぞれの軸の波形を割り当てているからなのですが、横軸の波形と縦軸の波形は「ヒルベルト変換」という変換の関係にあるため、片方の波形はもう片方の波形に依存します。（プログラムの右側の青い波形は、今回Lチャンネルに割り当てられています。）
+      li
+        | また、両波形はパワースペクトルは同じである（位相だけ90度ずれている）ため、波形が全く違うように見えても聞こえる音はほとんど同じです。（そのため、出力としてはLチャンネルだけでよいのですが、便宜上「虚」の波形も出力している次第です。）
+      li VCOのみだとあまりにも単調すぎるので、今回はLFOを1個追加してあります。初期状態では常に1（定数）が乗算されている状態です。
+      li
+        | LFOを「sine」に設定した場合、掛け合わされる値は絶対値が1の複素数となるため、位相回転フィルタになります。（普通のシンセサイザーでは右側の実波形が掛け合わせられますが、本システムでは複素波形として乗算されます。）
+      li LFOの図形を変化させると、音量と位相にフィルタが掛かることになります。（LFOでは水平位置が音量に大きな影響を与えることになります。）
+      li VCOを少し歪ませて、LFOを「sine」に設定すると、「ワウワウ」というような高次うなりを発生させたりできます。
+
+    h4 終わりに
+    p 「解析信号」を複素平面上で操作するという、波形編集の新たな方法を提案しました。これを応用すれば、今までにない新しい音作りが期待できます。
+    p このプログラムは単なる研究紹介デモなので、「音楽作成ソフト」からは程遠い現状であることをあらかじめご了承ください。
+    p ご意見・ご質問があれば著者にお気軽に連絡ください。
+
+    h4 参考文献
+    ol
+      li
+        +bib('ec--2008--iwabuchi-yuki')
+      li
+        +bib('wiss--2008--iwabuchi-yuki')
+      li
+        +bib('mus-85--iwabuchi-yuki')
+      li
+        +bib('interaction--2011--iwabuchi-yuki')
+      li
+        +bib('art-science--2011--iwabuchi-yuki')
+      li 博士論文「図形と音声の変換手法とその応用に関する研究」(2012)
+
+    .footnote#footnote-ipsj
+      .appendix
+        | 注1: 本著作物の著作権は（社）情報処理学会に帰属します。本著作物は著作権者である情報処理学会の許可のもとに掲載するものです。ご利用に当たっては「著作権法」ならびに「
+        a(href='http://www.ipsj.or.jp/ipsjcode.html', target='_blank') 情報処理学会倫理綱領
+        | 」に従うことをお願いいたします。
