@@ -9,13 +9,13 @@
   "scripts": {
     "start": "gulp",
     "serve": "gulp serve",
-    "build": "gulp build",
     "watch": "gulp watch",
     "build-css": "gulp css",
     "build-js": "gulp js",
     "build-html": "gulp html",
-    "build-redirect": "gulp redirect",
-    "build-works": "gulp works"
+    "build-works": "gulp works",
+    "build-partial": "gulp build-partial",
+    "build": "gulp build"
   },
   "keywords": [
     "starterkit"
