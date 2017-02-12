@@ -1,6 +1,9 @@
 block config-block
-  - pageId = 'undefined'
-  - rootPath = '/'
+  - path = path.replace(/[^\/]+.pug$/, '')
+  - rootPath = path.replace(/(.+?)[\/]/g, '../')
+  - imgPath = `${rootPath}img/${path}`
+  - swfPath = `${rootPath}swf/${path}`
+  - dataPath = `${rootPath}data/${path}`
   - title = 'butchi.jp'
 
 mixin bib(key)
