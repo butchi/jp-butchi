@@ -1,4 +1,4 @@
-@include with-page(org--ku--tte) {
+@include with-page("org/ku/tte/") {
   .description {
     blockquote {
       @include mq-sp {

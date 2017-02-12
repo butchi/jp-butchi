@@ -1,4 +1,4 @@
-@include with-page(works--tag) {
+@include with-page("works/tag/") {
   .list {
     display: block;
 

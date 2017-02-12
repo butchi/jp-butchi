@@ -1,4 +1,4 @@
-@include with-page(root) {
+@include with-page("/") {
   .btc-heading {
     &[data-heading-level="3"] {
       @extend .is-uppercase;

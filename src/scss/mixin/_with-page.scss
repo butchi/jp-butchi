@@ -1,5 +1,5 @@
-@mixin with-page($page-id) {
-  body.page---#{$page-id} {
+@mixin with-page($path) {
+  body[data-path="#{$path}"] {
     @content;
   }
 }
