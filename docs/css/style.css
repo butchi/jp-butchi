@@ -13,7 +13,7 @@
   padding: 0.05rem 0.15rem;
   background-color: #3f51b5;
   color: #ffffff; }
-  .btc-heading[data-heading-level="3"].is-uppercase, body.page---root .btc-heading[data-heading-level="3"] {
+  .btc-heading[data-heading-level="3"].is-uppercase, body[data-path="/"] .btc-heading[data-heading-level="3"] {
     text-transform: uppercase; }
 
 .display-none {
@@ -111,11 +111,11 @@ html.is-pc .wrapper {
   min-width: 6.4rem;
   overflow: hidden; }
 
-body.page---root .e-mail {
+body[data-path="/"] .e-mail {
   text-align: right; }
-  body.page---root .e-mail .material-icons {
+  body[data-path="/"] .e-mail .material-icons {
     vertical-align: middle; }
-  body.page---root .e-mail .delete-me {
+  body[data-path="/"] .e-mail .delete-me {
     display: inline-block;
     position: absolute;
     width: 1px;
@@ -125,24 +125,24 @@ body.page---root .e-mail {
     opacity: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; }
 
-body.page---root .sec-link ul {
+body[data-path="/"] .sec-link ul {
   padding-left: 20px;
   padding-left: 0.2rem; }
 
-body.page---root .sec-link li {
+body[data-path="/"] .sec-link li {
   list-style: none; }
 
-body.page---root .sec-link .mdi, body.page---root .sec-link .material-icons {
+body[data-path="/"] .sec-link .mdi, body[data-path="/"] .sec-link .material-icons {
   vertical-align: middle;
   font-size: 18px;
   font-size: 0.18rem; }
 
-.page---documents--analytic-signal .list-as {
+body[data-path="documents/analytic-signal/"] .list-as {
   margin: 0;
   padding: 0; }
-  .page---documents--analytic-signal .list-as .item-as {
+  body[data-path="documents/analytic-signal/"] .list-as .item-as {
     list-style: none; }
-    .page---documents--analytic-signal .list-as .item-as .btc-analytic-signal-viewer {
+    body[data-path="documents/analytic-signal/"] .list-as .item-as .btc-analytic-signal-viewer {
       position: relative;
       width: 256px;
       width: 2.56rem;
@@ -153,16 +153,16 @@ body.page---root .sec-link .mdi, body.page---root .sec-link .material-icons {
       background-repeat: no-repeat;
       background-position: 50% 50%;
       cursor: pointer; }
-      .page---documents--analytic-signal .list-as .item-as .btc-analytic-signal-viewer .elm-canvas {
+      body[data-path="documents/analytic-signal/"] .list-as .item-as .btc-analytic-signal-viewer .elm-canvas {
         display: none; }
-      .page---documents--analytic-signal .list-as .item-as .btc-analytic-signal-viewer .cover {
+      body[data-path="documents/analytic-signal/"] .list-as .item-as .btc-analytic-signal-viewer .cover {
         position: absolute;
         left: 0;
         top: 0;
         width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.3); }
-      .page---documents--analytic-signal .list-as .item-as .btc-analytic-signal-viewer .btn-play {
+      body[data-path="documents/analytic-signal/"] .list-as .item-as .btc-analytic-signal-viewer .btn-play {
         position: absolute;
         width: 100px;
         width: 1rem;
@@ -180,72 +180,72 @@ body.page---root .sec-link .mdi, body.page---root .sec-link .material-icons {
         margin-top: -50px;
         margin-top: -0.5rem;
         color: #c00; }
-      .page---documents--analytic-signal .list-as .item-as .btc-analytic-signal-viewer:hover .btn-play {
+      body[data-path="documents/analytic-signal/"] .list-as .item-as .btc-analytic-signal-viewer:hover .btn-play {
         color: #f33; }
-      .page---documents--analytic-signal .list-as .item-as .btc-analytic-signal-viewer.is-play {
+      body[data-path="documents/analytic-signal/"] .list-as .item-as .btc-analytic-signal-viewer.is-play {
         background: none !important;
         cursor: default; }
-        .page---documents--analytic-signal .list-as .item-as .btc-analytic-signal-viewer.is-play .elm-canvas {
+        body[data-path="documents/analytic-signal/"] .list-as .item-as .btc-analytic-signal-viewer.is-play .elm-canvas {
           display: block; }
-        .page---documents--analytic-signal .list-as .item-as .btc-analytic-signal-viewer.is-play .cover {
+        body[data-path="documents/analytic-signal/"] .list-as .item-as .btc-analytic-signal-viewer.is-play .cover {
           display: none; }
-        .page---documents--analytic-signal .list-as .item-as .btc-analytic-signal-viewer.is-play .btn-play {
+        body[data-path="documents/analytic-signal/"] .list-as .item-as .btc-analytic-signal-viewer.is-play .btn-play {
           display: none; }
 
-body.page---org--kep--as-graph .card {
+body[data-path="org/kep/as-graph/"] .card {
   width: 610px;
   width: 6.1rem;
   margin-top: 30px;
   margin-top: 0.3rem; }
-  body.page---org--kep--as-graph .card .mdl-card__title {
+  body[data-path="org/kep/as-graph/"] .card .mdl-card__title {
     margin-top: 0; }
-  body.page---org--kep--as-graph .card .mdl-card__media {
+  body[data-path="org/kep/as-graph/"] .card .mdl-card__media {
     width: 610px;
     width: 6.1rem;
     height: 377px;
     height: 3.77rem; }
 
-html.is-sp body.page---org--ku--tte .description blockquote {
+html.is-sp body[data-path="org/ku/tte/"] .description blockquote {
   font-size: 15px;
   font-size: 0.15rem; }
 
-html.is-pc body.page---org--ku--tte .description blockquote {
+html.is-pc body[data-path="org/ku/tte/"] .description blockquote {
   font-size: 15px;
   font-size: 0.15rem; }
 
-body.page---org--ku--b-thesis--presentation .mdl-layout__content {
+body[data-path="org/ku/b-thesis/presentation/"] .mdl-layout__content {
   width: 100%;
   height: 100%;
   margin-top: 30px;
   margin-top: 0.3rem; }
 
-body.page---person--people .card {
+body[data-path="person/people/"] .card {
   margin-top: 30px;
   margin-top: 0.3rem;
   width: 256px;
   width: 2.56rem; }
-  body.page---person--people .card .face {
+  body[data-path="person/people/"] .card .face {
     width: 256px;
     width: 2.56rem;
     height: 256px;
     height: 2.56rem;
     background-position: center center;
     background-size: cover; }
-  body.page---person--people .card .mdl-card__title {
+  body[data-path="person/people/"] .card .mdl-card__title {
     padding: 0; }
-  body.page---person--people .card .mdl-card__title-text {
+  body[data-path="person/people/"] .card .mdl-card__title-text {
     padding: 8px;
     padding: 0.08rem; }
-  body.page---person--people .card .mdl-card__title-text {
+  body[data-path="person/people/"] .card .mdl-card__title-text {
     background-color: rgba(255, 255, 255, 0.5); }
-  body.page---person--people .card .relation {
+  body[data-path="person/people/"] .card .relation {
     padding-top: 16px;
     padding-top: 0.16rem;
     font-weight: bold; }
-    body.page---person--people .card .relation + .description {
+    body[data-path="person/people/"] .card .relation + .description {
       padding-top: 0px;
       padding-top: 0rem; }
-  body.page---person--people .card .item-link {
+  body[data-path="person/people/"] .card .item-link {
     padding: 0;
     min-width: 36px;
     min-width: 0.36rem;
@@ -254,43 +254,43 @@ body.page---person--people .card {
     font-size: 24px;
     font-size: 0.24rem; }
 
-html.is-sp body.page---person--profile .sec-history .item-history {
+html.is-sp body[data-path="person/profile/"] .sec-history .item-history {
   font-size: 15px;
   font-size: 0.15rem; }
 
-html.is-pc body.page---person--profile .sec-history .item-history {
+html.is-pc body[data-path="person/profile/"] .sec-history .item-history {
   font-size: 15px;
   font-size: 0.15rem; }
 
-body.page---person--profile .sec-history .item-history .heading {
+body[data-path="person/profile/"] .sec-history .item-history .heading {
   margin: 0;
   font-size: inherit;
   margin-right: 0.5em; }
 
-body.page---person--profile .sec-history .heading {
+body[data-path="person/profile/"] .sec-history .heading {
   display: inline-block; }
 
-body.page---person--profile .sec-interest .interest-category {
+body[data-path="person/profile/"] .sec-interest .interest-category {
   display: block; }
-  body.page---person--profile .sec-interest .interest-category .heading {
+  body[data-path="person/profile/"] .sec-interest .interest-category .heading {
     display: inline-block;
     margin: 0; }
-  body.page---person--profile .sec-interest .interest-category .keyword {
+  body[data-path="person/profile/"] .sec-interest .interest-category .keyword {
     display: inline-block;
     margin: 0; }
 
-body.page---works--tag .list {
+body[data-path="works/tag/"] .list {
   display: block;
   list-style: none; }
 
-body.page---works--tag .item {
+body[data-path="works/tag/"] .item {
   display: inline-block;
   margin-left: 10px;
   margin-left: 0.1rem;
   margin-top: 15px;
   margin-top: 0.15rem; }
 
-body.page---works--tag .card {
+body[data-path="works/tag/"] .card {
   width: 256px;
   width: 2.56rem;
   height: 256px;
@@ -298,14 +298,14 @@ body.page---works--tag .card {
   background-repeat: no-repeat;
   background-size: cover; }
 
-body.page---works--tag .mdl-card__actions {
+body[data-path="works/tag/"] .mdl-card__actions {
   height: 52px;
   height: 0.52rem;
   padding: 16px;
   padding: 0.16rem;
   background: rgba(255, 255, 255, 0.5); }
 
-body.page---works--tag .title {
+body[data-path="works/tag/"] .title {
   color: #000000;
   font-size: 14px;
   font-size: 0.14rem;
