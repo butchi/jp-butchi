@@ -2,8 +2,6 @@ extends /_layout/_default-layout
 
 append config-block
   - pageId = 'person--people'
-  - rootPath = '../../'
-  - imgPath = `${rootPath}img/person/people`
   - title = '関連人物'
 
 mixin people(profileLi)
@@ -16,14 +14,14 @@ mixin people(profileLi)
   - linkLi = profileLi.linkLi
   - linkKey = profileLi.linkKey
   if picture
-    - pictureUrl = `${imgPath}/picture/${picture}`
+    - pictureUrl = `${imgPath}picture/${picture}`
   else
     if facebookId
       - pictureUrl = `https://graph.facebook.com/${facebookId}/picture?width=512&amp;height=512`
     else if sex == 'male'
-      - pictureUrl = `${imgPath}/picture/male.png`
+      - pictureUrl = `${imgPath}picture/male.png`
     else if sex == 'female'
-      - pictureUrl = `${imgPath}/picture/female.png`
+      - pictureUrl = `${imgPath}picture/female.png`
 
   .card.mdl-card.mdl-shadow--2dp
     .face.mdl-card__title(style= `background-image: url(${pictureUrl})`)
