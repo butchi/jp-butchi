@@ -1,4 +1,11 @@
 @charset "UTF-8";
+.btc-site-title {
+  position: relative;
+  padding-left: 10px;
+  padding-left: 0.1rem;
+  font-size: 26px;
+  font-size: 0.26rem; }
+
 .btc-page-title {
   position: relative;
   width: 100%;
@@ -7,14 +14,11 @@
   padding: 5px 15px;
   padding: 0.05rem 0.15rem;
   background-color: #3f51b5;
+  font-size: 26px;
+  font-size: 0.26rem;
   color: #ffffff; }
   .btc-page-title.is-uppercase, body[data-path="/"] .btc-page-title.btc-heading[data-heading-level="3"] {
     text-transform: uppercase; }
-
-.btc-site-title {
-  position: relative;
-  padding-left: 10px;
-  padding-left: 0.1rem; }
 
 .btc-section-title {
   position: relative;
