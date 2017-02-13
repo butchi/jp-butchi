@@ -3,74 +3,66 @@ extends /_layout/_default-layout
 append config-block
   - title = '第85回音楽情報科学研究会'
 
-prepend javascript-block
-  script(src=`${rootPath}js/lib/swfobject.js`)
-
-append javascript-block
-  script
-    | var el = document.querySelector(".swf-object");
-    | swfobject.embedSWF("#{dataPath}/mus85demo.swf", el, 610, 377, 10);
-
 block content-block
   +page-title
 
   .inner-block
-    +heading(10)
-      | 概要
-    p
-      | 第85回音楽情報科学研究会のデモ用に制作したプログラムを掲載しています。
-    p
-      | 「解析信号」を複素平面上で操作することにより、それに応じた音色を生成します。
-    p
-      | プログラム実行には
-      a(href="http://get.adobe.com/jp/flashplayer/", target="_blank")
-        | Adobe Flash Player
-      | が必要です。
-    p
-      | 開発環境：Adobe Flash CS4 / ActionScript 3.0
+    section
+      +heading(4)
+        | 論文情報
 
-    +heading(4)
-      | デモプログラム
+      +heading(5)
+        | 著者
 
-    .swf-object
+      ul
+        li
+          | 岩淵 勇樹
+        li
+          | 秋田 純一
+        li
+          | 北川章夫
 
-    p
-      a(href= `${dataPath}/analytic_signal_synthesizer10.fla`) flaファイル
-      | （MIDIキーボード接続機能付き。エラーが出るときは"// Max/MSPとの接続"以降27行を削除してください。）
-    p
-      a(href= `${dataPath}/mus85demo.swf`) swfファイル
-    +heading(4)
-      | 操作説明
-    ul
-      li 円形は黒い点（制御点）が集まって構成されています。制御点をドラッグすると音が変化します。（点が外れすぎると音割れが生じるので注意してください。）
-      |   
-      li 左上のOscillatorのプルダウンメニューから音色を選択することができます。
-      |   
-      li 右側の青い線が実際生成される音の時間波形（2周期分）です。左側の図形の縦座標と一致します。
-      |   
-      li CtrlModeのプルダウンメニューを選択するか、ドラッグ中にマウスのホイールを操作すると、ctrlModeが変わってドラッグ時の影響が変化します。
-      |   
-      li 右上のAmplifierの黒い点（あるいは太い棒）をドラッグするとADSRエンベロープを制御できます。
-      |   
-      li キー入力はマウスで鍵盤を押すか、キーボード入力をすると可能です。キーボード入力をする際は一度プログラム画面をクリックしてください。
+      +heading(5)
+        | 発表タイトル
 
-    +heading(4)
-      | 特徴
-    ul
-      li
-        a(href="http://www.vector.co.jp/soft/win95/art/se085448.html", target="_blank") WaveSpectra
-        | などのソフトで生波形を見てみてください。「リサジュー」で両チャンネルの波形をプロットすると、VCOで操作している閉曲線図形と同じ形が見えると思います。
-      |   
-      li
-        | これは実際に音声のLチャンネルとRチャンネルにそれぞれの軸の波形を割り当てているからなのですが、横軸の波形と縦軸の波形は「ヒルベルト変換」という変換の関係にあるため、片方の波形はもう片方の波形に依存します。（プログラムの右側の青い波形は、今回Lチャンネルに割り当てられています。）
-      |   
-      li
-        | また、両波形はパワースペクトルは同じである（位相だけ90度ずれている）ため、波形が全く違うように見えても聞こえる音はほとんど同じです。（そのため、出力としてはLチャンネルだけでよいのですが、便宜上「虚」の波形も出力している次第です。）
+      p
+        | 閉曲線を利用した音色操作方法の検討と実装
 
-    +heading(4)
-      | 終わりに
-    p 「解析信号」を複素平面上で操作するという、波形編集の新たな方法を提案しました。これを応用すれば、今までにない新しい音作りが期待できます。
-    p ご意見・ご質問があれば著者にお気軽に連絡ください。
+      p
+        | A Method of Sound Synthesis Using Closed Curves and Its Implementation
+
+      +heading(5)
+        | Abstract
+
+      p
+        | 電子楽器を用いることにより，今までにない新たな音色を作ることが可能となり，
+        | 音色を生成する方法も数多く考案されている．
+        | しかしながら，それらのほとんどは多種多様な音色を作るために多くのパラメータ制御を必要とするため，
+        | 直感的な操作が難しく，特性を掴むのに多くの時間を要する．
+        | 本稿では，解析信号を複素平面上の閉曲線図形として直接操作することによって周期音声信号を生成する方法を提案する．
+        | 解析信号を複素平面上の閉曲線図形として扱うことにより，相似図形同士が同じ音色と対応する．
+        | また図形と音を対応付けることにより，直感的な入力が可能になるほか，
+        | 視覚表現と融合した音楽パフォーマンスへの応用も考えられる．
+
+      p(lang="en")
+        | In this paper, we propose the method of sound synthesis
+        | which output audio signal based on given closed curve.
+        | First, we derive the condition that similar figures constantly represent the same timbre.
+        | And we try to convert curves into analytic signals,
+        | that is the simplest representation that satisfy such condition.
+        | Through this research, it can be created an intuitive musical interface.
+
+    section
+      +heading(4)
+        | 発表資料
+
+      p
+        i.material-icons picture_as_pdf
+        a(href=`${dataPath}mus85paper.pdf`) 論文（PDF）
+
+      p
+        a(href="demo/")
+          | デモプログラム
 
     +heading(4)
       | 参考文献
