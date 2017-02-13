@@ -40,6 +40,11 @@ list:
     dest: '/documents/butchi-number/'
 
   -
+    title: '解析信号ギャラリー'
+    path: '/documents/analytic_signal/'
+    dest: '/documents/analytic-signal/'
+
+  -
     title: '2進数の平面的表現に関する考察'
     path: '/documents/'
     filename: 'b-thesis.html'
