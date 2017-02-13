@@ -1,0 +1,277 @@
+extends /_layout/_default-layout
+
+append config-block
+  - title = 'フラクタル'
+  - description = 'フラクタルについての雑文'
+  - keywords = ['フラクタル', '再帰曲線']
+
+block content-block
+  +page-title
+
+  .inner-block
+    p フラクタル (fractal) について、名のあるフラクタル図形を知っている限り列挙。
+
+    p
+      a(href="http://commons.wikimedia.org/wiki/Fractal") Wikimedia CommonsのFractalのギャラリー
+      | でほとんど網羅されてますけど…。
+
+    section
+      +heading(3)
+        | 再帰的処理によるもの
+
+      p 曲線に対して再帰的処理を施したものは特に再帰曲線と呼ばれる。
+
+      section
+        +heading(4)
+          | コッホ雪片（Koch snowflake）
+
+        p コッホ曲線を3つ繋げた図形。内部の面積は有限だが境界線の長さは無限大。
+        p
+          img(alt="コッホ雪片", src="koch_snowflake.png")
+
+        section
+          +heading(4)
+            | コッホ曲線（Koch curve）
+          p
+            img(alt="コッホ曲線", src="koch.gif")
+
+          +heading(5)
+            | Quadratic von Koch curve (type 1)
+          p
+            a(href="#vicsek") Vicsek fractal
+            | の一部。
+          p
+            img(alt="Quadratic von Koch curve (type 1)", src="quadratic_type1_4.png")
+
+          +heading(5)
+            | Quadratic von Koch curve (type 2)
+          p ミンコフスキーのソーセージ(Minkowski sausage)とも。
+          p
+            img(alt="Quadratic von Koch curve (type 2)", src="quadratic_type2_3.png")
+
+          +heading(5)
+            | Cesaro fractal
+          p
+            img(alt="Cesaro fractal", src="cesaro_6.png")
+
+          +heading(5)
+            | コッホ曲線の亜種
+          img(alt="コッホ曲線の亜種", src="4_6.png")
+          img(alt="コッホ曲線の亜種", src="5_6.png")
+          img(alt="コッホ曲線の亜種", src="6_6.png")
+
+      +heading(4)
+        | カントール集合（Cantor set）
+      p
+        | 0～1の実数を3進数で表現したとき、その文字列の中に1を含まない点（0.20020222
+        sub 3
+        | など）の集合として定義することができる。そのため、このように定義した場合はカントールの3進集合（Cantor ternary set）とも呼ばれる。
+      p cf) 悪魔の階段（Devil's staircase、カントール関数（Cantor function））
+      img(alt="悪魔の階段（カントール関数）", src="cantor_function.png")
+
+      a#cantor_dust
+      +heading(4)
+        | カントールの塵（Cantor dust）
+      p カントール集合の2次元への拡張。
+
+      a(href="cantor_dust_large.png")
+        img(alt="シェルピンスキーのギャスケット", src="cantor_dust.png")
+
+      +heading(4)
+        | Cantor Square Fractal
+      p
+        a(href="#cantor_dust") カントールの塵
+        | の補集合
+      a(href="cantor_square_fractal_large.png")
+        img(alt="シェルピンスキーのギャスケット", src="cantor_square_fractal.png")
+
+      +heading(4)
+        | シェルピンスキーのギャスケット（Sierpiński gasket）
+      p
+        small 「シェルピンスキーのガスケット」や「シルピンスキーのギャスケット」、「シェルピンスキーの三角形（Sierpiński triangle）」などとも。
+      a(href="sierpinski_gasket.svg")
+        img(alt="シェルピンスキーのギャスケット", src="sierpinski_gasket.png")
+      p 点（図示では円）を初期集合として表すこともできる。
+      a(href="sierpinski_gasket_with_point.svg")
+        img(alt="シェルピンスキーのギャスケット", src="sierpinski_gasket_with_point.png")
+      p 線分を初期集合として表すこともできる。
+      a(href="sierpinski_gasket_with_line.svg")
+        img(alt="シェルピンスキーのギャスケット", src="sierpinski_gasket_with_line.png")
+      p 三角形を初期集合として表すこともできる。これが一番よく知られている方法である。
+      a(href="sierpinski_gasket_with_triangle.svg")
+        img(alt="シェルピンスキーのギャスケット", src="sierpinski_gasket_with_triangle.png")
+      p ビットマップに合う簡単な形としてせん断された状態で描かれることもある。下図はセルオートマトンのルール60である。
+      a(href="sierpinski_gasket_rule60_large.png")
+        img(alt="シェルピンスキーのギャスケット", src="sierpinski_gasket_rule60.png")
+      p 下図のセルオートマトンのルール90としても知られている。
+      a(href="sierpinski_gasket_rule90_large.png")
+        img(alt="シェルピンスキーのギャスケット", src="sierpinski_gasket_rule90.png")
+
+      +heading(4)
+        | シェルピンスキーのカーペット（Sierpiński carpet）
+      p シェルピンスキーのギャスケットの外形が正三角形であるのに対し、こちらは正方形。
+      a(href="sierpinski_carpet_large.png")
+        img(alt="シェルピンスキーのカーペット", src="sierpinski_carpet.png")
+
+      +heading(4)
+        | メンガーのスポンジ（Menger sponge）
+      p シェルピンスキーのカーペットの3次元拡張。
+
+      a#vicsek
+      +heading(4)
+        | Vicsek fractal
+      p 「Vicsek snowflake」や「box fractal」、「quadraflake」とも。
+      p X字(saltire)の作り方と+字(cross)の作り方がある。
+      a(href="vicsek_saltire_large.png")
+        img(alt="シェルピンスキーのカーペット", src="vicsek_saltire.png")
+      a(href="vicsek_cross_large.png")
+        img(alt="シェルピンスキーのカーペット", src="vicsek_cross.png")
+
+      section
+        +heading(4)
+          | <i>n</i>-flake
+
+        p n=3でシェルピンスキーのギャスケット、n=4でVicsek fractalになる。
+
+        +heading(5)
+          | Pentaflake
+        +heading(5)
+          | Hexaflake
+        a(href="hexaflake.svg")
+          img(alt="Hexaflake", src="hexaflake.png")
+        p ビットマップに合う簡単な形としてせん断された状態でも描ける。
+        a(href="hexaflake_carpet_large.png")
+          img(alt="Hexaflake", src="hexaflake_carpet.png")
+
+        +heading(5)
+          | Polyflake
+        +heading(5)
+          | Sierpinski tetrahedron
+        +heading(5)
+          | Hexahedron flake
+        +heading(5)
+          | Octahedron flake
+        +heading(5)
+          | Dodecahedron flake
+        +heading(5)
+          | Icosahedron flake
+
+      +heading(4)
+        | T-square
+
+      section
+        +heading(4)
+          | 空間充填曲線（Space-filling curves）
+        p 平面充填曲線としては以下のような曲線が挙げられる。
+        ul
+          li
+            | ペアノ曲線（Peano curve）
+            ul
+              li
+                a(href="http://en.wikipedia.org/wiki/File:Greek_cross_fractal_stage_4.svg", target="_blank") 2D Greek cross fractal (?)
+                p
+                  img(alt="2D Greek cross fractal (?)", src="1_3.png")
+          li ヒルベルト曲線（Hilbert curve）
+          li シェルピンスキー曲線（Sierpiński curve）
+          li ムーア曲線（Moore curve）
+          li ゴスパー曲線（Gosper curve）
+          li ルベーグ曲線（Lebesgue curve）（Z曲線（z-order curve）とも）
+        p 極限は平面図形そのものであるため、フラクタルの定義からは外れるが、自己相似性は有するためフラクタル図形として数えられることが多い。
+
+      section
+        +heading(4)
+          | ドラゴン曲線（dragon curve）
+        img(alt="ドラゴン曲線", src="dragon.gif")
+        p これも空間充填曲線の一種である。境界線のハウスドルフ次元は非整数である。
+        p Heighway dragon、Harter–Heighway dragon、Jurassic Park dragonとも。
+        p
+          | Twindragon曲線（Davis-Knuth dragon）は2つのドラゴン曲線を点対称に繋ぎ合わせた形であり、複素数を 
+          i i
+          |  -1 進数で表したときに見つけられる形である。
+        a(href="twindragon_large.png")
+          img(alt="Twindragon曲線", src="twindragon.png")
+        p 派生形としてTerdragon曲線もある。
+        img(alt="Terdragon曲線", src="terdragon_8.png")
+
+      section
+        +heading(4)
+          | レヴィのC曲線（Lévy C curve）
+        p
+          | ドラゴン曲線と似た方法で作られ、Lévy dragonとも呼ばれる。
+          small （個人的にはあまり好きじゃないかたち…。）
+        img(alt="レヴィのC曲線", src="c_13.png")
+
+      +heading(4)
+        | ミンコフスキー曲線（Minkowski curve）
+      img(alt="ミンコフスキー曲線", src="minkowski_6.png")
+
+      +heading(4)
+        | 無名の再帰曲線
+      p 名前を知っている方がいればご一報ください。
+      p
+        img(alt="無名の再帰曲線", src="3_6.png")
+      p
+        img(alt="無名の再帰曲線", src="7_5.png")
+
+    section
+      +heading(3)
+        | 複素数
+
+      +heading(4)
+        | マンデルブロ集合（Mandelbrot set）
+      img(alt="マンデルブロ集合", src="mandelbrot.gif")
+      +heading(4)
+        | ジュリア集合（Julia set）
+      +heading(4)
+        | Burning Ship fractal
+
+    section
+      +heading(3)
+        | 自己相似性をもつ関数
+
+      +heading(4)
+        | 高木曲線（Takagi curve）
+      p 海外ではブラマンジェ曲線（blancmange curve）として知られている。
+
+      +heading(4)
+        | ワイエルシュトラス関数（Weierstrass function）
+
+    section
+      +heading(3)
+        | 自然界におけるフラクタル
+
+      +heading(4)
+        | 拡散律速凝集（DLA, Diffusion-limited aggregation）
+      p
+        | →
+        a(href="http://en.wikipedia.org/wiki/Diffusion-limited_aggregation") Wikipedia（英語）
+
+      +heading(4)
+        | ロマネスコ（Broccoflower）
+      +heading(4)
+        | ブロッコリー（Broccoli）
+      img(alt="ブロッコリーの束", src="broccoli_all.jpg")
+      img(alt="ブロッコリーのかけら", src="broccoli_part.jpg")
+
+    //-
+      <h2>フラクタル次元</h2>
+      フラクタル図形の次元一覧は<a href="http://en.wikipedia.org/wiki/List_of_fractals_by_Hausdorff_dimension">Wikipediaの記事（英語）</a>を参照。
+      <table>
+      <tr><th>位相次元</th><th>フラクタル次元（近似値）</th><th>フラクタル次元（具体値）</th><th>図形</th></tr>
+      <tr><td></td><td>0.631</td><td>log<sub>3</sub>2</td><td>カントール集合</td></tr>
+      <tr><td></td><td>1.262</td><td>log<sub>3</sub>4</td><td>Cantor dust</td></tr>
+      <tr><td></td><td>1.262</td><td>log<sub>3</sub>4</td><td>コッホ曲線</td></tr>
+      <tr><td></td><td>1.524</td><td>log<sub>2</sub>{(1+(73-6√87)<sup>1/3</sup>+(73+6√87)<sup>1/3</sup>)/3}</td><td>ドラゴン曲線の境界線</td></tr>
+      <tr><td></td><td>1.585</td><td>log<sub>2</sub>3</td><td>シェルピンスキーのギャスケット</td></tr>
+      <tr><td></td><td>1.893</td><td>log<sub>3</sub>8</td><td>シェルピンスキーのカーペット</td></tr>
+      <tr><td></td><td>2.000</td><td>2<td>マンデルブロ集合の境界線</td></tr>
+      <tr><td></td><td>2.727</td><td>log<sub>3</sub>20</td><td>メンガーのスポンジ</td></tr>
+      </table>
+
+    +heading(3)
+      | 参考リンク
+    ul
+      li
+        a(href="http://en.wikipedia.org/wiki/List_of_fractals_by_Hausdorff_dimension") フラクタル図形のハウスドルフ次元一覧（Wikipedia英語版）
+      |  
+    br
