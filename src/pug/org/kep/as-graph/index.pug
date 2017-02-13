@@ -8,14 +8,10 @@ mixin card-media(fileName)
       param(name='movie', value= `${fileName}.swf`)
       param(name='quality', value='high')
       param(name='bgcolor', value='#ffffff')
-      embed(src= `${swfPath}${fileName}.swf`, quality='high', bgcolor='#ffffff', width='610', height='377', name= fileName, align='middle', allowscriptaccess='sameDomain', allowfullscreen='false', type='application/x-shockwave-flash', pluginspage='http://www.adobe.com/go/getflashplayer_jp')
+      embed(src= `${dataPath}${fileName}.swf`, quality='high', bgcolor='#ffffff', width='610', height='377', name= fileName, align='middle', allowscriptaccess='sameDomain', allowfullscreen='false', type='application/x-shockwave-flash', pluginspage='http://www.adobe.com/go/getflashplayer_jp')
 
 mixin card-link(file, type= 'data', title= null)
-  if type === 'swf'
-    - filePath= swfPath
-  else
-    - filePath= dataPath
-  a.mdl-button.mdl-button--colored.mdl-js-button.mdl-js-ripple-effect(href= `${filePath}${file}`)
+  a.mdl-button.mdl-button--colored.mdl-js-button.mdl-js-ripple-effect(href= `${dataPath}${file}`)
     i.material-icons file_download
     if title
       = title
