@@ -87,23 +87,23 @@
             <h4 class="btc-heading" data-heading-level="4">デモプログラム
             </h4>
             <div class="swf-object"></div>
-            <p><a href="../../../data/publication/sigmus85/demo/../analytic_signal_synthesizer10.fla">flaファイル</a>（MIDIキーボード接続機能付き。エラーが出るときは"// Max/MSPとの接続"以降27行を削除してください。）</p>
-            <p><a href="../../../data/publication/sigmus85/demo/../mus85demo.swf">swfファイル</a></p>
+            <p><a href="../../../data/publication/sigmus85/demo/analytic_signal_synthesizer10.fla">flaファイル</a>（MIDIキーボード接続機能付き。エラーが出るときは"// Max/MSPとの接続"以降27行を削除してください。）</p>
+            <p><a href="../../../data/publication/sigmus85/demo/mus85demo.swf">swfファイル</a></p>
             <h4 class="btc-heading" data-heading-level="4">操作説明
             </h4>
             <ul>
-              <li>円形は黒い点（制御点）が集まって構成されています。制御点をドラッグすると音が変化します。（点が外れすぎると音割れが生じるので注意してください。）</li>  
-              <li>左上のOscillatorのプルダウンメニューから音色を選択することができます。</li>  
-              <li>右側の青い線が実際生成される音の時間波形（2周期分）です。左側の図形の縦座標と一致します。</li>  
-              <li>CtrlModeのプルダウンメニューを選択するか、ドラッグ中にマウスのホイールを操作すると、ctrlModeが変わってドラッグ時の影響が変化します。</li>  
-              <li>右上のAmplifierの黒い点（あるいは太い棒）をドラッグするとADSRエンベロープを制御できます。</li>  
+              <li>円形は黒い点（制御点）が集まって構成されています。制御点をドラッグすると音が変化します。（点が外れすぎると音割れが生じるので注意してください。）</li>
+              <li>左上のOscillatorのプルダウンメニューから音色を選択することができます。</li>
+              <li>右側の青い線が実際生成される音の時間波形（2周期分）です。左側の図形の縦座標と一致します。</li>
+              <li>CtrlModeのプルダウンメニューを選択するか、ドラッグ中にマウスのホイールを操作すると、ctrlModeが変わってドラッグ時の影響が変化します。</li>
+              <li>右上のAmplifierの黒い点（あるいは太い棒）をドラッグするとADSRエンベロープを制御できます。</li>
               <li>キー入力はマウスで鍵盤を押すか、キーボード入力をすると可能です。キーボード入力をする際は一度プログラム画面をクリックしてください。</li>
             </ul>
             <h4 class="btc-heading" data-heading-level="4">特徴
             </h4>
             <ul>
-              <li><a href="http://www.vector.co.jp/soft/win95/art/se085448.html" target="_blank">WaveSpectra</a>などのソフトで生波形を見てみてください。「リサジュー」で両チャンネルの波形をプロットすると、VCOで操作している閉曲線図形と同じ形が見えると思います。</li>  
-              <li>これは実際に音声のLチャンネルとRチャンネルにそれぞれの軸の波形を割り当てているからなのですが、横軸の波形と縦軸の波形は「ヒルベルト変換」という変換の関係にあるため、片方の波形はもう片方の波形に依存します。（プログラムの右側の青い波形は、今回Lチャンネルに割り当てられています。）</li>  
+              <li><a href="http://www.vector.co.jp/soft/win95/art/se085448.html" target="_blank">WaveSpectra</a>などのソフトで生波形を見てみてください。「リサジュー」で両チャンネルの波形をプロットすると、VCOで操作している閉曲線図形と同じ形が見えると思います。</li>
+              <li>これは実際に音声のLチャンネルとRチャンネルにそれぞれの軸の波形を割り当てているからなのですが、横軸の波形と縦軸の波形は「ヒルベルト変換」という変換の関係にあるため、片方の波形はもう片方の波形に依存します。（プログラムの右側の青い波形は、今回Lチャンネルに割り当てられています。）</li>
               <li>また、両波形はパワースペクトルは同じである（位相だけ90度ずれている）ため、波形が全く違うように見えても聞こえる音はほとんど同じです。（そのため、出力としてはLチャンネルだけでよいのですが、便宜上「虚」の波形も出力している次第です。）</li>
             </ul>
             <h4 class="btc-heading" data-heading-level="4">終わりに
@@ -151,7 +151,7 @@
     <script src="../../../js/script.js"></script>
     <script>
       var el = document.querySelector(".swf-object");
-      swfobject.embedSWF("../../../data/publication/sigmus85/demo/../mus85demo.swf", el, 610, 377, 10);
+      swfobject.embedSWF("../../../data/publication/sigmus85/demo/mus85demo.swf", el, 610, 377, 10);
     </script>
 <script src="https://apis.google.com/js/platform.js" async defer>
   {lang: 'ja'}
