@@ -88,51 +88,17 @@ block content-block
           a(href='http://butchi.jp/documents/analytic_signal/index.html')
             | 解析信号ギャラリー
 
-    //- FIXME: デモ等のURLを直す
     section.sec-reference
-      mixin ipsj
-        sup
-          a(href="#footnote-ipsj") 注1
-
       +heading(4)
         | 参考文献
       ol
         li
           +bib('ec--2008--iwabuchi-yuki')
-          .appendix
-            a(href='http://butchi.jp/documents/ec2008iwabuchi.pdf')
-              | [論文(PDF)]
-              +ipsj
         li
           +bib('wiss--2008--iwabuchi-yuki')
-          .appendix
-            a(href='http://www.wiss.org/WISS2008Proceedings/posters/paper0057.pdf') [論文(PDF)]
-            a(href='http://butchi.jp/documents/wiss2008demo.html')
-              | [デモ（Flashページ）
-              b ※音が出ます
-              | ]
         li
           +bib('mus-85--iwabuchi-yuki')
-          .appendix
-            a(href='http://butchi.jp/documents/mus85paper.pdf') [論文(PDF)]
-              +ipsj
-            a(href='http://butchi.jp/documents/mus85presentation.pdf') [発表資料(PDF)]
-            a(href='http://butchi.jp/documents/mus85demo/') [デモ（Flashページ）]
         li
           +bib('interaction--2011--iwabuchi-yuki')
-          .appendix
-            a(href='http://butchi.jp/documents/interaction2011paper.pdf') [論文(PDF)]
-              +ipsj
-            a(href='http://butchi.jp/documents/interaction2011poster.pdf') [ポスター(PDF)]
-            a(href='http://butchi.jp/documents/mus85demo/') [デモ（Flashページ、第85回音楽情報科学研究会と同じ）]
         li
           +bib('art-science--2011--iwabuchi-yuki')
-          .appendix
-            a(href='http://art-science.org/journal/v10n3/v10n3pp157/artsci-v10n3pp157.pdf') [論文(PDF)]
-            a(href='http://art-science.org/journal/v10n3/v10n3pp157/demo.html') [デモ（Flashページ）]
-
-      .footnote#footnote-ipsj
-        small
-          | 注1: 本著作物の著作権は（社）情報処理学会に帰属します。本著作物は著作権者である情報処理学会の許可のもとに掲載するものです。ご利用に当たっては「著作権法」ならびに「
-          a(href='http://www.ipsj.or.jp/ipsjcode.html', target='_blank') 情報処理学会倫理綱領
-          | 」に従うことをお願いいたします。
