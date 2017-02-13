@@ -61,7 +61,7 @@ list:
     title: 'WISS2008デモ'
     path: '/documents/'
     filename: 'wiss2008demo.html'
-    dest: '/publication/wiss2008/'
+    dest: '/publication/wiss2008/demo/'
 
   -
     title: '第85回音楽情報科学研究会デモ'
