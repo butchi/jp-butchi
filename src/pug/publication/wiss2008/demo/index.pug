@@ -9,7 +9,7 @@ prepend javascript-block
 append javascript-block
   script
     | var el = document.querySelector(".swf-object");
-    | swfobject.embedSWF("#{dataPath}../wiss2008demo.swf", el, 610, 377, 10);
+    | swfobject.embedSWF("#{dataPath}wiss2008demo.swf", el, 610, 377, 10);
 
 block content-block
   +page-title
@@ -33,7 +33,7 @@ block content-block
     .swf-object
 
     p
-      a(href=`${dataPath}../wiss2008demo.swf`) swfファイル
+      a(href=`${dataPath}wiss2008demo.swf`) swfファイル
 
     +heading(4)
       | 操作説明

@@ -9,7 +9,7 @@ prepend javascript-block
 append javascript-block
   script
     | var el = document.querySelector(".swf-object");
-    | swfobject.embedSWF("#{dataPath}../mus85demo.swf", el, 610, 377, 10);
+    | swfobject.embedSWF("#{dataPath}mus85demo.swf", el, 610, 377, 10);
 
 block content-block
   +page-title
@@ -35,10 +35,11 @@ block content-block
     .swf-object
 
     p
-      a(href= `${dataPath}../analytic_signal_synthesizer10.fla`) flaファイル
+      a(href= `${dataPath}analytic_signal_synthesizer10.fla`) flaファイル
       | （MIDIキーボード接続機能付き。エラーが出るときは"// Max/MSPとの接続"以降27行を削除してください。）
     p
-      a(href= `${dataPath}../mus85demo.swf`) swfファイル
+      a(href= `${dataPath}mus85demo.swf`) swfファイル
+
 
     +heading(4)
       | 操作説明
