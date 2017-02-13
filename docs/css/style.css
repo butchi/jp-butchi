@@ -16,41 +16,62 @@
   padding-left: 10px;
   padding-left: 0.1rem; }
 
-.btc-heading {
-  padding-left: 10px;
-  padding-left: 0.1rem; }
-  .btc-heading[data-heading-level="1"] {
-    font-size: 26px;
-    font-size: 0.26rem; }
-  .btc-heading[data-heading-level="2"] {
-    font-size: 26px;
-    font-size: 0.26rem; }
-  .btc-heading[data-heading-level="3"] {
-    font-size: 26px;
-    font-size: 0.26rem;
-    border-left: 10px solid #3f51b5; }
-  .btc-heading[data-heading-level="4"] {
-    font-size: 24px;
-    font-size: 0.24rem;
+.btc-section-title {
+  position: relative;
+  width: 100%;
+  margin-left: 0px;
+  margin-left: 0rem;
+  padding: 5px 15px;
+  padding: 0.05rem 0.15rem;
+  background-color: #3f51b5;
+  color: #ffffff; }
+  .btc-section-title.is-uppercase, body[data-path="/"] .btc-section-title.btc-heading[data-heading-level="3"] {
+    text-transform: uppercase; }
+
+.btc-heading[data-heading-level="1"] {
+  font-size: 26px;
+  font-size: 0.26rem; }
+
+.btc-heading[data-heading-level="2"] {
+  font-size: 26px;
+  font-size: 0.26rem; }
+
+.btc-heading[data-heading-level="3"] {
+  font-size: 26px;
+  font-size: 0.26rem; }
+
+.btc-heading[data-heading-level="4"] {
+  font-size: 24px;
+  font-size: 0.24rem; }
+  section > .btc-heading[data-heading-level="4"] {
+    border-left: 10px solid #3f51b5;
+    padding-left: 10px; }
+
+.btc-heading[data-heading-level="5"] {
+  font-size: 22px;
+  font-size: 0.22rem; }
+  section > .btc-heading[data-heading-level="5"] {
     font-weight: bold; }
-  .btc-heading[data-heading-level="5"] {
-    font-size: 22px;
-    font-size: 0.22rem; }
-  .btc-heading[data-heading-level="6"] {
-    font-size: 20px;
-    font-size: 0.2rem; }
-  .btc-heading[data-heading-level="7"] {
-    font-size: 19px;
-    font-size: 0.19rem; }
-  .btc-heading[data-heading-level="8"] {
-    font-size: 18px;
-    font-size: 0.18rem; }
-  .btc-heading[data-heading-level="9"] {
-    font-size: 17px;
-    font-size: 0.17rem; }
-  .btc-heading[data-heading-level="10"] {
-    font-size: 16px;
-    font-size: 0.16rem; }
+
+.btc-heading[data-heading-level="6"] {
+  font-size: 20px;
+  font-size: 0.2rem; }
+
+.btc-heading[data-heading-level="7"] {
+  font-size: 19px;
+  font-size: 0.19rem; }
+
+.btc-heading[data-heading-level="8"] {
+  font-size: 18px;
+  font-size: 0.18rem; }
+
+.btc-heading[data-heading-level="9"] {
+  font-size: 17px;
+  font-size: 0.17rem; }
+
+.btc-heading[data-heading-level="10"] {
+  font-size: 16px;
+  font-size: 0.16rem; }
 
 .display-none {
   display: none; }
