@@ -7,15 +7,45 @@ block content-block
   +page-title
 
   .inner-block
-    a(href= `${dataPath}lams-2013--poster.pdf`)
-      | ポスター
+    section
+      +heading(4)
+        | 発表情報
+
+      +heading(5)
+        | 発表タイトル
+
+      p
+        | GraphiCalPad
+
+      +heading(5)
+        | 発表者
+
+      ul
+        li
+          | 岩淵 勇樹
+
+      +heading(5)
+        | Abstract
+
+      p
+        | 画像処理ソフトのような操作性を求めて、テキストベースでない新たな数式処理システムを作りたい、
+        | という理念を基にこのアプリケーションを作りました。
+        | 表計算やグラフとの連動で新たな操作感を創り出すことが目標です。
+        | e-Learningの補助ツールとして活用できるほか、
+        | Mathematicaなどにはない操作性で研究ツールとしても実力を発揮できると思われます。
+
+    section
+      +heading(4)
+        | 発表資料
+
+      p
+        i.material-icons picture_as_pdf
+        a(href= `${dataPath}lams-2013--poster.pdf`)
+          | ポスター
 
     +heading(4)
-      | 参考文献
+      | 関連ページ
 
-    ol
-      li
-        +bib('lams--2013--iwabuchi-yuki')
-      li
-        a(href= `${rootPath}project/graphicalpad/`)
-          | GraphiCalPad
+    p
+      a(href= `${rootPath}project/graphicalpad/`)
+        | GraphiCalPad
