@@ -1,0 +1,45 @@
+extends /_layout/_default-layout
+
+append config-block
+  - title = '修士論文'
+
+block content-block
+  +page-title
+    | 岩淵勇樹 修士論文
+
+  .inner-block
+    section.sec-body
+      +heading(4)
+        | 論文
+
+      +heading(5)
+        | 発表タイトル
+
+      p
+        | 閉曲線図形を利用した音色生成法
+
+    section.sec-presentation
+      +heading(4)
+        | 発表資料
+
+      p
+        a(href= `${dataPath}m-thesis.pdf`) スライド（PPT）
+
+    section.sec-reference
+      a(name="reference")
+      +heading(4)
+        | 参考文献
+
+      ol
+        li
+          +bib('ec--2008--iwabuchi-yuki')
+        li
+          +bib('mus-85--iwabuchi-yuki')
+        li
+          +bib('wiss--2008--iwabuchi-yuki')
+        li
+          +bib('interaction--2011--iwabuchi-yuki')
+        li
+          +bib('art-science--2011--iwabuchi-yuki')
+        li
+          +bib('d-thesis--iwabuchi-yuki')
