@@ -136,10 +136,10 @@ gulp.task('works', () => {
     let destination;
     if(tag === 'works') {
       destination = `${DEST}/works`;
-      locals.path = `works/`;
+      locals.pugPath = `works/`;
     } else {
       destination = `${DEST}/works/tag/${tag}`;
-      locals.path = `works/tag/${tag}`;
+      locals.pugPath = `works/tag/${tag}`;
     }
 
     let filteredArr = _.filter(worksLi, (item, name) => {
@@ -164,7 +164,7 @@ gulp.task('works', () => {
   Object.keys(worksLi).forEach((name) => {
     let locals = worksLi[name];
 
-    locals.path = `works/works/${name}`;
+    locals.pugPath = `works/works/${name}`;
 
     ret = gulp.src([`${SRC}/pug/_works-item/index.pug`])
       .pipe(pug({
@@ -192,7 +192,7 @@ gulp.task('pug', () => {
   return gulp.src([`${SRC}/pug/**/[!_]*.pug`, `!${SRC}/pug/_**/*`])
     // from [Pug(Jade)で効率的なマークアップ環境を作る ｜ Tips Note by TAM](http://www.tam-tam.co.jp/tipsnote/html_css/post10973.html)
     .pipe(data(function(file) {
-      locals.path = path.relative(file.base, file.path);
+      locals.pugPath = path.relative(file.base, file.path);
         return locals;
     }))
     .pipe(pug({

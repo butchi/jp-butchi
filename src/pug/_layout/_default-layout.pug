@@ -1,5 +1,5 @@
 block config-block
-  - path = path.replace(/[^\/]+.pug$/, '')
+  - path = pugPath.replace(/[^\/]+.pug$/, '')
   - rootPath = path.replace(/(.+?)[\/]/g, '../')
   - imgPath = `${rootPath}img/${path}`
   - swfPath = `${rootPath}swf/${path}`
