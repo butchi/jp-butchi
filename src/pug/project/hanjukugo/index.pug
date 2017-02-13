@@ -4,17 +4,18 @@ append config-block
   - title = '半熟語'
 
 block content-block
-  h3.btc-heading(data-heading-level="3")
-    = title
+  +page-title
 
   .inner-block
-    h4 岩淵勇樹「半熟語」
+    +heading(4)
+      | 岩淵勇樹「半熟語」
     p
       img(alt="半熟語ロゴ", src= `${imgPath}logo.png`)
       img(alt="半熟語QRコード", src= `${imgPath}qr_top.png`)
     p
       a(href="readme/") 概要
-    h5 二字熟語
+    +heading(5)
+      | 二字熟語
     ul
       li
         | 01 
@@ -121,7 +122,8 @@ block content-block
         a(href= `${imgPath}15_r.png`) 右
         |  
         a(href= `${imgPath}15_all.png`) 熟語
-    h5 三字熟語
+    +heading(5)
+      | 三字熟語
     ul
       li
         | 16 
@@ -151,7 +153,8 @@ block content-block
         a(href= `${imgPath}19_r.png`) 右
         |  
         a(href= `${imgPath}19_all.png`) 熟語
-    h5 四字熟語
+    +heading(5)
+      | 四字熟語
     ul
       li
         | 20 

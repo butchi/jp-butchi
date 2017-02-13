@@ -12,8 +12,7 @@ append javascript-block
     | swfobject.embedSWF("#{dataPath}/icd200707presentation.swf", el, 640, 480, 10);
 
 block content-block
-  h3.btc-heading(data-heading-level="3")
-    = title
+  +page-title
 
   .inner-block
     .swf-object

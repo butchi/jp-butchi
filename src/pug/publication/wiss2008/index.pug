@@ -12,8 +12,7 @@ append javascript-block
     | swfobject.embedSWF("#{dataPath}/wiss2008demo.swf", el, 610, 377, 10);
 
 block content-block
-  h3.btc-heading(data-heading-level="3")
-    = title
+  +page-title
 
   .inner-block
 

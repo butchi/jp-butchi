@@ -4,12 +4,12 @@ append config-block
   - title = '学位論文'
 
 block content-block
-  h3.btc-heading(data-heading-level="3")
+  +heading(3)
     | 岩淵勇樹 学位論文
 
   .inner-block
     section.sec-body
-      h4.btc-heading#body(data-heading-level="4")
+      +heading(4)
         | 論文
 
       ul
@@ -17,7 +17,7 @@ block content-block
           a(href= `${dataPath}b-thesis.pdf`) 論文（PDF）
 
     section.sec-presentation
-      h4.btc-heading#body(data-heading-level="4")
+      +heading(4)
         | 資料
 
       ul
@@ -31,7 +31,8 @@ block content-block
         sup
           a(href="#footnote-ipsj") 注1
 
-      h4.btc-heading#reference(data-heading-level="4")
+      a(name="reference")
+      +heading(4)
         | 参考文献
       ol
         li

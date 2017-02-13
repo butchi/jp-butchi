@@ -4,7 +4,7 @@ append config-block
   - title = '生い立ち'
 
 block content-block
-  h2.btc-heading(data-heading-level="2")
+  +page-title
     span(lang="ja")
     ruby
       mixin ruby(kanji, hiragana)
@@ -22,17 +22,17 @@ block content-block
       | (IWABUCHI Yu(u)ki)
 
   section.sec-history
-    h3.btc-heading(data-heading-level="3")
+    +heading(3)
       | 生い立ち
 
     .inner-block
       ul.list-history
         li.item-history
-          h4.heading
+          +heading(4)
             time(datetime="1984-09-13T06:18") 1984年9月13日午前6時18分
           | 福井県大野市生まれ
         li.item-history
-          h4.heading
+          +heading(4)
             time(datetime="1991") 1991年
           | 大野市有終西小学校 入学
           ul
@@ -40,13 +40,13 @@ block content-block
             li 相撲クラブ
             li 漫画クラブ他
         li.item-history
-          h4.heading
+          +heading(4)
             time(datetime="1997") 1997年
           | 大野市開成中学校 入学
           ul
             li 美術部
         li.item-history
-          h4.heading
+          +heading(4)
             time(datetime="2000") 2000年
           | 福井県立大野高等学校 入学
           ul
@@ -54,7 +54,7 @@ block content-block
             li 放送部(2001年～)
             li 合唱部(2001年～)
         li.item-history
-          h4.heading
+          +heading(4)
             time(datetime="2003") 2003年
           | 金沢大学 工学部 情報システム工学科 入学
           ul
@@ -62,19 +62,19 @@ block content-block
             li 美術部
             li ICT教材作成支援室（金沢大学FD・ICT教育推進室）(2005年～)
         li.item-history
-          h4.heading
+          +heading(4)
             time(datetime="2007") 2007年
           | 金沢大学大学院 自然科学研究科 電子情報工学専攻 博士前期課程 入学
         li.item-history
-          h4.heading
+          +heading(4)
             time(datetime="2008-12") 2008年12月
           | 人生最大の転機
         li.item-history
-          h4.heading
+          +heading(4)
             time(datetime="2009") 2009年
           | 金沢大学大学院 自然科学研究科 電子情報科学専攻 博士後期課程 入学
         li.item-history
-          h4.heading
+          +heading(4)
             time(datetime="2012") 2012年
           a(href='http://www.kayac.com/', target='_blank') 面白法人カヤック
           | 入社
@@ -98,7 +98,7 @@ block content-block
               time(datetime="2014") 2014年
               | 〜）
         li.item-history
-          h4.heading
+          +heading(4)
             time(datetime="2015-10") 2015年
             | ～ 
           a(href="http://wbawakate.jp/", target="_blank")
@@ -106,7 +106,7 @@ block content-block
           |  社会人支部
 
   section
-    h3.btc-heading(data-heading-level="3")
+    +heading(3)
       | 昔取った杵柄
 
     .inner-block
@@ -131,7 +131,7 @@ block content-block
 
   section.sec-interest
     mixin interest-list(key)
-      h4.btc-heading(data-heading-level="4")
+      +heading(4)
         = key
         each row, rowTitle in interest[key]
           .interest-category
@@ -144,7 +144,7 @@ block content-block
         p
           | …
 
-    h3.btc-heading(data-heading-level="3")
+    +heading(3)
       | 興味キーワード
 
     .inner-block

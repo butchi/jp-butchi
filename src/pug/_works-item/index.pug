@@ -7,13 +7,8 @@ append config-block
   - imgPath = `${rootPath}img/${path}`
   - worksPath = '../'
 
-//- append stylesheet-block
-
-//- append javascript-block
-
 block content-block
-  h3.btc-heading(data-heading-level="3")
-    = title
+  +page-title
 
   .inner-block
     if(ext === 'png' || ext === 'gif' || ext === 'jpg')

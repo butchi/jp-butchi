@@ -1,7 +1,7 @@
 extends /_layout/_default-layout
 
 append config-block
-  - title = ''
+  - title = 'エンタテインメントコンピューティング2008'
 
 prepend javascript-block
   script(src=`${rootPath}js/lib/swfobject.js`)
@@ -12,8 +12,7 @@ append javascript-block
     | swfobject.embedSWF("#{dataPath}/ec2008presentation.swf", el, 640, 480, 10);
 
 block content-block
-  h3.btc-heading(data-heading-level="3")
-    | エンタテインメントコンピューティング2008
+  +page-title
 
   .inner-block
     .swf-object

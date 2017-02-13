@@ -4,12 +4,11 @@ append config-block
   - title = 'テクノロジトレンド工学'
 
 block content-block
-  h3.btc-heading(data-heading-level="3")
-    = title
+  +page-title
 
   .inner-block
     .description
-      h5
+      +heading(4)
         | 講義概要
       blockquote
         | みなさんの多くは、いずれ技術者(engineer)や研究者(researcher)として社会に出て行くことになると思いますが、そこで大切なのは、「技術に対する感受性(sense)」のように思います。 理論は、あとからいくらでも勉強できますが、世の中にいまどんな技術があって、それがおおよそどんなもので、どんな特徴があり、他のものと比べてどうか、さらには、それに「乗る」のはいいことか悪いことか(得か損か)、ということを「感じとる」感受性は、 日ごろから「技術の傾向に触れる」習慣をもつことが 非常に大切だと考えます。
@@ -23,7 +22,7 @@ block content-block
         | より）
 
     section.sec-2010
-      h4.btc-heading(data-heading-level="4")
+      +heading(4)
         | 2010年度
 
       ul
@@ -36,13 +35,13 @@ block content-block
           li
             a(href='http://www.itmedia.co.jp/news/articles/1011/12/news063.html')
               | iPhoneでFlash動画再生できるモバイルブラウザ、週末に30万本販売
-          h5.btc-heading(data-heading-level="5")
+          +heading(5)
             | 議論
           ul
             li Flashでは消費電力が高いというのは本当か？
           li
             a(href='http://www.itmedia.co.jp/news/articles/1008/19/news082.html') ドラッグ＆ドロップで簡単プログラミング　文科省が子ども向けに公開、まとめサイトも登場
-          h5.btc-heading(data-heading-level="5")
+          +heading(5)
             | 議論
           ul
             li for文とかwhile文とかが子供にわかるのか
@@ -69,7 +68,7 @@ block content-block
             a(href='http://www.itmedia.co.jp/news/articles/1011/09/news066.html\
             ') パッチングもアナログシーケンサーも――KORGのiPad楽器、第2弾は名器MS-20＋SQ-10＝「iMS-20」
 
-            h5.btc-heading(data-heading-level="5")
+            +heading(5)
               | 議論
             ul
               li アナログのツマミのほうが操作性がいい？
@@ -78,14 +77,14 @@ block content-block
           li
             a(href='http://journal.mycom.co.jp/news/2011/01/20/015/\
             ') Amidio、iPadでギターのような演奏が楽しめる楽器アプリ「OMGuitar」発売
-            h5.btc-heading(data-heading-level="5")
+            +heading(5)
               | 議論
             ul
               li タッチパッドだと感触がないのが問題
               li ギターの弦を真似る必要があるのか？
 
     section.sec-2007
-      h4.btc-heading(data-heading-level="4")
+      +heading(4)
         | 2007年度
 
       ul

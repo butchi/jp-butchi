@@ -10,7 +10,7 @@ append config-block
 block content-block
   .mdl-grid.mdl-grid--no-spacing
     .mdl-cell--12-col
-      h2.btc-heading(data-heading-level="2")
+      +site-title
         span(lang="ja")
         ruby
           mixin ruby(kanji, hiragana)
@@ -31,7 +31,7 @@ block content-block
         a(href='index-e.html') English version
 
       section.section-icon#icon
-        h3.btc-heading(data-heading-level="3")
+        +heading(3)
           | Icon
 
         mixin icon(src, title, href)
@@ -59,21 +59,21 @@ block content-block
           +icon('nandemo-magic.png', 'なんでも魔法。', `${rootPath}project/nandemo-magic/`)
 
       section.section-feed#feed
-        h3.btc-heading(data-heading-level="3")
+        +heading(3)
           | Feed
 
         .inner-block
           .butchi-feed
 
       section.section-news#news
-        h3.btc-heading(data-heading-level="3")
+        +heading(3)
           | News
 
         .inner-block
           .btc-news
 
       section.section-bibliogfraphy#bibliography
-        h3.btc-heading(data-heading-level="3")
+        +heading(3)
           | 略歴
 
         .inner-block
@@ -103,13 +103,13 @@ block content-block
           a(href= rootPath + 'person/people/') →関連人物
 
           section#research-theme
-            h4.btc-heading(data-heading-level="4")
+            +heading(4)
               | 研究テーマ
             p 数学的特性に基づくインターフェースや、美しい画像表現のためのハードウェア、効率的な処理を行う演算器など。
             p 数学モデルの集積回路・インタラクティブシステムなどへの応用に関する研究に従事。
 
       section.section-document#document
-        h3.btc-heading(data-heading-level="3")
+        +heading(3)
           | 諸々
 
         .inner-block
@@ -142,12 +142,12 @@ block content-block
               a(href= `https://butchi.github.io/secondly-happy/`) 秒刊ハッピー
 
       section.section-publication#publication
-        h3.btc-heading(data-heading-level="3")
+        +heading(3)
           | 発表文献
 
         .inner-block
           section
-            h4.btc-heading(data-heading-level="4")
+            +heading(4)
               | 国際発表
             ul
               li
@@ -160,7 +160,7 @@ block content-block
               sup
                 a(href="#footnote-ipsj") 注1
 
-            h4.btc-heading(data-heading-level="4")
+            +heading(4)
               | 国内発表
             ul
               li
@@ -219,7 +219,7 @@ block content-block
                   | 」に従うことをお願いいたします。
 
           section
-            h4.btc-heading(data-heading-level="4")
+            +heading(4)
               | 学内発表・講義関連
             ul
               li 自主課題研究「偏角関数を用いた曲線の研究」(2006)
@@ -252,7 +252,7 @@ block content-block
                   a(href='documents/yugen20120826') [発表スライド(HTMLページ)]
 
       section.section-institution#institution
-        h3.btc-heading(data-heading-level="3")
+        +heading(3)
           | 所属学会
 
         .inner-block
@@ -261,12 +261,12 @@ block content-block
               a(href='http://www.ieice.or.jp/', target='_blank') 電子情報通信学会(IEICE)
       
       section.section-link#link
-        h3.btc-heading(data-heading-level="3")
+        +heading(3)
           | リンク
 
         .inner-block
           section
-            h4.btc-heading(data-heading-level="4")
+            +heading(4)
               | 所属
             ul
               li
@@ -286,7 +286,7 @@ block content-block
                   | アカペラグループ「某隊」
 
           section
-            h5.btc-heading(data-heading-level="5")
+            +heading(5)
               | 過去の所属
             ul
               li
@@ -306,7 +306,7 @@ block content-block
                   | 金沢大学美術部
 
           section.sec-link
-            h5.btc-heading(data-heading-level="5")
+            +heading(5)
               | 関連リンク
             ul
               li

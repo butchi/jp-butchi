@@ -1,16 +1,16 @@
 extends /_layout/_default-layout
 
 block content-block
-  h3.btc-heading(data-heading-level="3")
+  +heading(3)
     | キュービックパズルの迷宮
 
   .inner-block
-    h4.btc-heading(data-heading-level="4")
+    +heading(4)
       | 概要
     p
       | 2004年度前期に受講した鷲山靖先生による「キュービックパズルの迷宮」で紹介されていたパズルと、講義で自作したキュービックパズル（マイ・テトブレイン）を問題として出題します。
 
-    h4.btc-heading(data-heading-level="4")
+    +heading(4)
       | 問1
 
     p 正方形でできた16×20のマスに、立方体の展開図（全部で11種類）をできるだけ多く敷き詰めてください。
@@ -21,7 +21,7 @@ block content-block
     p
       a(href= `${imgPath}cube-puzzle--answer.gif`) 解答例
 
-    h4.btc-heading(data-heading-level="4")
+    +heading(4)
       | 問2
     p [マイ・テトブレイン]以下の図のパーツを用いて、3×3×4の直方体を作ってください。
     p

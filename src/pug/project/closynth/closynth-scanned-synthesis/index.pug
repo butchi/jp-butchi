@@ -12,11 +12,11 @@ append javascript-block
     | swfobject.embedSWF("#{dataPath}analytic_signal_synthesizer11.swf", el, 640, 480, 10);
 
 block content-block
-  h3.btc-heading(data-heading-level="3")
-    = title
+  +page-title
 
   .inner-block
-    h4 概要
+    +heading(4)
+      | 概要
 
     p
       a(href="http://butchi.jp/documents/mus85demo/") 第85回音楽情報科学研究会のデモ用に制作したプログラム
@@ -29,14 +29,16 @@ block content-block
 
     p 開発環境：Adobe Flash CS4 / ActionScript 3.0
 
-    h4 デモプログラム
+    +heading(4)
+      | デモプログラム
 
     .swf-object
 
     p
       a(href= `${dataPath}analytic_signal_synthesizer11.swf`) swfファイル
 
-    h4 操作説明
+    +heading(4)
+      | 操作説明
     ul
       li 円形は灰色の点（制御点）が集まって構成されています。制御点をドラッグすると音が変化します。（点が外れすぎると音割れが生じるので注意してください。）
       li 左上のOscillatorのプルダウンメニューから音色を選択することができます。
@@ -50,7 +52,8 @@ block content-block
         | です。地表面をマウスでなぞると黒くなります。黒くなった部分の上に制御点が乗っているとパルス（右側の青い線で盛り上がっている部分）が立ち上がります。
       li 地表面を元に戻す機能がないので、やり直す場合はリロードしてください。
 
-    h4 特徴
+    +heading(4)
+      | 特徴
     ul
       li
         a(href="http://www.vector.co.jp/soft/win95/art/se085448.html", target="_blank") WaveSpectra
@@ -60,11 +63,13 @@ block content-block
       li
         | また、両波形はパワースペクトルは同じである（位相だけ90度ずれている）ため、波形が全く違うように見えても聞こえる音はほとんど同じです。（そのため、出力としてはLチャンネルだけでよいのですが、便宜上「虚」の波形も出力している次第です。）
 
-    h4 終わりに
+    +heading(4)
+      | 終わりに
     p 「解析信号」を複素平面上で操作するという、波形編集の新たな方法を提案しました。これを応用すれば、今までにない新しい音作りが期待できます。
     p ご意見・ご質問があれば著者にお気軽に連絡ください。
 
-    h4 参考文献
+    +heading(4)
+      | 参考文献
     p
       a(href= `${rootPath}/org/ku/d-thesis/#reference`) 博士論文ページ
       | 参照

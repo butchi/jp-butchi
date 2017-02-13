@@ -29,11 +29,11 @@ append config-block
 //- append javascript-block
 
 block content-block
-  h3.btc-heading(data-heading-level="3")
-    = title
+  +page-title
 
   .inner-block
-    h4.btc-heading(data-heading-level="4") 概要
+    +heading(4)
+      | 概要
 
     p e-Leaningの数学教材として開発したグラフ描画プログラムです。
 

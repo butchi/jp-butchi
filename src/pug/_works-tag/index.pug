@@ -8,13 +8,8 @@ append config-block
   - imgPath = `${rootPath}img/works/`
   - worksPath = tagName === 'works' ? './' : '../../'
 
-//- append stylesheet-block
-
-//- append javascript-block
-
 block content-block
-  h3.btc-heading(data-heading-level="3")
-    = title
+  + page-title
 
   .inner-block
     ul.list

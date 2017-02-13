@@ -49,12 +49,12 @@ mixin people(profileLi)
               i.material-icons web
 
 block content-block
-  h3.btc-heading(data-heading-level="3")
+  +page-title
     | 岩淵 勇樹  の関連人物
 
   .inner-block
     section
-      h4.btc-heading(data-heading-level="4")
+      +heading(4)
         | 家族
 
       +people({
@@ -114,7 +114,7 @@ block content-block
       })
 
     section
-      h4.btc-heading(data-heading-level="4")
+      +heading(4)
         | 親戚
 
       +people({
@@ -178,7 +178,7 @@ block content-block
       })
 
     section
-      h4.btc-heading(data-heading-level="4")
+      +heading(4)
         | 親友
 
       +people({
@@ -213,7 +213,7 @@ block content-block
       })
 
     section
-      h4.btc-heading(data-heading-level="4")
+      +heading(4)
         | 尊敬する人
 
       +people({
@@ -256,7 +256,7 @@ block content-block
       })
 
     section
-      h4.btc-heading(data-heading-level="4")
+      +heading(4)
         | 憧れのカヤック社員
 
       +people({
@@ -272,7 +272,7 @@ block content-block
       })
 
     section
-      h4.btc-heading(data-heading-level="4")
+      +heading(4)
         | お気に入りのアーティスト
 
       +people({
