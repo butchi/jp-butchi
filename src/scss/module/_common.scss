@@ -111,3 +111,12 @@ a {
     color: #000000;
   }
 }
+
+.btc-blockquote {
+  @include mq-sp {
+    font-size: px($base-font-size--sp)
+  }
+  @include mq-pc {
+    font-size: px($base-font-size--pc)
+  }
+}
