@@ -1,0 +1,58 @@
+extends /_layout/_default-layout
+
+append config-block
+  - title = '空間スペクトルを用いたジャギー評価に関する一考察 ～擬似的不規則画素配置によるジャギーの解消効果～'
+
+block content-block
+  +page-title
+
+  .inner-block
+
+    section
+      +heading(4)
+        | 論文情報
+
+      +heading(5)
+        | 著者
+
+      ul
+        li
+          | 前田 唯
+        li
+          | 岩淵 勇樹
+        li
+          | 秋田 純一
+
+      +heading(5)
+        | Abstract
+
+      p
+        | 従来の画像システムの画素の並びは格子状配置であるため、
+        | そこにはジャギーが現れ、場合によって画像の精細さを著しく損なう要因となる。
+        | その解消のためには、高解像度化やアンチエイリアス処理が行われてるが、
+        | 高解像度化には画素サイズや画像情報量からの限界があり、
+        | またアンチエイリアス処理は輪郭がぼやけるなどの問題点がある。
+        | 著者らは、画素の配置を擬似的に不規則とすることで、
+        | ジャギーの影響を低減することが出来る画像システムの提案と評価を行ってきた。
+        | 本稿では、離散フーリエ変換を用いてジャギーの特性を抽出する方法を提案し、
+        | それを用いて、画素の配置を擬似的に不規則とすることによるジャギーの解消効果を評価する。
+
+      p(lang="en")
+        | The pixels in the conventional image systems are located in lattice places,
+        | that cause the jaggy in the image, which often cause the severe defect in the image quality.
+        | The conventional approaches to overcome this jaggy problem
+        | are such as the increased number of pixels and anti-aliasing,
+        | however, the number of pixels is limited by the physical pixel size and the quantity of the image information,
+        | while the anti-aliasing intrinsically causes the blurred image.
+        | The authors have been proposing and evaluating the image systems
+        | with pseudorandom pixel placement to decrease the effect of the jaggy.
+        | In this report, we propose the jaggy evaluation method using discrete Fourier transform,
+        | as well as the evaluation of the jaggy elimination by pseudorandom pixel placement.
+
+    section
+      +heading(4)
+        | 発表資料
+
+      p
+        a(href="http://ci.nii.ac.jp/naid/110007384615")
+          | [CiNii 論文 -  空間スペクトルを用いたジャギー評価に関する一考察 : 擬似的不規則画素配置によるジャギーの解消効果(高機能イメージセンサとその応用)](http://ci.nii.ac.jp/naid/110007384615)
