@@ -36,11 +36,15 @@
   // sectioning
   &[data-heading-level="3"] {
     font-size: px(26);
+
+    border-left: 10px solid $main-color;
   }
 
   // sub section
   &[data-heading-level="4"] {
     font-size: px(24);
+
+    font-weight: bold;
   }
 
   &[data-heading-level="5"] {
