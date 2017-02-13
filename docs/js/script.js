@@ -462,15 +462,19 @@ var Router = function () {
   _createClass(Router, [{
     key: 'initialize',
     value: function initialize() {
+      function matchQs(selector) {
+        return !!document.querySelector(selector);
+      };
+
       var $body = $('body');
 
       this.pageCommon = new _Common2.default();
 
-      if ($body.hasClass('page---root')) {
+      if (matchQs('body[data-path="/"]')) {
         this.pageRoot = new _Root2.default();
       }
 
-      if ($body.hasClass('page---documents--analytic-signal')) {
+      if (matchQs('body[data-path="documents/analytic-signal/"]')) {
         this.pageDocumentsAnalyticSignal = new _analyticSignal2.default();
       }
     }

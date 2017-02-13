@@ -9,15 +9,19 @@ export default class Router {
   }
 
   initialize() {
+    function matchQs(selector) {
+      return !!document.querySelector(selector);
+    };
+
     const $body = $('body');
 
     this.pageCommon = new PageCommon();
 
-    if($body.hasClass('page---root')) {
+    if(matchQs('body[data-path="/"]')) {
       this.pageRoot = new PageRoot();
     }
 
-    if($body.hasClass('page---documents--analytic-signal')) {
+    if(matchQs('body[data-path="documents/analytic-signal/"]')) {
       this.pageDocumentsAnalyticSignal = new PageDocumentsAnalyticSignal();
     }
   }
