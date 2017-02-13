@@ -1,0 +1,33 @@
+mixin heading(level)
+  if level === 1
+    h1.btc-heading(data-heading-level="1")
+      block
+  if level === 2
+    h2.btc-heading(data-heading-level="2")
+      block
+  if level === 3
+    h3.btc-heading(data-heading-level="3")
+      block
+  if level === 4
+    h4.btc-heading(data-heading-level="4")
+      block
+  if level === 5
+    h5.btc-heading(data-heading-level="5")
+      block
+  if level >= 6
+    h6.btc-heading(data-heading-level= level)
+      block
+
+mixin site-title
+  h1.btc-site-title
+    if block
+      block
+    else
+      = site_name
+
+mixin page-title
+  h2.btc-page-title
+    if block
+      block
+    else
+      = title
