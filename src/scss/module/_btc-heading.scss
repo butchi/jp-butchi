@@ -22,9 +22,24 @@
   padding-left: px(10);
 }
 
-.btc-heading {
-  padding-left: px(10);
+.btc-section-title {
+  position: relative;
 
+  width: 100%;
+
+  margin-left: 0rem;
+
+  padding: px(5) px(15);
+  background-color: $main-color;
+
+  color: $white;
+
+  &.is-uppercase {
+    text-transform: uppercase;
+  }
+}
+
+.btc-heading {
   &[data-heading-level="1"] {
     font-size: px(26);
   }
@@ -36,19 +51,24 @@
   // sectioning
   &[data-heading-level="3"] {
     font-size: px(26);
-
-    border-left: 10px solid $main-color;
   }
 
   // sub section
   &[data-heading-level="4"] {
     font-size: px(24);
 
-    font-weight: bold;
+    section > & {
+      border-left: 10px solid $main-color;
+      padding-left: 10px;
+    }
   }
 
   &[data-heading-level="5"] {
     font-size: px(22);
+
+    section > & {
+      font-weight: bold;
+    }
   }
 
   &[data-heading-level="6"] {
