@@ -22,7 +22,7 @@ block content-block
       | (IWABUCHI Yu(u)ki)
 
   section.sec-history
-    +heading(3)
+    +section-title
       | 生い立ち
 
     .inner-block
@@ -106,7 +106,7 @@ block content-block
           |  社会人支部
 
   section
-    +heading(3)
+    +section-title
       | 昔取った杵柄
 
     .inner-block
@@ -133,18 +133,18 @@ block content-block
     mixin interest-list(key)
       +heading(4)
         = key
-        each row, rowTitle in interest[key]
-          .interest-category
-            //- h5.heading
-              = rowTitle
-              | : 
-            p.keyword
-              = row.join(', ')
-              | , 
-        p
-          | …
+      each row, rowTitle in interest[key]
+        .interest-category
+          //- h5.heading
+            = rowTitle
+            | : 
+          p.keyword
+            = row.join(', ')
+            | , 
+      p
+        | …
 
-    +heading(3)
+    +section-title
       | 興味キーワード
 
     .inner-block

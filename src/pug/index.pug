@@ -31,7 +31,7 @@ block content-block
         a(href='index-e.html') English version
 
       section.section-icon#icon
-        +heading(3)
+        +section-title
           | Icon
 
         mixin icon(src, title, href)
@@ -59,21 +59,21 @@ block content-block
           +icon('nandemo-magic.png', 'なんでも魔法。', `${rootPath}project/nandemo-magic/`)
 
       section.section-feed#feed
-        +heading(3)
+        +section-title
           | Feed
 
         .inner-block
           .butchi-feed
 
       section.section-news#news
-        +heading(3)
+        +section-title
           | News
 
         .inner-block
           .btc-news
 
       section.section-bibliogfraphy#bibliography
-        +heading(3)
+        +section-title
           | 略歴
 
         .inner-block
@@ -109,7 +109,7 @@ block content-block
             p 数学モデルの集積回路・インタラクティブシステムなどへの応用に関する研究に従事。
 
       section.section-document#document
-        +heading(3)
+        +section-title
           | 諸々
 
         .inner-block
@@ -142,7 +142,7 @@ block content-block
               a(href= `https://butchi.github.io/secondly-happy/`) 秒刊ハッピー
 
       section.section-publication#publication
-        +heading(3)
+        +section-title
           | 発表文献
 
         .inner-block
@@ -252,7 +252,7 @@ block content-block
                   a(href='documents/yugen20120826') [発表スライド(HTMLページ)]
 
       section.section-institution#institution
-        +heading(3)
+        +section-title
           | 所属学会
 
         .inner-block
@@ -261,7 +261,7 @@ block content-block
               a(href='http://www.ieice.or.jp/', target='_blank') 電子情報通信学会(IEICE)
       
       section.section-link#link
-        +heading(3)
+        +section-title
           | リンク
 
         .inner-block
