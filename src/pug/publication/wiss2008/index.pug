@@ -16,7 +16,8 @@ block content-block
 
   .inner-block
 
-    h4 概要
+    +heading(4)
+      | 概要
     p WISS2008のデモ用に制作したプログラムを掲載しています。
     p 「解析信号」を複素平面上で操作することにより、リアルタイムで音色を生成します。
     p
@@ -26,14 +27,16 @@ block content-block
 
     p 開発環境：Adobe Flash CS4 / ActionScript 3.0
 
-    h4 デモプログラム
+    +heading(4)
+      | デモプログラム
 
     .swf-object
 
     p
       a(href=`${dataPath}wiss2008demo.swf`) swfファイル
 
-    h4 操作説明
+    +heading(4)
+      | 操作説明
     ul
       li 初期状態では灰色で「VCO」と表示されている部分の周りに黒い円形が表示されています。同時に「ポー」という440Hzの正弦波音が鳴っています。
       li 円形は黒い点（制御点）が集まって構成されています。制御点をドラッグすると音が変化します。（点が外れすぎると音割れが生じるので注意してください。）
@@ -44,7 +47,8 @@ block content-block
       li 下部のボタンをクリックするか、ドラッグ中にマウスのホイールを操作すると、ctrlModeが変わってドラッグ時の影響が変化します。
       li 「LFO」も同様に操作できます。
 
-    h4 特徴
+    +heading(4)
+      | 特徴
     ul
       li
         a(href="http://www.vector.co.jp/soft/win95/art/se085448.html", target="_blank") WaveSpectra
@@ -66,22 +70,18 @@ block content-block
     p このプログラムは単なる研究紹介デモなので、「音楽作成ソフト」からは程遠い現状であることをあらかじめご了承ください。
     p ご意見・ご質問があれば著者にお気軽に連絡ください。
 
-    h4 参考文献
-    ol
-      li
-        +bib('ec--2008--iwabuchi-yuki')
-      li
-        +bib('wiss--2008--iwabuchi-yuki')
-      li
-        +bib('mus-85--iwabuchi-yuki')
-      li
-        +bib('interaction--2011--iwabuchi-yuki')
-      li
-        +bib('art-science--2011--iwabuchi-yuki')
-      li 博士論文「図形と音声の変換手法とその応用に関する研究」(2012)
+    section
+      +heading(4)
+        | 参考文献
 
-    .footnote#footnote-ipsj
-      .appendix
-        | 注1: 本著作物の著作権は（社）情報処理学会に帰属します。本著作物は著作権者である情報処理学会の許可のもとに掲載するものです。ご利用に当たっては「著作権法」ならびに「
-        a(href='http://www.ipsj.or.jp/ipsjcode.html', target='_blank') 情報処理学会倫理綱領
-        | 」に従うことをお願いいたします。
+      ol
+        li
+          +bib('ec--2008--iwabuchi-yuki')
+        li
+          +bib('mus-85--iwabuchi-yuki')
+        li
+          +bib('interaction--2011--iwabuchi-yuki')
+        li
+          +bib('art-science--2011--iwabuchi-yuki')
+        li
+          +bib('d-thesis--iwabuchi-yuki')

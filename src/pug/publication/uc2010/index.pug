@@ -5,3 +5,33 @@ append config-block
 
 block content-block
   +page-title
+
+  .inner-block
+    section
+      +heading(4)
+        | 論文情報
+
+      +heading(5)
+        | Abstract
+
+      p
+        | Conventional binary numbers has the carry rule of leftward propagation in linear array.
+        | In this paper, we propose the number representation with the carry rule of
+        | both leftward and upward propagations in planar array,
+        | which we call “planar binary (Butchi number),” and we describe their properties.
+
+    section
+      +heading(4)
+        | 発表資料
+
+      p
+        i.material-icons picture_as_pdf
+        a(href=`${dataPath}/uc2010poster.pdf`)
+          | ポスター（PDF）
+
+      +heading(4)
+        | 関連ページ
+
+      p
+        a(href=`${rootPath}documents/butchi-number/`)
+          | 物智数

@@ -459,9 +459,11 @@ butchi-number--2010-06--iwabuchi-yuki:
   title:
     Properties of “Planar Binary (Butchi Number)”
   journal:
-    '<a href="http://arn.local.frs.riken.jp/UC10/" target="_blank">Unconventional Computation (UC)</a>'
+    'Unconventional Computation (UC)'
   date:
     "2010-06"
+  site:
+    'publication/uc2010/'
 
 icd--2007-07--iwabuchi-yuki:
   author:
@@ -481,6 +483,8 @@ icd--2007-07--iwabuchi-yuki:
   ]
   date:
     "2007-07"
+  site:
+    'publication/icd200707/'
 
 ec--2008--iwabuchi-yuki:
   author:
@@ -490,13 +494,15 @@ ec--2008--iwabuchi-yuki:
   title:
     閉曲線図形に基づいた音色生成方法の検討
   journal:
-    '<a href="http://www.dc-meiji.jp/ec2008/" target="_blank">エンタテインメントコンピューティング2008</a>論文集'
+    '<a href="http://ec2008.entcomp.org/" target="_blank">エンタテインメントコンピューティング2008</a>論文集'
   pages: [
     143,
     146
   ]
   date:
     "2008-10"
+  site:
+    'publication/ec2008/'
 
 wiss--2008--iwabuchi-yuki:
   author:
@@ -513,6 +519,8 @@ wiss--2008--iwabuchi-yuki:
   ]
   date:
     "2008-11"
+  site:
+    'publication/wiss2008/'
 
 ite--2008--maeda-yui:
   author:
@@ -533,6 +541,8 @@ ite--2008--maeda-yui:
   ]
   date:
     "2008-12"
+  site:
+    'publication/ite2008/'
 
 mus-85--iwabuchi-yuki:
   author:
@@ -545,6 +555,8 @@ mus-85--iwabuchi-yuki:
     '<a href="http://www.sigmus.jp/SIG/sig201005program.html" target="_blank">第85回音楽情報科学研究会</a>'
   date:
     '2010-05'
+  site:
+    'publication/mus85/'
 
 interaction--2011--iwabuchi-yuki:
   author:
@@ -557,6 +569,8 @@ interaction--2011--iwabuchi-yuki:
     '<a href="http://www.interaction-ipsj.org/2011/" target="_blank">インタラクション2011</a>'
   date:
     '2011-03'
+  site:
+    'publication/interaction2011/'
 
 art-science--2011--iwabuchi-yuki:
   author:
@@ -577,6 +591,20 @@ art-science--2011--iwabuchi-yuki:
   ]
   date:
     '2011-09'
+  site:
+    'publication/art-science--v10n3/'
+
+d-thesis--iwabuchi-yuki:
+  author:
+    - 岩淵勇樹
+  title:
+    図形と音声の変換手法とその応用に関する研究
+  journal:
+    博士論文
+  date:
+    '2012-03'
+  site:
+    'org/ku/d-thesis/'
 
 lams--2013--iwabuchi-yuki:
   author:
@@ -587,3 +615,5 @@ lams--2013--iwabuchi-yuki:
     '<a href="http://imi.kyushu-u.ac.jp/~waki/lams/" target="_blank">数学ソフトウェア紹介</a>'
   date:
     '2013'
+  site:
+    'publication/lams2013/'

@@ -15,4 +15,48 @@ block content-block
   +page-title
 
   .inner-block
-    .swf-object
+    section
+      +heading(4)
+        | 論文情報
+
+      +heading(5)
+        | 発表タイトル
+
+      p
+        | 閉曲線図形に基づいた音色生成方法の検討
+
+      +heading(5)
+        | Abstract
+
+      p(lang="en")
+        |  In this paper, we propose the method of sound synthesis which output audio
+        | signal based on given closed curve. First, we derive the condition that similar figures
+        | constantly represent the same timbre. And we try to convert curves into analytic signals,
+        | that is the simplest representation that satisfy such condition. Through this research, it
+        | can be created an intuitive musical interface.
+
+      p
+        i.material-icons picture_as_pdf
+        a(href=`${dataPath}ec2008iwabuchi.pdf`) 論文（PDF）
+
+    section
+      +heading(4)
+        | 発表資料（PC限定）
+
+      .swf-object
+
+    section
+      +heading(4)
+        | 参考文献
+
+      ol
+        li
+          +bib('wiss--2008--iwabuchi-yuki')
+        li
+          +bib('mus-85--iwabuchi-yuki')
+        li
+          +bib('interaction--2011--iwabuchi-yuki')
+        li
+          +bib('art-science--2011--iwabuchi-yuki')
+        li
+          +bib('d-thesis--iwabuchi-yuki')

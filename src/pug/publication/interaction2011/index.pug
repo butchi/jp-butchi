@@ -5,3 +5,62 @@ append config-block
 
 block content-block
   +page-title
+
+  .inner-block
+    section
+      +heading(4)
+        | 論文情報
+
+      +heading(5)
+        | Abstract
+
+      p
+        | 電子楽器の発明以降，音色を生成する方法も数多く考案されている．
+        | しかしそれらの多くは音色生成のための多くの制御パラメータを必要とし，
+        | また各パラメータと音色との対応が複雑であり，
+        | 直感的な音色の操作が困難である．
+        | またそれらのパラメータ操作は一次元的であり，
+        | 近年普及が著しいタッチパッドなどの二次元操作デバイスを有効に利用できていない．
+        | 本稿では，解析信号と呼ばれる複素平面上の閉曲線図形と音声信号との対応に着目し，
+        | 閉曲線に対する形状操作等の直接操作によって周期音声信号を変化させる方式による音色の操作方法を提案する．
+        | 本手法は，既存の音に対する加工によって音色の発展させる音色生成には有効である．
+        | また図形と音を対応付けることにより，視覚表現と融合した音楽パフォーマンスへの応用も考えられる．
+
+      p(lang="en")
+        | A lot of studies on tone generation methods are proposed,
+        | however, tone generation requires numbers of parameters,
+        | and it is difficult to understand the relation between the parameters and the generated tone.
+        | Their parameters are operated in one-dimensional interface,
+        | which is not effective for two-dimensional interface, such as touch pad.
+        | In this paper,
+        | we propose the tone manipulation method using a kind of closed curves called the analytic signal.
+        | The waveform of the tone is related to the corresponding analytic signal,
+        | and the manipulation for the analytic signal can generate the modified tone.
+        | This method is adequate for tone modification from the existing instrument’s tone.
+        | It is also expected to extend the application of the analytic signal to visual fusion performance.
+
+    section
+      +heading(4)
+        | 発表資料
+
+      p
+        i.material-icons picture_as_pdf
+        a(href=`${dataPath}/interaction2011poster.pdf`)
+          | ポスター（PDF）
+
+
+    section
+      +heading(4)
+        | 参考文献
+
+      ol
+        li
+          +bib('ec--2008--iwabuchi-yuki')
+        li
+          +bib('wiss--2008--iwabuchi-yuki')
+        li
+          +bib('mus-85--iwabuchi-yuki')
+        li
+          +bib('art-science--2011--iwabuchi-yuki')
+        li
+          +bib('d-thesis--iwabuchi-yuki')
