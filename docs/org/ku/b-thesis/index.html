@@ -75,22 +75,21 @@
           </nav>
         </div>
         <main class="mdl-layout__content">
-          <h3 class="btc-heading" data-heading-level="3">岩淵勇樹 学位論文
-          </h3>
+          <h2 class="btc-page-title">岩淵勇樹 学位論文
+          </h2>
           <div class="inner-block">
             <section class="sec-body">
               <h4 class="btc-heading" data-heading-level="4">論文
               </h4>
-              <ul>
-                <li><a href="../../../data/org/ku/b-thesis/b-thesis.pdf">論文（PDF）</a></li>
-              </ul>
+              <h5 class="btc-heading" data-heading-level="5">発表タイトル
+              </h5>
+              <p>2進数の平面的表現に関する考察</p>
+              <p><i class="material-icons">picture_as_pdf</i><a href="../../../data/org/ku/b-thesis/b-thesis.pdf">論文（PDF）</a></p>
             </section>
             <section class="sec-presentation">
-              <h4 class="btc-heading" data-heading-level="4">資料
+              <h4 class="btc-heading" data-heading-level="4">発表資料（PC限定）
               </h4>
-              <ul>
-                <li><a href="presentation/">発表スライド(Flashページ)</a></li>
-              </ul>
+              <div class="swf-object"></div>
             </section>
             <section class="sec-reference"><a name="reference"></a>
               <h4 class="btc-heading" data-heading-level="4">参考文献
@@ -99,7 +98,6 @@
                 <li><span class="btc-bib">IWABUCHI Yuuki, AKITA Junichi. Properties of “Planar Binary (Butchi Number)”. Unconventional Computation (UC). 
                     <time class="date">2010-06
                     </time>. <a href="../../../publication/uc2010/">[詳細ページ]</a></span>
-                  <div class="appendix"><a href="../../../documents/uc2010poster.pdf">[poster (PDF)]</a></div>
                 </li>
               </ol>
             </section>
@@ -109,10 +107,15 @@
       </div>
     </div>
     <!-- javascript-->
+    <script src="../../../js/lib/swfobject.js"></script>
     <script src="../../../js/lib/jquery.min.js"></script>
     <script src="../../../js/lib/lodash.min.js"></script>
     <script src="../../../js/lib/material.min.js"></script>
     <script src="../../../js/script.js"></script>
+    <script>
+      var el = document.querySelector(".swf-object");
+      swfobject.embedSWF("../../../data/org/ku/b-thesis/b-thesis.swf", el, 640, 480, 10);
+    </script>
 <script src="https://apis.google.com/js/platform.js" async defer>
   {lang: 'ja'}
 </script>

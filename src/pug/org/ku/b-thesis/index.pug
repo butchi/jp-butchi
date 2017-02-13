@@ -3,8 +3,16 @@ extends /_layout/_default-layout
 append config-block
   - title = '学位論文'
 
+prepend javascript-block
+  script(src=`${rootPath}js/lib/swfobject.js`)
+
+append javascript-block
+  script
+    | var el = document.querySelector(".swf-object");
+    | swfobject.embedSWF("#{dataPath}b-thesis.swf", el, 640, 480, 10);
+
 block content-block
-  +heading(3)
+  +page-title
     | 岩淵勇樹 学位論文
 
   .inner-block
@@ -12,30 +20,26 @@ block content-block
       +heading(4)
         | 論文
 
-      ul
-        li
-          a(href= `${dataPath}b-thesis.pdf`) 論文（PDF）
+      +heading(5)
+        | 発表タイトル
+
+      p
+        | 2進数の平面的表現に関する考察
+
+      p
+        i.material-icons picture_as_pdf
+        a(href= `${dataPath}b-thesis.pdf`) 論文（PDF）
 
     section.sec-presentation
       +heading(4)
-        | 資料
+        | 発表資料（PC限定）
 
-      ul
-        li
-          a(href="presentation/")
-            | 発表スライド(Flashページ)
+      .swf-object
 
-    //- FIXME: デモ等のURLを直す
     section.sec-reference
-      mixin ipsj
-        sup
-          a(href="#footnote-ipsj") 注1
-
       a(name="reference")
       +heading(4)
         | 参考文献
       ol
         li
           +bib('butchi-number--2010-06--iwabuchi-yuki')
-          .appendix
-            a(href= `${rootPath}documents/uc2010poster.pdf`) [poster (PDF)]
