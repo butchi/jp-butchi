@@ -44,13 +44,13 @@ block content-block
           +icon('music.png', '♪', 'documents/music/')
           +icon('butchi-number.png', '平面的2進数（物智数）', `${rootPath}documents/butchi-number/`)
           +icon('bit-reversal-plane.png', 'ビット逆転平面', 'http://ci.nii.ac.jp/naid/110006380829/')
-          +icon('dragon-tapestry--red.png', 'ドラゴン曲線のタペストリー', 'documents/fractal/')
+          +icon('dragon-tapestry--red.png', 'ドラゴン曲線のタペストリー', `${rootPath}documents/fractal/`)
           +icon('bitwise-xor.png', 'ビット毎の排他的論理和', 'http://reference.wolfram.com/mathematica/ref/BitXor.html')
           +icon('bion.png', 'bion (両対数極座標)', 'documents/design/')
           +icon('gray-code-counter.gif', 'グレイコードカウンタ', 'http://www.youtube.com/watch?v=v64F7YaY27U')
-          +icon('fractal.png', 'フラクタル', 'documents/fractal')
-          +icon('analytic-signal--harmonica.png', '解析信号（ハーモニカ）', 'documents/analytic-signal/')
-          +icon('analytic-signal--whistle.png', '解析信号（口笛）', 'documents/analytic-signal/')
+          +icon('fractal.png', 'フラクタル', `${rootPath}documents/fractal`)
+          +icon('analytic-signal--harmonica.png', '解析信号（ハーモニカ）', `${rootPath}documents/analytic-signal/`)
+          +icon('analytic-signal--whistle.png', '解析信号（口笛）', `${rootPath}documents/analytic-signal/`)
           +icon('regular-icosahedron.png', '正20面体')
           +icon('delta.png', 'DeltaΔPulse', 'documents/design/')
           +icon('star.png', 'star', 'documents/design/')
@@ -96,11 +96,11 @@ block content-block
               a(href="http://www.kayac.com/", target="_blank")
                 | 面白法人カヤック
 
-          a(href= rootPath + 'person/profile/') →略さない歴
+          a(href=`${rootPath}person/profile/`) →略さない歴
           br
-          a(href= rootPath + 'person/creed/') →者是
+          a(href=`${rootPath}person/creed/`) →者是
           br
-          a(href= rootPath + 'person/people/') →関連人物
+          a(href=`${rootPath}person/people/`) →関連人物
 
           section#research-theme
             +heading(4)
@@ -115,13 +115,13 @@ block content-block
         .inner-block
           ul
             li
-              a(href= `${rootPath}documents/butchi-number/`) 平面的2進数（Butchi数）
+              a(href=`${rootPath}documents/butchi-number/`) 平面的2進数（Butchi数）
             li
               a(href= rootPath + 'documents/music/') 音楽
             li
               a(href= rootPath + 'documents/poem/') 詩
             li
-              a(href= rootPath + 'documents/analytic-signal/') 解析信号ギャラリー
+              a(href=`${rootPath}documents/analytic-signal/`) 解析信号ギャラリー
             li
               a(href= rootPath + 'documents/character/') キャラクター
             li
@@ -129,17 +129,17 @@ block content-block
             li
               a(href= rootPath + 'documents/fractal/') フラクタル図形一覧
             li
-              a(href= rootPath + 'documents/graphicalpad/') GraphiCalPad
+              a(href=`${rootPath}documents/graphicalpad/`) GraphiCalPad
             li
-              a(href= rootPath + 'documents/symbol/') 記号辞典〜コンピューターにおける記号の意味と使われ方〜
+              a(href=`${rootPath}documents/symbol/`) 記号辞典〜コンピューターにおける記号の意味と使われ方〜
             li
-              a(href= `${rootPath}project/webclappad/`) WebClapPad
+              a(href=`${rootPath}project/webclappad/`) WebClapPad
             li
-              a(href= `${rootPath}project/nandemo-magic/`) なんでも魔法。
+              a(href=`${rootPath}project/nandemo-magic/`) なんでも魔法。
             li
-              a(href= `${rootPath}project/po3pokemon/`) ポポポポケモン！
+              a(href=`${rootPath}project/po3pokemon/`) ポポポポケモン！
             li
-              a(href= `https://butchi.github.io/secondly-happy/`) 秒刊ハッピー
+              a(href=`https://butchi.github.io/secondly-happy/`) 秒刊ハッピー
 
       section.section-publication#publication
         +section-title
