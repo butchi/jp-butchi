@@ -32,7 +32,7 @@ list:
   -
     title: 'いいノック'
     path: '/iiknock/'
-    dest: '/project/iiknock'
+    dest: '/project/iiknock/'
 
   -
     title: '物智数'
