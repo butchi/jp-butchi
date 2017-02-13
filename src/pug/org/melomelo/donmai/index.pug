@@ -1,0 +1,41 @@
+extends /_layout/_default-layout
+
+append config-block
+  - title = 'rockasen『丼米』'
+
+block content-block
+  +page-title
+
+  .inner-block
+    +heading(4)
+      | 概要
+
+    p アカペラサークルMeloMeloで結成されたアカペラグループ、rockasenのアルバム『丼米』のアートワークです。
+
+    +heading(4)
+      | 冊子
+
+    p
+      img(src=`${imgPath}__-00.jpg`, alt="title page")
+    p
+      img(src=`${imgPath}01-02.jpg`, alt="pp. 1--2")
+    p
+      img(src=`${imgPath}03-04.jpg`, alt="pp. 3--4")
+    p
+      img(src=`${imgPath}05-06.jpg`, alt="pp. 5--6")
+    p
+      img(src=`${imgPath}07-08.jpg`, alt="pp. 7--8")
+    p
+      img(src=`${imgPath}09-10.jpg`, alt="pp. 9--10")
+    p
+      img(src=`${imgPath}11-12.jpg`, alt="pp. 11--12")
+    p
+      img(src=`${imgPath}13-14.jpg`, alt="pp. 13--14")
+    p
+      img(src=`${imgPath}15-__.jpg`, alt="last page")
+
+    +heading(4)
+      | CDラベル
+
+    p
+      img(src=`${imgPath}label1.png`)
