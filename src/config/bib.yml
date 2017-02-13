@@ -452,18 +452,17 @@ icad--auditory-display:
 
 
 # self
-butchi-number--2010-06--iwabuchi-yuki:
+b-thesis--iwabuchi-yuki:
   author:
-    - IWABUCHI Yuuki
-    - AKITA Junichi
+    - 岩淵勇樹
   title:
-    Properties of “Planar Binary (Butchi Number)”
+    2進数の平面的表現に関する考察
   journal:
-    'Unconventional Computation (UC)'
+    学士論文
   date:
-    "2010-06"
+    '2007-03'
   site:
-    'publication/uc2010/'
+    'org/ku/b-thesis/'
 
 icd--2007-07--iwabuchi-yuki:
   author:
@@ -544,6 +543,18 @@ ite--2008--maeda-yui:
   site:
     'publication/ite2008/'
 
+m-thesis--iwabuchi-yuki:
+  author:
+    - 岩淵勇樹
+  title:
+    閉曲線図形を利用した音色生成法
+  journal:
+    修士論文
+  date:
+    '2009-03'
+  site:
+    'org/ku/b-thesis/'
+
 mus-85--iwabuchi-yuki:
   author:
     - 岩淵勇樹
@@ -557,6 +568,19 @@ mus-85--iwabuchi-yuki:
     '2010-05'
   site:
     'publication/sigmus85/'
+
+butchi-number--2010-06--iwabuchi-yuki:
+  author:
+    - IWABUCHI Yuuki
+    - AKITA Junichi
+  title:
+    Properties of “Planar Binary (Butchi Number)”
+  journal:
+    'Unconventional Computation (UC)'
+  date:
+    "2010-06"
+  site:
+    'publication/uc2010/'
 
 interaction--2011--iwabuchi-yuki:
   author:
