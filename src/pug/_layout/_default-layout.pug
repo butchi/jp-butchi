@@ -18,6 +18,7 @@ mixin bib(key)
     - pages = bibitem.pages
     - date = bibitem.date
     - url = bibitem.url
+    - site = bibitem.site
     span.btc-bib
       if author
         if author instanceof Array
@@ -53,6 +54,11 @@ mixin bib(key)
       if url
         a(href= url, target="_blank")
           = url
+
+      if site
+        |  
+        a(href= site)
+          | [詳細ページ]
 
 doctype html
 html(lang="ja")
