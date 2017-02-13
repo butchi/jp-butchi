@@ -1,0 +1,23 @@
+- path = 'org/melomelo/mv5/'
+- rootPath = '../../../'
+- dataPath = `${rootPath}data/${path}`
+
+doctype html
+html
+  head
+    title
+      | Moving Voice vol. 5
+    style.
+      body {
+        margin: 0;
+        background: black;
+      }
+
+  body
+    .wrapper
+      .swf-object
+
+    script(src=`${rootPath}js/lib/swfobject.js`)
+    script
+      | var el = document.querySelector(".swf-object");
+      | swfobject.embedSWF("#{dataPath}opening.swf", el, 800, 600, 10);
