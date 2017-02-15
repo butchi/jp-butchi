@@ -78,8 +78,10 @@
           <h2 class="btc-page-title">解析信号
           </h2>
           <div class="inner-block">
-            <h4>解析信号ギャラリー</h4>
-            <h5>概要</h5>
+            <h4 class="btc-heading" data-heading-level="4">解析信号ギャラリー
+            </h4>
+            <h5 class="btc-heading" data-heading-level="5">概要
+            </h5>
             <p>
               音声信号の正周波数成分を2倍、負周波数成分を0倍にした信号を解析信号と呼びます。
               また、音声信号の正周波数成分を $-i$ 倍、負周波数成分を $i$ 倍する変換をヒルベルト変換と呼びます（ $i$ は虚数単位）。これは、解析信号の虚部に等しくなります。
@@ -88,228 +90,241 @@
             <p>当ページでは、さまざまな音色の解析信号の、時間軸を潰して複素平面上に投影した画像を載せています。</p>
             <p>音色の名前にリンクしているWAVファイルは、Lチャンネルが原信号、Rチャンネルが原信号をヒルベルト変換した信号となっており、フリーソフトの<a href="http://www.vector.co.jp/soft/win95/art/se085448.html" target="_blank">WaveSpectra</a>などのソフトで「リサジュー」で両チャンネルの波形をプロットすると解析信号を複素平面上に投影した信号を見ることができます。</p>
             <p>筆者は、解析信号を利用したシンセサイザを開発しています。最後の<a href="#references">参考文献</a>のリンクからデモを利用できます。</p>
-            <h4>プリミティブな音</h4>
-            <ul class="list-as">
-              <li class="item-as">
-                <h5>正弦波</h5>
-                <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/sine.mp3" style="background-image: url(../../img/documents/analytic-signal/sine.png)">
-                  <div class="cover"></div>
-                  <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
-                </div>
-              </li>
-              <li class="item-as">
-                <h5>三角波</h5>
-                <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/trianglar.mp3" style="background-image: url(../../img/documents/analytic-signal/trianglar.png)">
-                  <div class="cover"></div>
-                  <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
-                </div>
-              </li>
-              <li class="item-as">
-                <h5>のこぎり波</h5>
-                <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/sawlike.mp3" style="background-image: url(../../img/documents/analytic-signal/sawlike.png)">
-                  <div class="cover"></div>
-                  <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
-                </div>
-              </li>
-              <li class="item-as">
-                <h5>矩形波</h5>
-                <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/rectangle.mp3" style="background-image: url(../../img/documents/analytic-signal/rectangle.png)">
-                  <div class="cover"></div>
-                  <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
-                </div>
-              </li>
-              <li class="item-as">
-                <h5>Sinc関数</h5>
-                <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/sinc.mp3" style="background-image: url(../../img/documents/analytic-signal/sinc.png)">
-                  <div class="cover"></div>
-                  <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
-                </div>
-              </li>
-            </ul>
-            <h4>MIDI音</h4>MIDI音はMicrosoft GS Wavetable SW Synthのものを利用しました。
-            <ul class="list-as">
-              <li class="item-as">
-                <h5>005 El. Piano</h5>
-                <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/midi-005.mp3" style="background-image: url(../../img/documents/analytic-signal/midi-005.png)">
-                  <div class="cover"></div>
-                  <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
-                </div>
-              </li>
-              <li class="item-as">
-                <h5>023 Harmonica</h5>
-                <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/midi-023.mp3" style="background-image: url(../../img/documents/analytic-signal/midi-023.png)">
-                  <div class="cover"></div>
-                  <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
-                </div>
-              </li>
-              <li class="item-as">
-                <h5>025 Nylon Guitar</h5>
-                <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/midi-025.mp3" style="background-image: url(../../img/documents/analytic-signal/midi-025.png)">
-                  <div class="cover"></div>
-                  <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
-                </div>
-              </li>
-              <li class="item-as">
-                <h5>027 Jazz Guitar</h5>
-                <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/midi-027.mp3" style="background-image: url(../../img/documents/analytic-signal/midi-027.png)">
-                  <div class="cover"></div>
-                  <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
-                </div>
-              </li>
-              <li class="item-as">
-                <h5>041 Violin</h5>
-                <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/midi-041.mp3" style="background-image: url(../../img/documents/analytic-signal/midi-041.png)">
-                  <div class="cover"></div>
-                  <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
-                </div>
-              </li>
-              <li class="item-as">
-                <h5>047 OrchestraHarp</h5>
-                <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/midi-047.mp3" style="background-image: url(../../img/documents/analytic-signal/midi-047.png)">
-                  <div class="cover"></div>
-                  <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
-                </div>
-              </li>
-              <li class="item-as">
-                <h5>049 Strings 1</h5>
-                <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/midi-049.mp3" style="background-image: url(../../img/documents/analytic-signal/midi-049.png)">
-                  <div class="cover"></div>
-                  <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
-                </div>
-              </li>
-              <li class="item-as">
-                <h5>053 Choir Aahs</h5>
-                <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/midi-053.mp3" style="background-image: url(../../img/documents/analytic-signal/midi-053.png)">
-                  <div class="cover"></div>
-                  <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
-                </div>
-              </li>
-              <li class="item-as">
-                <h5>081 Square Lead</h5>
-                <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/midi-081.mp3" style="background-image: url(../../img/documents/analytic-signal/midi-081.png)">
-                  <div class="cover"></div>
-                  <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
-                </div>
-              </li>
-              <li class="item-as">
-                <h5>082 Saw Lead</h5>
-                <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/midi-082.mp3" style="background-image: url(../../img/documents/analytic-signal/midi-082.png)">
-                  <div class="cover"></div>
-                  <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
-                </div>
-              </li>
-            </ul>
-            <h4>楽器音</h4>
-            桂田祐史氏が提供していただいた音声ファイルを用いました。
-            桂田先生と松山周五郎氏に感謝します。
-            <ul class="list-as">
-              <li class="item-as">
-                <h5>チェレスタ</h5>
-                <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/cheresta.mp3" style="background-image: url(../../img/documents/analytic-signal/cheresta.png)">
-                  <div class="cover"></div>
-                  <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
-                </div>
-              </li>
-              <li class="item-as">
-                <h5>ギター</h5>
-                <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/guitar.mp3" style="background-image: url(../../img/documents/analytic-signal/guitar.png)">
-                  <div class="cover"></div>
-                  <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
-                </div>
-              </li>
-              <li class="item-as">
-                <h5>ギター（高）</h5>
-                <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/guitar-high.mp3" style="background-image: url(../../img/documents/analytic-signal/guitar-high.png)">
-                  <div class="cover"></div>
-                  <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
-                </div>
-              </li>
-              <li class="item-as">
-                <h5>ハーモニカ</h5>
-                <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/harmonika.mp3" style="background-image: url(../../img/documents/analytic-signal/harmonika.png)">
-                  <div class="cover"></div>
-                  <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
-                </div>
-              </li>
-              <li class="item-as">
-                <h5>ハーモニカ（高）</h5>
-                <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/harmonika-high.mp3" style="background-image: url(../../img/documents/analytic-signal/harmonika-high.png)">
-                  <div class="cover"></div>
-                  <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
-                </div>
-              </li>
-              <li class="item-as">
-                <h5>ピアノ</h5>
-                <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/piano.mp3" style="background-image: url(../../img/documents/analytic-signal/piano.png)">
-                  <div class="cover"></div>
-                  <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
-                </div>
-              </li>
-              <li class="item-as">
-                <h5>ピアノ（高）</h5>
-                <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/piano-high.mp3" style="background-image: url(../../img/documents/analytic-signal/piano-high.png)">
-                  <div class="cover"></div>
-                  <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
-                </div>
-              </li>
-              <li class="item-as">
-                <h5>リコーダー</h5>
-                <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/riko-da-.mp3" style="background-image: url(../../img/documents/analytic-signal/riko-da-.png)">
-                  <div class="cover"></div>
-                  <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
-                </div>
-              </li>
-              <li class="item-as">
-                <h5>リコーダー（高）</h5>
-                <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/riko-da-high.mp3" style="background-image: url(../../img/documents/analytic-signal/riko-da-high.png)">
-                  <div class="cover"></div>
-                  <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
-                </div>
-              </li>
-              <li class="item-as">
-                <h5>三味線</h5>
-                <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/shamisen.mp3" style="background-image: url(../../img/documents/analytic-signal/shamisen.png)">
-                  <div class="cover"></div>
-                  <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
-                </div>
-              </li>
-              <li class="item-as">
-                <h5>三味線（高）</h5>
-                <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/shamisen-high.mp3" style="background-image: url(../../img/documents/analytic-signal/shamisen-high.png)">
-                  <div class="cover"></div>
-                  <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
-                </div>
-              </li>
-              <li class="item-as">
-                <h5>トランペット</h5>
-                <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/toranpetto.mp3" style="background-image: url(../../img/documents/analytic-signal/toranpetto.png)">
-                  <div class="cover"></div>
-                  <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
-                </div>
-              </li>
-              <li class="item-as">
-                <h5>トランペット（高）</h5>
-                <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/toranpetto-high.mp3" style="background-image: url(../../img/documents/analytic-signal/toranpetto-high.png)">
-                  <div class="cover"></div>
-                  <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
-                </div>
-              </li>
-              <li class="item-as">
-                <h5>ヴァイオリン</h5>
-                <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/violin.mp3" style="background-image: url(../../img/documents/analytic-signal/violin.png)">
-                  <div class="cover"></div>
-                  <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
-                </div>
-              </li>
-              <li class="item-as">
-                <h5>ヴァイオリン（高）</h5>
-                <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/violin-high.mp3" style="background-image: url(../../img/documents/analytic-signal/violin-high.png)">
-                  <div class="cover"></div>
-                  <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
-                </div>
-              </li>
-            </ul>
-            <h4>参考文献</h4><a name="references"></a>
+            <section>
+              <h4 class="btc-heading" data-heading-level="4">プリミティブな音
+              </h4>
+              <ul class="list-as">
+                <li class="item-as">
+                  <h5>正弦波</h5>
+                  <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/sine.mp3" style="background-image: url(../../img/documents/analytic-signal/sine.png)">
+                    <div class="cover"></div>
+                    <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
+                  </div>
+                </li>
+                <li class="item-as">
+                  <h5>三角波</h5>
+                  <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/trianglar.mp3" style="background-image: url(../../img/documents/analytic-signal/trianglar.png)">
+                    <div class="cover"></div>
+                    <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
+                  </div>
+                </li>
+                <li class="item-as">
+                  <h5>のこぎり波</h5>
+                  <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/sawlike.mp3" style="background-image: url(../../img/documents/analytic-signal/sawlike.png)">
+                    <div class="cover"></div>
+                    <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
+                  </div>
+                </li>
+                <li class="item-as">
+                  <h5>矩形波</h5>
+                  <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/rectangle.mp3" style="background-image: url(../../img/documents/analytic-signal/rectangle.png)">
+                    <div class="cover"></div>
+                    <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
+                  </div>
+                </li>
+                <li class="item-as">
+                  <h5>Sinc関数</h5>
+                  <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/sinc.mp3" style="background-image: url(../../img/documents/analytic-signal/sinc.png)">
+                    <div class="cover"></div>
+                    <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
+                  </div>
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h4 class="btc-heading" data-heading-level="4">MIDI音
+              </h4>
+              <p>MIDI音はMicrosoft GS Wavetable SW Synthのものを利用しました。</p>
+              <ul class="list-as">
+                <li class="item-as">
+                  <h5>005 El. Piano</h5>
+                  <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/midi-005.mp3" style="background-image: url(../../img/documents/analytic-signal/midi-005.png)">
+                    <div class="cover"></div>
+                    <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
+                  </div>
+                </li>
+                <li class="item-as">
+                  <h5>023 Harmonica</h5>
+                  <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/midi-023.mp3" style="background-image: url(../../img/documents/analytic-signal/midi-023.png)">
+                    <div class="cover"></div>
+                    <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
+                  </div>
+                </li>
+                <li class="item-as">
+                  <h5>025 Nylon Guitar</h5>
+                  <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/midi-025.mp3" style="background-image: url(../../img/documents/analytic-signal/midi-025.png)">
+                    <div class="cover"></div>
+                    <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
+                  </div>
+                </li>
+                <li class="item-as">
+                  <h5>027 Jazz Guitar</h5>
+                  <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/midi-027.mp3" style="background-image: url(../../img/documents/analytic-signal/midi-027.png)">
+                    <div class="cover"></div>
+                    <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
+                  </div>
+                </li>
+                <li class="item-as">
+                  <h5>041 Violin</h5>
+                  <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/midi-041.mp3" style="background-image: url(../../img/documents/analytic-signal/midi-041.png)">
+                    <div class="cover"></div>
+                    <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
+                  </div>
+                </li>
+                <li class="item-as">
+                  <h5>047 OrchestraHarp</h5>
+                  <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/midi-047.mp3" style="background-image: url(../../img/documents/analytic-signal/midi-047.png)">
+                    <div class="cover"></div>
+                    <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
+                  </div>
+                </li>
+                <li class="item-as">
+                  <h5>049 Strings 1</h5>
+                  <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/midi-049.mp3" style="background-image: url(../../img/documents/analytic-signal/midi-049.png)">
+                    <div class="cover"></div>
+                    <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
+                  </div>
+                </li>
+                <li class="item-as">
+                  <h5>053 Choir Aahs</h5>
+                  <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/midi-053.mp3" style="background-image: url(../../img/documents/analytic-signal/midi-053.png)">
+                    <div class="cover"></div>
+                    <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
+                  </div>
+                </li>
+                <li class="item-as">
+                  <h5>081 Square Lead</h5>
+                  <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/midi-081.mp3" style="background-image: url(../../img/documents/analytic-signal/midi-081.png)">
+                    <div class="cover"></div>
+                    <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
+                  </div>
+                </li>
+                <li class="item-as">
+                  <h5>082 Saw Lead</h5>
+                  <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/midi-082.mp3" style="background-image: url(../../img/documents/analytic-signal/midi-082.png)">
+                    <div class="cover"></div>
+                    <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
+                  </div>
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h4 class="btc-heading" data-heading-level="4">楽器音
+              </h4>
+              <p>
+                桂田祐史氏が提供していただいた音声ファイルを用いました。
+                桂田先生と松山周五郎氏に感謝します。
+              </p>
+              <ul class="list-as">
+                <li class="item-as">
+                  <h5>チェレスタ</h5>
+                  <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/cheresta.mp3" style="background-image: url(../../img/documents/analytic-signal/cheresta.png)">
+                    <div class="cover"></div>
+                    <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
+                  </div>
+                </li>
+                <li class="item-as">
+                  <h5>ギター</h5>
+                  <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/guitar.mp3" style="background-image: url(../../img/documents/analytic-signal/guitar.png)">
+                    <div class="cover"></div>
+                    <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
+                  </div>
+                </li>
+                <li class="item-as">
+                  <h5>ギター（高）</h5>
+                  <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/guitar-high.mp3" style="background-image: url(../../img/documents/analytic-signal/guitar-high.png)">
+                    <div class="cover"></div>
+                    <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
+                  </div>
+                </li>
+                <li class="item-as">
+                  <h5>ハーモニカ</h5>
+                  <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/harmonika.mp3" style="background-image: url(../../img/documents/analytic-signal/harmonika.png)">
+                    <div class="cover"></div>
+                    <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
+                  </div>
+                </li>
+                <li class="item-as">
+                  <h5>ハーモニカ（高）</h5>
+                  <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/harmonika-high.mp3" style="background-image: url(../../img/documents/analytic-signal/harmonika-high.png)">
+                    <div class="cover"></div>
+                    <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
+                  </div>
+                </li>
+                <li class="item-as">
+                  <h5>ピアノ</h5>
+                  <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/piano.mp3" style="background-image: url(../../img/documents/analytic-signal/piano.png)">
+                    <div class="cover"></div>
+                    <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
+                  </div>
+                </li>
+                <li class="item-as">
+                  <h5>ピアノ（高）</h5>
+                  <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/piano-high.mp3" style="background-image: url(../../img/documents/analytic-signal/piano-high.png)">
+                    <div class="cover"></div>
+                    <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
+                  </div>
+                </li>
+                <li class="item-as">
+                  <h5>リコーダー</h5>
+                  <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/riko-da-.mp3" style="background-image: url(../../img/documents/analytic-signal/riko-da-.png)">
+                    <div class="cover"></div>
+                    <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
+                  </div>
+                </li>
+                <li class="item-as">
+                  <h5>リコーダー（高）</h5>
+                  <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/riko-da-high.mp3" style="background-image: url(../../img/documents/analytic-signal/riko-da-high.png)">
+                    <div class="cover"></div>
+                    <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
+                  </div>
+                </li>
+                <li class="item-as">
+                  <h5>三味線</h5>
+                  <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/shamisen.mp3" style="background-image: url(../../img/documents/analytic-signal/shamisen.png)">
+                    <div class="cover"></div>
+                    <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
+                  </div>
+                </li>
+                <li class="item-as">
+                  <h5>三味線（高）</h5>
+                  <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/shamisen-high.mp3" style="background-image: url(../../img/documents/analytic-signal/shamisen-high.png)">
+                    <div class="cover"></div>
+                    <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
+                  </div>
+                </li>
+                <li class="item-as">
+                  <h5>トランペット</h5>
+                  <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/toranpetto.mp3" style="background-image: url(../../img/documents/analytic-signal/toranpetto.png)">
+                    <div class="cover"></div>
+                    <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
+                  </div>
+                </li>
+                <li class="item-as">
+                  <h5>トランペット（高）</h5>
+                  <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/toranpetto-high.mp3" style="background-image: url(../../img/documents/analytic-signal/toranpetto-high.png)">
+                    <div class="cover"></div>
+                    <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
+                  </div>
+                </li>
+                <li class="item-as">
+                  <h5>ヴァイオリン</h5>
+                  <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/violin.mp3" style="background-image: url(../../img/documents/analytic-signal/violin.png)">
+                    <div class="cover"></div>
+                    <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
+                  </div>
+                </li>
+                <li class="item-as">
+                  <h5>ヴァイオリン（高）</h5>
+                  <div class="btc-analytic-signal-viewer" data-src="../../data/documents/analytic-signal/violin-high.mp3" style="background-image: url(../../img/documents/analytic-signal/violin-high.png)">
+                    <div class="cover"></div>
+                    <div class="btn-play"><i class="mdi mdi-play-circle"></i></div>
+                  </div>
+                </li>
+              </ul>
+            </section>
+            <h4 class="btc-heading" data-heading-level="4">参考文献
+            </h4><a name="references"></a>
             <ol>
               <li><span class="btc-bib">岩淵 勇樹, 秋田 純一, 北川 章夫. 閉曲線図形に基づいた音色生成方法の検討. <a href="http://ec2008.entcomp.org/" target="_blank">エンタテインメントコンピューティング2008</a>論文集. pp. 143--146, 
                   <time class="date">2008-10
