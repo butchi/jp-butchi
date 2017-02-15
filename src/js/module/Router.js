@@ -1,7 +1,10 @@
 import ns from './ns';
-import PageCommon from '../page/Common';
-import PageRoot from '../page/Root';
-import PageDocumentsAnalyticSignal from '../page/documents/analytic-signal';
+
+import page from 'page';
+
+import common from '../page/common';
+import root from '../page/root';
+import documents__analytic_signal from '../page/documents/analytic-signal';
 
 export default class Router {
   constructor() {
@@ -9,20 +12,13 @@ export default class Router {
   }
 
   initialize() {
-    function matchQs(selector) {
-      return !!document.querySelector(selector);
-    };
+    common();
 
-    const $body = $('body');
+    ns.page = ns.page || {};
 
-    this.pageCommon = new PageCommon();
+    page('/', root);
+    page('/documents/analytic-signal/', documents__analytic_signal);
 
-    if(matchQs('body[data-path="/"]')) {
-      this.pageRoot = new PageRoot();
-    }
-
-    if(matchQs('body[data-path="documents/analytic-signal/"]')) {
-      this.pageDocumentsAnalyticSignal = new PageDocumentsAnalyticSignal();
-    }
+    page();
   }
 }

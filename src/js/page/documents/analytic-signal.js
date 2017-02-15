@@ -1,16 +1,12 @@
 import ns from '../../module/ns';
 import BtcAnalyticSignalViewer from '../../module/BtcAnalyticSignalViewer';
 
-export default class PageDocumentsAnalyticSignal {
-  constructor(opts = {}) {
-    this.initialize();
-  }
+export default () => {
+  console.log('page analytic-signal');
 
-  initialize() {
-    $('.item-as').each((i, elm) => {
-      this.btcAnalyticSignalViewer = new BtcAnalyticSignalViewer({
-        elm: elm.querySelector('.btc-analytic-signal-viewer'),
-      });
+  $('.item-as').each((i, elm) => {
+    ns.page.btcAnalyticSignalViewer = new BtcAnalyticSignalViewer({
+      elm: elm.querySelector('.btc-analytic-signal-viewer'),
     });
-  }
-}
+  });
+};

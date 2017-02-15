@@ -1,14 +1,8 @@
 import ns from '../module/ns';
 import BtcNews from '../module/BtcNews';
 
-export default class Index {
-  constructor(opts = {}) {
-    this.initialize();
-  }
+export default () => {
+  console.log('index page');
 
-  initialize() {
-    console.log('index page');
-
-    this.btcNews = new BtcNews();
-  }
-}
+  ns.page.btcNews = new BtcNews();
+};
