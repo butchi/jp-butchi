@@ -38,7 +38,10 @@ html(lang="ja")
     if facebook_app_id
       meta(property="fb:app_id", content=facebook_app_id)
     if url
-      meta(property="og:url", content=url)
+      if path === '/'
+        meta(property="og:url", content= `${url}`)
+      else
+        meta(property="og:url", content= `${url}${path}`)
     if ogp_image_url
       meta(property="og:image", content=ogp_image_url)
     if ogp_image_width
