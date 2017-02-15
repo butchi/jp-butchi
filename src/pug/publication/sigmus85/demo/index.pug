@@ -6,11 +6,6 @@ append config-block
 prepend javascript-block
   script(src=`${rootPath}js/lib/swfobject.js`)
 
-append javascript-block
-  script
-    | var el = document.querySelector(".swf-object");
-    | swfobject.embedSWF("#{dataPath}mus85demo.swf", el, 610, 377, 10);
-
 block content-block
   +page-title
 
@@ -32,7 +27,7 @@ block content-block
     +heading(4)
       | デモプログラム
 
-    .swf-object
+    .btc-swf-object(data-src=`${dataPath}mus85demo.swf`, data-width="610", data-height="377")
 
     p
       a(href= `${dataPath}analytic_signal_synthesizer10.fla`) flaファイル

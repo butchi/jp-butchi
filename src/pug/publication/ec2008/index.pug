@@ -6,11 +6,6 @@ append config-block
 prepend javascript-block
   script(src=`${rootPath}js/lib/swfobject.js`)
 
-append javascript-block
-  script
-    | var el = document.querySelector(".swf-object");
-    | swfobject.embedSWF("#{dataPath}/ec2008presentation.swf", el, 640, 480, 10);
-
 block content-block
   +page-title
 
@@ -60,7 +55,7 @@ block content-block
       +heading(4)
         | 発表資料（PC限定）
 
-      .swf-object
+      .btc-swf-object(data-src=`${dataPath}ec2008presentation.swf`, data-width="640", data-height="480")
 
     section
       +heading(4)

@@ -6,16 +6,11 @@ append config-block
 prepend javascript-block
   script(src=`${rootPath}js/lib/swfobject.js`)
 
-append javascript-block
-  script
-    | var el = document.querySelector(".swf-object");
-    | swfobject.embedSWF("#{dataPath}/webclappad-04.swf", el, 640, 480, 10);
-
 block content-block
   +page-title
 
   .inner-block
-    .swf-object
+    .btc-swf-object(data-src=`${dataPath}webclappad-04.swf`, data-width="640", data-height="480")
 
     p
       a(href= `${dataPath}webclappad-04.fla`) flaファイル

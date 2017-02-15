@@ -6,11 +6,6 @@ append config-block
 prepend javascript-block
   script(src=`${rootPath}js/lib/swfobject.js`)
 
-append javascript-block
-  script
-    | var el = document.querySelector(".swf-object");
-    | swfobject.embedSWF("#{dataPath}analytic_signal_synthesizer11.swf", el, 640, 480, 10);
-
 block content-block
   +page-title
 
@@ -32,7 +27,7 @@ block content-block
     +heading(4)
       | デモプログラム
 
-    .swf-object
+    .btc-swf-object(data-src=`${dataPath}analytic_signal_synthesizer11.swf`, data-width="640", data-height="480")
 
     p
       a(href= `${dataPath}analytic_signal_synthesizer11.swf`) swfファイル

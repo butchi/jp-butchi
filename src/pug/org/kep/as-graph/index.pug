@@ -1,14 +1,11 @@
 extends /_layout/_default-layout
 
+prepend javascript-block
+  script(src=`${rootPath}js/lib/swfobject.js`)
+
 mixin card-media(fileName)
   .mdl-card__media
-    object(id= fileName, classid='clsid:d27cdb6e-ae6d-11cf-96b8-444553540000', codebase='http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0', width='610', height='377', align='middle')
-      param(name='allowScriptAccess', value='sameDomain')
-      param(name='allowFullScreen', value='false')
-      param(name='movie', value= `${fileName}.swf`)
-      param(name='quality', value='high')
-      param(name='bgcolor', value='#ffffff')
-      embed(src= `${dataPath}${fileName}.swf`, quality='high', bgcolor='#ffffff', width='610', height='377', name= fileName, align='middle', allowscriptaccess='sameDomain', allowfullscreen='false', type='application/x-shockwave-flash', pluginspage='http://www.adobe.com/go/getflashplayer_jp')
+    .btc-swf-object(data-src=`${dataPath}${fileName}.swf`, data-width="610", data-height="377")
 
 mixin card-link(file, type= 'data', title= null)
   a.mdl-button.mdl-button--colored.mdl-js-button.mdl-js-ripple-effect(href= `${dataPath}${file}`)
@@ -19,10 +16,6 @@ mixin card-link(file, type= 'data', title= null)
 
 append config-block
   - title = 'e-Leaning数学教材向けグラフ描画プログラム'
-
-//- append stylesheet-block
-
-//- append javascript-block
 
 block content-block
   +page-title

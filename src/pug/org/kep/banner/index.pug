@@ -1,21 +1,7 @@
 extends /_layout/_default-layout
 
-mixin card-media(fileName)
-  .mdl-card__media
-    object(id= fileName, classid='clsid:d27cdb6e-ae6d-11cf-96b8-444553540000', codebase='http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0', width='610', height='377', align='middle')
-      param(name='allowScriptAccess', value='sameDomain')
-      param(name='allowFullScreen', value='false')
-      param(name='movie', value= `${fileName}.swf`)
-      param(name='quality', value='high')
-      param(name='bgcolor', value='#ffffff')
-      embed(src= `${dataPath}${fileName}.swf`, quality='high', bgcolor='#ffffff', width='610', height='377', name= fileName, align='middle', allowscriptaccess='sameDomain', allowfullscreen='false', type='application/x-shockwave-flash', pluginspage='http://www.adobe.com/go/getflashplayer_jp')
-
-mixin card-link(file, type= 'data', title= null)
-  a.mdl-button.mdl-button--colored.mdl-js-button.mdl-js-ripple-effect(href= `${dataPath}${file}`)
-    i.material-icons file_download
-    if title
-      = title
-
+prepend javascript-block
+  script(src=`${rootPath}js/lib/swfobject.js`)
 
 append config-block
   - title = '金沢電子出版広告バナー'
@@ -24,10 +10,4 @@ block content-block
   +page-title
 
   .inner-block
-    object#banner-05(classid='clsid:d27cdb6e-ae6d-11cf-96b8-444553540000', codebase='http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0', width='529', height='110', align='middle')
-      param(name='allowScriptAccess', value='sameDomain')
-      param(name='allowFullScreen', value='false')
-      param(name='movie', value='banner-05.swf')
-      param(name='quality', value='high')
-      param(name='bgcolor', value='#ffffff')
-      embed(src=`${dataPath}banner-05.swf`, quality='high', bgcolor='#ffffff', width='529', height='110', name='banner-05', align='middle', allowscriptaccess='sameDomain', allowfullscreen='false', type='application/x-shockwave-flash', pluginspage='http://www.adobe.com/go/getflashplayer_jp')
+    .btc-swf-object(data-src=`${dataPath}banner-05.swf`, data-width="529", data-height="110")

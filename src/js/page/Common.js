@@ -1,9 +1,16 @@
 import ns from '../module/ns';
+import BtcSwfObject from '../module/BtcSwfObject';
 
 export default () => {
     console.log('page common');
 
     setEnvClass();
+
+    $('.btc-swf-object').each((i, elm) => {
+      new BtcSwfObject({
+        elm,
+      });
+    });
 };
 
 function setEnvClass() {
