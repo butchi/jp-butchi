@@ -386,6 +386,49 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var BtcSwfObject = function () {
+  function BtcSwfObject() {
+    var opts = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+    _classCallCheck(this, BtcSwfObject);
+
+    this.initialize(opts);
+  }
+
+  _createClass(BtcSwfObject, [{
+    key: 'initialize',
+    value: function initialize() {
+      var opts = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+      this.elm = opts.elm;
+
+      this.width = opts.width || this.elm.getAttribute('data-width') || 610;
+      this.height = opts.height || this.elm.getAttribute('data-height') || 377;
+
+      this.version = opts.version || this.elm.getAttribute('data-version') || 10;
+
+      this.src = opts.src || this.elm.getAttribute('data-src');
+
+      swfobject.embedSWF(this.src, this.elm, this.width, this.height, 10);
+    }
+  }]);
+
+  return BtcSwfObject;
+}();
+
+exports.default = BtcSwfObject;
+
+},{}],5:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _Router = require('./Router');
 
 var _Router2 = _interopRequireDefault(_Router);
@@ -423,7 +466,7 @@ var Main = function () {
 
 exports.default = Main;
 
-},{"./Router":5}],5:[function(require,module,exports){
+},{"./Router":6}],6:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -482,7 +525,7 @@ var Router = function () {
 
 exports.default = Router;
 
-},{"../page/common":7,"../page/documents/analytic-signal":8,"../page/root":9,"./ns":6}],6:[function(require,module,exports){
+},{"../page/common":8,"../page/documents/analytic-signal":9,"../page/root":10,"./ns":7}],7:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -497,7 +540,7 @@ window.Btc = window.Btc || {};
 var ns = window.Btc;
 exports.default = ns;
 
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -508,12 +551,22 @@ var _ns = require('../module/ns');
 
 var _ns2 = _interopRequireDefault(_ns);
 
+var _BtcSwfObject = require('../module/BtcSwfObject');
+
+var _BtcSwfObject2 = _interopRequireDefault(_BtcSwfObject);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = function () {
   console.log('page common');
 
   setEnvClass();
+
+  $('.btc-swf-object').each(function (i, elm) {
+    new _BtcSwfObject2.default({
+      elm: elm
+    });
+  });
 };
 
 function setEnvClass() {
@@ -534,7 +587,7 @@ function setEnvClass() {
   }
 }
 
-},{"../module/ns":6}],8:[function(require,module,exports){
+},{"../module/BtcSwfObject":4,"../module/ns":7}],9:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -561,7 +614,7 @@ exports.default = function () {
   });
 };
 
-},{"../../module/BtcAnalyticSignalViewer":1,"../../module/ns":6}],9:[function(require,module,exports){
+},{"../../module/BtcAnalyticSignalViewer":1,"../../module/ns":7}],10:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -584,7 +637,7 @@ exports.default = function () {
   _ns2.default.page.btcNews = new _BtcNews2.default();
 };
 
-},{"../module/BtcNews":2,"../module/ns":6}],10:[function(require,module,exports){
+},{"../module/BtcNews":2,"../module/ns":7}],11:[function(require,module,exports){
 'use strict';
 
 var _ns = require('./module/ns');
@@ -601,4 +654,4 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 _ns2.default.main = new _Main2.default();
 
-},{"./module/Main":4,"./module/ns":6}]},{},[10]);
+},{"./module/Main":5,"./module/ns":7}]},{},[11]);
