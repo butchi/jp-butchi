@@ -251,6 +251,6 @@ gulp.task('redirect', () => {
 
 gulp.task('serve', gulp.series('browser-sync'));
 
-gulp.task('build', gulp.parallel('font', 'css', 'js', 'html', 'works', 'redirect'));
+gulp.task('build', gulp.parallel('font', 'css', 'js', 'redirect', 'html', 'works'));
 gulp.task('build-partial', gulp.parallel('font', 'css', 'js', 'html'));
 gulp.task('default', gulp.series('build', 'serve'));
