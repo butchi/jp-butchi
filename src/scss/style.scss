@@ -2,7 +2,9 @@
 // @import 'bower_components/reset-css/reset.scss';
 
 // config
-@import 'function', 'variable', 'mixin', 'keyframes';
+@import 'function', 'variable', 'keyframes';
+
+@import 'mixin/**/*';
 
 // modules
 @import 'module/**/*';
