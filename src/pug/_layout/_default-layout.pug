@@ -1,145 +1,73 @@
+extends /_layout/_blank-page
+
 include /_mixin/_heading
 include /_mixin/_bib
 include /_mixin/_mathjax
 
-block config-block
-  - path = pugPath.replace(/[^\/]+.pug$/, '')
-  - rootPath = path.replace(/(.+?)[\/]/g, '../')
-  - imgPath = `${rootPath}img/${path}`
-  - dataPath = `${rootPath}data/${path}`
-  - title = 'butchi.jp'
-
-doctype html
-html(lang="ja")
-  head
-    meta(charset="utf-8")
-    // meta
-    title
-      block title
-        = page_name ? [page_name, site_name].join(' | ') : site_name
-    if description
-      meta(name="description", content=description)
-    if keywords && keywords.length
-      meta(name="keywords", content=keywords.join ? keywords.join(',') : keywords)
-    if favicon_url
-      link(rel="shortcut icon", href=favicon_url, type="image/vnd.microsoft.icon")
-      link(rel="icon", href=favicon_url, type="image/vnd.microsoft.icon")
-
-    //- IEで「互換モード」で表示されるのを防ぐための指定
-    meta(http-equiv="X-UA-Compatible", content="IE=Edge")
-      
-    // smartphone meta
-    meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no")
-    if webclipicon_url
-      meta(name="apple-mobile-web-app-capable", content='yes')
-      meta(name="apple-mobile-web-app-status-bar-style", content=ios_status_bar || 'default')
-      link(rel="apple-touch-icon", href=webclipicon_url)
-
-    // ogp
-    if facebook_app_id
-      meta(property="fb:app_id", content=facebook_app_id)
-    if url
-      if path === '/'
-        meta(property="og:url", content= `${url}`)
-      else
-        meta(property="og:url", content= `${url}${path}`)
-    if ogp_image_url
-      meta(property="og:image", content=ogp_image_url)
-    if ogp_image_width
-      meta(property="og:image:width", content=ogp_image_width)
-    if ogp_image_height
-      meta(property="og:image:height", content=ogp_image_height)
-    meta(property="og:type", content=ogp_type || "website")
-    meta(property="og:title", content=title)
-    meta(property="og:site_name", content=site_name)
-    meta(property="og:description", content=description)
-    meta(property="og:locale", content=ogp_locale || "ja_JP")
-
-    // twitter card
-    meta(property="twitter:card", content=(ogp_image_url ? 'summary_large_image' : 'summary'))
-    meta(property="twitter:title", content=title)
-    meta(property="twitter:description", content=description)
-    if ogp_image_url
-      meta(property="twitter:image", content=ogp_image_url)
-    if twitter_card_owner
-      meta(property="twitter:site", content=twitter_card_owner)
-      meta(property="twitter:creator", content=twitter_card_owner)
-
-    if url
-      // canonical url
-      //- このページをはてぶ・シェアする際、使われるべきURLを明示する指定
-      //- wwwやhttps、getパラメータなど、微妙に違うURLでアクセスされても、使われるURLをひとつに絞れる
-      link(rel="canonical" href=url)
-
-    script(src= rootPath + 'js/ua-switch.js')
-
-    // stylesheet
-    block stylesheet-block
-      link(rel="stylesheet", href= rootPath + 'css/material.min.css')
-      link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
-      link(rel='stylesheet', href= rootPath + 'css/materialdesignicons.min.css')
-      link(rel="stylesheet", href= rootPath + 'css/style.css')
-
-  body(data-path= path)
-    // 岩淵勇樹のホームページへようこそ！
-    //- appId指定を忘れないように
-    include /_partial/fb-sdk.html
-
-    .wrapper
-      .mdl-layout.mdl-js-layout.mdl-layout--fixed-header
-        block header
-          header.mdl-layout__header
-            .mdl-layout__header-row
-              //- Title
-              span.mdl-layout-title
-                = title
-              //- Add spacer, to align navigation to the right
-              .mdl-layout-spacer
-              //- Navigation. We hide it in small screens.
-              nav.mdl-navigation.mdl-layout--large-screen-only
-                a.mdl-navigation__link(href='') Link
-                a.mdl-navigation__link(href='') Link
-                a.mdl-navigation__link(href='') Link
-                a.mdl-navigation__link(href='') Link
-
-        block drawer
-          .mdl-layout__drawer
-            span.mdl-layout-title Title
-            nav.mdl-navigation
+block content-body
+  .wrapper
+    .mdl-layout.mdl-js-layout.mdl-layout--fixed-header
+      block header
+        header.mdl-layout__header
+          .mdl-layout__header-row
+            //- Title
+            span.mdl-layout-title
+              = title
+            //- Add spacer, to align navigation to the right
+            .mdl-layout-spacer
+            //- Navigation. We hide it in small screens.
+            nav.mdl-navigation.mdl-layout--large-screen-only
               a.mdl-navigation__link(href='') Link
               a.mdl-navigation__link(href='') Link
               a.mdl-navigation__link(href='') Link
               a.mdl-navigation__link(href='') Link
-              .list-share.mdl-textfield--align-right
-                .item-share.facebook
-                  .fb-like(data-href= url, data-layout='box_count', data-action='like', data-size='small', data-show-faces='false', data-share='true')
-                .item-share.twitter
-                  a.twitter-share-button(href="https://twitter.com/share", data-lang="ja", data-url= url) ツイート
-                  script.
-                    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
-                .item-share.line
-                  span
-                    script(type='text/javascript', src='//media.line.me/js/line-button.js?v=20140411')
-                    script(type='text/javascript')
-                      | new media_line_me.LineButton({"pc":false,"lang":"ja","type":"a","text": "#{title}","withUrl":true});
-                .item-share.gplus
-                  .g-plusone(data-size='medium')
 
-        main.mdl-layout__content
-          block content-block
+      block drawer
+        .mdl-layout__drawer
+          span.mdl-layout-title Title
+          nav.mdl-navigation
+            a.mdl-navigation__link(href='') Link
+            a.mdl-navigation__link(href='') Link
+            a.mdl-navigation__link(href='') Link
+            a.mdl-navigation__link(href='') Link
+            .list-share.mdl-textfield--align-right
+              .item-share.facebook
+                .fb-like(data-href= url, data-layout='box_count', data-action='like', data-size='small', data-show-faces='false', data-share='true')
+              .item-share.twitter
+                a.twitter-share-button(href="https://twitter.com/share", data-lang="ja", data-url= url) ツイート
+                script.
+                  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+              .item-share.line
+                span
+                  script(type='text/javascript', src='//media.line.me/js/line-button.js?v=20140411')
+                  script(type='text/javascript')
+                    | new media_line_me.LineButton({"pc":false,"lang":"ja","type":"a","text": "#{title}","withUrl":true});
+              .item-share.gplus
+                .g-plusone(data-size='medium')
 
-        block footer
-          footer
-            a(href= rootPath) Home
+      main.mdl-layout__content
+        block content-block
 
-    // javascript
-    block javascript-block
-      script(src= rootPath + 'js/lib/jquery.min.js')
-      script(src= rootPath + 'js/lib/lodash.min.js')
-      script(src= rootPath + 'js/lib/material.min.js')
-      script(src= rootPath + 'js/script.js')
+      block footer
+        footer
+          a(href= rootPath) Home
 
-    include /_partial/gplus-platform.html
+block body-header
+  // 岩淵勇樹のホームページへようこそ！
+  //- appId指定を忘れないように
+  include /_partial/fb-sdk.html
 
-    //- トラッキングID指定を忘れないように
-    include /_partial/ga.html
+block stylesheet-block
+  link(rel="stylesheet", href= rootPath + 'css/material.min.css')
+  link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
+  link(rel='stylesheet', href= rootPath + 'css/materialdesignicons.min.css')
+  link(rel="stylesheet", href= rootPath + 'css/style.css')
+
+block javascript-block
+  script(src= rootPath + 'js/lib/jquery.min.js')
+  script(src= rootPath + 'js/lib/lodash.min.js')
+  script(src= rootPath + 'js/lib/material.min.js')
+  script(src= rootPath + 'js/script.js')
+
+block body-footer
+  include /_partial/gplus-platform.html
