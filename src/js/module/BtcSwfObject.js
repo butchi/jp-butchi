@@ -1,4 +1,4 @@
-export default class BtcSwfObject {
+class BtcSwfObject {
   constructor(opts = {}) {
     this.initialize(opts);
   }
@@ -16,3 +16,11 @@ export default class BtcSwfObject {
     swfobject.embedSWF(this.src, this.elm, this.width, this.height, 10);
   }
 }
+
+$('.btc-swf-object').each((i, elm) => {
+  new BtcSwfObject({
+    elm,
+  });
+});
+
+export default BtcSwfObject;

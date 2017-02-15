@@ -418,6 +418,12 @@ var BtcSwfObject = function () {
   return BtcSwfObject;
 }();
 
+$('.btc-swf-object').each(function (i, elm) {
+  new BtcSwfObject({
+    elm: elm
+  });
+});
+
 exports.default = BtcSwfObject;
 
 },{}],5:[function(require,module,exports){
@@ -561,12 +567,6 @@ exports.default = function () {
   console.log('page common');
 
   setEnvClass();
-
-  $('.btc-swf-object').each(function (i, elm) {
-    new _BtcSwfObject2.default({
-      elm: elm
-    });
-  });
 };
 
 function setEnvClass() {
