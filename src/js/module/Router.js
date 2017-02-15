@@ -1,10 +1,14 @@
 import ns from './ns';
 
-import page from 'page';
-
 import common from '../page/common';
 import root from '../page/root';
 import documents__analytic_signal from '../page/documents/analytic-signal';
+
+function page(path, callback) {
+  if(document.querySelector(`body[data-path="${path}"]`)) {
+    callback();
+  }
+};
 
 export default class Router {
   constructor() {
@@ -12,13 +16,13 @@ export default class Router {
   }
 
   initialize() {
-    common();
+    const $body = $('body');
 
     ns.page = ns.page || {};
 
-    page('/', root);
-    page('/documents/analytic-signal/', documents__analytic_signal);
+    common();
 
-    page();
+    page('/', root);
+    page('documents/analytic-signal/', documents__analytic_signal);
   }
 }
