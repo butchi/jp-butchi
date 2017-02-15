@@ -1,14 +1,14 @@
 {
-  "name": "butchi-web-starter-kit",
-  "version": "0.0.0",
-  "description": "description",
+  "name": "butchi.jp",
+  "version": "0.0.1",
+  "description": "IWABUCHI Yuuki Official Website.",
   "main": "js/main.min.js",
   "authors": [
     "IWABUCHI Yuuki"
   ],
   "license": "MIT",
   "keywords": [
-    "starterkit"
+    "website"
   ],
   "moduleType": [],
   "homepage": "http://butchi.jp/",

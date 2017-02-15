@@ -1,7 +1,7 @@
 {
-  "name": "butchi-web-starter-kit",
-  "version": "0.0.0",
-  "description": "description",
+  "name": "butchi.jp",
+  "version": "0.0.1",
+  "description": "IWABUCHI Yuuki Official Website.",
   "main": "gulpfile.babel.js",
   "engines": {
     "node": ">=6.9.1"
@@ -18,7 +18,7 @@
     "build": "gulp build"
   },
   "keywords": [
-    "starterkit"
+    "website"
   ],
   "author": "IWABUCHI Yuuki",
   "license": "MIT",
