@@ -468,8 +468,6 @@ var Router = function () {
   _createClass(Router, [{
     key: 'initialize',
     value: function initialize() {
-      var $body = $('body');
-
       _ns2.default.page = _ns2.default.page || {};
 
       (0, _common2.default)();

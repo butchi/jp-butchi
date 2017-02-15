@@ -16,8 +16,6 @@ export default class Router {
   }
 
   initialize() {
-    const $body = $('body');
-
     ns.page = ns.page || {};
 
     common();
