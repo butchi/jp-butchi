@@ -116,8 +116,8 @@ gulp.task('deco', () => {
   ;
 });
 
-// gulp.task 'js', gulp.parallel('browserify', 'copy-bower-js')
-gulp.task('js', gulp.parallel('copy-bower-js', gulp.series('browserify', gulp.parallel('minify', 'deco'))));
+gulp.task('es6', gulp.series('browserify', gulp.parallel('minify', 'deco')));
+gulp.task('js', gulp.parallel('copy-bower-js', 'es6'));
 
 gulp.task('works', () => {
   const worksLi = readConfig(`${CONFIG}/works.yml`);
@@ -217,7 +217,7 @@ gulp.task('browser-sync' , () => {
   watch([`${SRC}/js/**/*.js`], gulp.series('browserify', browserSync.reload));
   watch([
       `${SRC}/pug/**/*.pug`,
-      `${SRC}/config/meta.yml`
+      `${SRC}/config/*`
   ], gulp.series('pug', browserSync.reload));
 });
 
@@ -252,5 +252,5 @@ gulp.task('redirect', () => {
 gulp.task('serve', gulp.series('browser-sync'));
 
 gulp.task('build', gulp.parallel('font', 'css', 'js', 'redirect', 'html', 'works'));
-gulp.task('build-partial', gulp.parallel('css', 'js', 'html'));
-gulp.task('default', gulp.series('build', 'serve'));
+gulp.task('build-partial', gulp.parallel('sass', 'es6', 'html'));
+gulp.task('default', gulp.series('build-partial', 'serve'));
