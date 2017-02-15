@@ -82,7 +82,7 @@
             <h5>概要</h5>
             <p>
               音声信号の正周波数成分を2倍、負周波数成分を0倍にした信号を解析信号と呼びます。
-              また、音声信号の正周波数成分を-<i>i</i> 倍、負周波数成分を<i>i</i> 倍する変換をヒルベルト変換と呼びます（<i>i</i> は虚数単位）。これは、解析信号の虚部に等しくなります。
+              また、音声信号の正周波数成分を $-i$ 倍、負周波数成分を $i$ 倍する変換をヒルベルト変換と呼びます（ $i$ は虚数単位）。これは、解析信号の虚部に等しくなります。
             </p>
             <p><a href="http://www.mnc.toho-u.ac.jp/v-lab/yobology/Hilbert_Transform/Hilbert_transform.htm" target="_blank">参考サイト</a></p>
             <p>当ページでは、さまざまな音色の解析信号の、時間軸を潰して複素平面上に投影した画像を載せています。</p>
@@ -342,6 +342,8 @@
       </div>
     </div>
     <!-- javascript-->
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
+    <script type="text/javascript" async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"></script>
     <script src="../../js/lib/jquery.min.js"></script>
     <script src="../../js/lib/lodash.min.js"></script>
     <script src="../../js/lib/material.min.js"></script>
