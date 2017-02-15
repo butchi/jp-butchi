@@ -1,0 +1,105 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+}
+.slide:before {
+  z-index: -1; /* beforeを通常テキストの裏に持ってくる */
+  position: absolute;
+  top: 10px; right: 10px; bottom: 10px; left: 10px;
+  content: "";
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px #000;
+  -webkit-box-shadow: 3px 3px 10px #000;
+  -moz-box-shadow: 3px 3px 10px #000;
+}
+.title h1 {
+  position: absolute;
+  top: 30%;
+}
+.title .name {
+  position: absolute;
+  top: 80%;
+}
+
+.title h1, .title .name {
+  margin-left: 5%;
+}
+
+h1 {
+  font-size: 72px;
+  margin: 0 0 0 10px;
+  padding: 20px 10px;
+}
+
+table.digits {
+  display: inline-table;
+}
+
+table.digits th {
+  background-color: #CCC;
+}
+
+table.digits td {
+  background-color: #DDD;
+}
+
+table.digits th, table.digits td {
+  text-align: right;
+  width: 80px;
+  padding: 5px;
+}
+
+div, dt, dd, li, math {
+  font-size: 36px;
+}
+
+th, td {
+  font-size: 18px;
+}
+
+div, dt, dd, math, table {
+  margin-left: 30px;
+}
+
+dd {
+  margin-left: 60px;
+}
+
+.imgContainer {
+  text-align: center;
+}
+
+.tag {
+  background-color: #000;
+  color: #FFF;
+  padding: 5px;
+  position: absolute;
+  top: 5%;
+  left: 90%
+}
+
+.tag:before {
+  position: absolute;
+  top: 2px; right: 2px; bottom: 2px; left: 2px;
+  content: "";
+  border: #fff 1px solid;
+}
+
+.tag.known {
+  background-color: #09F;
+}
+
+.tag.unknown {
+  background-color: #666;
+}
+
+.tag.original {
+  background-color: #F00;
+}

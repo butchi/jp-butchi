@@ -1,0 +1,863 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<style>
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+}
+.slide:before {
+    z-index: -1; /* beforeを通常テキストの裏に持ってくる */
+    position: absolute;
+    top: 10px; right: 10px; bottom: 10px; left: 10px;
+    content: "";
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px #000;
+    -webkit-box-shadow: 3px 3px 10px #000;
+    -moz-box-shadow: 3px 3px 10px #000;
+}
+.title h1 {
+    position: absolute;
+    top: 30%;
+}
+.title .name {
+    position: absolute;
+    top: 80%;
+}
+
+.title h1, .title .name {
+    margin-left: 5%;
+}
+
+h1 {
+    font-size: 72px;
+    margin: 0 0 0 10px;
+    padding: 20px 10px;
+}
+
+table.digits {
+    display: inline-table;
+}
+
+table.digits th {
+    background-color: #CCC;
+}
+
+table.digits td {
+    background-color: #DDD;
+}
+
+table.digits th, table.digits td {
+    text-align: right;
+    width: 80px;
+    padding: 5px;
+}
+
+div, dt, dd, li, math {
+    font-size: 36px;
+}
+
+th, td {
+    font-size: 18px;
+}
+
+div, dt, dd, math, table {
+    margin-left: 30px;
+}
+
+dd {
+    margin-left: 60px;
+}
+
+.imgContainer {
+    text-align: center;
+}
+
+.tag {
+    background-color: #000;
+    color: #FFF;
+    padding: 5px;
+    position: absolute;
+    top: 5%;
+    left: 90%
+}
+
+.tag:before {
+    position: absolute;
+    top: 2px; right: 2px; bottom: 2px; left: 2px;
+    content: "";
+    border: #fff 1px solid;
+}
+
+.tag.known {
+    background-color: #09F;
+}
+
+.tag.unknown {
+    background-color: #666;
+}
+
+.tag.original {
+    background-color: #F00;
+}
+
+</style>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script>
+MathJax.Hub.Config({
+	NativeMML: {
+		scale: 200
+   }
+});
+</script>
+</head>
+<body>
+
+<section class="title slide">
+<h1>記数法のさまざまな拡張<br />～2進数からButchi数まで～</h1>
+<div class="name">面白法人カヤック 岩淵勇樹</div>
+</section>
+
+<section class="slide">
+<h1>自己紹介</h1>
+<ul>
+<li>岩淵勇樹</li>
+<li>金沢大学大学院自然科学研究科電子情報科学専攻 博士後期課程修了</li>
+<li>博士（工学）</li>
+<li>2012年4月 面白法人カヤックに入社</li>
+</ul>
+</section>
+
+<section class="slide">
+<h1>10進法(decimal)</h1>
+<div class="tag known">既知</div>
+<div>人間が普段使っている記数法</div>
+<dl>
+<dt>base</dt>
+<dd>10</dd>
+<dt>digit</dt>
+<dd>0, 1, 2, 3, 4, 5, 6, 7, 8, 9</dd>
+</dl>
+<div>例: 1984=1×10<sup>3</sup>+9×10<sup>2</sup>+8×10<sup>1</sup>+4×10<sup>0</sup></div>
+</section>
+
+<section class="slide">
+<h1>用語説明</h1>
+<dl>
+<dt>base</dt>
+<dd>radix、基数、底。仮数に掛け合わせる数（重みの倍率）</dd>
+<dt>digit</dt>
+<dd>仮数。その位に記される数</dd>
+</dl>
+</section>
+
+<section class="slide">
+<h1>16進法(Hexadecimal)</h1>
+<div class="tag known">既知</div>
+<div>コンピューターでよく使われている</div>
+<div>HTMLのカラーコードは16進数を3つ並べて表記する（#ffffffなど）</div>
+<dl>
+<dt>base</dt>
+<dd>16</dd>
+<dt>digit</dt>
+<dd>0, 1, 2, 3, 4, 5, 6, 7, 8, 9, a, b, c, d, e, f</dd>
+</dl>
+<div>例: 2d=2×16<sup>1</sup>+13×16<sup>0</sup>=45</div>
+</section>
+
+<section class="slide">
+<h1>2進法(binary)</h1>
+<div class="tag known">既知</div>
+<dl>
+<dt>base</dt>
+<dd>2</dd>
+<dt>digit</dt>
+<dd>0, 1</dd>
+</dl>
+<div>例: 1011=1×2<sup>3</sup>+0×2<sup>2</sup>+1×2<sup>1</sup>+1×2<sup>0</sup>=13</div>
+<table class="digits">
+<tr><th>8</th><th>4</th><th>2</th><th>1</th><td></td></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>0</td><th>0</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>1</td><th>1</th></tr>
+<tr><td>0</td><td>0</td><td>1</td><td>0</td><th>2</th></tr>
+<tr><td>0</td><td>0</td><td>1</td><td>1</td><th>3</th></tr>
+<tr><td>0</td><td>1</td><td>0</td><td>0</td><th>4</th></tr>
+<tr><td>0</td><td>1</td><td>0</td><td>1</td><th>5</th></tr>
+<tr><td>0</td><td>1</td><td>1</td><td>0</td><th>6</th></tr>
+<tr><td>0</td><td>1</td><td>1</td><td>1</td><th>7</th></tr>
+</table>
+<table class="digits">
+<tr><th>8</th><th>4</th><th>2</th><th>1</th><td></td></tr>
+<tr><td>1</td><td>0</td><td>0</td><td>0</td><th>8</th></tr>
+<tr><td>1</td><td>0</td><td>0</td><td>1</td><th>9</th></tr>
+<tr><td>1</td><td>0</td><td>1</td><td>0</td><th>10</th></tr>
+<tr><td>1</td><td>0</td><td>1</td><td>1</td><th>11</th></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>0</td><th>12</th></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>1</td><th>13</th></tr>
+<tr><td>1</td><td>1</td><td>1</td><td>0</td><th>14</th></tr>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><th>15</th></tr>
+</table>
+</section>
+
+<section class="slide">
+<h1>3進法(ternary)</h1>
+<div class="tag known">既知</div>
+<dl>
+<dt>base</dt>
+<dd>3</dd>
+<dt>digit</dt>
+<dd>0, 1, 2</dd>
+</dl>
+<table class="digits">
+<tr><th>9</th><th>3</th><th>1</th><td></tr>
+<tr><td>0</td><td>0</td><td>0</td><th>0</th></tr>
+<tr><td>0</td><td>0</td><td>1</td><th>1</th></tr>
+<tr><td>0</td><td>0</td><td>2</td><th>2</th></tr>
+<tr><td>0</td><td>1</td><td>0</td><th>3</th></tr>
+<tr><td>0</td><td>1</td><td>1</td><th>4</th></tr>
+<tr><td>0</td><td>1</td><td>2</td><th>5</th></tr>
+</table>
+<table class="digits">
+<tr><th>9</th><th>3</th><th>1</th><td></tr>
+<tr><td>0</td><td>2</td><td>0</td><th>6</th></tr>
+<tr><td>0</td><td>2</td><td>1</td><th>7</th></tr>
+<tr><td>0</td><td>2</td><td>2</td><th>8</th></tr>
+<tr><td>1</td><td>0</td><td>0</td><th>9</th></tr>
+<tr><td>1</td><td>0</td><td>1</td><th>10</th></tr>
+<tr><td>1</td><td>0</td><td>2</td><th>11</th></tr>
+</table>
+</section>
+
+<section class="slide">
+<h1>N進法（まとめ）</h1>
+<div class="tag known">既知</div>
+<dl>
+<dt>base</dt>
+<dd>N</dd>
+<dt>digit</dt>
+<dd>0～N-1</dd>
+</dl>
+<div><math xmlns='http://www.w3.org/1998/Math/MathML'>
+
+ <mrow>
+
+  <munderover>
+
+   <mo>&#8721;</mo>
+
+   <mrow>
+
+    <mi>k</mi>
+
+    <mo>=</mo>
+
+    <mn>1</mn>
+
+   </mrow>
+
+   <mi>n</mi>
+
+  </munderover>
+
+  <mrow>
+
+   <msub>
+
+    <mi>a</mi>
+
+    <mi>k</mi>
+
+   </msub>
+
+   <mo>&#8290;</mo>
+
+   <msup>
+
+    <mi>N</mi>
+
+    <mi>k</mi>
+
+   </msup>
+
+  </mrow>
+
+ </mrow>
+
+</math></div>
+</section>
+
+<section class="slide">
+<h1>黄金進法（φ進法）(phinary, golden ratio base)</h1>
+<div class="tag known">既知</div>
+<dl>
+<dt>base</dt>
+<dd>
+<math xmlns='http://www.w3.org/1998/Math/MathML'>
+
+ <mrow>
+
+  <mfrac>
+
+   <mn>1</mn>
+
+   <mn>2</mn>
+
+  </mfrac>
+
+  <mo>&#8290;</mo>
+
+  <mrow>
+
+   <mo>(</mo>
+
+   <mrow>
+
+    <mn>1</mn>
+
+    <mo>+</mo>
+
+    <msqrt>
+
+     <mn>5</mn>
+
+    </msqrt>
+
+   </mrow>
+
+   <mo>)</mo>
+
+  </mrow>
+
+ </mrow>
+
+</math>
+ (=φ)</dd>
+<dt>digit</dt>
+<dd>0, 1</dd>
+</dl>
+<div>自然数全体に加えて一部の無理数も表現できる（10=φなど）</div>
+</section>
+
+<section class="slide">
+<h1>黄金進法（φ進法）(phinary, golden ratio base)</h1>
+<div class="tag known">既知</div>
+<table class="digits">
+<tr><th>φ<sup>4</sup></th><th>φ<sup>3</sup></th><th>φ<sup>2</sup></th><th>φ<sup>1</sup></th><th>φ<sup>0</sup></th><th>φ<sup>-1</sup></th><th>φ<sup>-2</sup></th><th>φ<sup>-3</sup></th><th>φ<sup>-4</sup></th><td></td></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><th>0</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><th>1</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><th>2</th></tr>
+<tr><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><th>3</th></tr>
+<tr><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><th>4</th></tr>
+<tr><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><th>5</th></tr>
+<tr><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><th>6</th></tr>
+<tr><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><th>7</th></tr>
+<tr><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><th>8</th></tr>
+<tr><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><th>9</th></tr>
+<tr><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><th>10</th></tr>
+</table>
+
+</section>
+
+
+<section class="slide">
+<h1>フィボナッチ記数法（フィボナッチ符号）</h1>
+<div class="tag known">既知</div>
+<dl>
+<dt>base</dt>
+<dd>フィボナッチ数</dd>
+<dt>digit</dt>
+<dd>0, 1</dd>
+</dl>
+<div>自然数全体を表現できる</div>
+</section>
+
+<section class="slide">
+<h1>フィボナッチ記数法（フィボナッチ符号）</h1>
+<div class="tag known">既知</div>
+<table class="digits">
+<tr><th>8</th><th>5</th><th>3</th><th>2</th><th>1</th><td></td></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><th>0</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><th>1</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><th>2</th></tr>
+<tr><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><th>3</th></tr>
+<tr><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><th>4</th></tr>
+<tr><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><th>5</th></tr>
+<tr><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><th>6</th></tr>
+<tr><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td><th>7</th></tr>
+<tr><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><th>8</th></tr>
+<tr><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><th>9</th></tr>
+<tr><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><th>10</th></tr>
+</table>
+</section>
+
+<section class="slide">
+<h1>ゼッケンドルフの定理</h1>
+<div class="tag known">既知</div>
+<div>自然数は隣り合わないフィボナッチ数の和で表せる</div>
+</section>
+
+<!--
+<section class="slide">
+<h1>2進化10進表現</h1>
+<div class="tag known">既知</div>
+</section>
+-->
+
+<section class="slide">
+<h1>二五進法</h1>
+<div class="tag known">既知</div>
+<div>そろばんで用いられる</div>
+<table class="digits">
+<tbody><tr>
+<th>十進数</th>
+<th>二五進法</th>
+<th>二進数</th>
+</tr>
+<tr>
+<td>0</td>
+<td>0 000</td>
+<td>0000</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0 001</td>
+<td>0001</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0 010</td>
+<td>0010</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0 011</td>
+<td>0011</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0 100</td>
+<td>0100</td>
+</tr>
+<tr>
+<td>5</td>
+<td>1 000</td>
+<td>0101</td>
+</tr>
+<tr>
+<td>6</td>
+<td>1 001</td>
+<td>0110</td>
+</tr>
+<tr>
+<td>7</td>
+<td>1 010</td>
+<td>0111</td>
+</tr>
+<tr>
+<td>8</td>
+<td>1 011</td>
+<td>1000</td>
+</tr>
+<tr>
+<td>9</td>
+<td>1 100</td>
+<td>1001</td>
+</tr>
+</tbody></table>
+</section>
+
+<section class="slide">
+<h1>グレイコード</h1>
+<div class="tag known">既知</div>
+<table class="digits">
+<tr><td>0</td><td>0</td><td>0</td><td>0</td><th>0</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>1</td><th>1</th></tr>
+<tr><td>0</td><td>0</td><td>1</td><td>1</td><th>2</th></tr>
+<tr><td>0</td><td>0</td><td>1</td><td>0</td><th>3</th></tr>
+<tr><td>0</td><td>1</td><td>1</td><td>0</td><th>4</th></tr>
+<tr><td>0</td><td>1</td><td>1</td><td>1</td><th>5</th></tr>
+<tr><td>0</td><td>1</td><td>0</td><td>1</td><th>6</th></tr>
+<tr><td>0</td><td>1</td><td>0</td><td>0</td><th>7</th></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>0</td><th>8</th></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>1</td><th>9</th></tr>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><th>10</th></tr>
+<tr><td>1</td><td>1</td><td>1</td><td>0</td><th>11</th></tr>
+<tr><td>1</td><td>0</td><td>1</td><td>0</td><th>12</th></tr>
+<tr><td>1</td><td>0</td><td>1</td><td>1</td><th>13</th></tr>
+<tr><td>1</td><td>0</td><td>0</td><td>1</td><th>14</th></tr>
+<tr><td>1</td><td>0</td><td>0</td><td>0</td><th>15</th></tr>
+</table>
+</section>
+
+<section class="slide">
+<h1>（蛇足）グレイコードの歌</h1>
+<div class="tag original">独自</div>
+<div><a href="http://www.youtube.com/watch?v=v64F7YaY27U">グレイコードカウンタの歌</a></div>
+<div class="imgContainer"><a href="http://www.youtube.com/watch?v=v64F7YaY27U"><img src="img/gray_code_counter.gif" width="512" height="512" /></a></div>
+</section>
+
+
+<section class="slide">
+<h1>符号付き2進法</h1>
+<div class="tag known">既知</div>
+<dl>
+<dt>base</dt>
+<dd>2</dd>
+<dt>digit</dt>
+<dd>-1, 0, 1</dd>
+</dl>
+<div>NAF表記（0でないdigitが連続しない）によって一意性が保たれる</div>
+</section>
+
+<section class="slide">
+<h1>符号付き2進法</h1>
+<div class="tag known">既知</div>
+<table class="digits">
+<tr><th>8</th><th>4</th><th>2</th><th>1</th><td></td></tr>
+<tr><td>0</td><td>-1</td><td>0</td><td>-1</td><th>-5</th></tr>
+<tr><td>0</td><td>-1</td><td>0</td><td>0</td><th>-4</th></tr>
+<tr><td>0</td><td>-1</td><td>0</td><td>1</td><th>-3</th></tr>
+<tr><td>0</td><td>0</td><td>-1</td><td>0</td><th>-2</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>-1</td><th>-1</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>0</td><th>0</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>1</td><th>1</th></tr>
+<tr><td>0</td><td>0</td><td>1</td><td>0</td><th>2</th></tr>
+<tr><td>0</td><td>1</td><td>0</td><td>-1</td><th>3</th></tr>
+<tr><td>0</td><td>1</td><td>0</td><td>0</td><th>4</th></tr>
+<tr><td>0</td><td>1</td><td>0</td><td>1</td><th>5</th></tr>
+<tr><td>1</td><td>0</td><td>-1</td><td>0</td><th>6</th></tr>
+<tr><td>1</td><td>0</td><td>0</td><td>-1</td><th>7</th></tr>
+<tr><td>1</td><td>0</td><td>0</td><td>0</td><th>8</th></tr>
+<tr><td>1</td><td>0</td><td>0</td><td>1</td><th>9</th></tr>
+<tr><td>1</td><td>0</td><td>1</td><td>0</td><th>10</th></tr>
+</table>
+</section>
+
+<section class="slide">
+<h1>平衡3進法</h1>
+<div class="tag known">既知</div>
+<dl>
+<dt>base</dt>
+<dd>3</dd>
+<dt>digit</dt>
+<dd>-1, 0, 1</dd>
+</dl>
+<div>コンピューターで計算がしやすい</div>
+</section>
+
+<section class="slide">
+<h1>平衡3進法</h1>
+<div class="tag known">既知</div>
+<table class="digits">
+<tr><th>9</th><th>3</th><th>1</th><td></td></tr>
+<tr><td>0</td><td>0</td><td>0</td><th>0</th></tr>
+<tr><td>0</td><td>0</td><td>1</td><th>1</th></tr>
+<tr><td>0</td><td>1</td><td>-1</td><th>2</th></tr>
+<tr><td>0</td><td>1</td><td>0</td><th>3</th></tr>
+<tr><td>0</td><td>1</td><td>1</td><th>4</th></tr>
+<tr><td>1</td><td>-1</td><td>-1</td><th>5</th></tr>
+<tr><td>1</td><td>-1</td><td>0</td><th>6</th></tr>
+<tr><td>1</td><td>-1</td><td>1</td><th>7</th></tr>
+<tr><td>1</td><td>0</td><td>-1</td><th>8</th></tr>
+<tr><td>1</td><td>0</td><td>0</td><th>9</th></tr>
+<tr><td>1</td><td>0</td><td>1</td><th>10</th></tr>
+</table>
+</section>
+
+
+<section class="slide">
+<h1>Bijective numeration</h1>
+<div class="tag known">既知</div>
+<dl>
+<div>k-adicの場合:</div>
+<dl>
+<dt>base</dt>
+<dd>k</dd>
+<dt>digit</dt>
+<dd>1～k</dd>
+</dl>
+<div>0を使わない記数法</div>
+</section>
+
+<section class="slide">
+<h1>Bijective numeration (1-adic)</h1>
+<div class="tag known">既知</div>
+<table class="digits">
+<tr><th>1</th><th>1</th><th>1</th><th>1</th><th>1</th></tr>
+<tr><td></td><td></td><td></td><td></td><td>ε</td></tr>
+<tr><td></td><td></td><td></td><td></td><td>1</td></tr>
+<tr><td></td><td></td><td></td><td>1</td><td>1</td></tr>
+<tr><td></td><td></td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td></td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+</table>
+</section>
+
+<section class="slide">
+<h1>Bijective numeration (2-adic)</h1>
+<div class="tag known">既知</div>
+<table class="digits">
+<tr><th>4</th><th>2</th><th>1</th></tr>
+<tr><td></td><td></td><td>ε</td><th>0</th></tr>
+<tr><td></td><td></td><td>1</td><th>1</th></tr>
+<tr><td></td><td></td><td>2</td><th>2</th></tr>
+<tr><td></td><td>1</td><td>1</td><th>3</th></tr>
+<tr><td></td><td>1</td><td>2</td><th>4</th></tr>
+<tr><td></td><td>2</td><td>1</td><th>5</th></tr>
+<tr><td></td><td>2</td><td>2</td><th>6</th></tr>
+<tr><td>1</td><td>1</td><td>1</td><th>7</th></tr>
+<tr><td>1</td><td>1</td><td>2</td><th>8</th></tr>
+<tr><td>1</td><td>2</td><td>1</td><th>9</th></tr>
+<tr><td>1</td><td>2</td><td>2</td><th>10</th></tr>
+</table>
+</section>
+
+<section class="slide">
+<h1>-2進法(negabinary)</h1>
+<div class="tag known">既知</div>
+<dl>
+<dt>base</dt>
+<dd>-2</dd>
+<dt>digit</dt>
+<dd>0, 1</dd>
+</dl>
+<div>整数全体を表せる記数法</div>
+</section>
+
+<section class="slide">
+<h1>-2進法(negabinary)</h1>
+<div class="tag known">既知</div>
+<table class="digits">
+<tr><th>16</th><th>-8</th><th>4</th><th>-2</th><th>1</th><td></td></tr>
+<tr><td>0</td><td>1</td><td>1</td><td>1</td><td>1</td><th>-5</th></tr>
+<tr><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td><th>-4</th></tr>
+<tr><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td><th>-3</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><th>-2</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><th>-1</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><th>0</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><th>1</th></tr>
+<tr><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><th>2</th></tr>
+<tr><td>0</td><td>0</td><td>1</td><td>1</td><td>1</td><th>3</th></tr>
+<tr><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><th>4</th></tr>
+<tr><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><th>5</th></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><th>6</th></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>1</td><td>1</td><th>7</th></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><th>8</th></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td><th>9</th></tr>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td><th>10</th></tr>
+</table>
+</section>
+
+<section class="slide">
+<h1>-1+i進法</h1>
+<div class="tag known">既知</div>
+<dl>
+<dt>base</dt>
+<dd>-1+i</dd>
+<dt>digit</dt>
+<dd>0, 1</dd>
+</dl>
+<div>D. Knuthが考案</div>
+<div>有限桁でガウス整数を記述可能</div>
+</section>
+
+<section class="slide">
+<h1>1+i進法</h1>
+<div class="tag known">独自</div>
+<dl>
+<dt>base</dt>
+<dd>1+i</dd>
+<dt>digit</dt>
+<dd>0, 1</dd>
+</dl>
+<div>有限桁ではガウス整数全体は記述不可</div>
+</section>
+
+<section class="slide">
+<h1>i+1進法</h1>
+<div class="tag known">既知</div>
+<div class="imgContainer"><img src="img/twin_dragon_text.png" />
+</section>
+
+<section class="slide">
+<h1>Twindragon</h1>
+<div class="tag known">既知</div>
+<div class="imgContainer"><img src="img/twindragon.png"	 />
+</section>
+
+<section class="slide">
+<h1>2i進法</h1>
+<div class="tag known">既知</div>
+<dl>
+<dt>base</dt>
+<dd>2i</dd>
+<dt>digit</dt>
+<dd>0, 1, 2, 3</dd>
+</dl>
+<div>D. Knuthが考案</div>
+</section>
+
+<section class="slide">
+<h1>黄金進法の負への拡張</h1>
+<div class="tag unknown">未知</div>
+<table class="digits">
+<tr><th>(-φ)<sup>4</sup></th><th>(-φ)<sup>3</sup></th><th>(-φ)<sup>2</sup></th><th>(-φ)<sup>1</sup></th><th>(-φ)<sup>0</sup></th><th>(-φ)<sup>-1</sup></th><th>(-φ)<sup>-2</sup></th><th>(-φ)<sup>-3</sup></th><th>(-φ)<sup>-4</sup></th>
+<tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><th>0</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><th>1</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><th>2</th></tr>
+<tr><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><th>3</th></tr>
+<tr><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><th>4</th></tr>
+<tr><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><th>5</th></tr>
+<tr><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><th>6</th></tr>
+<tr><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><th>7</th></tr>
+<tr><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><th>8</th></tr>
+<tr><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><th>9</th></tr>
+<tr><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><th>10</th></tr>
+</table>
+</section>
+
+<section class="slide">
+<h1>フィボナッチ記数法の負への拡張</h1>
+<div class="tag unknown">未知</div>
+<table class="digits">
+<tr><th>13</th><th>-8</th><th>5</th><th>-3</th><th>2</th><th>-1</th><th>1</th><td></td></tr>
+<tr><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><th>-5</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td><th>-4</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><th>-3</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><th>-2</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><th>-1</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><th>0</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><th>1</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><th>2</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><th>3</th></tr>
+<tr><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><th>4</th></tr>
+<tr><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><th>5</th></tr>
+<tr><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><th>6</th></tr>
+<tr><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><th>7</th></tr>
+<tr><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td><th>8</th></tr>
+<tr><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td><th>9</th></tr>
+</table>
+</section>
+
+<section class="slide">
+<h1>factorial based radix</h1>
+<div class="tag known">既知</div>
+<dl>
+<dt>base</dt>
+<dd>n!</dd>
+<dt>digit</dt>
+<dd>0～n</dd>
+</dl>
+<table class="digits">
+<tr><th>3!</th><th>2!</th><th>1!</th><th>0!</th></tr>
+<tr><td>0</td><td>0</td><td>1</td><td>0</td><th>1</th></tr>
+<tr><td>0</td><td>1</td><td>0</td><td>0</td><th>2</th></tr>
+<tr><td>0</td><td>1</td><td>1</td><td>0</td><th>3</th></tr>
+<tr><td>0</td><td>2</td><td>0</td><td>0</td><th>4</th></tr>
+<tr><td>0</td><td>2</td><td>1</td><td>0</td><th>5</th></tr>
+<tr><td>1</td><td>0</td><td>0</td><td>0</td><th>6</th></tr>
+<tr><td>1</td><td>0</td><td>1</td><td>0</td><th>7</th></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>0</td><th>8</th></tr>
+<tr><td>1</td><td>1</td><td>1</td><td>0</td><th>9</th></tr>
+<tr><td>1</td><td>2</td><td>0</td><td>0</td><th>10</th></tr>	
+</table>
+</section>
+
+<section class="slide">
+<h1>p-進法</h1>
+<div class="tag known">既知</div>
+<div>無限桁で負の数を含む有理数を表せる</div>
+<div>-1=…111111</div>
+<div>-1/3=…010101</div>
+</section>
+
+<!--
+<section class="slide">
+<h1>繰り上がり則</h1>
+<div class="tag original">独自</div>
+</section>
+
+<section class="slide">
+<h1>（実演）Excelで繰り上がり</h1>
+<div class="tag original">独自</div>
+</section>
+
+<section class="slide">
+<h1>オートマトン</h1>
+<div class="tag known">既知</div>
+</section>
+-->
+
+<section class="slide">
+<h1>（蛇足）3足さん！</h1>
+<div><a href="http://butchi.jp/documents/program/santasan/">http://butchi.jp/documents/program/santasan/</a></div>
+<div class="imgContainer"><img src="img/santasan.png" />
+</section>
+
+<section class="slide">
+<h1>（蛇足）</h1>
+<div>Googleで「16進数」を検索すると…</div>
+<div class="imgContainer"><img src="img/hexadecimal_google.png" />
+</section>
+
+<section class="slide">
+<h1>繰り上がり則</h1>
+<div>2進法では、左に繰り上がる</div>
+<div class="imgContainer"><img alt="2進法の繰り上がり則" src="img/carry_binary.png" /></div>
+</section>
+
+<section class="slide">
+<h1>繰り上がり則</h1>
+<div>黄金進法では左に1繰り上がり、右に2繰り下がる</div>
+<div class="imgContainer"><img alt="黄金進法の繰り上がり則" src="img/carry_phinary.png" /></div>
+</section>
+
+<section class="slide">
+<h1>繰り上がり則</h1>
+<div>では、上にも繰り上がってはどうか？</div>
+<div class="imgContainer"><img alt="Butchi数の繰り上がり則" src="img/carry_butchi_number.png" /></div>
+</section>
+
+<section class="slide">
+<h1>Butchi数</h1>
+<div class="tag original">独自</div>
+<div style="margin-bottom: 50px;"><a href="http://butchi.jp/documents/planar_binary/">Butchi数解説ページ</a></div>
+<div>卒業論文「2進数の平面的表現に関する考察」
+<ul>
+	<li><a href="http://butchi.jp/documents/b-thesis.pdf">論文(PDF)</a></li>
+	<li><a href="http://butchi.jp/documents/b-thesis.html">スライド(Flashページ)</a></li>
+</ul>
+</div>
+</section>
+
+
+<section class="slide">
+<h1>余談</h1>
+<div>このスライドはHTML 5の技術を用いて作りました。</div>
+<div>数式はMathematicaを用いてMathMLで記述しています。</div>
+<div>Firefox 14で動作確認済みです。</div>
+</section>
+
+<script>
+// ページ番号、スライド遷移
+var s = document.getElementsByClassName('slide');
+var i;
+for (i=0; i<s.length; i++) {
+	s[i].id = "s"+i;
+	s[i].addEventListener("click", function() {
+		location.hash=""; // 1つ前のスライドをクリックしたときに有効にするため
+		location.hash=('s'+(parseInt(this.id.slice(1))+1)); // 最後のスライドをクリックしたときは図らずも最初のスライドに飛ぶ
+	});
+}
+</script>
+</body>
+</html>
