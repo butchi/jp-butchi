@@ -1,0 +1,10 @@
+@include with-page("documents/fractal/") {
+  @include mq-sp {
+    p {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
