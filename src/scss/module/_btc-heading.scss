@@ -94,3 +94,34 @@
     font-size: px(16);
   }
 }
+
+
+h1:not([class]) {
+  font-size: px(26);
+}
+
+h2:not([class]) {
+  line-height: inherit;
+
+  border-left: 10px solid $main-color;
+  padding-left: 10px;
+
+  font-size: px(24);
+}
+
+h3:not([class]) {
+  font-size: px(22);
+  font-weight: bold;
+}
+
+h4:not([class]) {
+  font-size: px(20);
+}
+
+h5:not([class]) {
+  font-size: px(19);
+}
+
+h6:not([class]) {
+  font-size: px(18);
+}
