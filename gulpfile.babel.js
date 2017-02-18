@@ -184,6 +184,8 @@ gulp.task('works', () => {
 gulp.task('pug', () => {
   var locals = readConfig(`${CONFIG}/meta.yml`);
 
+  locals.require = require;
+
   locals.bib = readConfig(`${CONFIG}/bib.yml`);
   locals.interest = readConfig(`${CONFIG}/interest.yml`);
   locals.works = readConfig(`${CONFIG}/works.yml`);

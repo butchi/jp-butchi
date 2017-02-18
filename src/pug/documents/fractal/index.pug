@@ -1,6 +1,10 @@
 extends /_layout/_default-layout
 
 append config-block
+  -
+    var md = require('markdown-it')({
+      html: true,
+    });
   - title = 'フラクタル'
   - description = 'フラクタルについての雑文'
   - keywords = ['フラクタル', '再帰曲線']
@@ -11,9 +15,12 @@ prepend javascript-block
 block content-block
   +page-title
 
+  mixin markdown(mddoc)
+    article!= md.render(mddoc)
+
   .inner-block
-    article
-      :markdown-it(html=true)
+    -
+      doc = `
         フラクタル (fractal) について、名のあるフラクタル図形を知っている限り列挙。
 
         [Wikimedia CommonsのFractalのギャラリー](http://commons.wikimedia.org/wiki/Fractal)
@@ -267,8 +274,8 @@ block content-block
         # 参考リンク
 
         - [フラクタル図形のハウスドルフ次元一覧（Wikipedia英語版）](http://en.wikipedia.org/wiki/List_of_fractals_by_Hausdorff_dimension)
-
-
+      `
+    +markdown(doc)
 
       //-
         <h2>フラクタル次元</h2>
