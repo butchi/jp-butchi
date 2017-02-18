@@ -108,34 +108,27 @@ h6:not([class]) {
 .display-none {
   display: none; }
 
-html.is-pc .pc-none {
-  display: none; }
+@media screen and (min-width: 640px) {
+  .pc-none {
+    display: none; } }
 
-html.is-sp .sp-none {
-  display: none; }
+@media screen and (min-width: 320px) and (max-width: 639px) {
+  .sp-none {
+    display: none; } }
 
 html {
   font-size: 100px; }
-  html.is-sp html {
-    font-size: 15px;
-    font-size: 0.15rem; }
-  html.is-pc html {
-    font-size: 15px;
-    font-size: 0.15rem; }
-  html.is-tab html {
-    font-size: 15px;
-    font-size: 0.15rem; }
 
 body {
   font-family: YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Meiryo, "メイリオ", sans-serif; }
-  html.is-sp body {
-    font-size: 15px;
-    font-size: 0.15rem;
-    line-height: 1.618; }
-  html.is-pc body {
-    font-size: 15px;
-    font-size: 0.15rem;
-    line-height: 1.618; }
+  @media screen and (min-width: 320px) and (max-width: 639px) {
+    body {
+      font-size: 0.15rem;
+      line-height: 1.618; } }
+  @media screen and (min-width: 640px) {
+    body {
+      font-size: 0.15rem;
+      line-height: 1.618; } }
 
 main {
   display: block; }
@@ -149,17 +142,16 @@ a {
   a.hover, a:hover {
     text-decoration: none; }
 
-html.is-sp .inner-block {
-  position: relative;
-  padding-left: 10px;
-  padding-left: 0.1rem;
-  padding-right: 10px;
-  padding-right: 0.1rem; }
+@media screen and (min-width: 320px) and (max-width: 639px) {
+  .inner-block {
+    position: relative;
+    padding-left: 0.1rem;
+    padding-right: 0.1rem; } }
 
-html.is-pc .inner-block {
-  position: relative;
-  padding: 0 15px;
-  padding: 0 0.15rem; }
+@media screen and (min-width: 640px) {
+  .inner-block {
+    position: relative;
+    padding: 0 0.15rem; } }
 
 .list-share {
   font-size: 0; }
@@ -183,30 +175,31 @@ html.is-pc .inner-block {
 .mdi.mdi-wikipedia {
   color: #000000; }
 
-html.is-sp .btc-blockquote {
-  font-size: 15px;
-  font-size: 0.15rem; }
+@media screen and (min-width: 320px) and (max-width: 639px) {
+  .btc-blockquote {
+    font-size: 0.15rem; } }
 
-html.is-pc .btc-blockquote {
-  font-size: 15px;
-  font-size: 0.15rem; }
+@media screen and (min-width: 640px) {
+  .btc-blockquote {
+    font-size: 0.15rem; } }
 
-html.is-sp .mdl-card__supporting-text {
-  font-size: 15px;
-  font-size: 0.15rem; }
+@media screen and (min-width: 320px) and (max-width: 639px) {
+  .mdl-card__supporting-text {
+    font-size: 0.15rem; } }
 
-html.is-pc .mdl-card__supporting-text {
-  font-size: 15px;
-  font-size: 0.15rem; }
+@media screen and (min-width: 640px) {
+  .mdl-card__supporting-text {
+    font-size: 0.15rem; } }
 
-html.is-sp .wrapper {
-  overflow: hidden; }
+@media screen and (min-width: 320px) and (max-width: 639px) {
+  .wrapper {
+    overflow: hidden; } }
 
-html.is-pc .wrapper {
-  width: 100%;
-  min-width: 640px;
-  min-width: 6.4rem;
-  overflow: hidden; }
+@media screen and (min-width: 640px) {
+  .wrapper {
+    width: 100%;
+    min-width: 6.4rem;
+    overflow: hidden; } }
 
 body[data-path="/"] .e-mail {
   text-align: right; }
@@ -289,6 +282,11 @@ body[data-path="documents/analytic-signal/"] .list-as {
         body[data-path="documents/analytic-signal/"] .list-as .item-as .btc-analytic-signal-viewer.is-play .btn-play {
           display: none; }
 
+@media screen and (min-width: 320px) and (max-width: 639px) {
+  body[data-path="documents/fractal/"] p img {
+    width: 100%;
+    height: auto; } }
+
 body[data-path="org/kep/as-graph/"] .card {
   width: 610px;
   width: 6.1rem;
@@ -337,13 +335,13 @@ body[data-path="person/people/"] .card {
     font-size: 24px;
     font-size: 0.24rem; }
 
-html.is-sp body[data-path="person/profile/"] .sec-history .item-history {
-  font-size: 15px;
-  font-size: 0.15rem; }
+@media screen and (min-width: 320px) and (max-width: 639px) {
+  body[data-path="person/profile/"] .sec-history .item-history {
+    font-size: 0.15rem; } }
 
-html.is-pc body[data-path="person/profile/"] .sec-history .item-history {
-  font-size: 15px;
-  font-size: 0.15rem; }
+@media screen and (min-width: 640px) {
+  body[data-path="person/profile/"] .sec-history .item-history {
+    font-size: 0.15rem; } }
 
 body[data-path="person/profile/"] .sec-history .item-history .btc-heading {
   margin: 0;
