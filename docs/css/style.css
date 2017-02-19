@@ -282,6 +282,26 @@ body[data-path="documents/analytic-signal/"] .list-as {
         body[data-path="documents/analytic-signal/"] .list-as .item-as .btc-analytic-signal-viewer.is-play .btn-play {
           display: none; }
 
+body[data-path="documents/butchi-number/"] .paragraph {
+  margin: 0 0 16px;
+  margin: 0 0 0.16rem; }
+
+body[data-path="documents/butchi-number/"] .butchi-number {
+  margin-top: 1em;
+  border-top: 0px;
+  border-left: 0px;
+  border-bottom: 1px solid #000000;
+  border-right: 1px solid #000000;
+  display: inline-table;
+  vertical-align: bottom; }
+  body[data-path="documents/butchi-number/"] .butchi-number td {
+    text-align: right;
+    padding: 5px;
+    padding: 0.05rem;
+    line-height: 1;
+    width: 1em;
+    height: 1em; }
+
 @media screen and (min-width: 320px) and (max-width: 639px) {
   body[data-path="documents/fractal/"] p img {
     width: 100%;

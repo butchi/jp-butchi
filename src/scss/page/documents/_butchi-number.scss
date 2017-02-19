@@ -1,0 +1,26 @@
+@include with-page("documents/butchi-number/") {
+  .paragraph {
+    margin: 0 0 px(16);
+  }
+
+  .butchi-number {
+    margin-top: 1em;
+
+    border-top: 0px;
+    border-left: 0px;
+    border-bottom: 1px solid #000000;
+    border-right: 1px solid #000000;
+    display: inline-table;
+    vertical-align: bottom;
+
+    td {
+      text-align: right;
+
+      padding: px(5);
+      line-height: 1;
+
+      width: 1em;
+      height: 1em;
+    }
+  }
+}

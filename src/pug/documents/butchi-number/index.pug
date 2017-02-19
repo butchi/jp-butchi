@@ -1,0 +1,242 @@
+extends /_layout/_default-layout
+
+append config-block
+  - title = '物智数'
+  - description = '物智数（平面的2進数）'
+  - keywords = ['2進数', '記数法']
+
+prepend javascript-block
+  +mathjax
+
+mixin butchi-number(arr)
+  table.butchi-number
+    each row, i in arr
+      tr
+        each col, i in row
+          if(typeof col === 'number')
+            td
+              | $#{col}$
+          else
+            td!= col
+
+block content-block
+  +page-title
+
+  .inner-block
+    +heading 概要
+
+    p
+      | 2進数は以下のような繰り上がり規則をもつ。
+
+    p
+      | $1_2 + 1_2 = 10_2$
+
+    p
+      | これを平面的に拡張して、以下のような繰り上がり規則を考える。
+
+    p
+      +butchi-number([[1]])
+
+      |  + 
+
+      +butchi-number([[1]])
+
+      |  = 
+
+      +butchi-number([
+        [0, 1],
+        [1, 0]
+      ])
+
+    p
+      | こうすると、例えば $4$ は以下のように表される。
+
+    div.paragraph
+      +butchi-number([[4]])
+
+      |  = 
+
+      +butchi-number([[3]])
+
+      |  + 
+
+      +butchi-number([[1]])
+
+      |  = 
+
+      +butchi-number([
+        [0, 1],
+        [1, 1]
+      ])
+
+      |  + 
+
+      +butchi-number([[1]])
+
+      |  = 
+
+      +butchi-number([
+        [0, 1],
+        [1, '$\\bf{2}$']
+      ])
+
+      |  = 
+      +butchi-number([
+        [0, 2],
+        ['$\\bf{2}$', 0]
+      ])
+
+      |  = 
+
+      +butchi-number([
+        [0, 1, '$\\bf{2}$'],
+        [1, 0, 0]
+      ])
+
+      |  = 
+
+      +butchi-number([
+        [0, 0, 1],
+        [0, '$\\bf{2}$', 0],
+        [1, 0, 0]
+      ])
+
+      |  = 
+
+      +butchi-number([
+        [0, 1, 1],
+        [1, 0, 0],
+        [1, 0, 0]
+      ])
+
+    p
+      | このようにして表される数を
+      i 物智数（平面的2進数）
+      | と呼ぶ。
+
+    p
+      | $0$ から $10$ までの物智数を以下に示す。
+
+    div.paragraph
+      | $0$ = 
+
+      +butchi-number([
+        [0]
+      ])
+
+      | , 
+      | $1$ = 
+
+      +butchi-number([
+        [1]
+      ])
+
+      | , 
+      | $2$ = 
+
+      +butchi-number([
+        [0, 1],
+        [1, 0]
+      ])
+
+      | , 
+      | $3$ = 
+
+      +butchi-number([
+        [0, 1],
+        [1, 1]
+      ])
+
+      | , 
+      | $4$ = 
+
+      +butchi-number([
+        [0, 1, 1],
+        [1, 0, 0],
+        [1, 0, 0]
+      ])
+
+      | , 
+      | $5$ = 
+
+      +butchi-number([
+        [0, 1, 1],
+        [1, 0, 0],
+        [1, 0, 1]
+      ])
+
+      | , 
+      | $6$ = 
+
+      +butchi-number([
+        [0, 1, 1],
+        [1, 0, 1],
+        [1, 1, 0]
+      ])
+
+      | , 
+      | $7$ = 
+
+      +butchi-number([
+        [0, 1, 1],
+        [1, 0, 1],
+        [1, 1, 1]
+      ])
+
+      | , 
+      | $8$ = 
+
+      +butchi-number([
+        [0, 1, 1, 1],
+        [1, 0, 1, 0],
+        [1, 1, 0, 0],
+        [1, 0, 0, 0]
+      ])
+
+      | , 
+      | $9$ = 
+
+      +butchi-number([
+        [0, 1, 1, 1],
+        [1, 0, 1, 0],
+        [1, 1, 0, 0],
+        [1, 0, 0, 1]
+      ])
+
+      | , 
+      | $10$ = 
+
+      +butchi-number([
+        [0, 1, 1, 1],
+        [1, 0, 1, 0],
+        [1, 1, 0, 1],
+        [1, 0, 1, 0]
+      ])
+
+    p
+      | なお、
+
+      +butchi-number([[1, 0]])
+
+      |  や
+
+      +butchi-number([
+        [1, 1],
+        [1, 1]
+      ])
+
+      |  など、自然数としては意味を持たないものも物智数として考える。
+
+    +heading(3)
+      | 物智数ビューワー
+
+    div
+
+    +heading(3)
+      | 文献
+
+    ol
+      li
+        +bib('b-thesis--iwabuchi-yuki')
+      li
+        +bib('butchi-number--2010-06--iwabuchi-yuki')
