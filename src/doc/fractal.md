@@ -220,7 +220,7 @@ Twindragon曲線（Davis-Knuth dragon）は2つのドラゴン曲線を点対称
 
 ## マンデルブロ集合（Mandelbrot set）
 
-![マンデルブロ集合](${imgPath}mandelbrot.gif)
+[![マンデルブロ集合](${imgPath}mandelbrot.png)](${imgPath}mandelbrot--large.png)
 
 ## ジュリア集合（Julia set）
 
