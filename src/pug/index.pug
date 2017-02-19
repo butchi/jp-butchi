@@ -112,33 +112,55 @@ block content-block
           | 諸々
 
         .inner-block
-          ul
-            li
-              a(href=`${rootPath}documents/butchi-number/`) 平面的2進数（Butchi数）
-            li
-              a(href= rootPath + 'documents/music/') 音楽
-            li
-              a(href= rootPath + 'documents/poem/') 詩
-            li
-              a(href=`${rootPath}documents/analytic-signal/`) 解析信号ギャラリー
-            li
-              a(href= rootPath + 'documents/character/') キャラクター
-            li
-              a(href= rootPath + 'documents/design/') デザイン
-            li
-              a(href= rootPath + 'documents/fractal/') フラクタル図形一覧
-            li
-              a(href=`${rootPath}documents/graphicalpad/`) GraphiCalPad
-            li
-              a(href=`${rootPath}documents/symbol/`) 記号辞典〜コンピューターにおける記号の意味と使われ方〜
-            li
-              a(href=`${rootPath}project/webclappad/`) WebClapPad
-            li
-              a(href=`${rootPath}project/nandemo-magic/`) なんでも魔法。
-            li
-              a(href=`${rootPath}project/po3pokemon/`) ポポポポケモン！
-            li
-              a(href=`https://butchi.github.io/secondly-happy/`) 秒刊ハッピー
+          section
+            +heading(4)
+              | 作品
+
+            ul
+              li
+                a(href= rootPath + 'documents/music/') 音楽
+              li
+                a(href= rootPath + 'documents/poem/') 詩
+              li
+                a(href= rootPath + 'documents/character/') キャラクター
+              li
+                a(href= rootPath + 'documents/design/') デザイン
+
+          section
+            +heading(4)
+              | 研究
+
+            ul
+              li
+                a(href=`${rootPath}documents/butchi-number/`) 物智数
+              li
+                a(href=`${rootPath}documents/analytic-signal/`) 解析信号ギャラリー
+              li
+                a(href= rootPath + 'documents/fractal/') フラクタル図形一覧
+
+          section
+            +heading(4)
+              | 執筆
+
+            ul
+              li
+                a(href=`${rootPath}documents/symbol/`) 記号辞典〜コンピューターにおける記号の意味と使われ方〜
+
+          section
+            +heading(4)
+              | プログラム
+
+            ul
+              li
+                a(href=`${rootPath}documents/graphicalpad/`) GraphiCalPad
+              li
+                a(href=`${rootPath}project/webclappad/`) WebClapPad
+              li
+                a(href=`${rootPath}project/nandemo-magic/`) なんでも魔法。
+              li
+                a(href=`${rootPath}project/po3pokemon/`) ポポポポケモン！
+              li
+                a(href=`https://butchi.github.io/secondly-happy/`) 秒刊ハッピー
 
       section.section-publication#publication
         +section-title
