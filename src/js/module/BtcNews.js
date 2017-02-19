@@ -14,7 +14,7 @@ export default class BtcNews {
         let $list = $('<ul></ul>');
         $list.addClass('list');
 
-        data.forEach((item) => {
+        data.reverse().forEach((item) => {
           let date = item.date;
           let body = item.body;
           let tag = item.tag;
@@ -22,7 +22,7 @@ export default class BtcNews {
           let $item = $('<li></li>');
           $item.addClass('item');
 
-          $item.text(`
+          $item.html(`
             [${tag}] ${body} ( ${date} )
           `);
 

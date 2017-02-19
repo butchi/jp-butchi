@@ -598,7 +598,7 @@ var BtcNews = function () {
           var $list = $('<ul></ul>');
           $list.addClass('list');
 
-          data.forEach(function (item) {
+          data.reverse().forEach(function (item) {
             var date = item.date;
             var body = item.body;
             var tag = item.tag;
@@ -606,7 +606,7 @@ var BtcNews = function () {
             var $item = $('<li></li>');
             $item.addClass('item');
 
-            $item.text('\n            [' + tag + '] ' + body + ' ( ' + date + ' )\n          ');
+            $item.html('\n            [' + tag + '] ' + body + ' ( ' + date + ' )\n          ');
 
             $list.append($item);
           });
