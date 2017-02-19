@@ -1,4 +1,37 @@
 @charset "UTF-8";
+.btc-butchi-number-viewer {
+  position: relative; }
+  .btc-butchi-number-viewer .input-number {
+    display: block;
+    height: 30px;
+    font-size: 20px; }
+  .btc-butchi-number-viewer .display-butchi-number {
+    position: relative;
+    border-bottom: solid 1px #999;
+    border-right: solid 1px #999; }
+  .btc-butchi-number-viewer .area-tap {
+    position: absolute;
+    left: 266px;
+    left: 2.66rem;
+    bottom: 0; }
+    .btc-butchi-number-viewer .area-tap .btn {
+      background-color: #eee;
+      width: 50px;
+      height: 50px;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      line-height: 50px;
+      color: #666;
+      border: 1px solid #ddd;
+      cursor: pointer; }
+      .btc-butchi-number-viewer .area-tap .btn:hover, .btc-butchi-number-viewer .area-tap .btn:active {
+        background-color: #ccc; }
+      .btc-butchi-number-viewer .area-tap .btn[data-operation="up"]:after {
+        content: "▲"; }
+      .btc-butchi-number-viewer .area-tap .btn[data-operation="down"]:after {
+        content: "▼"; }
+
 .btc-site-title {
   position: relative;
   padding-left: 10px;

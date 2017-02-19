@@ -1,0 +1,56 @@
+.btc-butchi-number-viewer {
+  position: relative;
+
+  .input-number {
+    display: block;
+    height:30px;
+    font-size: 20px;
+  }
+
+  .display-butchi-number {
+    position: relative;
+
+    border-bottom:solid 1px #999;
+    border-right:solid 1px #999;
+  }
+
+  .area-tap {
+    position: absolute;
+
+    left: px(266);
+    bottom: 0;
+
+    .btn {
+      background-color: #eee;
+      width: 50px;
+      height: 50px;
+      padding: 0;
+      margin: 0;
+
+      text-align: center;
+      line-height: 50px;
+
+      color: #666;
+
+      border: 1px solid #ddd;
+
+      cursor: pointer;
+
+      &:hover, &:active {
+        background-color: #ccc;
+      }
+
+      &[data-operation="up"] {
+        &::after {
+          content: "▲";
+        }
+      }
+
+      &[data-operation="down"] {
+        &::after {
+          content: "▼";
+        }
+      }
+    }
+  }
+}

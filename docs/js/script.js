@@ -257,6 +257,315 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var max = 6900;
+var min = 0;
+
+var touchStart = 'ontouchstart' in window ? 'touchstart' : 'mousedown';
+var touchEnd = 'ontouchend' in window ? 'touchend' : 'mouseup';
+
+var bn = void 0;
+
+var BtcButchiNumberViewer = function BtcButchiNumberViewer() {
+  var opts = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+  _classCallCheck(this, BtcButchiNumberViewer);
+
+  $(function () {
+    var _this = this;
+
+    this.elm = opts.elm;
+    var $elm = $(this.elm);
+
+    this.touching = false;
+
+    this.initialNumber = opts.initialNumber;
+
+    this.elm.innerHTML = '\n<p><input class="input-number" type="number" value="1000"></p>\n<canvas class="display-butchi-number"></canvas>\n\n<div class="area-tap">\n  <p class="btn" data-operation="up"></p>\n  <p class="btn" data-operation="down"></p>\n</div>\n      ';
+
+    this.$upBtn = $elm.find('.btn[data-operation="up"]');
+    this.$downBtn = $elm.find('.btn[data-operation="down"]');
+
+    this.$inputNumber = $('.input-number');
+    this.$inputNumber.attr('max', max);
+    this.$inputNumber.attr('min', min);
+
+    this.$inputNumber.on('change', function (e) {
+      var val = parseInt($(this).val(), 10);
+      if (isFinite(val) && val >= min && val < max) {
+        bn.setNumber(val);
+        bn.draw();
+      }
+    });
+
+    bn = new ButchiNumber({
+      elm: this.elm,
+      initialNumber: this.initialNumber
+    });
+
+    bn.draw();
+
+    this.$upBtn.on(touchStart, function (evt) {
+      evt.preventDefault();
+
+      var cnt = 0;
+
+      var loop = function loop() {
+        if (bn.number < max) {
+          bn.incr();
+          bn.draw();
+          _this.$inputNumber.val(bn.number);
+        }
+
+        if (_this.touching) {
+          setTimeout(function () {
+            cnt++;
+            loop();
+          }, cnt === 0 ? 500 : 10);
+        }
+      };
+
+      _this.touching = true;
+
+      loop();
+    });
+
+    this.$downBtn.on(touchStart, function (evt) {
+      evt.preventDefault();
+
+      var cnt = 0;
+
+      var loop = function loop() {
+        if (bn.number > min) {
+          bn.decr();
+          bn.draw();
+          _this.$inputNumber.val(bn.number);
+        }
+
+        if (_this.touching) {
+          setTimeout(function () {
+            cnt++;
+            loop();
+          }, cnt === 0 ? 500 : 10);
+        }
+      };
+
+      _this.touching = true;
+
+      loop();
+    });
+
+    $('body').on(touchEnd, function () {
+      _this.touching = false;
+    });
+
+    $elm.find('.area-tap .btn').on('mouseout', function () {
+      _this.touching = false;
+    });
+  });
+};
+
+exports.default = BtcButchiNumberViewer;
+
+var BNCanvas = function BNCanvas() {
+  var opts = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+  _classCallCheck(this, BNCanvas);
+
+  this.width = opts.width;
+  this.height = opts.height;
+
+  this.elm = document.createElement('canvas');
+  this.elm.width = this.width;
+  this.elm.height = this.height;
+
+  this.width = this.elm.width;
+  this.height = this.elm.height;
+  this.ctx = this.elm.getContext('2d');
+
+  var dispCanvas = document.querySelector('.display-butchi-number');
+  dispCanvas.width = this.width;
+  dispCanvas.height = this.height;
+
+  this.dispCtx = dispCanvas.getContext('2d');
+  this.dispCtx.transform(-1, 0, 0, -1, 0, 0);
+  this.dispCtx.translate(-this.width, -this.height);
+  this.bmp = this.ctx.createImageData(this.width, this.height);
+};
+
+var ButchiNumber = function () {
+  function ButchiNumber() {
+    var opts = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+    _classCallCheck(this, ButchiNumber);
+
+    this.elm = opts.elm;
+
+    this.number = 0;
+
+    this.canvas = new BNCanvas({
+      width: 256,
+      height: 256
+    });
+    this.width = this.canvas.width;
+    this.height = this.canvas.height;
+
+    this.setNumber(opts.initialNumber);
+  }
+
+  _createClass(ButchiNumber, [{
+    key: 'setNumber',
+    value: function setNumber(n) {
+      if (n > this.number) {
+        while (this.number < n) {
+          this.incr();
+        }
+      } else if (n < this.number) {
+        while (this.number > n) {
+          this.decr();
+        }
+      }
+    }
+
+    // インクリメント則に従って1を加算。オーバーフロー時は2を返して正常に加算されない
+
+  }, {
+    key: 'incr',
+    value: function incr() {
+      var i1, i2, j1, j2;
+      this.number++;
+
+      if (this.getDigit(0, 0) == 0) {
+        this.setDigit(0, 0, 1);
+        return 0;
+      }
+      this.setDigit(0, 0, 0);
+
+      i1 = 1, j1 = 0, i2 = 0, j2 = 1;
+      while (i1 != i2 || j1 != j2) {
+        while (j1 < j2) {
+          if (this.getDigit(i1, j1) == 1) {
+            if (i1 < this.width) {
+              this.setDigit(i1, j1, 0);
+              i1++;
+            } else {
+              return 2;
+            }
+          } else {
+            if (j1 < this.height) {
+              this.setDigit(i1, j1, 1);
+              j1++;
+            } else {
+              return 2;
+            }
+          }
+        }
+        while (i2 < i1) {
+          if (this.getDigit(i2, j2) == 1) {
+            if (j2 < this.height) {
+              this.setDigit(i2, j2, 0);
+              j2++;
+            } else {
+              return 2;
+            }
+          } else {
+            if (i2 < this.width) {
+              this.setDigit(i2, j2, 1);
+              i2++;
+            } else {
+              return 2;
+            }
+          }
+        }
+      }
+      return 0;
+    }
+  }, {
+    key: 'decr',
+
+
+    // デクリメント則に従って1を減算。負の数には対応していない
+    value: function decr() {
+      var i1, i2, j1, j2;
+      this.number--;
+
+      if (this.getDigit(0, 0) == 1) {
+        this.setDigit(0, 0, 0);
+        return 0;
+      }
+      this.setDigit(0, 0, 1);
+
+      i1 = 1, j1 = 0, i2 = 0, j2 = 1;
+      while (i1 != i2 || j1 != j2) {
+        while (j1 < j2) {
+          if (this.getDigit(i1, j1) == 0) {
+            if (i1 < this.width) {
+              this.setDigit(i1, j1, 1);
+              i1++;
+            } else {
+              return 2;
+            }
+          } else {
+            if (j1 < this.height) {
+              this.setDigit(i1, j1, 0);
+              j1++;
+            } else {
+              return 2;
+            }
+          }
+        }
+        while (i2 < i1) {
+          if (this.getDigit(i2, j2) == 0) {
+            if (j2 < this.height) {
+              this.setDigit(i2, j2, 1);
+              j2++;
+            } else {
+              return 2;
+            }
+          } else {
+            if (i2 < this.width) {
+              this.setDigit(i2, j2, 0);
+              i2++;
+            } else {
+              return 2;
+            }
+          }
+        }
+      }
+      return 0;
+    }
+  }, {
+    key: 'setDigit',
+    value: function setDigit(x, y, flag) {
+      this.canvas.bmp.data[4 * (y * this.width + x) + 3] = flag == 1 ? 255 : 0;
+    }
+  }, {
+    key: 'getDigit',
+    value: function getDigit(x, y) {
+      return this.canvas.bmp.data[4 * (y * this.width + x) + 3] == 255 ? 1 : 0;
+    }
+  }, {
+    key: 'draw',
+    value: function draw() {
+      this.canvas.ctx.putImageData(this.canvas.bmp, 0, 0);
+      this.canvas.dispCtx.clearRect(0, 0, this.width, this.height);
+      this.canvas.dispCtx.drawImage(this.canvas.ctx.canvas, 0, 0);
+    }
+  }]);
+
+  return ButchiNumber;
+}();
+
+},{}],3:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _BtcSpreadSheet = require('../module/BtcSpreadSheet');
 
 var _BtcSpreadSheet2 = _interopRequireDefault(_BtcSpreadSheet);
@@ -313,7 +622,7 @@ var BtcNews = function () {
 
 exports.default = BtcNews;
 
-},{"../module/BtcSpreadSheet":3}],3:[function(require,module,exports){
+},{"../module/BtcSpreadSheet":4}],4:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -377,7 +686,7 @@ var BtcSpreadSheet = function () {
 
 exports.default = BtcSpreadSheet;
 
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -426,7 +735,7 @@ $('.btc-swf-object').each(function (i, elm) {
 
 exports.default = BtcSwfObject;
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -472,7 +781,7 @@ var Main = function () {
 
 exports.default = Main;
 
-},{"./Router":6}],6:[function(require,module,exports){
+},{"./Router":7}],7:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -496,6 +805,10 @@ var _root2 = _interopRequireDefault(_root);
 var _analyticSignal = require('../page/documents/analytic-signal');
 
 var _analyticSignal2 = _interopRequireDefault(_analyticSignal);
+
+var _butchiNumber = require('../page/documents/butchi-number');
+
+var _butchiNumber2 = _interopRequireDefault(_butchiNumber);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -523,6 +836,7 @@ var Router = function () {
 
       page('/', _root2.default);
       page('documents/analytic-signal/', _analyticSignal2.default);
+      page('documents/butchi-number/', _butchiNumber2.default);
     }
   }]);
 
@@ -531,7 +845,7 @@ var Router = function () {
 
 exports.default = Router;
 
-},{"../page/common":8,"../page/documents/analytic-signal":9,"../page/root":10,"./ns":7}],7:[function(require,module,exports){
+},{"../page/common":9,"../page/documents/analytic-signal":10,"../page/documents/butchi-number":11,"../page/root":12,"./ns":8}],8:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -546,7 +860,7 @@ window.Btc = window.Btc || {};
 var ns = window.Btc;
 exports.default = ns;
 
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -587,7 +901,7 @@ function setEnvClass() {
   }
 }
 
-},{"../module/BtcSwfObject":4,"../module/ns":7}],9:[function(require,module,exports){
+},{"../module/BtcSwfObject":5,"../module/ns":8}],10:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -614,7 +928,35 @@ exports.default = function () {
   });
 };
 
-},{"../../module/BtcAnalyticSignalViewer":1,"../../module/ns":7}],10:[function(require,module,exports){
+},{"../../module/BtcAnalyticSignalViewer":1,"../../module/ns":8}],11:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _ns = require('../../module/ns');
+
+var _ns2 = _interopRequireDefault(_ns);
+
+var _BtcButchiNumberViewer = require('../../module/BtcButchiNumberViewer');
+
+var _BtcButchiNumberViewer2 = _interopRequireDefault(_BtcButchiNumberViewer);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function () {
+  console.log('page butchi-number');
+
+  new _BtcButchiNumberViewer2.default({
+    elm: document.querySelector('.btc-butchi-number-viewer'),
+    width: 256,
+    height: 256,
+    initialNumber: 1000
+  });
+};
+
+},{"../../module/BtcButchiNumberViewer":2,"../../module/ns":8}],12:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -637,7 +979,7 @@ exports.default = function () {
   _ns2.default.page.btcNews = new _BtcNews2.default();
 };
 
-},{"../module/BtcNews":2,"../module/ns":7}],11:[function(require,module,exports){
+},{"../module/BtcNews":3,"../module/ns":8}],13:[function(require,module,exports){
 'use strict';
 
 var _ns = require('./module/ns');
@@ -654,4 +996,4 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 _ns2.default.main = new _Main2.default();
 
-},{"./module/Main":5,"./module/ns":7}]},{},[11]);
+},{"./module/Main":6,"./module/ns":8}]},{},[13]);
