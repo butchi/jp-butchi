@@ -33,7 +33,7 @@ export default class BtcButchiNumberViewer {
       this.$inputNumber.attr('max', max);
       this.$inputNumber.attr('min', min);
 
-      this.$inputNumber.on('change', function(e){
+      this.$inputNumber.on('input', function(e){
         var val = parseInt($(this).val(), 10);
         if(isFinite(val) && val >= min && val < max) {
           bn.setNumber(val);
