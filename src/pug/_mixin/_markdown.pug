@@ -1,0 +1,4 @@
+mixin md(path)
+  - mddoc = require('read-file').sync(`src/${path}`, 'utf8')
+  - mddocWithImgPath = mddoc.replace(/\${imgPath}/g, imgPath)
+  article!= markdown.render(mddocWithImgPath)
