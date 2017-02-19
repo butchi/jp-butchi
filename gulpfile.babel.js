@@ -186,6 +186,10 @@ gulp.task('pug', () => {
 
   locals.require = require;
 
+  locals.markdown = require('markdown-it')({
+    html: true,
+  });
+
   locals.bib = readConfig(`${CONFIG}/bib.yml`);
   locals.interest = readConfig(`${CONFIG}/interest.yml`);
   locals.works = readConfig(`${CONFIG}/works.yml`);
