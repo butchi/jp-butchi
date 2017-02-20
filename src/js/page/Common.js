@@ -1,10 +1,18 @@
 import ns from '../module/ns';
+import Hashaby from 'hashaby';
 import BtcSwfObject from '../module/BtcSwfObject';
 
 export default () => {
-    console.log('page common');
+  console.log('page common');
 
-    setEnvClass();
+  setEnvClass();
+
+  document.addEventListener('mdl-componentupgraded', (_evt) => {
+    ns.hashaby = new Hashaby({
+      sweetScrollContainer: '.mdl-layout__content',
+      immediate: true,
+    });
+  });
 };
 
 function setEnvClass() {

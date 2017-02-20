@@ -2208,6 +2208,10 @@ function-bind@^1.0.2:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.0.tgz#16176714c801798e4e8f2cf7f7529467bb4a5771"
 
+gator@^1.2.4:
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/gator/-/gator-1.2.4.tgz#ff668518415ef5f46ce5992fce06bba539efff16"
+
 gauge@~2.6.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/gauge/-/gauge-2.6.0.tgz#d35301ad18e96902b4751dcbbe40f4218b942a46"
@@ -2661,6 +2665,14 @@ hash.js@^1.0.0:
   resolved "https://registry.yarnpkg.com/hash.js/-/hash.js-1.0.3.tgz#1332ff00156c0a0ffdd8236013d07b77a0451573"
   dependencies:
     inherits "^2.0.1"
+
+hashaby@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/hashaby/-/hashaby-0.2.3.tgz#876bfc6cc8dc4a75835f15bf9de8096e6c333cca"
+  dependencies:
+    bower "^1.7.7"
+    gator "^1.2.4"
+    sweet-scroll "^2.2.0"
 
 hawk@1.1.1:
   version "1.1.1"
@@ -5405,6 +5417,10 @@ supports-color@^3.1.2:
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-3.1.2.tgz#72a262894d9d408b956ca05ff37b2ed8a6e2a2d5"
   dependencies:
     has-flag "^1.0.0"
+
+sweet-scroll@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/sweet-scroll/-/sweet-scroll-2.2.0.tgz#5085d6cab3317702b6f9a6c6a0ce9e9faf256982"
 
 syntax-error@^1.1.1:
   version "1.1.6"
