@@ -3,7 +3,7 @@ extends /_layout/_default-layout
 mixin audio-list(category)
   each audio in audioArr
     if audio.category === category
-      li.item-as
+      li.item-as(class= audio.filename)
         h5= audio.name
         .btc-analytic-signal-viewer(data-src= `${dataPath}${audio.filename}.mp3`, style= `background-image: url(${imgPath}${audio.filename}.png)`)
           .cover
@@ -205,17 +205,17 @@ block content-block
 
     p
       | 筆者は、解析信号を利用したシンセサイザを開発しています。最後の
-      a(href="#references") 参考文献
+      a(href="#.reference") 参考文献
       | のリンクからデモを利用できます。
 
-    section
+    section.group-primitive
       +heading(4)
         | プリミティブな音
 
       ul.list-as
         +audio-list('プリミティブな音')
 
-    section
+    section.group-midi
       +heading(4)
         | MIDI音
 
@@ -225,7 +225,7 @@ block content-block
       ul.list-as
         +audio-list('MIDI音')
 
-    section
+    section.group-instrument
       +heading(4)
         | 楽器音
 
@@ -236,20 +236,20 @@ block content-block
       ul.list-as
         +audio-list('楽器音')
 
-    +heading(4)
-      | 参考文献
+    section.reference
+      +heading(4)
+        | 参考文献
 
-    a(name="references")
-    ol
-      li
-        +bib('ec--2008--iwabuchi-yuki')
-      li
-        +bib('mus-85--iwabuchi-yuki')
-      li
-        +bib('wiss--2008--iwabuchi-yuki')
-      li
-        +bib('interaction--2011--iwabuchi-yuki')
-      li
-        +bib('art-science--2011--iwabuchi-yuki')
-      li
-        +bib('d-thesis--iwabuchi-yuki')
+      ol
+        li
+          +bib('ec--2008--iwabuchi-yuki')
+        li
+          +bib('mus-85--iwabuchi-yuki')
+        li
+          +bib('wiss--2008--iwabuchi-yuki')
+        li
+          +bib('interaction--2011--iwabuchi-yuki')
+        li
+          +bib('art-science--2011--iwabuchi-yuki')
+        li
+          +bib('d-thesis--iwabuchi-yuki')
