@@ -412,6 +412,15 @@ body[data-path="person/profile/"] .sec-interest .interest-category {
   body[data-path="person/profile/"] .sec-interest .interest-category .keyword {
     display: inline-block;
     margin: 0; }
+    body[data-path="person/profile/"] .sec-interest .interest-category .keyword .elm-a {
+      text-decoration: none;
+      border-bottom: 1px solid #000000;
+      border-bottom: 0.01rem solid #000000; }
+      body[data-path="person/profile/"] .sec-interest .interest-category .keyword .elm-a.google {
+        border-bottom: 1px dotted #000000;
+        border-bottom: 0.01rem dotted #000000; }
+      body[data-path="person/profile/"] .sec-interest .interest-category .keyword .elm-a:hover {
+        border-bottom: none; }
 
 body[data-path="works/tag/"] .list {
   display: block;

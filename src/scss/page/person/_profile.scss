@@ -35,6 +35,20 @@
         display: inline-block;
 
         margin: 0;
+
+        .elm-a {
+          text-decoration: none;
+
+          border-bottom: px(1) solid $black;
+
+          &.google {
+            border-bottom: px(1) dotted $black;
+          }
+
+          &:hover {
+            border-bottom: none;
+          }
+        }
       }
     }
   }

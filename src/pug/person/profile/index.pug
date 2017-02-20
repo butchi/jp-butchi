@@ -139,8 +139,31 @@ block content-block
             = rowTitle
             | : 
           p.keyword
-            = row.join(', ')
-            | , 
+            each item in row
+              - var href;
+              - var type = null;
+              - var target = null;
+
+              if item === null
+              else if item === '解析信号'
+                - href = `${rootPath}documents/analytic-signal/`;
+              else if item === 'フラクタル'
+                - href = `${rootPath}documents/fractal/`;
+              else if item === '人工知能'
+                - target = '_blank'
+                - href = 'http://wbawakate.jp/';
+              else
+                - type = 'google'
+                - href = `https://www.google.com/#q=${encodeURIComponent(item)}`
+
+              if type === 'google'
+                a.elm-a.google(href= href, target="_blank")
+                  = item
+              else
+                a.elm-a(href= href, target= target)
+                  = item
+
+              | , 
       p
         | …
 
