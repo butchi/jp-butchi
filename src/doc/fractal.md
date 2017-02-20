@@ -4,12 +4,14 @@
 でほとんど網羅されてますけど…。
 
 
+<section class="recursion">
 
 # 再帰的処理によるもの
 
 
 曲線に対して再帰的処理を施したものは特に再帰曲線と呼ばれる。
 
+<section class="koch-snowflake">
 
 ## コッホ雪片（Koch snowflake）
 
@@ -17,16 +19,25 @@
 
 ![コッホ雪片](${imgPath}koch_snowflake.png)
 
+</section>
+
+<section class="koch-curve">
 
 ## コッホ曲線（Koch curve）
 
 ![コッホ曲線](${imgPath}koch.gif)
 
+<section class="quadratic-von-koch-curve-type-1">
+
 ### Quadratic von Koch curve (type 1)
 
-[Vicsek fractal](#vicsek) の一部。
+[Vicsek fractal](#.vicsek-fractal) の一部。
 
 ![Quadratic von Koch curve (type 1)](${imgPath}quadratic_type1_4.png)
+
+</section>
+
+<section class="quadratic-von-koch-curve-type-2">
 
 ### Quadratic von Koch curve (type 2)
 
@@ -34,9 +45,17 @@
 
 ![Quadratic von Koch curve (type 2)](${imgPath}quadratic_type2_3.png)
 
+</section>
+
+<section class="cesaro-fractal">
+
 ### Cesaro fractal
 
 ![Cesaro fractal](${imgPath}cesaro_6.png)
+
+</section>
+
+<section class="koch-extra">
 
 ### コッホ曲線の亜種
 
@@ -46,6 +65,12 @@
 
 ![コッホ曲線の亜種](${imgPath}6_6.png)
 
+</section>
+
+</section>
+
+<section class="cantor-set">
+
 ## カントール集合（Cantor set）
 
 0～1の実数を3進数で表現したとき、その文字列の中に1を含まない点（ $0.20020222_3$ など）の集合として定義することができる。そのため、このように定義した場合はカントールの3進集合（Cantor ternary set）とも呼ばれる。
@@ -54,20 +79,28 @@ cf) 悪魔の階段（Devil's staircase、カントール関数（Cantor functio
 
 ![悪魔の階段（カントール関数）](${imgPath}cantor_function.png)
 
+</section>
 
-<a id="cantor_dust"></a>
+<section class="cantor-dust">
+
 ## カントールの塵（Cantor dust）
 
 カントール集合の2次元への拡張。
 
 [![シェルピンスキーのギャスケット](${imgPath}cantor_dust.png)](${imgPath}cantor_dust_large.png)
 
+</section>
+
+<section class="cantor-square-fractal">
 
 ## Cantor Square Fractal
-[カントールの塵](#cantor_dust) の補集合
+[カントールの塵](#.cantor-dust) の補集合
 
 [![シェルピンスキーのギャスケット](${imgPath}cantor_square_fractal.png)](${imgPath}cantor_square_fractal_large.png)
 
+</section>
+
+<section class="sierpinski-gasket">
 
 ## シェルピンスキーのギャスケット（Sierpiński gasket）
 <small>「シェルピンスキーのガスケット」や「シルピンスキーのギャスケット」、「シェルピンスキーの三角形（Sierpiński triangle）」などとも。</small>
@@ -94,6 +127,9 @@ cf) 悪魔の階段（Devil's staircase、カントール関数（Cantor functio
 
 [![シェルピンスキーのギャスケット](${imgPath}sierpinski_gasket_rule90.png)](${imgPath}sierpinski_gasket_rule90_large.png)
 
+</section>
+
+<section class="sierpinski-carpet">
 
 ## シェルピンスキーのカーペット（Sierpiński carpet）
 
@@ -101,13 +137,18 @@ cf) 悪魔の階段（Devil's staircase、カントール関数（Cantor functio
 
 [![シェルピンスキーのカーペット](${imgPath}sierpinski_carpet.png)](${imgPath}sierpinski_carpet_large.png)
 
+</section>
+
+<section class="menger-sponge">
 
 ## メンガーのスポンジ（Menger sponge）
 
 シェルピンスキーのカーペットの3次元拡張。
 
+</section>
 
-<a id="vicsek"></a>
+<section class="vicsek-fractal">
+
 ## Vicsek fractal
 
 「Vicsek snowflake」や「box fractal」、「quadraflake」とも。
@@ -117,12 +158,21 @@ X字(saltire)の作り方と+字(cross)の作り方がある。
 [![シェルピンスキーのカーペット](${imgPath}vicsek_saltire.png)](${imgPath}vicsek_saltire_large.png)
 [![シェルピンスキーのカーペット](${imgPath}vicsek_cross.png)](${imgPath}vicsek_cross_large.png)
 
+</section>
+
+<section class="n-flake">
 
 ## <i>n</i>-flake
 
 $n=3$ でシェルピンスキーのギャスケット、 $n=4$ でVicsek fractalになる。
 
+<section class="pentaflake">
+
 ### Pentaflake
+
+</section>
+
+<section class="hexaflake">
 
 ### Hexaflake
 
@@ -132,49 +182,117 @@ $n=3$ でシェルピンスキーのギャスケット、 $n=4$ でVicsek fracta
 
 [![Hexaflake](${imgPath}hexaflake_carpet.png)](${imgPath}hexaflake_carpet_large.png)
 
+</section>
+
+<section class="polyflake">
+
 ### Polyflake
+
+</section>
+
+<section class="sierpinski-tetrahedron">
 
 ### Sierpinski tetrahedron
 
+</section>
+
+<section class="hexahedron-flake">
+
 ### Hexahedron flake
+
+</section>
+
+<section class="octahedron-flake">
 
 ### Octahedron flake
 
+</section>
+
+<section class="dodecahedron-flake">
+
 ### Dodecahedron flake
+
+</section>
+
+<section class="icosahedron-flake">
 
 ### Icosahedron flake
 
+</section>
+
+</section>
+
+<section class="t-square">
 
 ## T-square
 
-### 空間充填曲線（Space-filling curves）
+</section>
+
+<section class="space-filling-curves">
+
+## 空間充填曲線（Space-filling curves）
 
 平面充填曲線としては以下のような曲線が挙げられる。
 
-#### ペアノ曲線（Peano curve）
+<section class="peano-curve">
 
-##### 2D Greek cross fractal (?)
+### ペアノ曲線（Peano curve）
+
+<section class="dimension-2-greek-cross-fractal">
+
+#### 2D Greek cross fractal (?)
 
 ![2D Greek cross fractal (?)](${imgPath}1_3.png)
 
 [2D Greek cross fractal](http://en.wikipedia.org/wiki/File:Greek_cross_fractal_stage_4.svg)
 
-#### ヒルベルト曲線（Hilbert curve）
+</section>
 
-#### シェルピンスキー曲線（Sierpiński curve）
+</section>
 
-#### ムーア曲線（Moore curve）
+<section class="hilbert-curve">
 
-#### ゴスパー曲線（Gosper curve）
+### ヒルベルト曲線（Hilbert curve）
 
-#### ルベーグ曲線（Lebesgue curve）
+</section>
+
+<section class="sierpinski-curve">
+
+### シェルピンスキー曲線（Sierpiński curve）
+
+</section>
+
+<section class="moore-curve">
+
+### ムーア曲線（Moore curve）
+
+</section>
+
+<section class="gosper-curve">
+
+### ゴスパー曲線（Gosper curve）
+
+</section>
+
+<section class="lebesgue-curve">
+
+### ルベーグ曲線（Lebesgue curve）
 
 Z曲線（z-order curve）とも
+
+</section>
+
+<section class="appendix">
 
 ### 補足
 
 極限は平面図形そのものであるため、フラクタルの定義からは外れるが、自己相似性は有するためフラクタル図形として数えられることが多い。
 
+</section>
+
+</section>
+
+<section class="dragon-curve">
 
 ## ドラゴン曲線（dragon curve）
 
@@ -192,6 +310,9 @@ Twindragon曲線（Davis-Knuth dragon）は2つのドラゴン曲線を点対称
 
 ![Terdragon曲線](${imgPath}terdragon_8.png)
 
+</section>
+
+<section class="levy-c-curve">
 
 ## レヴィのC曲線（Lévy C curve）
 
@@ -199,11 +320,17 @@ Twindragon曲線（Davis-Knuth dragon）は2つのドラゴン曲線を点対称
 
 ![レヴィのC曲線](${imgPath}c_13.png)
 
+</section>
+
+<section class="minkowski-curve">
 
 ## ミンコフスキー曲線（Minkowski curve）
 
 ![ミンコフスキー曲線](${imgPath}minkowski_6.png)
 
+</section>
+
+<section class="noname-recursive-curve">
 
 ## 無名の再帰曲線
 
@@ -213,45 +340,77 @@ Twindragon曲線（Davis-Knuth dragon）は2つのドラゴン曲線を点対称
 
 ![無名の再帰曲線](${imgPath}7_5.png)
 
+</section>
 
+</section>
+
+<section class="complex">
 
 # 複素数
 
+<section class="mandelbrot set">
 
 ## マンデルブロ集合（Mandelbrot set）
 
 [![マンデルブロ集合](${imgPath}mandelbrot.png)](${imgPath}mandelbrot--large.png)
 
+</section>
+
+<section class="julia-set">
+
 ## ジュリア集合（Julia set）
+
+</section>
+
+<section class="burning-ship-fractal">
 
 ## Burning Ship fractal
 
+</section>
 
+</section>
+
+<section class="function">
 
 # 自己相似性をもつ関数
 
+<section class="takagi-curve">
 
 ## 高木曲線（Takagi curve）
 
 海外ではブラマンジェ曲線（blancmange curve）として知られている。
 
+</section>
+
+<section class="weierstrass-function">
 
 ## ワイエルシュトラス関数（Weierstrass function）
 
+</section>
 
+</section>
+
+<section class="nature">
 
 # 自然界におけるフラクタル
 
+<section class="dla">
 
 ## 拡散律速凝集（DLA, Diffusion-limited aggregation）
 
 → [Wikipedia（英語）](http://en.wikipedia.org/wiki/Diffusion-limited_aggregation)
 
+</section>
+
+<section class="broccoflower">
 
 ## ロマネスコ（Broccoflower）
 
 [![ロマネスコ](${imgPath}romanesco.jpg)](${imgPath}romanesco--large.jpg)
 
+</section>
+
+<section class="broccoli">
 
 ## ブロッコリー（Broccoli）
 
@@ -259,8 +418,14 @@ Twindragon曲線（Davis-Knuth dragon）は2つのドラゴン曲線を点対称
 
 ![ブロッコリーのかけら](${imgPath}broccoli_part.jpg)
 
+</section>
 
+</section>
+
+<section class="reference">
 
 # 参考リンク
 
 - [フラクタル図形のハウスドルフ次元一覧（Wikipedia英語版）](http://en.wikipedia.org/wiki/List_of_fractals_by_Hausdorff_dimension)
+
+</section>
