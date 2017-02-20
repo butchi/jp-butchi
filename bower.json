@@ -2,7 +2,7 @@
   "name": "butchi.jp",
   "version": "0.0.1",
   "description": "IWABUCHI Yuuki Official Website.",
-  "main": "js/main.min.js",
+  "main": "src/js/script.js",
   "authors": [
     "IWABUCHI Yuuki"
   ],

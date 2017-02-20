@@ -70,7 +70,10 @@ html(lang="ja")
       // canonical url
       //- このページをはてぶ・シェアする際、使われるべきURLを明示する指定
       //- wwwやhttps、getパラメータなど、微妙に違うURLでアクセスされても、使われるURLをひとつに絞れる
-      link(rel="canonical" href=url)
+      if path === '/'
+        link(rel="canonical" href=`${url}`)
+      else
+        link(rel="canonical" href=`${url}${path}`)
 
     script(src= rootPath + 'js/ua-switch.js')
 
