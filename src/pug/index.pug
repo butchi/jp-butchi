@@ -40,20 +40,20 @@ block content-block
         .inner-block
           +icon('myavg.jpg', '平均自画像')
           +icon('chinese-character.png', 'Butchi')
-          +icon('music.png', '♪', 'documents/music/')
+          +icon('music.png', '♪', `${rootPath}works/tag/music/`)
           +icon('butchi-number.png', '平面的2進数（物智数）', `${rootPath}documents/butchi-number/`)
           +icon('bit-reversal-plane.png', 'ビット逆転平面', 'http://ci.nii.ac.jp/naid/110006380829/')
           +icon('dragon-tapestry--red.png', 'ドラゴン曲線のタペストリー', `${rootPath}documents/fractal/`)
           +icon('bitwise-xor.png', 'ビット毎の排他的論理和', 'http://reference.wolfram.com/mathematica/ref/BitXor.html')
-          +icon('bion.png', 'bion (両対数極座標)', 'documents/design/')
-          +icon('gray-code-counter.gif', 'グレイコードカウンタ', 'http://www.youtube.com/watch?v=v64F7YaY27U')
+          +icon('bion.png', 'bion (両対数極座標)', `${rootPath}works/bion/`)
+          +icon('gray-code-counter.gif', 'グレイコードカウンタ', `${rootPath}works/gray-code-counter-song/`)
           +icon('fractal.png', 'フラクタル', `${rootPath}documents/fractal`)
           +icon('analytic-signal--harmonica.png', '解析信号（ハーモニカ）', `${rootPath}documents/analytic-signal/`)
           +icon('analytic-signal--whistle.png', '解析信号（口笛）', `${rootPath}documents/analytic-signal/`)
           +icon('regular-icosahedron.png', '正20面体')
-          +icon('delta.png', 'DeltaΔPulse', 'documents/design/')
-          +icon('star.png', 'star', 'documents/design/')
-          +icon('notoryu.png', 'ノトリュー', 'documents/design/')
+          +icon('delta.png', 'DeltaΔPulse', `${rootPath}works/delta-pulse/`)
+          +icon('star.png', 'star', `${rootPath}works/star/`)
+          +icon('notoryu.png', 'ノトリュー', `${rootPath}works/notoryu/`)
           +icon('hanjukugo.png', '半熟語', `${rootPath}project/hanjukugo/`)
           +icon('nandemo-magic.png', 'なんでも魔法。', `${rootPath}project/nandemo-magic/`)
 
@@ -118,13 +118,13 @@ block content-block
 
             ul
               li
-                a(href= rootPath + 'documents/music/') 音楽
+                a(href= `${rootPath}works/tag/music/`) 音楽
               li
-                a(href= rootPath + 'documents/poem/') 詩
+                a(href= `${rootPath}works/tag/poem/`) 詩
               li
-                a(href= rootPath + 'documents/character/') キャラクター
+                a(href= `${rootPath}works/tag/character/`) キャラクター
               li
-                a(href= rootPath + 'documents/design/') デザイン
+                a(href= `${rootPath}works/tag/design/`) デザイン
 
           section
             +heading(4)
