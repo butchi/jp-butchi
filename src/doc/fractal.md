@@ -139,6 +139,10 @@ cf) 悪魔の階段（Devil's staircase、カントール関数（Cantor functio
 
 </section>
 
+## Sierpinski Pentagon
+
+[Sierpinski Pentagon](http://ecademy.agnesscott.edu/~lriddle/ifs/pentagon/pentagon.htm)
+
 <section class="menger-sponge">
 
 ## メンガーのスポンジ（Menger sponge）
@@ -228,6 +232,8 @@ $n=3$ でシェルピンスキーのギャスケット、 $n=4$ でVicsek fracta
 
 </section>
 
+## Jerusalem Square
+
 <section class="space-filling-curves">
 
 ## 空間充填曲線（Space-filling curves）
@@ -306,9 +312,9 @@ Twindragon曲線（Davis-Knuth dragon）は2つのドラゴン曲線を点対称
 
 [![Twindragon曲線](${imgPath}twindragon.png)](${imgPath}twindragon_large.png)
 
-派生形としてTerdragon曲線もある。
+派生形としてテルドラゴン曲線（Terdragon Curve）もある。
 
-![Terdragon曲線](${imgPath}terdragon_8.png)
+![テルドラゴン曲線](${imgPath}terdragon_8.png)
 
 </section>
 
@@ -322,6 +328,10 @@ Twindragon曲線（Davis-Knuth dragon）は2つのドラゴン曲線を点対称
 
 </section>
 
+## Fudgeflake
+
+[Fudgeflake](http://ecademy.agnesscott.edu/~lriddle/ifs/heighway/fudgeflake.htm)
+
 <section class="minkowski-curve">
 
 ## ミンコフスキー曲線（Minkowski curve）
@@ -331,6 +341,10 @@ Twindragon曲線（Davis-Knuth dragon）は2つのドラゴン曲線を点対称
 </section>
 
 <section class="noname-recursive-curve">
+
+## McWorter's Pentigree
+
+[McWorter's Pentigree](http://ecademy.agnesscott.edu/~lriddle/ifs/pentigre/pentigre2.htm)
 
 ## 無名の再帰曲線
 
