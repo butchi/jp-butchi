@@ -1,0 +1,16 @@
+---
+id:
+  'notoryu'
+ttl:
+  'ノトリュー'
+tag:
+  - works
+  - character
+image:
+  notoryu.png
+---
+
+_ノトリューは蛇の仙人（自称）です。空もちょっとだけ飛べます。じつは龍なのかもしれません。
+森の主なのでご年配ではありますが、子どもたちとも仲良く接してくれます。
+能登の「能」の字をモチーフに描きました。_
+[「ノトロ」](http://www.pref.ishikawa.jp/kodomoseisaku/notoro-kettei.html)という「ト○ロ」に激似な名前のマスコットキャラクターとして応募した作品。[モリゾーとキッコロに激似なキャラクター](http://ameblo.jp/poisontv/entry-10120739952.html)に負けてあえなく落選。

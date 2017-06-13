@@ -11,9 +11,11 @@ import browserify from 'browserify';
 import babelify from 'babelify';
 import debowerify from 'debowerify';
 import pug from 'gulp-pug';
+import postman from 'gulp-postman';
 import data from 'gulp-data';
 import path from 'path';
 import rename from 'gulp-rename';
+import rimraf from 'rimraf';
 import uglify from 'gulp-uglify';
 import decodecode from 'gulp-decodecode';
 import browserSync from 'browser-sync';
@@ -119,67 +121,6 @@ gulp.task('deco', () => {
 gulp.task('es6', gulp.series('browserify', gulp.parallel('minify', 'deco')));
 gulp.task('js', gulp.parallel('copy-bower-js', 'es6'));
 
-gulp.task('works', () => {
-  const worksLi = readConfig(`${CONFIG}/works.yml`);
-
-  let ret;
-
-  _.map(worksLi, (item, name) => {
-    item.name = name;
-  });
-
-  let tagArr = _.union(...(_.map(worksLi, 'tag')));
-
-  tagArr.forEach((tag) => {
-    const locals = {};
-
-    let destination;
-    if(tag === 'works') {
-      destination = `${DEST}/works`;
-      locals.pugPath = `works/`;
-    } else {
-      destination = `${DEST}/works/tag/${tag}`;
-      locals.pugPath = `works/tag/${tag}`;
-    }
-
-    let filteredArr = _.filter(worksLi, (item, name) => {
-      return item.tag.includes(tag);
-    });
-
-    locals.tagName = tag;
-    locals.workArr = filteredArr;
-
-    ret = gulp.src([`${SRC}/pug/_works-tag/index.pug`])
-      .pipe(pug({
-        locals: locals,
-        pretty: true,
-        basedir: `${SRC}/pug`,
-      }))
-      .pipe(gulp.dest(destination))
-    ;
-  });
-
-  // TODO: /tags/
-
-  Object.keys(worksLi).forEach((name) => {
-    let locals = worksLi[name];
-
-    locals.pugPath = `works/works/${name}`;
-
-    ret = gulp.src([`${SRC}/pug/_works-item/index.pug`])
-      .pipe(pug({
-        locals: locals,
-        pretty: true,
-        basedir: `${SRC}/pug`,
-      }))
-      .pipe(gulp.dest(`${DEST}/works/${name}`))
-    ;
-  });
-
-  return ret;
-});
-
-
 // html
 gulp.task('pug', () => {
   var locals = readConfig(`${CONFIG}/meta.yml`);
@@ -196,13 +137,17 @@ gulp.task('pug', () => {
   locals.dataPageSymbol = readConfig(`${CONFIG}/symbol.yml`);
 
   return gulp.src([`${SRC}/pug/**/[!_]*.pug`, `!${SRC}/pug/_**/*`])
+    .pipe(postman({
+      markdown: `${SRC}/config/_works/**/*.md`,
+      template: `${SRC}/pug/_works/works.pug`,
+      locals,
+    }))
     // from [Pug(Jade)で効率的なマークアップ環境を作る ｜ Tips Note by TAM](http://www.tam-tam.co.jp/tipsnote/html_css/post10973.html)
     .pipe(data(function(file) {
       locals.pugPath = path.relative(file.base, file.path);
         return locals;
     }))
     .pipe(pug({
-      locals: locals,
       pretty: true,
       basedir: `${SRC}/pug`,
     }))
@@ -210,7 +155,23 @@ gulp.task('pug', () => {
   ;
 });
 
-gulp.task('html', gulp.series('pug'));
+gulp.task('rename-works', () => {
+  return gulp.src(`${DEST}/_works/**/*`)
+    .pipe(rename(function (path) {
+      if (path.extname) {
+        path.dirname = path.basename;
+        path.basename = 'index';
+      }
+    }))
+    .pipe(gulp.dest(`${DEST}/works`))
+  ;
+});
+
+gulp.task('clean', (cb) => {
+  rimraf(`${DEST}/_works`, cb)
+});
+
+gulp.task('html', gulp.series('pug', 'rename-works', 'clean'));
 
 gulp.task('browser-sync' , () => {
   browserSync({
@@ -257,6 +218,6 @@ gulp.task('redirect', () => {
 
 gulp.task('serve', gulp.series('browser-sync'));
 
-gulp.task('build', gulp.parallel('font', 'css', 'js', 'redirect', 'html', 'works'));
+gulp.task('build', gulp.parallel('font', 'css', 'js', 'redirect', 'html'));
 gulp.task('build-partial', gulp.parallel('sass', 'es6', 'html'));
 gulp.task('default', gulp.series('build-partial', 'serve'));

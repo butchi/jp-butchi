@@ -1,0 +1,24 @@
+extends /_layout/_default-layout
+
+prepend config-block
+  - page_name = meta.ttl
+
+append config-block
+  - rootPath = '../../'
+  - path = 'works/'
+  - imgPath = `${rootPath}img/${path}`
+  - worksPath = '../'
+
+block content-block
+  +page-title
+
+  .inner-block
+    if meta.image
+      .image
+        img(src= `${worksPath}resources/${meta.image}`)
+    if meta.audio
+      .audio
+        audio(src= `${worksPath}resources/${meta.audio}`, controls)
+
+    .desc
+      != body
