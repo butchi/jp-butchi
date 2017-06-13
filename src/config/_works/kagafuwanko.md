@@ -4,7 +4,7 @@ id:
 title:
   'かがふわんこ'
 image:
-  'kagafuwanko.png'
+  'kagafuwanko.jpg'
 ---
 
 _加賀麩をモチーフに制作しました。上から細工麩、生麩、車麩、すだれ麩、おつゆ麩です。_
