@@ -183,7 +183,7 @@ gulp.task('browser-sync' , () => {
   watch([
       `${SRC}/pug/**/*.pug`,
       `${SRC}/config/*`
-  ], gulp.series('pug', browserSync.reload));
+  ], gulp.series('html', browserSync.reload));
 });
 
 
