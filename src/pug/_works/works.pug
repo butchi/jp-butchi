@@ -7,6 +7,7 @@ append config-block
   - rootPath = '../../'
   - path = 'works/'
   - imgPath = `${rootPath}img/${path}`
+  - dataPath = `${rootPath}data/${path}`
   - worksPath = '../'
 
 block content-block
@@ -15,10 +16,10 @@ block content-block
   .inner-block
     if meta.image
       .image
-        img(src= `${worksPath}resources/${meta.image}`)
+        img(src= `${imgPath}resources/${meta.image}`)
     if meta.audio
       .audio
-        audio(src= `${worksPath}resources/${meta.audio}`, controls)
+        audio(src= `${dataPath}resources/${meta.audio}`, controls)
     if meta.youtube
       .video
         = `${meta.youtube}`
