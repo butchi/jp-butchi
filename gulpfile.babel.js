@@ -9,7 +9,6 @@ import sassGlob from 'gulp-sass-glob';
 import pleeease from 'gulp-pleeease';
 import browserify from 'browserify';
 import babelify from 'babelify';
-import debowerify from 'debowerify';
 import pug from 'gulp-pug';
 import postman from 'gulp-postman';
 import data from 'gulp-data';
@@ -29,7 +28,7 @@ const CONFIG = './src/config';
 const DEST = './docs';
 
 // font
-gulp.task('copy-bower-fonts', () => { 
+gulp.task('copy-fonts', () => { 
   return gulp.src(
     [
       'mdi/fonts/materialdesignicons-webfont.eot',
@@ -38,16 +37,16 @@ gulp.task('copy-bower-fonts', () => {
       'mdi/fonts/materialdesignicons-webfont.woff',
       'mdi/fonts/materialdesignicons-webfont.woff2'
     ], {
-    cwd: 'bower_components',
+    cwd: 'node_modules',
   })
     .pipe(gulp.dest(`${DEST}/fonts`))
   ;
 });
 
-gulp.task('font', gulp.series('copy-bower-fonts'));
+gulp.task('font', gulp.series('copy-fonts'));
 
 // css
-gulp.task('copy-bower-css', () => { 
+gulp.task('copy-css-modules', () => { 
   return gulp.src(
     [
       'material-design-lite/material.min.css',
@@ -55,7 +54,7 @@ gulp.task('copy-bower-css', () => {
       'mdi/css/materialdesignicons.min.css',
       'mdi/css/materialdesignicons.min.css.map'
     ], {
-    cwd: 'bower_components',
+    cwd: 'node_modules',
   })
     .pipe(gulp.dest(`${DEST}/css`))
   ;
@@ -71,20 +70,20 @@ gulp.task('sass', () => {
   ;
 });
 
-gulp.task('css', gulp.parallel('sass', 'copy-bower-css'));
+gulp.task('css', gulp.parallel('sass', 'copy-css-modules'));
 
 
 // js
-gulp.task('copy-bower-js', () => { 
+gulp.task('copy-js-modules', () => { 
   return gulp.src(
     [
       'jquery/dist/jquery.min.js',
       'jquery/dist/jquery.min.map',
-      'lodash/dist/lodash.min.js',
+      'lodash/lodash.min.js',
       'material-design-lite/material.min.js',
       'material-design-lite/material.min.js.map'
     ], {
-    cwd: 'bower_components',
+    cwd: 'node_modules',
   })
     .pipe(gulp.dest(`${DEST}/js/lib`))
   ;
@@ -93,7 +92,6 @@ gulp.task('copy-bower-js', () => {
 gulp.task('browserify', () => {
   return browserify(`${SRC}/js/script.js`)
     .transform(babelify)
-    .transform(debowerify)
     .bundle()
     .pipe(source('script.js'))
     .pipe(gulp.dest(`${DEST}/js`))
@@ -119,7 +117,7 @@ gulp.task('deco', () => {
 });
 
 gulp.task('es6', gulp.series('browserify', gulp.parallel('minify', 'deco')));
-gulp.task('js', gulp.parallel('copy-bower-js', 'es6'));
+gulp.task('js', gulp.parallel('copy-js-modules', 'es6'));
 
 // html
 gulp.task('pug', () => {
