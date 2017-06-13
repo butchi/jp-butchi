@@ -123,18 +123,18 @@ gulp.task('js', gulp.parallel('copy-bower-js', 'es6'));
 
 // html
 gulp.task('pug', () => {
-  var locals = readConfig(`${CONFIG}/meta.yml`);
-
-  locals.require = require;
-
-  locals.markdown = require('markdown-it')({
-    html: true,
-  });
-
-  locals.bib = readConfig(`${CONFIG}/bib.yml`);
-  locals.interest = readConfig(`${CONFIG}/interest.yml`);
-  locals.works = readConfig(`${CONFIG}/works.yml`);
-  locals.dataPageSymbol = readConfig(`${CONFIG}/symbol.yml`);
+  const locals = {
+    require: require,
+    _: _,
+    markdown: require('markdown-it')({
+      html: true,
+    }),
+    settings: readConfig(`${CONFIG}/meta.yml`),
+    bib: readConfig(`${CONFIG}/bib.yml`),
+    interest: readConfig(`${CONFIG}/interest.yml`),
+    works: readConfig(`${CONFIG}/works.yml`),
+    dataPageSymbol: readConfig(`${CONFIG}/symbol.yml`),
+  };
 
   return gulp.src([`${SRC}/pug/**/[!_]*.pug`, `!${SRC}/pug/_**/*`])
     .pipe(postman({
