@@ -1,649 +1,327 @@
 notoryu:
-  ttl:
-    "ノトリュー"
+  title:
+    'ノトリュー'
   tag:
     - works
     - character
-  ext:
-    png
-  extThumb:
-    png
-  desc:
-    '
-      <p><i>ノトリューは蛇の仙人（自称）です。空もちょっとだけ飛べます。じつは龍なのかもしれません。
-    森の主なのでご年配ではありますが、子どもたちとも仲良く接してくれます。
-    能登の「能」の字をモチーフに描きました。</i></p>
-      <p><a href="http://www.pref.ishikawa.jp/kodomoseisaku/notoro-kettei.html">「ノトロ」</a>という「ト○ロ」に激似な名前のマスコットキャラクターとして応募した作品。<a href="http://ameblo.jp/poisontv/entry-10120739952.html">モリゾーとキッコロに激似なキャラクター</a>に負けてあえなく落選。</p>
-    '
 
 kenken:
-  ttl:
-    "研犬"
+  title:
+    '研犬'
   tag:
     - works
     - character
-  ext:
-    png
-  extThumb:
-    png
-  desc:
-    '
-      <p>金沢大学IT教育推進プログラム主催の学生e-Learning作品コンテストに応募した作品。</p>
-    '
 
 kagafuwanko:
-  ttl:
-    "かがふわんこ"
+  title:
+    'かがふわんこ'
   tag:
     - works
     - character
-  ext:
-    png
-  extThumb:
-    png
-  desc:
-    '
-      <p><i>加賀麩をモチーフに制作しました。上から細工麩、生麩、車麩、すだれ麩、おつゆ麩です。</i></p>
-      <p><a href="http://eatx.bp-musashi.jp/09award.html">eAT&quot;09アワード</a>に応募した作品。</p>
-    '
 
 newgo:
-  ttl:
-    "1(仮)"
+  title:
+    '1(仮)'
   tag:
     - works
     - music
-  ext:
-    mp3
-  extThumb:
-    png
 
 travelli:
-  ttl:
-    "トラベり(仮)"
+  title:
+    'トラベり(仮)'
   tag:
     - works
     - music
-  ext:
-    mp3
-  extThumb:
-    png
 
 prime:
-  ttl:
-    "prime(仮)"
+  title:
+    'prime(仮)'
   tag:
     - works
     - music
-  ext:
-    mp3
-  extThumb:
-    png
 
 dot-jp:
-  ttl:
-    "dot jp(仮)"
+  title:
+    'dot jp(仮)'
   tag:
     - works
     - music
-  ext:
-    mp3
-  extThumb:
-    png
 
 selection:
-  ttl:
-    "selection(仮)"
+  title:
+    'selection(仮)'
   tag:
     - works
     - music
-  ext:
-    mp3
-  extThumb:
-    png
 
 first-battle:
-  ttl:
-    "First Battle(仮)"
+  title:
+    'First Battle(仮)'
   tag:
     - works
     - music
-  ext:
-    mp3
-  extThumb:
-    png
 
 outskirts-dungeon:
-  ttl:
-    "場末のダンジョン(仮)"
+  title:
+    '場末のダンジョン(仮)'
   tag:
     - works
     - music
-  ext:
-    mp3
-  extThumb:
-    png
 
 suzumi:
-  ttl:
-    "suz(仮)"
+  title:
+    'suz(仮)'
   tag:
     - works
     - music
-  ext:
-    mp3
-  extThumb:
-    png
 
 gray-code-counter-song:
-  ttl:
-    "グレイコードカウンタの歌"
+  title:
+    'グレイコードカウンタの歌'
   tag:
     - works
     - music
-  youtube:
-    "v64F7YaY27U"
-  extThumb:
-    png
 
 bion:
-  ttl:
-    "bion（倍音）"
+  title:
+    'bion（倍音）'
   tag:
     - works
     - design
-  ext:
-    png
-  extThumb:
-    png
-  desc:
-    '
-      <p>両対数極座標。</p>
-    '
 
 waon:
-  ttl:
-    "waon（輪音）"
+  title:
+    'waon（輪音）'
   tag:
     - works
     - design
-  ext:
-    png
-  extThumb:
-    png
-  desc:
-    '
-      <p>『bion』を同心円上に並べた形。</p>
-    '
 
 geometry-3456:
-  ttl:
-    "3456"
+  title:
+    '3456'
   tag:
     - works
     - design
-  ext:
-    png
-  extThumb:
-    png
-  desc:
-    '
-      <p>正4面体、正8面体、正20面体、平面を上から見た形。</p>
-    '
 
 star:
-  ttl:
-    "star"
+  title:
+    'star'
   tag:
     - works
     - design
-  ext:
-    png
-  extThumb:
-    png
-  desc:
-    '
-      <p>36°、72°、108°のいずれかを含む2等辺3角形で構成される形。</p>
-    '
 
 drop-into:
-  ttl:
-    "Drop into..."
+  title:
+    'Drop into...'
   tag:
     - works
     - design
-  ext:
-    png
-  extThumb:
-    png
-  desc:
-    '
-      <p>水は空気の中を落ち、空気は水の中を落ちている。</p>
-    '
 
 beer-and-cocktail:
-  ttl:
-    "Beer & Cocktail"
+  title:
+    'Beer & Cocktail'
   tag:
     - works
     - design
-  ext:
-    png
-  extThumb:
-    png
-  desc:
-    '
-      <p>水は空気の中を落ち、空気は水の中を落ちている。</p>
-    '
 
 delta-pulse:
-  ttl:
-    "DeltaΔPulse"
+  title:
+    'DeltaΔPulse'
   tag:
     - works
     - design
-  ext:
-    png
-  extThumb:
-    png
-  desc:
-    '
-      <p>ギリシャ文字「Δ」と<a href="http://ja.wikipedia.org/wiki/%E3%83%87%E3%82%A3%E3%83%A9%E3%83%83%E3%82%AF%E3%81%AE%E3%83%87%E3%83%AB%E3%82%BF%E9%96%A2%E6%95%B0">ディラックのデルタ関数</a>（グラフ描画時の上矢印「↑」）がかかっている。</p>
-    '
 
 golden-tree:
-  ttl:
-    "黄金木"
+  title:
+    '黄金木'
   tag:
     - works
     - design
-  ext:
-    png
-  extThumb:
-    png
-  desc:
-    '
-      <p>黄金比とフィボナッチ数。</p>
-    '
 
 self-folding:
-  ttl:
-    "自畳"
+  title:
+    '自畳'
   tag:
     - works
     - design
-  ext:
-    png
-  extThumb:
-    png
-  desc:
-    '
-      <p>QRコードには四字熟語が埋め込まれている。</p>
-    '
 
 enki-do:
-  ttl:
-    "EnkiDo"
+  title:
+    'EnkiDo'
   tag:
     - works
     - design
-  ext:
-    png
-  extThumb:
-    png
-  desc:
-    '
-      <p>塩基配列アデニン（A）、チミン（T）、シトシン（C）、グアニン（G）。</p>
-    '
 
 quark:
-  ttl:
-    "quark"
+  title:
+    'quark'
   tag:
     - works
     - design
-  ext:
-    png
-  extThumb:
-    png
-  desc:
-    '
-      <p>アップ、ダウン、チャーム、ストレンジ、トップ、ボトム。6種類のクォーク。</p>
-    '
 
-time-2005-march.gif:
-  ttl:
-    "2005年春用デスクトップ壁紙"
+datetime-2005-march:
+  title:
+    '2005年春用デスクトップ壁紙'
   tag:
     - works
     - design
-  ext:
-    gif
-  extThumb:
-    png
-  desc:
-    '
-      <p>2005年春用デスクトップ壁紙。</p>
-    '
 
 web-stockings:
-  ttl:
-    "蜘蛛の巣トッキング"
+  title:
+    '蜘蛛の巣トッキング'
   tag:
     - works
     - design
-  ext:
-    png
-  extThumb:
-    png
-  desc:
-    '
-      <p>2010年度美術部新年展の作品。「大晦日に病院の待合室でクモがストッキングをゆっくりかぶった」というお題を頂いて制作。芥川龍之介の「蜘蛛の糸」をモチーフに、病院で生死をさまよう人間を表現。</p>
-    '
 
 shin-go-ki:
-  ttl:
-    "新合機"
+  title:
+    '新合機'
   tag:
     - works
     - design
-  ext:
-    png
-  extThumb:
-    png
-  desc:
-    '
-      <p>「合」という字には一つの屋根の下で人や物が一緒になるという意味が込められていると考えます。信号機を男女の出会いに見立てています。</p>
-    '
 
 copy-to-trashbox:
-  ttl:
-    "ごみ箱にコピー"
+  title:
+    'ごみ箱にコピー'
   tag:
     - works
     - design
-  ext:
-    png
-  extThumb:
-    png
-  desc:
-    '
-      <p>意味無いシリーズ: ごみ箱にファイルをコピーしたら捨ててないのと同じ。</p>
-    '
+    - iminai-series
 
 tercet-rest:
-  ttl:
-    "三連休符"
+  title:
+    '三連休符'
   tag:
     - works
     - design
     - iminai-series
-  ext:
-    png
-  extThumb:
-    png
-  desc:
-    '
-      <p>意味無いシリーズ: 三連休符は全休符と同じ。</p>
-    '
 
 zero-plus-zero:
-  ttl:
-    "((((0+0))))"
+  title:
+    '((((0+0))))'
   tag:
     - works
     - design
     - iminai-series
-  ext:
-    png
-  extThumb:
-    png
-  desc:
-    '
-      <p>意味無いシリーズ: 数式をいくつの括弧で括っても結果は同じ。</p>
-    '
 
 lion-110-o:
-  ttl:
-    "110のO"
+  title:
+    '110のO'
   tag:
     - works
     - design
     - iminai-series
-  ext:
-    png
-  extThumb:
-    png
-  desc:
-    '
-      <p>百獣の王、ポンデライオン。Oの個数を数えてみよう。</p>
-    '
 
 itabasamies:
-  ttl:
-    "イタバサミーズ"
+  title:
+    'イタバサミーズ'
   tag:
     - works
     - design
-  ext:
-    png
-  extThumb:
-    png
-  desc:
-    '
-      <p>後津サリ、板場サミ、前野メリの3人は<a href="http://twitter.com/zougoroku" target="_blank">Twitter「造語録」(@zougoroku)</a>から生まれたキャラクターです。</p>
-    '
 
 rotation:
-  ttl:
-    "回転"
+  title:
+    '回転'
   tag:
     - works
     - design
-  ext:
-    png
-  extThumb:
-    png
-  desc:
-    '
-      <p>回ってます。</p>
-    '
 
 value-of-company:
-  ttl:
-    "企業の価値"
+  title:
+    '企業の価値'
   tag:
     - works
     - design
-  ext:
-    png
-  extThumb:
-    png
-  desc:
-    '
-      <p>高ければ高いほど高いのか。</p>
-    '
 
 jigsaw-qr:
-  ttl:
-    "ジグソーQR"
+  title:
+    'ジグソーQR'
   tag:
     - works
     - design
-  ext:
-    png
-  extThumb:
-    png
-  desc:
-    '
-      <p>QRコードのドットをジグソーパズルのピースにしてみました。ちゃんと携帯電話で読み取れます。試してみよう！<br>正方格子状のデータを記述するのは簡単ですが、正方格子の境目のデータを記述するのは一工夫要ります。</p>
-    '
 
 blinder:
-  ttl:
-    "目■■線"
+  title:
+    '目■■線'
   tag:
     - works
     - design
-  ext:
-    png
-  extThumb:
-    png
-  desc:
-    '
-      <p>「目隠し線」の「隠し」を隠すことによって残るもの。</p>
-      <p>人は顔を見るとき、80%のシカク情報を目から受け取っていると言われています。</p>
-      <p>2012年「四角展」出展作品。</p>
-    '
 
-newcomer-exhibition-poster-2003.png:
-  ttl:
-    "2003年度美術部新人展ポスター"
+newcomer-exhibition-poster-2003:
+  title:
+    '2003年度美術部新人展ポスター'
   tag:
     - works
     - design
     - ads
-  ext:
-    png
-  extThumb:
-    png
-  desc:
-    '
-      <p>2003年度美術部新人展ポスター。</p>
-    '
 
 newcomer-exhibition-sign-2003:
-  ttl:
-    "2003年度美術部新人展立看板"
+  title:
+    '2003年度美術部新人展立看板'
   tag:
     - works
     - design
     - ads
-  ext:
-    png
-  extThumb:
-    png
-  desc:
-    '
-      <p>2003年度美術部新人展立看板。</p>
-    '
 
 welcome-2004:
-  ttl:
-    "2004年度美術部新歓展ポスター"
+  title:
+    '2004年度美術部新歓展ポスター'
   tag:
     - works
     - design
     - ads
-  ext:
-    png
-  extThumb:
-    png
-  desc:
-    '
-      <p>2004年度美術部新歓展ポスター。</p>
-    '
 
-nanigashitai-flier-2008.jpg:
-  ttl:
-    "「ぼくたち一体なにがしたい！？」フライヤー"
+nanigashitai-flier-2008:
+  title:
+    '「ぼくたち一体なにがしたい！？」フライヤー'
   tag:
     - works
     - design
     - ads
-  ext:
-    png
-  extThumb:
-    png
-  desc:
-    '
-      <p>所属グループ「某隊」のライブ「ぼくたち一体なにがしたい！？」フライヤー。</p>
-    '
 
 hanami-flier:
-  ttl:
-    "花見フライヤー"
+  title:
+    '花見フライヤー'
   tag:
     - works
     - design
     - ads
-  ext:
-    png
-  extThumb:
-    png
-  desc:
-    '
-      <p>研究室行事の花見（2007年）のフライヤー。</p>
-    '
 
 fine-char-actors:
-  ttl:
-    "Fine CharActors"
+  title:
+    'Fine CharActors'
   tag:
     - works
     - design
     - ads
-  ext:
-    png
-  extThumb:
-    png
-  desc:
-    '
-      <p>金沢大学美術部新年展2009ポスターより。</p>
-      <p>「金沢大学美術部」のパーツを利用して「文字展」を作っている。</p>
-    '
 
 shikakuten-logo:
-  ttl:
-    "四角展ロゴ"
+  title:
+    '四角展ロゴ'
   tag:
     - works
     - design
     - ads
-  ext:
-    png
-  extThumb:
-    png
-  desc:
-    '
-      <p>美術部新年展「四角展」（2012年）のポスター用ロゴ</p>
-    '
 
 logo-acaneco-sns:
-  ttl:
-    "AcaNeCoロゴ"
+  title:
+    'AcaNeCoロゴ'
   tag:
     - works
     - design
     - logo
-  ext:
-    png
-  extThumb:
-    png
-  desc:
-    '
-      <p>AcaNeCo（金沢大学SNS）ロゴ（SNS版）。</p>
-    '
 
 logo-acaneco-portal:
-  ttl:
-    "AcaNeCoロゴ"
+  title:
+    'AcaNeCoロゴ'
   tag:
     - works
     - design
     - logo
-  ext:
-    png
-  extThumb:
-    png
-  desc:
-    '
-      <p>AcaNeCo（金沢大学SNS）ロゴ（アカンサスポータル版）。</p>
-    '
 
 logo-alpha-1:
-  ttl:
-    "Alpha"
+  title:
+    'Alpha'
   tag:
     - works
     - design
@@ -654,224 +332,144 @@ logo-alpha-1:
     png
 
 logo-alpha-2:
-  ttl:
-    "Alpha"
+  title:
+    'Alpha'
   tag:
     - works
     - design
     - logo
-  ext:
-    png
-  extThumb:
-    png
 
 logo-alpha-3:
-  ttl:
-    "Alpha"
+  title:
+    'Alpha'
   tag:
     - works
     - design
     - logo
-  ext:
-    png
-  extThumb:
-    png
 
 logo-roof:
-  ttl:
-    "Roof"
+  title:
+    'Roof'
   tag:
     - works
     - design
     - logo
-  ext:
-    png
-  extThumb:
-    png
 
 logo-blade:
-  ttl:
-    "Blade"
+  title:
+    'Blade'
   tag:
     - works
     - design
     - logo
-  ext:
-    png
-  extThumb:
-    png
 
 logo-scene:
-  ttl:
-    "Scene"
+  title:
+    'Scene'
   tag:
     - works
     - design
     - logo
-  ext:
-    png
-  extThumb:
-    png
 
 logo-joint:
-  ttl:
-    "Joint"
+  title:
+    'Joint'
   tag:
     - works
     - design
     - logo
-  ext:
-    png
-  extThumb:
-    png
 
 logo-jelly:
-  ttl:
-    "Jelly"
+  title:
+    'Jelly'
   tag:
     - works
     - design
     - logo
-  ext:
-    png
-  extThumb:
-    png
 
 logo-heart:
-  ttl:
-    "Heart"
+  title:
+    'Heart'
   tag:
     - works
     - design
     - logo
-  ext:
-    png
-  extThumb:
-    png
 
 logo-ghost:
-  ttl:
-    "Ghost"
+  title:
+    'Ghost'
   tag:
     - works
     - design
     - logo
-  ext:
-    png
-  extThumb:
-    png
 
 logo-fade:
-  ttl:
-    "Fade"
+  title:
+    'Fade'
   tag:
     - works
     - design
     - logo
-  ext:
-    png
-  extThumb:
-    png
 
 logo-dream:
-  ttl:
-    "Dream"
+  title:
+    'Dream'
   tag:
     - works
     - design
     - logo
-  ext:
-    png
-  extThumb:
-    png
 
 logo-pro:
-  ttl:
-    "Pro"
+  title:
+    'Pro'
   tag:
     - works
     - design
     - logo
-  ext:
-    png
-  extThumb:
-    png
 
 logo-treatment:
-  ttl:
-    "Treatment"
+  title:
+    'Treatment'
   tag:
     - works
     - design
     - logo
-  ext:
-    png
-  extThumb:
-    png
 
 logo-club:
-  ttl:
-    "Club"
+  title:
+    'Club'
   tag:
     - works
     - design
     - logo
-  ext:
-    png
-  extThumb:
-    png
 
 newyear-2004:
-  ttl:
-    "2004年年賀状"
+  title:
+    '2004年年賀状'
   tag:
     - works
     - design
     - newyear
-  ext:
-    png
-  extThumb:
-    png
-  desc:
-    '
-      <p>「申」が猿のキャラクターに。</p>
-    '
 
 newyear-2008:
-  ttl:
-    "2008年年賀画像"
+  title:
+    '2008年年賀画像'
   tag:
     - works
     - design
     - newyear
-  ext:
-    png
-  extThumb:
-    png
-  desc:
-    '
-      <p>子曰、「注仲忠虫宙（ちゅうちゅうちゅうちゅうちゅう）。」</p>
-    '
 
 newyear-2011:
-  ttl:
-    "2011年年賀状"
+  title:
+    '2011年年賀状'
   tag:
     - works
     - design
     - newyear
-  ext:
-    png
-  extThumb:
-    png
-  desc:
-    '
-      <p><a href="http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0#.E5.85.8E.E3.81.AE.E5.95.8F.E9.A1.8C" target="_blank">フィボナッチのウサギ</a>。</p>
-    '
 
 newyear-2012:
-  ttl:
-    "2012年年賀状"
+  title:
+    '2012年年賀状'
   tag:
     - works
     - design
@@ -886,8 +484,8 @@ newyear-2012:
     '
 
 newyear-2013:
-  ttl:
-    "2013年年賀状"
+  title:
+    '2013年年賀状'
   tag:
     - works
     - design
@@ -902,8 +500,8 @@ newyear-2013:
     '
 
 butchi-sutra:
-  ttl:
-    "物智経"
+  title:
+    '物智経'
   tag:
     - works
     - poem
@@ -951,8 +549,8 @@ butchi-sutra:
     '
 
 poem-kokoro:
-  ttl:
-    "心"
+  title:
+    '心'
   tag:
     - works
     - poem
@@ -966,8 +564,8 @@ poem-kokoro:
     '
 
 poem-nothing:
-  ttl:
-    "無"
+  title:
+    '無'
   tag:
     - works
     - poem
@@ -981,8 +579,8 @@ poem-nothing:
     '
 
 poem-anohibi:
-  ttl:
-    "今が「あの日々」となるように"
+  title:
+    '今が「あの日々」となるように'
   tag:
     - works
     - poem
@@ -1000,8 +598,8 @@ poem-anohibi:
     '
 
 poem-yuki-rinrin:
-  ttl:
-    "勇气凛凛"
+  title:
+    '勇气凛凛'
   tag:
     - works
     - poem
@@ -1053,8 +651,8 @@ poem-yuki-rinrin:
     '
 
 poem-anpanman-march:
-  ttl:
-    "餡麺麭男行進曲"
+  title:
+    '餡麺麭男行進曲'
   tag:
     - works
     - poem

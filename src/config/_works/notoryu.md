@@ -1,13 +1,10 @@
 ---
 id:
   'notoryu'
-ttl:
+title:
   'ノトリュー'
-tag:
-  - works
-  - character
 image:
-  notoryu.png
+  'notoryu.png'
 ---
 
 _ノトリューは蛇の仙人（自称）です。空もちょっとだけ飛べます。じつは龍なのかもしれません。

@@ -1,7 +1,7 @@
 extends /_layout/_default-layout
 
 prepend config-block
-  - page_name = meta.ttl
+  - page_name = meta.title
 
 append config-block
   - rootPath = '../../'
@@ -19,6 +19,9 @@ block content-block
     if meta.audio
       .audio
         audio(src= `${worksPath}resources/${meta.audio}`, controls)
+    if meta.youtube
+      .video
+        = `${meta.youtube}`
 
     .desc
       != body
