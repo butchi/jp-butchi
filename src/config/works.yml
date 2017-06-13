@@ -474,14 +474,6 @@ newyear-2012:
     - works
     - design
     - newyear
-  ext:
-    png
-  extThumb:
-    png
-  desc:
-    '
-      <p><a href="http://www.google.co.jp/search?q=%83h%83%89%83S%83%93%8B%C8%90%FC" target="_blank">ドラゴン曲線</a>を2つ重ねたTwindragon。</p>
-    '
 
 newyear-2013:
   title:
@@ -490,14 +482,6 @@ newyear-2013:
     - works
     - design
     - newyear
-  ext:
-    png
-  extThumb:
-    png
-  desc:
-    '
-      <p>自己加算フラクタルによる「巳」。</p>
-    '
 
 butchi-sutra:
   title:
@@ -505,48 +489,6 @@ butchi-sutra:
   tag:
     - works
     - poem
-  ext:
-    png
-  extThumb:
-    png
-  body:
-    '
-      <p>平成二十年師走十二日卯の刻(西暦2008年12月12日6時8分)</p>
-      <p>有</p>
-
-      <p>良？</p>
-
-      <p>無。</p>
-
-      <p>而是良。</p>
-
-      <p>死？</p>
-      <p>生。</p>
-      <p>有時而死。</p>
-      <p>時実而甚。</p>
-      <p>側時有良。</p>
-      <p>傍者勇者。</p>
-      <p>笑。</p>
-      <p>∥</p>
-      <p>一</p>
-      <p>〇</p>
-      <p>。</p>
-      <p>.</p>
-
-      <h3>意訳</h3>
-      <p>この世は「有」の世界である。</p>
-      <p>それは良いのか？</p>
-      <p>その答えは無い。</p>
-      <p>しかし、良いと定義する。</p>
-      <p>死ぬの？</p>
-      <p>生きる。</p>
-      <p>時間があるから死ぬのである。</p>
-      <p>しかし、時間というのは細分すれば無限に有る。</p>
-      <p>そして、時間が有るからこそ良いのである。</p>
-      <p>あなたの傍らには勇者がいる。</p>
-      <p>笑えばいいと思うよ。</p>
-      <p>=10。.（2進数における10、つまり2と同等になる。）</p>
-    '
 
 poem-kokoro:
   title:
@@ -554,14 +496,6 @@ poem-kokoro:
   tag:
     - works
     - poem
-  ext:
-    png
-  extThumb:
-    png
-  body:
-    '
-      <p>私はあなたの心です。私はあなたの気持ちをもちろんすべて知っています。あなたは私の気持ちをどれだけ知っていますか？</p>
-    '
 
 poem-nothing:
   title:
@@ -569,14 +503,6 @@ poem-nothing:
   tag:
     - works
     - poem
-  ext:
-    png
-  extThumb:
-    png
-  body:
-    '
-      <p>私は無という存在です。私があなたに伝えることは何も無く、むろん存在でもない。私はそのようなことを語りかけることは無く、無い。</p>
-    '
 
 poem-anohibi:
   title:
@@ -584,18 +510,6 @@ poem-anohibi:
   tag:
     - works
     - poem
-  ext:
-    png
-  extThumb:
-    png
-  body:
-    '
-      <p>何かにつけてはタスクをこなす日々</p>
-      <p>食っちゃ寝 学んじゃ寝 働いちゃ寝 恋しちゃ寝</p>
-      <p>もっとハート揺れ動かさなくちゃね</p>
-      <p>遠い未来、自分が輝くためにやらなきゃいけないこと</p>
-      <p>それはいま輝くこと</p>
-    '
 
 poem-yuki-rinrin:
   title:
@@ -603,52 +517,6 @@ poem-yuki-rinrin:
   tag:
     - works
     - poem
-  ext:
-    png
-  extThumb:
-    png
-  body:
-    '
-      <p>勇气凛凛　　簗瀬巍</p>
-      <br>
-      <p>勇气之鈴鳴凛凛　奇怪之冒険流流</p>
-      <p>餡食伽哩之面包　果醤牛乾酪弾弾</p>
-      <p>黴菌男目玉爛爛　餡面包男何不行</p>
-      <p>驚悸女使人悸悸　果子醤翁顔優雅</p>
-      <p>牛酪子奔走騒騒　誰忌餡面包男乎</p>
-      <br>
-
-      <h3>書き下し</h3>
-      <p>勇気の鈴 凛凛(りんりん)</p>
-      <p>奇怪なる冒険 流流(るんるん)</p>
-      <p>餡・食・伽哩(かりー)の麺麭</p>
-      <p>果醤(じゃむ)、牛・乾酪 弾弾</p>
-      <p>黴菌(ばいきん)男の目玉 爛爛(らんらん)</p>
-      <p>餡麺麭男(あんぱんまん) 何ぞ行かざる</p>
-      <p>驚悸女 人をして悸悸(どきどき)せしむ</p>
-      <p>果子醤翁の顔 優雅なり</p>
-      <p>牛酪子 奔走すること騒騒(ばたばた)</p>
-      <p>誰ぞ餡麺麭男を忌むか</p>
-      <br>
-
-      <h3>現代語訳</h3>
-      <p>勇気の鈴がリンリンと鳴り、</p>
-      <p>不思議な冒険はルンルンと続く。</p>
-      <p>アンパン、食パン､カレーパン、</p>
-      <p>ジャム、バター、チーズと食材は続々と出る。</p>
-      <p>バイキンマンの目玉はらんらんと光る。</p>
-      <p>アンパンマンが行かない事があろうか､いやない。</p>
-      <p>ドキンちゃんは人をドキドキさせ、</p>
-      <p>バタコさんはバタバタと走る。</p>
-      <p>アンパンマンを嫌うものがいるだろうか､いやいない。</p>
-
-      <h3>出典</h3>
-      <ul>
-       <li>
-        <a href="http://www.utamap.com/showkasi.php?surl=E02028" target="_blank">勇気りんりん</a>
-       </li>
-      </ul>
-    '
 
 poem-anpanman-march:
   title:
@@ -656,24 +524,3 @@ poem-anpanman-march:
   tag:
     - works
     - poem
-  ext:
-    png
-  extThumb:
-    png
-  body:
-    '
-      <p>餡麺麭男行進曲　　簗瀬巍</p>
-      <br>
-      <p>為皆不畏、吾友愛勇気耳。</p>
-      <p>何子幸、何子為悦。不解而終、吾嫌其。不忘夢、不零涙、而子飛無限。</p>
-      <p>為皆不畏、吾友愛勇気耳。</p>
-      <p>嗚呼何優餡麺麭男、為守皆夢行。</p>
-      <br>
-
-      <h3>出典</h3>
-      <ul>
-       <li>
-        <a href="http://www.utamap.com/showkasi.php?surl=E02014" target="_blank">アンパンマンのマーチ</a>
-       </li>
-      </ul>
-    '
