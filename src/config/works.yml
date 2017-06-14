@@ -607,6 +607,46 @@ newyear-2013:
   thumb:
     'newyear-2013.png'
 
+newyear-2014:
+  title:
+    '2014年年賀状'
+  tag:
+    - works
+    - design
+    - newyear
+  thumb:
+    'newyear-2014.png'
+
+newyear-2015:
+  title:
+    '2015年年賀状'
+  tag:
+    - works
+    - design
+    - newyear
+  thumb:
+    'newyear-2015.png'
+
+newyear-2016:
+  title:
+    '2016年年賀状'
+  tag:
+    - works
+    - design
+    - newyear
+  thumb:
+    'newyear-2016.png'
+
+newyear-2017:
+  title:
+    '2017年年賀状'
+  tag:
+    - works
+    - design
+    - newyear
+  thumb:
+    'newyear-2017.png'
+
 butchi-sutra:
   title:
     '物智経'

@@ -6,7 +6,7 @@ append config-block
 mixin work(key)
   - const work = works[key];
   .work
-    a(href=`${worksPath}${key}`)
+    a(href=`${worksPath}${key}/`)
       .card.mdl-card.mdl-shadow--2dp(style=`
         background-image: url(${rootPath}img/works/thumb/${work.thumb});
       `)
