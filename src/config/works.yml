@@ -4,6 +4,8 @@ notoryu:
   tag:
     - works
     - character
+  thumb:
+    'notoryu.png'
 
 kenken:
   title:
@@ -11,6 +13,8 @@ kenken:
   tag:
     - works
     - character
+  thumb:
+    'kenken.png'
 
 kagafuwanko:
   title:
@@ -18,6 +22,8 @@ kagafuwanko:
   tag:
     - works
     - character
+  thumb:
+    'kagafuwanko.png'
 
 newgo:
   title:
@@ -25,6 +31,8 @@ newgo:
   tag:
     - works
     - music
+  thumb:
+    'music.png'
 
 travelli:
   title:
@@ -32,6 +40,8 @@ travelli:
   tag:
     - works
     - music
+  thumb:
+    'music.png'
 
 prime:
   title:
@@ -39,6 +49,8 @@ prime:
   tag:
     - works
     - music
+  thumb:
+    'music.png'
 
 dot-jp:
   title:
@@ -46,6 +58,8 @@ dot-jp:
   tag:
     - works
     - music
+  thumb:
+    'music.png'
 
 selection:
   title:
@@ -53,6 +67,8 @@ selection:
   tag:
     - works
     - music
+  thumb:
+    'music.png'
 
 first-battle:
   title:
@@ -60,6 +76,8 @@ first-battle:
   tag:
     - works
     - music
+  thumb:
+    'music.png'
 
 outskirts-dungeon:
   title:
@@ -67,6 +85,8 @@ outskirts-dungeon:
   tag:
     - works
     - music
+  thumb:
+    'music.png'
 
 suzumi:
   title:
@@ -74,6 +94,8 @@ suzumi:
   tag:
     - works
     - music
+  thumb:
+    'music.png'
 
 gray-code-counter-song:
   title:
@@ -81,6 +103,8 @@ gray-code-counter-song:
   tag:
     - works
     - music
+  thumb:
+    'music.png'
 
 bion:
   title:
@@ -88,6 +112,8 @@ bion:
   tag:
     - works
     - design
+  thumb:
+    'bion.png'
 
 waon:
   title:
@@ -95,6 +121,8 @@ waon:
   tag:
     - works
     - design
+  thumb:
+    'waon.png'
 
 geometry-3456:
   title:
@@ -102,6 +130,8 @@ geometry-3456:
   tag:
     - works
     - design
+  thumb:
+    'geometry-3456.png'
 
 star:
   title:
@@ -109,6 +139,8 @@ star:
   tag:
     - works
     - design
+  thumb:
+    'star.png'
 
 drop-into:
   title:
@@ -116,6 +148,8 @@ drop-into:
   tag:
     - works
     - design
+  thumb:
+    'drop-into.png'
 
 beer-and-cocktail:
   title:
@@ -123,6 +157,8 @@ beer-and-cocktail:
   tag:
     - works
     - design
+  thumb:
+    'beer-and-cocktail.png'
 
 delta-pulse:
   title:
@@ -130,6 +166,8 @@ delta-pulse:
   tag:
     - works
     - design
+  thumb:
+    'delta-pulse.png'
 
 golden-tree:
   title:
@@ -137,6 +175,8 @@ golden-tree:
   tag:
     - works
     - design
+  thumb:
+    'golden-tree.png'
 
 self-folding:
   title:
@@ -144,6 +184,8 @@ self-folding:
   tag:
     - works
     - design
+  thumb:
+    'self-folding.png'
 
 enki-do:
   title:
@@ -151,6 +193,8 @@ enki-do:
   tag:
     - works
     - design
+  thumb:
+    'enki-do.png'
 
 quark:
   title:
@@ -158,6 +202,8 @@ quark:
   tag:
     - works
     - design
+  thumb:
+    'quark.png'
 
 datetime-2005-march:
   title:
@@ -165,6 +211,8 @@ datetime-2005-march:
   tag:
     - works
     - design
+  thumb:
+    'datetime-2005-march.png'
 
 web-stockings:
   title:
@@ -172,6 +220,8 @@ web-stockings:
   tag:
     - works
     - design
+  thumb:
+    'web-stockings.png'
 
 shin-go-ki:
   title:
@@ -179,6 +229,8 @@ shin-go-ki:
   tag:
     - works
     - design
+  thumb:
+    'shin-go-ki.png'
 
 copy-to-trashbox:
   title:
@@ -187,6 +239,8 @@ copy-to-trashbox:
     - works
     - design
     - iminai-series
+  thumb:
+    'copy-to-trashbox.png'
 
 tercet-rest:
   title:
@@ -195,6 +249,8 @@ tercet-rest:
     - works
     - design
     - iminai-series
+  thumb:
+    'tercet-rest.png'
 
 zero-plus-zero:
   title:
@@ -203,6 +259,8 @@ zero-plus-zero:
     - works
     - design
     - iminai-series
+  thumb:
+    'zero-plus-zero.png'
 
 lion-110-o:
   title:
@@ -211,6 +269,8 @@ lion-110-o:
     - works
     - design
     - iminai-series
+  thumb:
+    'lion-110-o.png'
 
 itabasamies:
   title:
@@ -218,6 +278,8 @@ itabasamies:
   tag:
     - works
     - design
+  thumb:
+    'itabasamies.png'
 
 rotation:
   title:
@@ -225,6 +287,8 @@ rotation:
   tag:
     - works
     - design
+  thumb:
+    'rotation.png'
 
 value-of-company:
   title:
@@ -232,6 +296,8 @@ value-of-company:
   tag:
     - works
     - design
+  thumb:
+    'value-of-company.png'
 
 jigsaw-qr:
   title:
@@ -239,6 +305,8 @@ jigsaw-qr:
   tag:
     - works
     - design
+  thumb:
+    'jigsaw-qr.png'
 
 blinder:
   title:
@@ -246,6 +314,8 @@ blinder:
   tag:
     - works
     - design
+  thumb:
+    'blinder.png'
 
 newcomer-exhibition-poster-2003:
   title:
@@ -254,6 +324,8 @@ newcomer-exhibition-poster-2003:
     - works
     - design
     - ads
+  thumb:
+    'newcomer-exhibition-poster-2003.png'
 
 newcomer-exhibition-sign-2003:
   title:
@@ -262,6 +334,8 @@ newcomer-exhibition-sign-2003:
     - works
     - design
     - ads
+  thumb:
+    'newcomer-exhibition-sign-2003.png'
 
 welcome-2004:
   title:
@@ -270,6 +344,8 @@ welcome-2004:
     - works
     - design
     - ads
+  thumb:
+    'welcome-2004.png'
 
 nanigashitai-flier-2008:
   title:
@@ -278,6 +354,8 @@ nanigashitai-flier-2008:
     - works
     - design
     - ads
+  thumb:
+    'nanigashitai-flier-2008.png'
 
 hanami-flier:
   title:
@@ -286,6 +364,8 @@ hanami-flier:
     - works
     - design
     - ads
+  thumb:
+    'hanami-flier.png'
 
 fine-char-actors:
   title:
@@ -294,6 +374,8 @@ fine-char-actors:
     - works
     - design
     - ads
+  thumb:
+    'fine-char-actors.png'
 
 shikakuten-logo:
   title:
@@ -302,6 +384,8 @@ shikakuten-logo:
     - works
     - design
     - ads
+  thumb:
+    'shikakuten-logo.png'
 
 logo-acaneco-sns:
   title:
@@ -310,6 +394,8 @@ logo-acaneco-sns:
     - works
     - design
     - logo
+  thumb:
+    'logo-acaneco-sns.png'
 
 logo-acaneco-portal:
   title:
@@ -318,6 +404,8 @@ logo-acaneco-portal:
     - works
     - design
     - logo
+  thumb:
+    'logo-acaneco-portal.png'
 
 logo-alpha-1:
   title:
@@ -326,10 +414,8 @@ logo-alpha-1:
     - works
     - design
     - logo
-  ext:
-    png
-  extThumb:
-    png
+  thumb:
+    'logo-alpha-1.png'
 
 logo-alpha-2:
   title:
@@ -338,6 +424,8 @@ logo-alpha-2:
     - works
     - design
     - logo
+  thumb:
+    'logo-alpha-2.png'
 
 logo-alpha-3:
   title:
@@ -346,6 +434,8 @@ logo-alpha-3:
     - works
     - design
     - logo
+  thumb:
+    'logo-alpha-3.png'
 
 logo-roof:
   title:
@@ -354,6 +444,8 @@ logo-roof:
     - works
     - design
     - logo
+  thumb:
+    'logo-roof.png'
 
 logo-blade:
   title:
@@ -362,6 +454,8 @@ logo-blade:
     - works
     - design
     - logo
+  thumb:
+    'logo-blade.png'
 
 logo-scene:
   title:
@@ -370,6 +464,8 @@ logo-scene:
     - works
     - design
     - logo
+  thumb:
+    'logo-scene.png'
 
 logo-joint:
   title:
@@ -378,6 +474,8 @@ logo-joint:
     - works
     - design
     - logo
+  thumb:
+    'logo-joint.png'
 
 logo-jelly:
   title:
@@ -386,6 +484,8 @@ logo-jelly:
     - works
     - design
     - logo
+  thumb:
+    'logo-jelly.png'
 
 logo-heart:
   title:
@@ -394,6 +494,8 @@ logo-heart:
     - works
     - design
     - logo
+  thumb:
+    'logo-heart.png'
 
 logo-ghost:
   title:
@@ -402,6 +504,8 @@ logo-ghost:
     - works
     - design
     - logo
+  thumb:
+    'logo-ghost.png'
 
 logo-fade:
   title:
@@ -410,6 +514,8 @@ logo-fade:
     - works
     - design
     - logo
+  thumb:
+    'logo-fade.png'
 
 logo-dream:
   title:
@@ -418,6 +524,8 @@ logo-dream:
     - works
     - design
     - logo
+  thumb:
+    'logo-dream.png'
 
 logo-pro:
   title:
@@ -426,6 +534,8 @@ logo-pro:
     - works
     - design
     - logo
+  thumb:
+    'logo-pro.png'
 
 logo-treatment:
   title:
@@ -434,6 +544,8 @@ logo-treatment:
     - works
     - design
     - logo
+  thumb:
+    'logo-treatment.png'
 
 logo-club:
   title:
@@ -442,6 +554,8 @@ logo-club:
     - works
     - design
     - logo
+  thumb:
+    'logo-club.png'
 
 newyear-2004:
   title:
@@ -450,6 +564,8 @@ newyear-2004:
     - works
     - design
     - newyear
+  thumb:
+    'newyear-2004.png'
 
 newyear-2008:
   title:
@@ -458,6 +574,8 @@ newyear-2008:
     - works
     - design
     - newyear
+  thumb:
+    'newyear-2008.png'
 
 newyear-2011:
   title:
@@ -466,6 +584,8 @@ newyear-2011:
     - works
     - design
     - newyear
+  thumb:
+    'newyear-2011.png'
 
 newyear-2012:
   title:
@@ -474,6 +594,8 @@ newyear-2012:
     - works
     - design
     - newyear
+  thumb:
+    'newyear-2012.png'
 
 newyear-2013:
   title:
@@ -482,6 +604,8 @@ newyear-2013:
     - works
     - design
     - newyear
+  thumb:
+    'newyear-2013.png'
 
 butchi-sutra:
   title:
@@ -489,6 +613,8 @@ butchi-sutra:
   tag:
     - works
     - poem
+  thumb:
+    'writing.png'
 
 poem-kokoro:
   title:
@@ -496,6 +622,8 @@ poem-kokoro:
   tag:
     - works
     - poem
+  thumb:
+    'writing.png'
 
 poem-nothing:
   title:
@@ -503,6 +631,8 @@ poem-nothing:
   tag:
     - works
     - poem
+  thumb:
+    'writing.png'
 
 poem-anohibi:
   title:
@@ -510,6 +640,8 @@ poem-anohibi:
   tag:
     - works
     - poem
+  thumb:
+    'writing.png'
 
 poem-yuki-rinrin:
   title:
@@ -517,6 +649,8 @@ poem-yuki-rinrin:
   tag:
     - works
     - poem
+  thumb:
+    'writing.png'
 
 poem-anpanman-march:
   title:
@@ -524,3 +658,5 @@ poem-anpanman-march:
   tag:
     - works
     - poem
+  thumb:
+    'writing.png'
