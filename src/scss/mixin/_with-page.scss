@@ -3,3 +3,9 @@
     @content;
   }
 }
+
+@mixin with-just-page($path) {
+  body[data-path="#{$path}"] {
+    @content;
+  }
+}

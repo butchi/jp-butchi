@@ -422,6 +422,38 @@ body[data-path^="person/profile/"] .sec-interest .interest-category {
       body[data-path^="person/profile/"] .sec-interest .interest-category .keyword .elm-a:hover {
         border-bottom: none; }
 
+body[data-path="works/"] .list {
+  display: block;
+  list-style: none; }
+
+body[data-path="works/"] .item {
+  display: inline-block;
+  margin-left: 10px;
+  margin-left: 0.1rem;
+  margin-top: 15px;
+  margin-top: 0.15rem; }
+
+body[data-path="works/"] .card {
+  width: 256px;
+  width: 2.56rem;
+  height: 256px;
+  height: 2.56rem;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+body[data-path="works/"] .mdl-card__actions {
+  height: 52px;
+  height: 0.52rem;
+  padding: 16px;
+  padding: 0.16rem;
+  background: rgba(255, 255, 255, 0.5); }
+
+body[data-path="works/"] .title {
+  color: #000000;
+  font-size: 14px;
+  font-size: 0.14rem;
+  font-weight: 500; }
+
 body[data-path^="works/tag/"] .list {
   display: block;
   list-style: none; }
