@@ -24,33 +24,39 @@ block content-block
     section
       h2
         | 作品
-      -
-        const workKeyArr = Object.keys(works).filter((key) => (
-          works[key].tag.includes('design')
-          &&
-          !works[key].tag.includes('logo')
-          &&
-          !works[key].tag.includes('newyear')
-        ))
-      each key in workKeyArr
-        +work(key)
+      .list
+        -
+          const workKeyArr = Object.keys(works).filter((key) => (
+            works[key].tag.includes('design')
+            &&
+            !works[key].tag.includes('logo')
+            &&
+            !works[key].tag.includes('newyear')
+          ))
+        each key in workKeyArr
+          .item
+            +work(key)
 
     section
       h2
         | 年賀状
-      -
-        const newyearKeyArr = Object.keys(works).filter((key) => (
-          works[key].tag.includes('newyear')
-        ))
-      each key in newyearKeyArr
-        +work(key)
+      .list
+        -
+          const newyearKeyArr = Object.keys(works).filter((key) => (
+            works[key].tag.includes('newyear')
+          ))
+        each key in newyearKeyArr
+          .item
+            +work(key)
 
     section
       h2
         | ロゴ
-      -
-        const logoKeyArr = Object.keys(works).filter((key) => (
-          works[key].tag.includes('logo')
-        ))
-      each key in logoKeyArr
-        +work(key)
+      .list
+        -
+          const logoKeyArr = Object.keys(works).filter((key) => (
+            works[key].tag.includes('logo')
+          ))
+        each key in logoKeyArr
+          .item
+            +work(key)

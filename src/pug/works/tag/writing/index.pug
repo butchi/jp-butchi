@@ -24,9 +24,11 @@ block content-block
     section
       h2
         | 作品
-      -
-        const workKeyArr = Object.keys(works).filter((key) => (
-          works[key].tag.includes('writing')
-        ))
-      each key in workKeyArr
-        +work(key)
+      .list
+        -
+          const workKeyArr = Object.keys(works).filter((key) => (
+            works[key].tag.includes('writing')
+          ))
+        each key in workKeyArr
+          .item
+            +work(key)
