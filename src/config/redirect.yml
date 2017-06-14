@@ -35,6 +35,11 @@ list:
     dest: '/project/iiknock/'
 
   -
+    title: 'Go! Zen! Go! Go!'
+    path: '/gozengogo/'
+    dest: 'https://butchi.github.io/2014/'
+
+  -
     title: '物智数'
     path: '/planar_binary/'
     dest: '/documents/butchi-number/'
