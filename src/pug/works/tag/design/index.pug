@@ -1,11 +1,7 @@
 extends /_layout/_default-layout
 
 append config-block
-  - rootPath = '../../'
-  - path = 'works/design/'
-  - imgPath = `${rootPath}img/${path}`
-  - dataPath = `${rootPath}data/${path}`
-  - worksPath = '../'
+  - worksPath = '../../'
 
 mixin work(key)
   - const work = works[key];

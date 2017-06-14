@@ -612,7 +612,7 @@ butchi-sutra:
     '物智経'
   tag:
     - works
-    - poem
+    - writing
   thumb:
     'writing.png'
 
@@ -621,7 +621,7 @@ poem-kokoro:
     '心'
   tag:
     - works
-    - poem
+    - writing
   thumb:
     'writing.png'
 
@@ -630,7 +630,7 @@ poem-nothing:
     '無'
   tag:
     - works
-    - poem
+    - writing
   thumb:
     'writing.png'
 
@@ -639,7 +639,7 @@ poem-anohibi:
     '今が「あの日々」となるように'
   tag:
     - works
-    - poem
+    - writing
   thumb:
     'writing.png'
 
@@ -648,7 +648,7 @@ poem-yuki-rinrin:
     '勇气凛凛'
   tag:
     - works
-    - poem
+    - writing
   thumb:
     'writing.png'
 
@@ -657,6 +657,6 @@ poem-anpanman-march:
     '餡麺麭男行進曲'
   tag:
     - works
-    - poem
+    - writing
   thumb:
     'writing.png'
