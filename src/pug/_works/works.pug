@@ -1,7 +1,7 @@
 extends /_layout/_default-layout
 
 prepend config-block
-  - const work = _.values(works).filter((work) => work.id === meta.id )[0]
+  - const work = _.values(works).filter((work) => work.id === meta.id )[0] || {}
   - page_name = meta.title
 
 append config-block
@@ -15,18 +15,13 @@ append config-block
   - audio = meta.audio || work.audio
   - youtube = meta.youtube || work.youtube
   - nicovideo = meta.nicovideo || work.nicovideo
+  - pixiv = meta.pixiv || work.pixiv
 
 block content-block
   +page-title
 
   .inner-block
 
-    if image
-      .image
-        img(src= `${imgPath}resources/${image}`)
-    if audio
-      .audio
-        audio(src= `${dataPath}resources/${audio}`, controls)
     if youtube
       .video
         iframe(width="560", height="315", src=`https://www.youtube.com/embed/${youtube}`, frameborder="0", allowfullscreen)
@@ -34,6 +29,14 @@ block content-block
         script(type="application/javascript", src=`http://embed.nicovideo.jp/watch/${nicovideo}/script?w=720&h=480`)
         noscript: a(href=`http://www.nicovideo.jp/watch/${nicovideo}`)
           = title
+    if pixiv
+      script(src="http://source.pixiv.net/source/embed.js", data-id= pixiv, data-size="large", data-border="on" charset="utf-8")
+    if image
+      .image
+        img(src= `${imgPath}resources/${image}`)
+    if audio
+      .audio
+        audio(src= `${dataPath}resources/${audio}`, controls)
 
     if body
       .desc

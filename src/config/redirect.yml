@@ -17,22 +17,22 @@ list:
   -
     title: 'waraken'
     path: '/waraken/'
-    dest: '/project/waraken/'
+    dest: '/works/waraken/'
 
   -
     title: 'なんでも魔法。'
     path: '/magic/'
-    dest: '/project/nandemo-magic/'
+    dest: '/works/nandemo-magic/'
 
   -
     title: 'ポポポポケモン！'
     path: '/pokemon/'
-    dest: '/project/po3pokemon/'
+    dest: '/works/po3pokemon/'
 
   -
     title: 'いいノック'
     path: '/iiknock/'
-    dest: '/project/iiknock/'
+    dest: '/works/iiknock/'
 
   -
     title: 'Go! Zen! Go! Go!'

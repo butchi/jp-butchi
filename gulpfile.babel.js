@@ -182,7 +182,7 @@ gulp.task('browser-sync' , () => {
   watch([`${SRC}/js/**/*.js`], gulp.series('browserify', browserSync.reload));
   watch([
       `${SRC}/pug/**/*.pug`,
-      `${SRC}/config/*`
+      `${SRC}/config/**/*`
   ], gulp.series('html', browserSync.reload));
 });
 
