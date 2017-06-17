@@ -1,0 +1,32 @@
+extends /_layout/_default-layout
+
+append config-block
+  - category = 'works-genre'
+  - worksPath = '../'
+
+mixin work-item(work)
+  .item
+    .work
+      a(href=`${worksPath}${work.id}/`)
+        .card.mdl-card.mdl-shadow--2dp(style=`
+          background-image: url(${rootPath}img/works/thumb/${work.thumb});`)
+          .mdl-card__title.mdl-card--expand
+          .mdl-card__actions
+            .title
+              span= work.title
+
+block content-block
+  +page-title
+
+  .inner-block
+
+    section
+      h2
+        | 作品
+      .list
+        -
+          const workArr = _.values(works).filter((work) => (
+            work.writing
+          ))
+        each work in workArr
+          +work-item(work)

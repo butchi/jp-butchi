@@ -4,7 +4,8 @@ prepend config-block
   - const hasTag = (work, name) => work.tag.split(',').includes(name);
 
 append config-block
-  - worksPath = '../../'
+  - category = 'works-genre'
+  - worksPath = '../'
 
 mixin work-item(work)
   .item

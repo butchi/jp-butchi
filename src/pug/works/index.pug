@@ -9,10 +9,22 @@ block content-block
   .inner-block
     .list
       .item
-        a(href=`${worksPath}tag/design/`)
-          .card.mdl-card.mdl-shadow--2dp(style=`
-            background-image: url(${rootPath}img/works/thumb/bion.png);
-          `)
+        a(href=`${worksPath}web/`)
+          .card.mdl-card.mdl-shadow--2dp(style=
+            `background-image: url(${rootPath}img/works/thumb/web.png);`
+          )
+
+            .mdl-card__title.mdl-card--expand
+            .mdl-card__actions
+              .title
+                span
+                  | Web
+
+      .item
+        a(href=`${worksPath}design/`)
+          .card.mdl-card.mdl-shadow--2dp(style=
+            `background-image: url(${rootPath}img/works/thumb/design.png);`
+          )
 
             .mdl-card__title.mdl-card--expand
             .mdl-card__actions
@@ -21,10 +33,10 @@ block content-block
                   | デザイン
 
       .item
-        a(href=`${worksPath}tag/music/`)
-          .card.mdl-card.mdl-shadow--2dp(style=`
-            background-image: url(${rootPath}img/works/thumb/music.png);
-          `)
+        a(href=`${worksPath}music/`)
+          .card.mdl-card.mdl-shadow--2dp(style=
+            `background-image: url(${rootPath}img/works/thumb/music.png);`
+          )
 
             .mdl-card__title.mdl-card--expand
             .mdl-card__actions
@@ -33,7 +45,7 @@ block content-block
                   | 音楽
 
       .item
-        a(href=`${worksPath}tag/writing/`)
+        a(href=`${worksPath}writing/`)
           .card.mdl-card.mdl-shadow--2dp(style=`
             background-image: url(${rootPath}img/works/thumb/writing.png);
           `)
