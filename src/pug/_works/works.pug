@@ -1,6 +1,7 @@
 extends /_layout/_default-layout
 
 prepend config-block
+  - const work = _.values(works).filter((work) => work.id === meta.id )[0]
   - page_name = meta.title
 
 append config-block
@@ -9,20 +10,24 @@ append config-block
   - imgPath = `${rootPath}img/${path}`
   - dataPath = `${rootPath}data/${path}`
   - worksPath = '../'
+  - image = meta.image || work.image
+  - console.log(image)
+  - audio = meta.audio || work.audio
+  - youtube = meta.youtube || work.youtube
 
 block content-block
   +page-title
 
   .inner-block
-    if meta.image
+    if image
       .image
-        img(src= `${imgPath}resources/${meta.image}`)
-    if meta.audio
+        img(src= `${imgPath}resources/${image}`)
+    if audio
       .audio
-        audio(src= `${dataPath}resources/${meta.audio}`, controls)
-    if meta.youtube
+        audio(src= `${dataPath}resources/${audio}`, controls)
+    if youtube
       .video
-        = `${meta.youtube}`
+        = `${youtube}`
 
     .desc
       != body

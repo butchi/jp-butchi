@@ -3,8 +3,6 @@ id:
   'newyear-2016'
 title:
   '2016年年賀状'
-image:
-  'newyear-2016.png'
 ---
 
 2004年年賀状のリメイク。

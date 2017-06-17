@@ -8,7 +8,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "character",
-      "thumb" : "notoryu.png"
+      "thumb" : "notoryu.png",
+      "image" : "notoryu.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "kenken" : {
       "id" : "kenken",
@@ -18,7 +21,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "character",
-      "thumb" : "kenken.png"
+      "thumb" : "kenken.png",
+      "image" : "kenken.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "kagafuwanko" : {
       "id" : "kagafuwanko",
@@ -28,7 +34,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "character",
-      "thumb" : "kagafuwanko.png"
+      "thumb" : "kagafuwanko.png",
+      "image" : "kagafuwanko.jpg",
+      "audio" : "",
+      "youtube" : ""
     },
     "bion" : {
       "id" : "bion",
@@ -38,7 +47,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "",
-      "thumb" : "bion.png"
+      "thumb" : "bion.png",
+      "image" : "bion.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "waon" : {
       "id" : "waon",
@@ -48,7 +60,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "",
-      "thumb" : "waon.png"
+      "thumb" : "waon.png",
+      "image" : "waon.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "geometry-3456" : {
       "id" : "geometry-3456",
@@ -58,7 +73,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "",
-      "thumb" : "geometry-3456.png"
+      "thumb" : "geometry-3456.png",
+      "image" : "geometry-3456.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "star" : {
       "id" : "star",
@@ -68,7 +86,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "",
-      "thumb" : "star.png"
+      "thumb" : "star.png",
+      "image" : "star.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "drop-into" : {
       "id" : "drop-into",
@@ -78,7 +99,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "",
-      "thumb" : "drop-into.png"
+      "thumb" : "drop-into.png",
+      "image" : "drop-into.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "beer-and-cocktail" : {
       "id" : "beer-and-cocktail",
@@ -88,7 +112,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "",
-      "thumb" : "beer-and-cocktail.png"
+      "thumb" : "beer-and-cocktail.png",
+      "image" : "beer-and-cocktail.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "delta-pulse" : {
       "id" : "delta-pulse",
@@ -98,7 +125,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "",
-      "thumb" : "delta-pulse.png"
+      "thumb" : "delta-pulse.png",
+      "image" : "delta-pulse.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "golden-tree" : {
       "id" : "golden-tree",
@@ -108,7 +138,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "",
-      "thumb" : "golden-tree.png"
+      "thumb" : "golden-tree.png",
+      "image" : "golden-tree.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "self-folding" : {
       "id" : "self-folding",
@@ -118,7 +151,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "",
-      "thumb" : "self-folding.png"
+      "thumb" : "self-folding.png",
+      "image" : "self-folding.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "enki-do" : {
       "id" : "enki-do",
@@ -128,7 +164,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "",
-      "thumb" : "enki-do.png"
+      "thumb" : "enki-do.png",
+      "image" : "enki-do.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "quark" : {
       "id" : "quark",
@@ -138,7 +177,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "",
-      "thumb" : "quark.png"
+      "thumb" : "quark.png",
+      "image" : "quark.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "datetime-2005-march" : {
       "id" : "datetime-2005-march",
@@ -148,7 +190,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "",
-      "thumb" : "datetime-2005-march.png"
+      "thumb" : "datetime-2005-march.png",
+      "image" : "datetime-2005-march.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "web-stockings" : {
       "id" : "web-stockings",
@@ -158,7 +203,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "",
-      "thumb" : "web-stockings.png"
+      "thumb" : "web-stockings.png",
+      "image" : "web-stockings.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "shin-go-ki" : {
       "id" : "shin-go-ki",
@@ -168,7 +216,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "",
-      "thumb" : "shin-go-ki.png"
+      "thumb" : "shin-go-ki.png",
+      "image" : "shin-go-ki.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "copy-to-trashbox" : {
       "id" : "copy-to-trashbox",
@@ -178,7 +229,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "iminai-series",
-      "thumb" : "copy-to-trashbox.png"
+      "thumb" : "copy-to-trashbox.png",
+      "image" : "copy-to-trashbox.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "tercet-rest" : {
       "id" : "tercet-rest",
@@ -188,7 +242,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "iminai-series",
-      "thumb" : "tercet-rest.png"
+      "thumb" : "tercet-rest.png",
+      "image" : "tercet-rest.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "zero-plus-zero" : {
       "id" : "zero-plus-zero",
@@ -198,7 +255,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "iminai-series",
-      "thumb" : "zero-plus-zero.png"
+      "thumb" : "zero-plus-zero.png",
+      "image" : "zero-plus-zero.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "lion-110-o" : {
       "id" : "lion-110-o",
@@ -208,7 +268,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "",
-      "thumb" : "lion-110-o.png"
+      "thumb" : "lion-110-o.png",
+      "image" : "lion-110-o.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "itabasamies" : {
       "id" : "itabasamies",
@@ -218,7 +281,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "",
-      "thumb" : "itabasamies.png"
+      "thumb" : "itabasamies.png",
+      "image" : "itabasamies.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "rotation" : {
       "id" : "rotation",
@@ -228,7 +294,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "",
-      "thumb" : "rotation.png"
+      "thumb" : "rotation.png",
+      "image" : "rotation.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "value-of-company" : {
       "id" : "value-of-company",
@@ -238,7 +307,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "",
-      "thumb" : "value-of-company.png"
+      "thumb" : "value-of-company.png",
+      "image" : "value-of-company.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "jigsaw-qr" : {
       "id" : "jigsaw-qr",
@@ -248,7 +320,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "",
-      "thumb" : "jigsaw-qr.png"
+      "thumb" : "jigsaw-qr.png",
+      "image" : "jigsaw-qr.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "blinder" : {
       "id" : "blinder",
@@ -258,7 +333,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "",
-      "thumb" : "blinder.png"
+      "thumb" : "blinder.png",
+      "image" : "blinder.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "newcomer-exhibition-poster-2003" : {
       "id" : "newcomer-exhibition-poster-2003",
@@ -268,7 +346,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "ad",
-      "thumb" : "newcomer-exhibition-poster-2003.png"
+      "thumb" : "newcomer-exhibition-poster-2003.png",
+      "image" : "newcomer-exhibition-poster-2003.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "newcomer-exhibition-sign-2003" : {
       "id" : "newcomer-exhibition-sign-2003",
@@ -278,7 +359,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "ad",
-      "thumb" : "newcomer-exhibition-sign-2003.png"
+      "thumb" : "newcomer-exhibition-sign-2003.png",
+      "image" : "newcomer-exhibition-sign-2003.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "welcome-2004" : {
       "id" : "welcome-2004",
@@ -288,7 +372,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "ad",
-      "thumb" : "welcome-2004.png"
+      "thumb" : "welcome-2004.png",
+      "image" : "welcome-2004.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "nanigashitai-flier-2008" : {
       "id" : "nanigashitai-flier-2008",
@@ -298,7 +385,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "ad",
-      "thumb" : "nanigashitai-flier-2008.png"
+      "thumb" : "nanigashitai-flier-2008.png",
+      "image" : "nanigashitai-flier-2008.jpg",
+      "audio" : "",
+      "youtube" : ""
     },
     "hanami-flier" : {
       "id" : "hanami-flier",
@@ -308,7 +398,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "ad",
-      "thumb" : "hanami-flier.png"
+      "thumb" : "hanami-flier.png",
+      "image" : "hanami-flier.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "fine-char-actors" : {
       "id" : "fine-char-actors",
@@ -318,7 +411,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "ad",
-      "thumb" : "fine-char-actors.png"
+      "thumb" : "fine-char-actors.png",
+      "image" : "fine-char-actors.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "shikakuten-logo" : {
       "id" : "shikakuten-logo",
@@ -328,7 +424,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "ad",
-      "thumb" : "shikakuten-logo.png"
+      "thumb" : "shikakuten-logo.png",
+      "image" : "shikakuten-logo.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "logo-acaneco-sns" : {
       "id" : "logo-acaneco-sns",
@@ -338,7 +437,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "logo",
-      "thumb" : "logo-acaneco-sns.png"
+      "thumb" : "logo-acaneco-sns.png",
+      "image" : "logo-acaneco-sns.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "logo-acaneco-portal" : {
       "id" : "logo-acaneco-portal",
@@ -348,7 +450,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "logo",
-      "thumb" : "logo-acaneco-portal.png"
+      "thumb" : "logo-acaneco-portal.png",
+      "image" : "logo-acaneco-portal.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "logo-alpha-1" : {
       "id" : "logo-alpha-1",
@@ -358,7 +463,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "logo",
-      "thumb" : "logo-alpha-1.png"
+      "thumb" : "logo-alpha-1.png",
+      "image" : "logo-alpha-1.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "logo-alpha-2" : {
       "id" : "logo-alpha-2",
@@ -368,7 +476,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "logo",
-      "thumb" : "logo-alpha-2.png"
+      "thumb" : "logo-alpha-2.png",
+      "image" : "logo-alpha-2.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "logo-alpha-3" : {
       "id" : "logo-alpha-3",
@@ -378,7 +489,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "logo",
-      "thumb" : "logo-alpha-3.png"
+      "thumb" : "logo-alpha-3.png",
+      "image" : "logo-alpha-3.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "logo-roof" : {
       "id" : "logo-roof",
@@ -388,7 +502,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "logo",
-      "thumb" : "logo-roof.png"
+      "thumb" : "logo-roof.png",
+      "image" : "logo-roof.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "logo-blade" : {
       "id" : "logo-blade",
@@ -398,7 +515,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "logo",
-      "thumb" : "logo-blade.png"
+      "thumb" : "logo-blade.png",
+      "image" : "logo-blade.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "logo-scene" : {
       "id" : "logo-scene",
@@ -408,7 +528,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "logo",
-      "thumb" : "logo-scene.png"
+      "thumb" : "logo-scene.png",
+      "image" : "logo-scene.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "logo-joint" : {
       "id" : "logo-joint",
@@ -418,7 +541,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "logo",
-      "thumb" : "logo-joint.png"
+      "thumb" : "logo-joint.png",
+      "image" : "logo-joint.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "logo-jelly" : {
       "id" : "logo-jelly",
@@ -428,7 +554,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "logo",
-      "thumb" : "logo-jelly.png"
+      "thumb" : "logo-jelly.png",
+      "image" : "logo-jelly.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "logo-heart" : {
       "id" : "logo-heart",
@@ -438,7 +567,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "logo",
-      "thumb" : "logo-heart.png"
+      "thumb" : "logo-heart.png",
+      "image" : "logo-heart.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "logo-ghost" : {
       "id" : "logo-ghost",
@@ -448,7 +580,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "logo",
-      "thumb" : "logo-ghost.png"
+      "thumb" : "logo-ghost.png",
+      "image" : "logo-ghost.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "logo-fade" : {
       "id" : "logo-fade",
@@ -458,7 +593,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "logo",
-      "thumb" : "logo-fade.png"
+      "thumb" : "logo-fade.png",
+      "image" : "logo-fade.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "logo-dream" : {
       "id" : "logo-dream",
@@ -468,7 +606,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "logo",
-      "thumb" : "logo-dream.png"
+      "thumb" : "logo-dream.png",
+      "image" : "logo-dream.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "logo-pro" : {
       "id" : "logo-pro",
@@ -478,7 +619,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "logo",
-      "thumb" : "logo-pro.png"
+      "thumb" : "logo-pro.png",
+      "image" : "logo-pro.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "logo-treatment" : {
       "id" : "logo-treatment",
@@ -488,7 +632,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "logo",
-      "thumb" : "logo-treatment.png"
+      "thumb" : "logo-treatment.png",
+      "image" : "logo-treatment.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "logo-club" : {
       "id" : "logo-club",
@@ -498,7 +645,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "logo",
-      "thumb" : "logo-club.png"
+      "thumb" : "logo-club.png",
+      "image" : "logo-club.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "newyear-2004" : {
       "id" : "newyear-2004",
@@ -508,7 +658,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "newyear",
-      "thumb" : "newyear-2004.png"
+      "thumb" : "newyear-2004.png",
+      "image" : "newyear-2004.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "newyear-2008" : {
       "id" : "newyear-2008",
@@ -518,7 +671,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "newyear",
-      "thumb" : "newyear-2008.png"
+      "thumb" : "newyear-2008.png",
+      "image" : "newyear-2008.jpg",
+      "audio" : "",
+      "youtube" : ""
     },
     "newyear-2011" : {
       "id" : "newyear-2011",
@@ -528,7 +684,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "newyear",
-      "thumb" : "newyear-2011.png"
+      "thumb" : "newyear-2011.png",
+      "image" : "newyear-2011.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "newyear-2012" : {
       "id" : "newyear-2012",
@@ -538,7 +697,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "newyear",
-      "thumb" : "newyear-2012.png"
+      "thumb" : "newyear-2012.png",
+      "image" : "newyear-2012.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "newyear-2013" : {
       "id" : "newyear-2013",
@@ -548,7 +710,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "newyear",
-      "thumb" : "newyear-2013.png"
+      "thumb" : "newyear-2013.png",
+      "image" : "newyear-2013.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "newyear-2014" : {
       "id" : "newyear-2014",
@@ -558,7 +723,10 @@
       "writing" : "",
       "web" : 1,
       "tag" : "newyear",
-      "thumb" : "newyear-2014.png"
+      "thumb" : "newyear-2014.png",
+      "image" : "newyear-2014.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "newyear-2015" : {
       "id" : "newyear-2015",
@@ -568,7 +736,10 @@
       "writing" : "",
       "web" : 1,
       "tag" : "newyear",
-      "thumb" : "newyear-2015.png"
+      "thumb" : "newyear-2015.png",
+      "image" : "newyear-2015.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "newyear-2016" : {
       "id" : "newyear-2016",
@@ -578,7 +749,10 @@
       "writing" : "",
       "web" : 1,
       "tag" : "newyear",
-      "thumb" : "newyear-2016.png"
+      "thumb" : "newyear-2016.png",
+      "image" : "newyear-2016.png",
+      "audio" : "",
+      "youtube" : ""
     },
     "newyear-2017" : {
       "id" : "newyear-2017",
@@ -588,7 +762,10 @@
       "writing" : "",
       "web" : 1,
       "tag" : "newyear",
-      "thumb" : "newyear-2017.png"
+      "thumb" : "newyear-2017.png",
+      "image" : "newyear-2017.jpg",
+      "audio" : "",
+      "youtube" : ""
     },
     "newgo" : {
       "id" : "newgo",
@@ -598,7 +775,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "sample-track-2007",
-      "thumb" : "music.png"
+      "thumb" : "music.png",
+      "image" : "",
+      "audio" : "newgo.mp3",
+      "youtube" : ""
     },
     "travelli" : {
       "id" : "travelli",
@@ -608,7 +788,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "sample-track-2007",
-      "thumb" : "music.png"
+      "thumb" : "music.png",
+      "image" : "",
+      "audio" : "travelli.mp3",
+      "youtube" : ""
     },
     "prime" : {
       "id" : "prime",
@@ -618,7 +801,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "sample-track-2007",
-      "thumb" : "music.png"
+      "thumb" : "music.png",
+      "image" : "",
+      "audio" : "prime.mp3",
+      "youtube" : ""
     },
     "dot-jp" : {
       "id" : "dot-jp",
@@ -628,7 +814,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "sample-track-2007",
-      "thumb" : "music.png"
+      "thumb" : "music.png",
+      "image" : "",
+      "audio" : "dot-jp.mp3",
+      "youtube" : ""
     },
     "selection" : {
       "id" : "selection",
@@ -638,7 +827,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "sample-track-2007",
-      "thumb" : "music.png"
+      "thumb" : "music.png",
+      "image" : "",
+      "audio" : "selection.mp3",
+      "youtube" : ""
     },
     "first-battle" : {
       "id" : "first-battle",
@@ -648,7 +840,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "sample-track-2007",
-      "thumb" : "music.png"
+      "thumb" : "music.png",
+      "image" : "",
+      "audio" : "first-battle.mp3",
+      "youtube" : ""
     },
     "outskirts-dungeon" : {
       "id" : "outskirts-dungeon",
@@ -658,7 +853,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "sample-track-2007",
-      "thumb" : "music.png"
+      "thumb" : "music.png",
+      "image" : "",
+      "audio" : "outskirts-dungeon.mp3",
+      "youtube" : ""
     },
     "suzumi" : {
       "id" : "suzumi",
@@ -668,7 +866,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "sample-track-2007",
-      "thumb" : "music.png"
+      "thumb" : "music.png",
+      "image" : "",
+      "audio" : "suzumi.mp3",
+      "youtube" : ""
     },
     "gray-code-counter-song" : {
       "id" : "gray-code-counter-song",
@@ -678,7 +879,10 @@
       "writing" : "",
       "web" : "",
       "tag" : "",
-      "thumb" : "music.png"
+      "thumb" : "music.png",
+      "image" : "",
+      "audio" : "",
+      "youtube" : "v64F7YaY27U"
     },
     "butchi-sutra" : {
       "id" : "butchi-sutra",
@@ -688,7 +892,10 @@
       "writing" : 1,
       "web" : "",
       "tag" : "",
-      "thumb" : "writing.png"
+      "thumb" : "writing.png",
+      "image" : "",
+      "audio" : "",
+      "youtube" : ""
     },
     "poem-kokoro" : {
       "id" : "poem-kokoro",
@@ -698,7 +905,10 @@
       "writing" : 1,
       "web" : "",
       "tag" : "",
-      "thumb" : "writing.png"
+      "thumb" : "writing.png",
+      "image" : "",
+      "audio" : "",
+      "youtube" : ""
     },
     "poem-nothing" : {
       "id" : "poem-nothing",
@@ -708,7 +918,10 @@
       "writing" : 1,
       "web" : "",
       "tag" : "",
-      "thumb" : "writing.png"
+      "thumb" : "writing.png",
+      "image" : "",
+      "audio" : "",
+      "youtube" : ""
     },
     "poem-anohibi" : {
       "id" : "poem-anohibi",
@@ -718,7 +931,10 @@
       "writing" : 1,
       "web" : "",
       "tag" : "",
-      "thumb" : "writing.png"
+      "thumb" : "writing.png",
+      "image" : "",
+      "audio" : "",
+      "youtube" : ""
     },
     "poem-yuki-rinrin" : {
       "id" : "poem-yuki-rinrin",
@@ -728,7 +944,10 @@
       "writing" : 1,
       "web" : "",
       "tag" : "",
-      "thumb" : "writing.png"
+      "thumb" : "writing.png",
+      "image" : "",
+      "audio" : "",
+      "youtube" : ""
     },
     "poem-anpanman-march" : {
       "id" : "poem-anpanman-march",
@@ -738,7 +957,10 @@
       "writing" : 1,
       "web" : "",
       "tag" : "",
-      "thumb" : "writing.png"
+      "thumb" : "writing.png",
+      "image" : "",
+      "audio" : "",
+      "youtube" : ""
     }
   }
 }

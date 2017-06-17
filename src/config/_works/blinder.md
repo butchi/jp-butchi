@@ -3,8 +3,6 @@ id:
   'blinder'
 title:
   '目■■線'
-image:
-  'blinder.png'
 ---
 
 「目隠し線」の「隠し」を隠すことによって残るもの。
