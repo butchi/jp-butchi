@@ -3,18 +3,16 @@ extends /_layout/_default-layout
 append config-block
   - worksPath = '../../'
 
-mixin work(key)
-  - const work = works[key];
-  .work
-    a(href=`${worksPath}${key}/`)
-      .card.mdl-card.mdl-shadow--2dp(style=`
-        background-image: url(${rootPath}img/works/thumb/${work.thumb});
-      `)
-
-        .mdl-card__title.mdl-card--expand
-        .mdl-card__actions
-          .title
-            span= work.title
+mixin work-item(work)
+  .item
+    .work
+      a(href=`${worksPath}${work.id}/`)
+        .card.mdl-card.mdl-shadow--2dp(style=`
+          background-image: url(${rootPath}img/works/thumb/${work.thumb});`)
+          .mdl-card__title.mdl-card--expand
+          .mdl-card__actions
+            .title
+              span= work.title
 
 block content-block
   +page-title
@@ -24,12 +22,10 @@ block content-block
     section
       h2
         | 作品
-
       .list
         -
-          const workKeyArr = Object.keys(works).filter((key) => (
-            works[key].tag.includes('music')
+          const workArr = _.values(works).filter((work) => (
+            work.music
           ))
-        each key in workKeyArr
-          .item
-            +work(key)
+        each work in workArr
+          +work-item(work)
