@@ -30,7 +30,7 @@ block content-block
         noscript: a(href=`http://www.nicovideo.jp/watch/${nicovideo}`)
           = title
     if pixiv
-      script(src="http://source.pixiv.net/source/embed.js", data-id= pixiv, data-size="large", data-border="on" charset="utf-8")
+      script(src="https://source.pixiv.net/source/embed.js", data-id= pixiv, data-size="large", data-border="off" charset="utf-8")
     if image
       .image
         img(src= `${imgPath}resources/${image}`)
