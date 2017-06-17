@@ -1,5 +1,8 @@
 extends /_layout/_default-layout
 
+prepend config-block
+  - const hasTag = (work, name) => work.tag.split(',').includes(name);
+
 append config-block
   - category = 'works-genre'
   - worksPath = '../'
@@ -25,8 +28,26 @@ block content-block
         | Web
       .list
         -
-          const workArr = _.values(works).filter((work) => (
+          workArr = _.values(works).filter((work) => (
             work.genreWeb
           ))
+            .filter((work) => (
+              !hasTag(work, 'newyear')
+            ))
+          ;
         each work in workArr
           +work-item(work)
+
+    section
+      h2
+        | 年賀サイト
+      .list
+        -
+          workArr = _.values(works).filter((work) => (
+            work.genreWeb
+          ))
+            .filter((work) => hasTag(work, 'newyear'))
+          ;
+        each work in workArr
+          +work-item(work)
+

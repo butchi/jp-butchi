@@ -45,7 +45,9 @@ block content-block
         | キャラクター
       .list
         -
-          workArr = _.values(works).filter((work) => work.genreDesign)
+          workArr = _.values(works).filter((work) => (
+            work.genreDesign
+          ))
             .filter((work) => hasTag(work, 'character'))
           ;
         each work in workArr
@@ -56,7 +58,9 @@ block content-block
         | 年賀状
       .list
         -
-          workArr = _.values(works).filter((work) => work.genreDesign)
+          workArr = _.values(works).filter((work) => (
+            work.genreDesign
+          ))
             .filter((work) => hasTag(work, 'newyear'))
           ;
         each work in workArr
@@ -67,7 +71,9 @@ block content-block
         | ロゴ
       .list
         -
-          workArr = _.values(works).filter((work) => work.genreDesign)
+          workArr = _.values(works).filter((work) => (
+            work.genreDesign
+          ))
             .filter((work) => hasTag(work, 'logo'))
           ;
         each work in workArr

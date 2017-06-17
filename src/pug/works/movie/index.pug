@@ -25,7 +25,7 @@ block content-block
         | 映像
       .list
         -
-          const workArr = _.values(works).filter((work) => (
+          workArr = _.values(works).filter((work) => (
             work.genreMovie
           ))
         each work in workArr
