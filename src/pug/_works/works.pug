@@ -10,14 +10,17 @@ append config-block
   - imgPath = `${rootPath}img/${path}`
   - dataPath = `${rootPath}data/${path}`
   - worksPath = '../'
+  - title = meta.title || work.title
   - image = meta.image || work.image
   - audio = meta.audio || work.audio
   - youtube = meta.youtube || work.youtube
+  - nicovideo = meta.nicovideo || work.nicovideo
 
 block content-block
   +page-title
 
   .inner-block
+
     if image
       .image
         img(src= `${imgPath}resources/${image}`)
@@ -27,6 +30,11 @@ block content-block
     if youtube
       .video
         iframe(width="560", height="315", src=`https://www.youtube.com/embed/${youtube}`, frameborder="0", allowfullscreen)
+    if nicovideo
+        script(type="application/javascript", src=`http://embed.nicovideo.jp/watch/${nicovideo}/script?w=720&h=480`)
+        noscript: a(href=`http://www.nicovideo.jp/watch/${nicovideo}`)
+          = title
 
-    .desc
-      != body
+    if body
+      .desc
+        != body

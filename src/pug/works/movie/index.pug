@@ -22,11 +22,11 @@ block content-block
 
     section
       h2
-        | 作品
+        | 映像
       .list
         -
           const workArr = _.values(works).filter((work) => (
-            work.genreMusic
+            work.genreMovie
           ))
         each work in workArr
           +work-item(work)
