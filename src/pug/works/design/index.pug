@@ -1,80 +1,58 @@
-extends /_layout/_default-layout
+extends /_layout/_works-category
 
-prepend config-block
-  - const hasTag = (work, name) => work.tag.split(',').includes(name);
-
-append config-block
-  - category = 'works-genre'
-  - worksPath = '../'
-
-mixin work-item(work)
-  .item
-    .work
-      a(href=`${worksPath}${work.id}/`)
-        .card.mdl-card.mdl-shadow--2dp(style=`
-          background-image: url(${rootPath}img/works/thumb/${work.thumb});`)
-          .mdl-card__title.mdl-card--expand
-          .mdl-card__actions
-            .title
-              span= work.title
-
-block content-block
-  +page-title
-
-  .inner-block
-
-    section
-      h2
-        | デザイン
-      .list
-        -
-          workArr = _.values(works).filter((work) => work.genreDesign)
-            .filter((work) => (
-              !hasTag(work, 'character')
-              &&
-              !hasTag(work, 'logo')
-              &&
-              !hasTag(work, 'newyear')
-            ))
-          ;
-        each work in workArr
-          +work-item(work)
-
-    section
-      h2
-        | キャラクター
-      .list
-        -
-          workArr = _.values(works).filter((work) => (
-            work.genreDesign
+block works-index
+  section
+    h2
+      | デザイン
+    .list
+      -
+        workArr = _.values(works).filter((work) => work.genreDesign)
+          .filter((work) => (
+            !hasTag(work, 'character')
+            &&
+            !hasTag(work, 'logo')
+            &&
+            !hasTag(work, 'newyear')
           ))
-            .filter((work) => hasTag(work, 'character'))
-          ;
-        each work in workArr
-          +work-item(work)
+        ;
+      each work in workArr
+        +work-item(work)
 
-    section
-      h2
-        | 年賀状
-      .list
-        -
-          workArr = _.values(works).filter((work) => (
-            work.genreDesign
-          ))
-            .filter((work) => hasTag(work, 'newyear'))
-          ;
-        each work in workArr
-          +work-item(work)
+  section
+    h2
+      | キャラクター
+    .list
+      -
+        workArr = _.values(works).filter((work) => (
+          work.genreDesign
+        ))
+          .filter((work) => hasTag(work, 'character'))
+        ;
+      each work in workArr
+        +work-item(work)
 
-    section
-      h2
-        | ロゴ
-      .list
-        -
-          workArr = _.values(works).filter((work) => (
-            work.genreDesign
-          ))
-            .filter((work) => hasTag(work, 'logo'))
-          ;
-        each work in workArr
-          +work-item(work)
+  section
+    h2
+      | 年賀状
+    .list
+      -
+        workArr = _.values(works).filter((work) => (
+          work.genreDesign
+        ))
+          .filter((work) => hasTag(work, 'newyear'))
+        ;
+      each work in workArr
+        +work-item(work)
+
+  section
+    h2
+      | ロゴ
+    .list
+      -
+        workArr = _.values(works).filter((work) => (
+          work.genreDesign
+        ))
+          .filter((work) => hasTag(work, 'logo'))
+        ;
+      each work in workArr
+        +work-item(work)

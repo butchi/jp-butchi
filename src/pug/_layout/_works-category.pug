@@ -1,0 +1,51 @@
+extends /_layout/_default-layout
+
+prepend config-block
+  - const hasTag = (work, name) => work.tag.split(',').includes(name);
+
+append config-block
+  - category = 'works-genre'
+  - worksPath = '../'
+
+mixin work-item(work)
+  .item
+    .work
+      a(href=`${worksPath}${work.id}/`)
+        .card.mdl-card.mdl-shadow--2dp(style=`
+          background-image: url(${rootPath}img/works/thumb/${work.thumb});`)
+          .mdl-card__title.mdl-card--expand
+          .mdl-card__actions
+            .title
+              span= work.title
+
+prepend relation-link
+  -
+    relationArr = [
+      {
+        title: 'Web',
+        href: '../web/',
+      },
+      {
+        title: '映像',
+        href: '../movie/',
+      },
+      {
+        title: 'デザイン',
+        href: '../design/',
+      },
+      {
+        title: '音楽',
+        href: '../music/',
+      },
+      {
+        title: '詩・執筆',
+        href: '../writing/',
+      },
+    ]
+
+
+block content-block
+  +page-title
+
+  .inner-block
+    block works-index

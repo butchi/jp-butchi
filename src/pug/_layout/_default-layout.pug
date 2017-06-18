@@ -1,3 +1,4 @@
+include /_mixin/_navigation-link
 include /_mixin/_heading
 include /_mixin/_bib
 include /_mixin/_mathjax
@@ -103,20 +104,29 @@ html(lang="ja")
               //- Add spacer, to align navigation to the right
               .mdl-layout-spacer
               //- Navigation. We hide it in small screens.
-              nav.mdl-navigation.mdl-layout--large-screen-only
-                a.mdl-navigation__link(href='') Link
-                a.mdl-navigation__link(href='') Link
-                a.mdl-navigation__link(href='') Link
-                a.mdl-navigation__link(href='') Link
+              block relation-link
+                if relationArr
+                  nav.mdl-navigation.mdl-layout--large-screen-only
+                    each relation in relationArr
+                      +navigation-link(relation)
 
         block drawer
           .mdl-layout__drawer
-            span.mdl-layout-title Title
+            span.mdl-layout-title
+              | メニュー
             nav.mdl-navigation
-              a.mdl-navigation__link(href='') Link
-              a.mdl-navigation__link(href='') Link
-              a.mdl-navigation__link(href='') Link
-              a.mdl-navigation__link(href='') Link
+              +navigation-link({
+                href: `${rootPath}person/profile/`,
+                title: 'プロフィール',
+              })
+              +navigation-link({
+                href: `${rootPath}works/`,
+                title: '作品',
+              })
+              +navigation-link({
+                href: `${rootPath}documents/`,
+                title: '解説記事',
+              })
               .list-share.mdl-textfield--align-right
                 .item-share.facebook
                   .fb-like(data-href= url, data-layout='box_count', data-action='like', data-size='small', data-show-faces='false', data-share='true')
