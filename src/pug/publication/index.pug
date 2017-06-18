@@ -1,0 +1,68 @@
+extends /_layout/_default-layout
+
+append config-block
+  - title = '発表文献'
+
+mixin link-publication(key)
+  -
+    // from [JavaScriptでHTMLタグを削除する正規表現 - Qiita](http://qiita.com/miiitaka/items/793555b4ccb0259a4cb8)
+    const removeTagRegExp = /<("[^"]*"|'[^']*'|[^'">])*>/g;
+
+  - const bibitem = bib[key];
+  a(href= `${rootPath}${bibitem.site}`)
+    != bibitem.title.replace(removeTagRegExp, '')
+
+block content-block
+  +page-title
+
+  .inner-block
+    section
+      +heading(2)
+        | 物智数
+
+      ul.list
+        li.item
+          +link-publication('butchi-number--2010-06--iwabuchi-yuki')
+
+    section
+      +heading(2)
+        | 不規則画素配置
+
+      ul.list
+        li.item
+          +link-publication('icd--2007-07--iwabuchi-yuki')
+        li.item
+          +link-publication('ite--2008--maeda-yui')
+
+    section
+      +heading(2)
+        | 解析信号
+
+      ul.list
+        li.item
+          +link-publication('ec--2008--iwabuchi-yuki')
+        li.item
+          +link-publication('wiss--2008--iwabuchi-yuki')
+        li.item
+          +link-publication('mus-85--iwabuchi-yuki')
+        li.item
+          +link-publication('interaction--2011--iwabuchi-yuki')
+        li.item
+          +link-publication('art-science--2011--iwabuchi-yuki')
+
+    section
+      +heading(2)
+        | プログラミング言語
+
+      ul.list
+        li.item
+          +link-publication('lams--2013--iwabuchi-yuki')
+
+    section
+      +heading(2)
+        | フラクタル音楽
+
+      ul.list
+        li.item
+          +link-publication('mus-105--iwabuchi-yuki')
+
