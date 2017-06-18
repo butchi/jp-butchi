@@ -440,6 +440,59 @@ body[data-path^="person/profile/"] .sec-interest .interest-category {
       body[data-path^="person/profile/"] .sec-interest .interest-category .keyword .elm-a:hover {
         border-bottom: none; }
 
+body[data-category~="works-detail"] .link-box {
+  border: 1px solid #e1e1e1;
+  padding: 10px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 30px; }
+
+body[data-category~="works-detail"] .link-box:hover {
+  background-color: #f3f3f3;
+  transition: background-color .35s; }
+
+body[data-category~="works-detail"] .img-box {
+  width: 25%;
+  float: left; }
+
+body[data-category~="works-detail"] .img-box div {
+  min-height: 170px;
+  background-size: cover;
+  background-position: center center; }
+
+body[data-category~="works-detail"] .text-box {
+  width: 75%;
+  float: left;
+  padding-left: 20px;
+  line-height: 1.7;
+  margin: 0; }
+
+body[data-category~="works-detail"] .text-box .title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #428bca;
+  padding: 0;
+  margin: 0; }
+
+body[data-category~="works-detail"] .text-box .description {
+  font-size: 15px;
+  color: #333;
+  padding: 0; }
+
+@media only screen and (max-width: 479px) {
+  body[data-category~="works-detail"] .img-box div {
+    min-height: 80px; }
+  body[data-category~="works-detail"] .text-box {
+    margin-left: 10px;
+    line-height: 1.5; }
+  body[data-category~="works-detail"] .text-box .title {
+    font-size: 13px;
+    margin: 0; }
+  body[data-category~="works-detail"] .text-box .description {
+    font-size: 11px;
+    margin-top: 5px; } }
+
 body[data-category~="works-category"] .list {
   display: block;
   list-style: none; }
