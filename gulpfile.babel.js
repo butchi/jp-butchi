@@ -3,6 +3,7 @@
 // import
 import gulp from 'gulp';
 import _ from 'lodash';
+import moment from 'moment';
 import source from 'vinyl-source-stream';
 import sass from 'gulp-sass';
 import sassGlob from 'gulp-sass-glob';
@@ -122,8 +123,9 @@ gulp.task('js', gulp.parallel('copy-js-modules', 'es6'));
 // html
 gulp.task('pug', () => {
   const locals = {
-    require: require,
-    _: _,
+    require,
+    _,
+    moment,
     markdown: require('markdown-it')({
       html: true,
     }),

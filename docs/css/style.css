@@ -138,6 +138,11 @@ h6:not([class]) {
   font-size: 18px;
   font-size: 0.18rem; }
 
+.btc-news {
+  height: 180px;
+  height: 1.8rem;
+  overflow-y: auto; }
+
 .display-none {
   display: none; }
 

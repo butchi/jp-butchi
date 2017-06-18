@@ -1,3 +1,4 @@
+import moment from 'moment';
 import BtcSpreadSheet from '../module/BtcSpreadSheet';
 
 export default class BtcNews {
@@ -6,30 +7,32 @@ export default class BtcNews {
   }
 
   initialize(opts = {}) {
-    this.$elm = opts.$elm || $('.btc-news');
+    const $elm = this.$elm = opts.$elm || $('.btc-news');
 
     this.btcSpreadSheet = new BtcSpreadSheet({
       sheetId: '18Vf0-hu_ho6vdRSSrsQAy793OqdVpn6OCE9XCMsmtns',
       callback: (data) => {
-        let $list = $('<ul></ul>');
+        const $list = $('<ul></ul>');
         $list.addClass('list');
 
         data.reverse().forEach((item) => {
-          let date = item.date;
-          let body = item.body;
-          let tag = item.tag;
+          const date = item.date;
+          const body = item.body;
+          const tag = item.tag;
+          const dateMoment = moment(date);
+          const dateFormat = dateMoment.format('Y年M月D日');
 
           let $item = $('<li></li>');
           $item.addClass('item');
 
-          $item.html(`
-            [${tag}] ${body} ( ${date} )
-          `);
+          $item.html(
+            `[${tag}] ${body} ( ${dateFormat} )`
+          );
 
           $list.append($item);
         });
 
-        this.$elm.append($list);
+        $elm.append($list);
       }
     });
   }
