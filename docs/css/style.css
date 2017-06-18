@@ -422,18 +422,18 @@ body[data-path^="person/profile/"] .sec-interest .interest-category {
       body[data-path^="person/profile/"] .sec-interest .interest-category .keyword .elm-a:hover {
         border-bottom: none; }
 
-body[data-category~="works-genre"] .list {
+body[data-category~="works-category"] .list {
   display: block;
   list-style: none; }
 
-body[data-category~="works-genre"] .item {
+body[data-category~="works-category"] .item {
   display: inline-block;
   margin-left: 10px;
   margin-left: 0.1rem;
   margin-top: 15px;
   margin-top: 0.15rem; }
 
-body[data-category~="works-genre"] .card {
+body[data-category~="works-category"] .card {
   width: 256px;
   width: 2.56rem;
   height: 256px;
@@ -441,14 +441,14 @@ body[data-category~="works-genre"] .card {
   background-repeat: no-repeat;
   background-size: cover; }
 
-body[data-category~="works-genre"] .mdl-card__actions {
+body[data-category~="works-category"] .mdl-card__actions {
   height: 52px;
   height: 0.52rem;
   padding: 16px;
   padding: 0.16rem;
   background: rgba(255, 255, 255, 0.5); }
 
-body[data-category~="works-genre"] .title {
+body[data-category~="works-category"] .title {
   color: #000000;
   font-size: 14px;
   font-size: 0.14rem;
