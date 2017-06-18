@@ -9,8 +9,14 @@
       .btc-analytic-signal-viewer {
         position: relative;
 
-        width: px(256);
-        height: px(256);
+        // JSが対応していない
+        width: px(350);
+        height: px(350);
+
+        @include mq-pc {
+          width: px(256);
+          height: px(256);
+        }
 
         display: inline-block;
 

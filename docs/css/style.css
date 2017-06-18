@@ -272,15 +272,19 @@ body[data-path^="documents/analytic-signal/"] .list-as {
     list-style: none; }
     body[data-path^="documents/analytic-signal/"] .list-as .item-as .btc-analytic-signal-viewer {
       position: relative;
-      width: 256px;
-      width: 2.56rem;
-      height: 256px;
-      height: 2.56rem;
+      width: 350px;
+      width: 3.5rem;
+      height: 350px;
+      height: 3.5rem;
       display: inline-block;
       background-size: contain;
       background-repeat: no-repeat;
       background-position: 50% 50%;
       cursor: pointer; }
+      @media screen and (min-width: 640px) {
+        body[data-path^="documents/analytic-signal/"] .list-as .item-as .btc-analytic-signal-viewer {
+          width: 2.56rem;
+          height: 2.56rem; } }
       body[data-path^="documents/analytic-signal/"] .list-as .item-as .btc-analytic-signal-viewer .elm-canvas {
         display: none; }
       body[data-path^="documents/analytic-signal/"] .list-as .item-as .btc-analytic-signal-viewer .cover {
