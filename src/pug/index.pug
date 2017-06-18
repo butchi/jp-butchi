@@ -292,86 +292,111 @@ block content-block
           section.sec-link
             +heading(5)
               | 関連リンク
-            ul
-              li
-                i.mdi.mdi-facebook-box
-                |  
-                a(href="https://www.facebook.com/yuuki.iwabuchi.9", target="_blank")
-                  | 岩淵 勇樹
-              li
-                i.mdi.mdi-twitter-box
-                |  
-                a(href="https://twitter.com/butchi_y", target="_blank")
-                  | butchi_y （公式アカウント）
-              li
-                i.mdi.mdi-twitter-box
-                |  
-                a(href="https://twitter.com/butchi_x", target="_blank")
-                  | butchi_x（半公式アカウント）
-              li
-                i.mdi.mdi-twitter-box
-                |  
-                a(href="https://twitter.com/zougoroku", target="_blank")
-                  | zougoroku （造語録）
-              li
-                i.mdi.mdi-tumblr
-                |  
-                a(href="http://butchiy.tumblr.com/", target="_blank")
-                  | butchiy
-              li
-                i.material-icons web
-                |  
-                a(href="http://qiita.com/butchi_y", target="_blank")
-                  | Qiita (ID: butchi_y)
-              li
-                i.material-icons web
-                |  
-                a(href="http://butchi.blog42.fc2.com/", target="_blank")
-                  | ブッチブログ
-              li
-                i.material-icons web
-                |  
-                a(href="http://mixi.jp/show_profile.pl?id=3213231", target="_blank")
-                  | mixi (ID:3213231)
-              li
-                i.material-icons web
-                |  
-                a(href="http://www.lastfm.jp/user/butchi_y", target="_blank")
-                  | Last.fm (id=butchi_y)
-              li
-                i.material-icons web
-                |  
-                a(href="http://www.pixiv.net/member.php?id=119", target="_blank")
-                  | pixiv (id=119)
-              li
-                i.material-icons web
-                |  
-                a(href="http://geek-house-yokohama.webnode.jp/", target="_blank")
-                  | ギークハウス横浜
-              li
-                i.material-icons web
-                |  
-                a(href="https://www.facebook.com/mathcafejapan/", target="_blank")
-                  | 数学カフェ
-              li
-                i.material-icons web
-                |  
-                a(href=`https://twitter.com/hashtag/${encodeURIComponent('日曜数学会')}`, target="_blank")
-                  | 日曜数学会
-              li
-                i.material-icons web
-                |  
-                a(href="http://maths4pg.connpass.com/", target="_blank")
-                  | プログラマのための数学勉強会
-              li
-                i.material-icons web
-                |  
-                a(href= `https://twitter.com/search?q=${encodeURIComponent('伝道師になろう')}`, target="_blank")
-                  | 伝道師になろう
+            ul.list
+              mixin link-item(opts)
+                - const { title, href } = opts
+                li.item
+                  block
+                  |  
+                  a(href= href, target="_blank")
+                    = title
 
-              //- li
-                a(href="http://merl.ec.t.kanazawa-u.ac.jp/diary_public/index.php?butchi", target="_blank")
-                  | 研究室作業日誌
+              +link-item({
+                title: '岩淵 勇樹',
+                href: 'https://www.facebook.com/yuuki.iwabuchi.9',
+              })
+                i.mdi.mdi-facebook-box
+
+              +link-item({
+                icon: 'mdi mdi-twitter-box',
+                title: 'butchi_y （公式アカウント）',
+                href: 'https://twitter.com/butchi_y',
+              })
+                i.mdi.mdi-twitter-box
+
+              +link-item({
+                title: 'butchi_x（半公式アカウント）',
+                href: 'https://twitter.com/butchi_x',
+              })
+                i.mdi.mdi-twitter-box
+
+              +link-item({
+                title: 'zougoroku （造語録）',
+                href: 'https://twitter.com/zougoroku',
+              })
+                i.mdi.mdi-twitter-box
+
+              +link-item({
+                title: 'butchiy',
+                href: 'http://butchiy.tumblr.com/',
+              })
+                i.mdi.mdi-tumblr
+
+              +link-item({
+                title: 'Qiita (ID: butchi_y)',
+                href: 'http://qiita.com/butchi_y',
+              })
+                i.material-icons web
+
+              +link-item({
+                title: 'ブッチブログ',
+                href: 'http://butchi.blog42.fc2.com/',
+              })
+                i.material-icons web
+
+              +link-item({
+                title: 'mixi (ID:3213231)',
+                href: 'http://mixi.jp/show_profile.pl?id=3213231',
+              })
+                i.material-icons web
+
+              +link-item({
+                title: 'Last.fm (id=butchi_y)',
+                href: 'http://www.lastfm.jp/user/butchi_y',
+              })
+                i.material-icons web
+
+              +link-item({
+                title: 'pixiv (id=119)',
+                href: 'http://www.pixiv.net/member.php?id=119',
+              })
+                i.material-icons web
+
+              +link-item({
+                title: 'ギークハウス横浜',
+                href: 'http://geek-house-yokohama.webnode.jp/',
+              })
+                i.material-icons web
+
+              +link-item({
+                title: '数学カフェ',
+                href: 'https://www.facebook.com/mathcafejapan/',
+              })
+                i.material-icons web
+
+              +link-item({
+                title: '日曜数学会',
+                href: `https://twitter.com/hashtag/${encodeURIComponent('日曜数学会')}`,
+              })
+                i.material-icons web
+
+              +link-item({
+                title: 'プログラマのための数学勉強会',
+                href: 'http://maths4pg.connpass.com/',
+              })
+                i.material-icons web
+
+              +link-item({
+                title: '伝道師になろう',
+                href: `https://twitter.com/search?q=${encodeURIComponent('伝道師になろう')}`,
+              })
+                i.material-icons web
+
+              //- +link-item({
+              //-   title: '研究室作業日誌',
+              //-   href: 'http://merl.ec.t.kanazawa-u.ac.jp/diary_public/index.php?butchi',
+              //- })
+              //-   i.material-icons web
 
       .inner-block
         .e-mail
