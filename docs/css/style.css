@@ -440,6 +440,43 @@ body[data-path^="person/profile/"] .sec-interest .interest-category {
       body[data-path^="person/profile/"] .sec-interest .interest-category .keyword .elm-a:hover {
         border-bottom: none; }
 
+body[data-category~="works-category"] .list {
+  display: block;
+  list-style: none; }
+
+body[data-category~="works-category"] .item {
+  display: inline-block;
+  margin-top: 15px;
+  margin-top: 0.15rem; }
+  @media screen and (min-width: 640px) {
+    body[data-category~="works-category"] .item {
+      margin-left: 0.1rem; } }
+
+body[data-category~="works-category"] .card {
+  width: 350px;
+  width: 3.5rem;
+  height: 350px;
+  height: 3.5rem;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  @media screen and (min-width: 640px) {
+    body[data-category~="works-category"] .card {
+      width: 2.56rem;
+      height: 2.56rem; } }
+
+body[data-category~="works-category"] .mdl-card__actions {
+  height: 52px;
+  height: 0.52rem;
+  padding: 16px;
+  padding: 0.16rem;
+  background: rgba(255, 255, 255, 0.5); }
+
+body[data-category~="works-category"] .title {
+  color: #000000;
+  font-size: 14px;
+  font-size: 0.14rem;
+  font-weight: 500; }
+
 body[data-category~="works-detail"] .link-box {
   border: 1px solid #e1e1e1;
   padding: 10px;
@@ -493,56 +530,29 @@ body[data-category~="works-detail"] .text-box .description {
     font-size: 11px;
     margin-top: 5px; } }
 
-body[data-category~="works-category"] .list {
-  display: block;
-  list-style: none; }
-
-body[data-category~="works-category"] .item {
-  display: inline-block;
-  margin-left: 10px;
-  margin-left: 0.1rem;
-  margin-top: 15px;
-  margin-top: 0.15rem; }
-
-body[data-category~="works-category"] .card {
-  width: 256px;
-  width: 2.56rem;
-  height: 256px;
-  height: 2.56rem;
-  background-repeat: no-repeat;
-  background-size: cover; }
-
-body[data-category~="works-category"] .mdl-card__actions {
-  height: 52px;
-  height: 0.52rem;
-  padding: 16px;
-  padding: 0.16rem;
-  background: rgba(255, 255, 255, 0.5); }
-
-body[data-category~="works-category"] .title {
-  color: #000000;
-  font-size: 14px;
-  font-size: 0.14rem;
-  font-weight: 500; }
-
 body[data-path="works/"] .list {
   display: block;
   list-style: none; }
 
 body[data-path="works/"] .item {
   display: inline-block;
-  margin-left: 10px;
-  margin-left: 0.1rem;
   margin-top: 15px;
   margin-top: 0.15rem; }
+  @media screen and (min-width: 640px) {
+    body[data-path="works/"] .item {
+      margin-left: 0.1rem; } }
 
 body[data-path="works/"] .card {
-  width: 256px;
-  width: 2.56rem;
-  height: 256px;
-  height: 2.56rem;
+  width: 350px;
+  width: 3.5rem;
+  height: 350px;
+  height: 3.5rem;
   background-repeat: no-repeat;
   background-size: cover; }
+  @media screen and (min-width: 640px) {
+    body[data-path="works/"] .card {
+      width: 2.56rem;
+      height: 2.56rem; } }
 
 body[data-path="works/"] .mdl-card__actions {
   height: 52px;

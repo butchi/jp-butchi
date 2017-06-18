@@ -8,13 +8,22 @@
   .item {
     display: inline-block;
 
-    margin-left: px(10);
     margin-top: px(15);
+
+    @include mq-pc {
+      margin-left: px(10);
+    }
   }
 
   .card {
-    width: px(256);
-    height: px(256);
+    width: px(350);
+    height: px(350);
+
+    @include mq-pc {
+      width: px(256);
+      height: px(256);
+    }
+
     background-repeat: no-repeat;
     background-size: cover;
   }
