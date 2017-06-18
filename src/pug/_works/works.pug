@@ -6,9 +6,10 @@ prepend config-block
 
 append config-block
   - rootPath = '../../'
-  - path = 'works/'
-  - imgPath = `${rootPath}img/${path}`
-  - dataPath = `${rootPath}data/${path}`
+  - path = `works/${meta.id}/`
+  - category = 'works-detail'
+  - imgPath = `${rootPath}img/works/`
+  - dataPath = `${rootPath}data/works/`
   - worksPath = '../'
   - title = meta.title || work.title
   - image = meta.image || work.image
