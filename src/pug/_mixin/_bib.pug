@@ -1,15 +1,8 @@
 mixin bib(key)
   if bib[key]
     - bibitem = bib[key]
-    - author = bibitem.author
-    - title = bibitem.title
-    - journal = bibitem.journal
-    - volume = bibitem.volume
-    - number = bibitem.number
-    - pages = bibitem.pages
-    - date = bibitem.date
-    - url = bibitem.url
-    - site = bibitem.site
+    - const { author, title, journal, volume, number, pages, date, url, site } = bibitem
+
     span.btc-bib
       if author
         if author instanceof Array
@@ -24,10 +17,10 @@ mixin bib(key)
       | . 
 
       if volume
-        | Vol.#{bibitem.volume}, 
+        | Vol.#{volume}, 
 
       if number
-        | No.#{bibitem.number}, 
+        | No.#{number}, 
 
       if pages
         if pages instanceof Array
