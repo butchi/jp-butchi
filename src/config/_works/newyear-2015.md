@@ -7,4 +7,4 @@ title:
 
 Googleのロゴとウールマークの融合。
 
-- 年賀サイト: [Infinitypx](https://butchi.github.io/infinitypx/)
+- 年賀サイト: [Infinitypx](https://butchi.github.io/nenga/2015/)
