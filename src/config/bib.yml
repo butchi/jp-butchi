@@ -641,3 +641,15 @@ lams--2013--iwabuchi-yuki:
     '2013'
   site:
     'publication/lams-2013/'
+
+mus-105--iwabuchi-yuki:
+  author:
+    - 岩淵勇樹
+  title:
+    カーペットフラクタルの可聴化と音楽生成
+  journal:
+    '<a href="http://www.sigmus.jp/?page_id=2843" target="_blank">第105回音楽情報科学研究会</a>'
+  date:
+    '2014-11'
+  site:
+    'publication/sigmus105/'
