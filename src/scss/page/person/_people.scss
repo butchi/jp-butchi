@@ -1,12 +1,29 @@
 @include with-page("person/people/") {
+  .list {
+    font-size: 0;
+  }
+
+  .item {
+    display: block;
+  }
+
   .card {
     margin-top: px(30);
 
-    width: px(256);
+    width: px(350);
+
+    @include mq-pc {
+      width: px(256);
+    }
 
     .face {
-      width: px(256);
-      height: px(256);
+      width: px(350);
+      height: px(350);
+
+      @include mq-pc {
+        width: px(256);
+        height: px(256);
+      }
 
       background-position: center center;
       background-size: cover;

@@ -9,326 +9,61 @@ prepend relation-link
   +person-relation
 
 mixin people(profileLi)
-  - const { name, sex, facebookId, picture, relation, description, linkLi, linkKey } = profileLi;
+  - const { name, nameSub, sex, facebookId, picture, relation, description, href, web, facebook, mixi, twitter, kayac, wikipedia } = profileLi;
 
   if picture
     - pictureUrl = `${imgPath}picture/${picture}`
   else
     if facebookId
       - pictureUrl = `https://graph.facebook.com/${facebookId}/picture?width=512&height=512`
-    else if sex == 'male'
-      - pictureUrl = `${imgPath}picture/male.png`
     else if sex == 'female'
       - pictureUrl = `${imgPath}picture/female.png`
+    else
+      - pictureUrl = `${imgPath}picture/male.png`
 
   .card.mdl-card.mdl-shadow--2dp
     .face.mdl-card__title(style= `background-image: url(${pictureUrl})`)
-      if name
-        h5.mdl-card__title-text!= name
+      if name || nameSub
+        h5.mdl-card__title-text
+          if name && nameSub
+            != `${name}<br>${nameSub}`
+          else if nameSub
+            != nameSub
+          else
+            != name
     if relation
       .relation.mdl-card__supporting-text= relation
     if description
       .description.mdl-card__supporting-text!= description
-    if linkLi
+    if web || facebook || mixi || twitter || kayac || wikipedia
       .list-link.mdl-card__actions.mdl-card--border
-        each url, key in linkLi
-          a.item-link.mdl-button.mdl-button--colored.mdl-js-button.mdl-js-ripple-effect(href= url, target="_blank")
-            if key == null
-            else if key === 'wikipedia'
-              i.mdi.mdi-wikipedia
-            else if key === 'facebook'
-              i.mdi.mdi-facebook-box
-            else if key === 'twitter'
-              i.mdi.mdi-twitter-box
-            else if key === 'mixi'
-              img(src='icon_mx_s.png')
-            else if key === 'kayac'
-              img(src='kayac_icon.gif')
-            else
-              i.material-icons web
+        each url, key in { web, facebook, mixi, twitter, kayac, wikipedia }
+          if url
+            a.item-link.mdl-button.mdl-button--colored.mdl-js-button.mdl-js-ripple-effect(href= url, target="_blank")
+              if key === 'wikipedia'
+                i.mdi.mdi-wikipedia
+              else if key === 'facebook'
+                i.mdi.mdi-facebook-box
+              else if key === 'twitter'
+                i.mdi.mdi-twitter-box
+              else if key === 'mixi'
+                img(src='icon_mx_s.png')
+              else if key === 'kayac'
+                img(src='kayac_icon.gif')
+              else
+                i.material-icons web
 
 block content-block
   +page-title
     | 岩淵 勇樹  の関連人物
 
   .inner-block
-    section
-      +heading(4)
-        | 家族
+    each group, groupName in people
+      section
+        +heading(4)
+          = groupName
 
-      +people({
-        name: '直樹',
-        sex: 'male',
-        facebookId: '100000331648419',
-        relation: '父',
-        description: '温厚でユーモアのある父。',
-        linkLi: {
-          facebook: 'http://www.facebook.com/profile.php?id=100000331648419',
-        },
-      })
-
-      +people({
-        name: '和子',
-        sex: 'female',
-        relation: '母',
-        description: '絵を描くのが上手（最近描いてないけど）な母。',
-      })
-
-      +people({
-        name: '加那子',
-        sex: 'female',
-        facebookId: '100002967867122',
-        relation: '姉',
-        description: '元自衛隊員の三児の母。B\'zの大ファン。',
-      })
-
-      +people({
-        name: '烏龍',
-        sex: 'male',
-        picture: 'oolong.jpg',
-        relation: 'ペット',
-        description: 'トイプードルのオス。エサをなかなか食べてくれない。',
-      })
-
-      +people({
-        name: '利夫',
-        sex: 'male',
-        relation: '祖父（故人）',
-        description: '相撲が強かった祖父。',
-      })
-
-      +people({
-        name: '町子',
-        sex: 'female',
-        relation: '祖母（故人）',
-        description: 'スナック「コンパル」を経営していた。背が高い。',
-      })
-
-      +people({
-        name: 'ロン',
-        sex: 'male',
-        picture: 'ron.jpg',
-        relation: 'ペット（故犬）',
-        description: 'ゴールデンレトリバーのオス。人懐っこくて従順。',
-      })
-
-    section
-      +heading(4)
-        | 親戚
-
-      +people({
-        name: '新太郎',
-        sex: 'male',
-        relation: '祖父',
-      })
-
-      +people({
-        name: '茂子',
-        sex: 'female',
-        relation: '祖母',
-      })
-
-      +people({
-        name: '邦彦',
-        sex: 'male',
-        relation: '伯父（故人）',
-      })
-
-      +people({
-        name: '英樹',
-        sex: 'male',
-        relation: '伯父',
-        description: '父の双子の兄。',
-      })
-
-      +people({
-        name: '勝代',
-        sex: 'female',
-        relation: '叔母',
-        description: '母の妹。',
-      })
-
-      +people({
-        name: '帆真',
-        sex: 'male',
-        relation: '義兄',
-        description: '姉の夫。自衛隊員。',
-      })
-
-      +people({
-        name: '樹武',
-        sex: 'male',
-        relation: '甥',
-        description: '姉の息子。車が大好き。',
-      })
-
-      +people({
-        name: '龍志',
-        sex: 'male',
-        relation: '甥',
-        description: '姉の息子。恐竜が大好き。',
-      })
-
-      +people({
-        name: '和誠',
-        sex: 'male',
-        relation: '甥',
-        description: '姉の息子。',
-      })
-
-    section
-      +heading(4)
-        | 親友
-
-      +people({
-        name: 'とも',
-        sex: 'male',
-        facebookId: '100004066425823',
-        relation: '大学・サークル同輩',
-        description: '同じ学科の友人で、アカペラサークルで何度もグループを組んだ仲。よく兄弟と間違われた同胞。',
-      })
-
-      +people({
-        name: '脇本 健弘',
-        sex: 'male',
-        facebookId: '100001513852939',
-        relation: '高校時代の先輩',
-        description: '高校時代のパソコン部の先輩。優秀な研究者。',
-        linkLi: {
-          web: 'http://www.wakimoto-lab.net/',
-          twitter: 'http://twitter.com/wakitake',
-          mixi: 'http://mixi.jp/show_friend.pl?id=2456805',
-          facebook: 'http://www.facebook.com/profile.php?id=100001513852939',
-        },
-        linkKey: 'web',
-      })
-
-      +people({
-        name: '小野 祐貴',
-        sex: 'male',
-        facebookId: '100004180332207',
-        relation: '大学時代の後輩',
-        description: 'プログラミングの趣向としてとても気が合う仲間。',
-      })
-
-    section
-      +heading(4)
-        | 尊敬する人
-
-      +people({
-        name: 'ドナルド・クヌース',
-        sex: 'male',
-        facebookId: '160686890655321',
-        description: '2進数の拡張をやったりTeXを開発したりと、個人的な嗜好にジャストミートな研究者。',
-        linkLi: {
-          wikipedia: 'http://ja.wikipedia.org/wiki/%E3%83%89%E3%83%8A%E3%83%AB%E3%83%89%E3%83%BB%E3%82%AF%E3%83%8C%E3%83%BC%E3%82%B9',
-        },
-        linkKey: 'wikipedia',
-      })
-
-      +people({
-        name: '秋田 純一',
-        sex: 'male',
-        facebookId: '100002043415315',
-        relation: '指導教員',
-        description: '大学・大学院で6年間お世話になった先生。研究者としての生き字引。',
-        linkLi: {
-          web: 'http://akita11.jp',
-          twitter: 'http://twitter.com/akita11',
-          facebook: 'http://www.facebook.com/profile.php?id=100002043415315',
-          mixi: 'http://mixi.jp/show_friend.pl?id=37061',
-        },
-        linkKey: 'web',
-      })
-
-      +people({
-        name: '宮下 芳明',
-        sex: 'male',
-        facebookId: '100000104425995',
-        relation: '',
-        description: '映像・音楽もプロ級で研究も独創的なマルチクリエイター研究者。',
-        linkLi: {
-          web: 'http://www.homei.com/',
-          twitter: 'http://twitter.com/HomeiMiyashita',
-        },
-        linkKey: 'web',
-      })
-
-    section
-      +heading(4)
-        | 憧れのカヤック社員
-
-      +people({
-        name: '綿引 啓太',
-        sex: 'male',
-        facebookId: '100000908576388',
-        relation: '同僚',
-        description: '頭のキレがかなり凄い上に、ファッションセンスも抜群。',
-        linkLi: {
-          kayac: 'http://www.kayac.com/member/watahiki-keita',
-        },
-        linkKey: 'kayac',
-      })
-
-    section
-      +heading(4)
-        | お気に入りのアーティスト
-
-      +people({
-        name: `リチャード・D・ジェームス<br>(Aphex Twin)`,
-        sex: 'male',
-        facebookId: 'aphextwinafx',
-        description: 'ドラムンベースの巨匠。',
-        linkLi: {
-          wikipedia: 'http://ja.wikipedia.org/wiki/%E3%82%A8%E3%82%A4%E3%83%95%E3%82%A7%E3%83%83%E3%82%AF%E3%82%B9%E3%83%BB%E3%83%84%E3%82%A4%E3%83%B3',
-        },
-        linkKey: 'wikipedia',
-      })
-
-      +people({
-        name: `遠藤 大介<br>(DE DE MOUSE)`,
-        sex: 'male',
-        facebookId: '100000084938713',
-        description: 'アルバム『A journey to freedom』がかなりツボ。',
-        linkLi: {
-          web: 'http://dedemouse.com/',
-          wikipedia: 'http://ja.wikipedia.org/wiki/DE_DE_MOUSE',
-          twitter: 'http://twitter.com/DEDEMOUSE',
-        },
-        linkKey: 'web',
-      })
-
-      +people({
-        name: '野村 哲也',
-        sex: 'male',
-        facebookId: 'khmnomura',
-        description: 'ファイナルファンタジーVIIのキャラクターデザインなどを手がけており、画風がかなり好み。',
-        linkLi: {
-          wikipedia: 'http://ja.wikipedia.org/wiki/%E9%87%8E%E6%9D%91%E5%93%B2%E4%B9%9F',
-        },
-        linkKey: 'wikipedia',
-      })
-
-      +people({
-        name: '中島 信也',
-        sex: 'male',
-        facebookId: '100009459666495',
-        relation: '',
-        description: `CMディレクターで、有名なCMを数々手掛けている。<a href="http://eat-project.jp/" target="_blank">eAT KANAZAWA</a>の実行委員長。`,
-        linkLi: {
-          wikipedia: 'http://ja.wikipedia.org/wiki/%E4%B8%AD%E5%B3%B6%E4%BF%A1%E4%B9%9F',
-        },
-        linkKey: 'wikipedia',
-      })
-
-      +people({
-        name: `土佐 信道<br>(明和電機)`,
-        sex: 'male',
-        facebookId: '1698800852',
-        description: `<a href="http://www.maywadenki.com/otamatone/" target="_blank">オタマトーン</a>や<a href="http://bbu.kayac.com/" target="_blank">YUREX</a>などを開発したマルチクリエイター。<a href="http://eat-project.jp/" target="_blank">eAT KANAZAWA</a>の常連。`,
-        linkLi: {
-          web: 'http://www.maywadenki.com/',
-          wikipedia: 'http://ja.wikipedia.org/wiki/%E6%98%8E%E5%92%8C%E9%9B%BB%E6%A9%9F',
-        },
-        linkKey: 'web',
-      })
+        .list
+          each person in group
+            .item
+              +people(person)

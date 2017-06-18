@@ -353,18 +353,31 @@ body[data-path^="org/kep/as-graph/"] .card {
     height: 377px;
     height: 3.77rem; }
 
+body[data-path^="person/people/"] .list {
+  font-size: 0; }
+
+body[data-path^="person/people/"] .item {
+  display: block; }
+
 body[data-path^="person/people/"] .card {
   margin-top: 30px;
   margin-top: 0.3rem;
-  width: 256px;
-  width: 2.56rem; }
+  width: 350px;
+  width: 3.5rem; }
+  @media screen and (min-width: 640px) {
+    body[data-path^="person/people/"] .card {
+      width: 2.56rem; } }
   body[data-path^="person/people/"] .card .face {
-    width: 256px;
-    width: 2.56rem;
-    height: 256px;
-    height: 2.56rem;
+    width: 350px;
+    width: 3.5rem;
+    height: 350px;
+    height: 3.5rem;
     background-position: center center;
     background-size: cover; }
+    @media screen and (min-width: 640px) {
+      body[data-path^="person/people/"] .card .face {
+        width: 2.56rem;
+        height: 2.56rem; } }
   body[data-path^="person/people/"] .card .mdl-card__title {
     padding: 0; }
   body[data-path^="person/people/"] .card .mdl-card__title-text {

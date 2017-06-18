@@ -131,6 +131,7 @@ gulp.task('pug', () => {
     bib: readConfig(`${CONFIG}/bib.yml`),
     interest: readConfig(`${CONFIG}/interest.yml`),
     works: readConfig(`${CONFIG}/works.json`).sheet,
+    people: readConfig(`${CONFIG}/people.json`),
     dataPageSymbol: readConfig(`${CONFIG}/symbol.yml`),
   };
 
