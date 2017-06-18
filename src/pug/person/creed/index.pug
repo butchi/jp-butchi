@@ -1,7 +1,12 @@
 extends /_layout/_default-layout
 
+include /_mixin/_person-relation
+
 append config-block
   - title = '者是'
+
+prepend relation-link
+  +person-relation
 
 block content-block
   section.sec-history

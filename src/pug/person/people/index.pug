@@ -1,7 +1,12 @@
 extends /_layout/_default-layout
 
+include /_mixin/_person-relation
+
 append config-block
   - title = '関連人物'
+
+prepend relation-link
+  +person-relation
 
 mixin people(profileLi)
   - name = profileLi.name

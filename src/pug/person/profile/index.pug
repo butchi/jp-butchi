@@ -1,7 +1,12 @@
 extends /_layout/_default-layout
 
+include /_mixin/_person-relation
+
 append config-block
   - title = '生い立ち'
+
+prepend relation-link
+  +person-relation
 
 block content-block
   +page-title

@@ -116,16 +116,20 @@ html(lang="ja")
               | メニュー
             nav.mdl-navigation
               +navigation-link({
-                href: `${rootPath}person/profile/`,
-                title: 'プロフィール',
+                title: 'ホーム',
+                href: `${rootPath}`,
               })
               +navigation-link({
-                href: `${rootPath}works/`,
+                title: 'About me',
+                href: `${rootPath}person/`,
+              })
+              +navigation-link({
                 title: '作品',
+                href: `${rootPath}works/`,
               })
               +navigation-link({
-                href: `${rootPath}documents/`,
                 title: '解説記事',
+                href: `${rootPath}documents/`,
               })
               .list-share.mdl-textfield--align-right
                 .item-share.facebook
