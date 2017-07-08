@@ -1,5 +1,7 @@
 extends /_layout/_default-layout
 
+include /_mixin/_template-option
+
 prepend config-block
   - const work = _.values(works).filter((work) => work.id === meta.id )[0] || {}
   - page_name = meta.title
@@ -41,4 +43,5 @@ block content-block
 
     if body
       .desc
-        != body
+        +template-option
+        != _.template(unescape(body))(templateOption)

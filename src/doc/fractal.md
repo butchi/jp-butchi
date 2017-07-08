@@ -17,7 +17,7 @@
 
 コッホ曲線を3つ繋げた図形。内部の面積は有限だが境界線の長さは無限大。
 
-![コッホ雪片](${imgPath}koch_snowflake.png)
+![コッホ雪片]($$$imgPath$$$koch_snowflake.png)
 
 </section>
 
@@ -25,7 +25,7 @@
 
 ## コッホ曲線（Koch curve）
 
-![コッホ曲線](${imgPath}koch.gif)
+![コッホ曲線]($$$imgPath$$$koch.gif)
 
 <section class="quadratic-von-koch-curve-type-1">
 
@@ -33,7 +33,7 @@
 
 [Vicsek fractal](#.vicsek-fractal) の一部。
 
-![Quadratic von Koch curve (type 1)](${imgPath}quadratic_type1_4.png)
+![Quadratic von Koch curve (type 1)]($$$imgPath$$$quadratic_type1_4.png)
 
 </section>
 
@@ -43,7 +43,7 @@
 
 ミンコフスキーのソーセージ(Minkowski sausage)とも。
 
-![Quadratic von Koch curve (type 2)](${imgPath}quadratic_type2_3.png)
+![Quadratic von Koch curve (type 2)]($$$imgPath$$$quadratic_type2_3.png)
 
 </section>
 
@@ -51,7 +51,7 @@
 
 ### Cesaro fractal
 
-![Cesaro fractal](${imgPath}cesaro_6.png)
+![Cesaro fractal]($$$imgPath$$$cesaro_6.png)
 
 </section>
 
@@ -59,11 +59,11 @@
 
 ### コッホ曲線の亜種
 
-![コッホ曲線の亜種](${imgPath}4_6.png)
+![コッホ曲線の亜種]($$$imgPath$$$4_6.png)
 
-![コッホ曲線の亜種](${imgPath}5_6.png)
+![コッホ曲線の亜種]($$$imgPath$$$5_6.png)
 
-![コッホ曲線の亜種](${imgPath}6_6.png)
+![コッホ曲線の亜種]($$$imgPath$$$6_6.png)
 
 </section>
 
@@ -77,7 +77,7 @@
 
 cf) 悪魔の階段（Devil's staircase、カントール関数（Cantor function））
 
-![悪魔の階段（カントール関数）](${imgPath}cantor_function.png)
+![悪魔の階段（カントール関数）]($$$imgPath$$$cantor_function.png)
 
 </section>
 
@@ -87,7 +87,7 @@ cf) 悪魔の階段（Devil's staircase、カントール関数（Cantor functio
 
 カントール集合の2次元への拡張。
 
-[![シェルピンスキーのギャスケット](${imgPath}cantor_dust.png)](${imgPath}cantor_dust_large.png)
+[![シェルピンスキーのギャスケット]($$$imgPath$$$cantor_dust.png)]($$$imgPath$$$cantor_dust_large.png)
 
 </section>
 
@@ -96,7 +96,7 @@ cf) 悪魔の階段（Devil's staircase、カントール関数（Cantor functio
 ## Cantor Square Fractal
 [カントールの塵](#.cantor-dust) の補集合
 
-[![シェルピンスキーのギャスケット](${imgPath}cantor_square_fractal.png)](${imgPath}cantor_square_fractal_large.png)
+[![シェルピンスキーのギャスケット]($$$imgPath$$$cantor_square_fractal.png)]($$$imgPath$$$cantor_square_fractal_large.png)
 
 </section>
 
@@ -105,27 +105,27 @@ cf) 悪魔の階段（Devil's staircase、カントール関数（Cantor functio
 ## シェルピンスキーのギャスケット（Sierpiński gasket）
 <small>「シェルピンスキーのガスケット」や「シルピンスキーのギャスケット」、「シェルピンスキーの三角形（Sierpiński triangle）」などとも。</small>
 
-[![シェルピンスキーのギャスケット](${imgPath}sierpinski_gasket.png)](${imgPath}sierpinski_gasket.svg)
+[![シェルピンスキーのギャスケット]($$$imgPath$$$sierpinski_gasket.png)]($$$imgPath$$$sierpinski_gasket.svg)
 
 点（図示では円）を初期集合として表すこともできる。
 
-[![シェルピンスキーのギャスケット](${imgPath}sierpinski_gasket_with_point.png)](${imgPath}sierpinski_gasket_with_point.svg)
+[![シェルピンスキーのギャスケット]($$$imgPath$$$sierpinski_gasket_with_point.png)]($$$imgPath$$$sierpinski_gasket_with_point.svg)
 
 線分を初期集合として表すこともできる。
 
-[![シェルピンスキーのギャスケット](${imgPath}sierpinski_gasket_with_line.png)](${imgPath}sierpinski_gasket_with_line.svg)
+[![シェルピンスキーのギャスケット]($$$imgPath$$$sierpinski_gasket_with_line.png)]($$$imgPath$$$sierpinski_gasket_with_line.svg)
 
 三角形を初期集合として表すこともできる。これが一番よく知られている方法である。
 
-[![シェルピンスキーのギャスケット](${imgPath}sierpinski_gasket_with_triangle.png)](${imgPath}sierpinski_gasket_with_triangle.svg)
+[![シェルピンスキーのギャスケット]($$$imgPath$$$sierpinski_gasket_with_triangle.png)]($$$imgPath$$$sierpinski_gasket_with_triangle.svg)
 
 ビットマップに合う簡単な形としてせん断された状態で描かれることもある。下図はセルオートマトンのルール60である。
 
-[![シェルピンスキーのギャスケット](${imgPath}sierpinski_gasket_rule60.png)](${imgPath}sierpinski_gasket_rule60_large.png)
+[![シェルピンスキーのギャスケット]($$$imgPath$$$sierpinski_gasket_rule60.png)]($$$imgPath$$$sierpinski_gasket_rule60_large.png)
 
 下図のセルオートマトンのルール90としても知られている。
 
-[![シェルピンスキーのギャスケット](${imgPath}sierpinski_gasket_rule90.png)](${imgPath}sierpinski_gasket_rule90_large.png)
+[![シェルピンスキーのギャスケット]($$$imgPath$$$sierpinski_gasket_rule90.png)]($$$imgPath$$$sierpinski_gasket_rule90_large.png)
 
 </section>
 
@@ -135,7 +135,7 @@ cf) 悪魔の階段（Devil's staircase、カントール関数（Cantor functio
 
 シェルピンスキーのギャスケットの外形が正三角形であるのに対し、こちらは正方形。
 
-[![シェルピンスキーのカーペット](${imgPath}sierpinski_carpet.png)](${imgPath}sierpinski_carpet_large.png)
+[![シェルピンスキーのカーペット]($$$imgPath$$$sierpinski_carpet.png)]($$$imgPath$$$sierpinski_carpet_large.png)
 
 </section>
 
@@ -159,8 +159,8 @@ cf) 悪魔の階段（Devil's staircase、カントール関数（Cantor functio
 
 X字(saltire)の作り方と+字(cross)の作り方がある。
 
-[![シェルピンスキーのカーペット](${imgPath}vicsek_saltire.png)](${imgPath}vicsek_saltire_large.png)
-[![シェルピンスキーのカーペット](${imgPath}vicsek_cross.png)](${imgPath}vicsek_cross_large.png)
+[![シェルピンスキーのカーペット]($$$imgPath$$$vicsek_saltire.png)]($$$imgPath$$$vicsek_saltire_large.png)
+[![シェルピンスキーのカーペット]($$$imgPath$$$vicsek_cross.png)]($$$imgPath$$$vicsek_cross_large.png)
 
 </section>
 
@@ -180,11 +180,11 @@ $n=3$ でシェルピンスキーのギャスケット、 $n=4$ でVicsek fracta
 
 ### Hexaflake
 
-[![Hexaflake](${imgPath}hexaflake.png)](${imgPath}hexaflake.svg)
+[![Hexaflake]($$$imgPath$$$hexaflake.png)]($$$imgPath$$$hexaflake.svg)
 
 ビットマップに合う簡単な形としてせん断された状態でも描ける。
 
-[![Hexaflake](${imgPath}hexaflake_carpet.png)](${imgPath}hexaflake_carpet_large.png)
+[![Hexaflake]($$$imgPath$$$hexaflake_carpet.png)]($$$imgPath$$$hexaflake_carpet_large.png)
 
 </section>
 
@@ -248,7 +248,7 @@ $n=3$ でシェルピンスキーのギャスケット、 $n=4$ でVicsek fracta
 
 #### 2D Greek cross fractal (?)
 
-![2D Greek cross fractal (?)](${imgPath}1_3.png)
+![2D Greek cross fractal (?)]($$$imgPath$$$1_3.png)
 
 [2D Greek cross fractal](http://en.wikipedia.org/wiki/File:Greek_cross_fractal_stage_4.svg)
 
@@ -302,7 +302,7 @@ Z曲線（z-order curve）とも
 
 ## ドラゴン曲線（dragon curve）
 
-![ドラゴン曲線](${imgPath}dragon.gif)
+![ドラゴン曲線]($$$imgPath$$$dragon.gif)
 
 これも空間充填曲線の一種である。境界線のハウスドルフ次元は非整数である。
 
@@ -310,11 +310,11 @@ Heighway dragon、Harter–Heighway dragon、Jurassic Park dragonとも。
 
 Twindragon曲線（Davis-Knuth dragon）は2つのドラゴン曲線を点対称に繋ぎ合わせた形であり、複素数を $i-1$ 進数で表したときに見つけられる形である。
 
-[![Twindragon曲線](${imgPath}twindragon.png)](${imgPath}twindragon_large.png)
+[![Twindragon曲線]($$$imgPath$$$twindragon.png)]($$$imgPath$$$twindragon_large.png)
 
 派生形としてテルドラゴン曲線（Terdragon Curve）もある。
 
-![テルドラゴン曲線](${imgPath}terdragon_8.png)
+![テルドラゴン曲線]($$$imgPath$$$terdragon_8.png)
 
 </section>
 
@@ -324,7 +324,7 @@ Twindragon曲線（Davis-Knuth dragon）は2つのドラゴン曲線を点対称
 
 ドラゴン曲線と似た方法で作られ、Lévy dragonとも呼ばれる。<small>（個人的にはあまり好きじゃないかたち…。）</small>
 
-![レヴィのC曲線](${imgPath}c_13.png)
+![レヴィのC曲線]($$$imgPath$$$c_13.png)
 
 </section>
 
@@ -336,7 +336,7 @@ Twindragon曲線（Davis-Knuth dragon）は2つのドラゴン曲線を点対称
 
 ## ミンコフスキー曲線（Minkowski curve）
 
-![ミンコフスキー曲線](${imgPath}minkowski_6.png)
+![ミンコフスキー曲線]($$$imgPath$$$minkowski_6.png)
 
 </section>
 
@@ -350,9 +350,9 @@ Twindragon曲線（Davis-Knuth dragon）は2つのドラゴン曲線を点対称
 
 名前を知っている方がいればご一報ください。
 
-![無名の再帰曲線](${imgPath}3_6.png)
+![無名の再帰曲線]($$$imgPath$$$3_6.png)
 
-![無名の再帰曲線](${imgPath}7_5.png)
+![無名の再帰曲線]($$$imgPath$$$7_5.png)
 
 </section>
 
@@ -366,7 +366,7 @@ Twindragon曲線（Davis-Knuth dragon）は2つのドラゴン曲線を点対称
 
 ## マンデルブロ集合（Mandelbrot set）
 
-[![マンデルブロ集合](${imgPath}mandelbrot.png)](${imgPath}mandelbrot--large.png)
+[![マンデルブロ集合]($$$imgPath$$$mandelbrot.png)]($$$imgPath$$$mandelbrot--large.png)
 
 </section>
 
@@ -420,7 +420,7 @@ Twindragon曲線（Davis-Knuth dragon）は2つのドラゴン曲線を点対称
 
 ## ロマネスコ（Broccoflower）
 
-[![ロマネスコ](${imgPath}romanesco.jpg)](${imgPath}romanesco--large.jpg)
+[![ロマネスコ]($$$imgPath$$$romanesco.jpg)]($$$imgPath$$$romanesco--large.jpg)
 
 </section>
 
@@ -428,9 +428,9 @@ Twindragon曲線（Davis-Knuth dragon）は2つのドラゴン曲線を点対称
 
 ## ブロッコリー（Broccoli）
 
-![ブロッコリーの束](${imgPath}broccoli_all.jpg)
+![ブロッコリーの束]($$$imgPath$$$broccoli_all.jpg)
 
-![ブロッコリーのかけら](${imgPath}broccoli_part.jpg)
+![ブロッコリーのかけら]($$$imgPath$$$broccoli_part.jpg)
 
 </section>
 
