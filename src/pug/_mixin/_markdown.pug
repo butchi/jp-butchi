@@ -11,6 +11,6 @@ mixin md(path)
     };
 
   - const mddoc = require('read-file').sync(`src/${path}`, 'utf8');
-  -
-    const mddocHtml = _.template(mddoc)(templateOption);
+  - const mddocHtml = _.template(mddoc)(templateOption);
+
   article!= markdown.render(mddocHtml)
