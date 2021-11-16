@@ -5,10 +5,29 @@
 @import 'function', 'variable', 'keyframes';
 
 // mixin
-@import 'mixin/**/*';
+@import 'mixin/clearfix';
+@import 'mixin/bgimg';
+@import 'mixin/media-queries';
+@import 'mixin/with-page';
+@import 'mixin/layout';
 
 // modules
-@import 'module/**/*';
+@import 'module/common';
+@import 'module/mdl-reset';
+@import 'module/wrapper';
+@import 'module/btc-heading';
+@import 'module/btc-news';
+@import 'module/btc-butchi-number-viewer';
 
 // pages
-@import 'page/**/*';
+@import 'page/root';
+@import 'page/documents/butchi-number';
+@import 'page/documents/fractal';
+@import 'page/documents/analytic-signal';
+@import 'page/works/index';
+@import 'page/works/category';
+@import 'page/works/detail';
+@import 'page/person/people';
+@import 'page/person/profile';
+@import 'page/org/kep/as-graph';
+
