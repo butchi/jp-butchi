@@ -5,14 +5,11 @@ include /_mixin/_mathjax
 include /_mixin/_markdown
 
 block config-block
-  - path = pugPath.replace(/[^\/]+.pug$/, '')
-  - rootPath = path.replace(/(.+?)[\/]/g, '../')
   - imgPath = `${rootPath}img/${path}`
   - dataPath = `${rootPath}data/${path}`
-  - title = page_name ? [page_name, settings.site_name].join(' | ') : settings.site_name
-  - description = description || settings.description
-  - keywords = keywords || settings.keywords
-  - url = url || settings.url
+  - description = meta.discription
+  - keywords = meta.keywords
+  - url = meta.url
 
 doctype html
 html(lang="ja")
@@ -26,49 +23,49 @@ html(lang="ja")
       meta(name="description", content= description)
     if keywords && keywords.length
       meta(name="keywords", content= keywords.join ? keywords.join(',') : keywords)
-    if settings.favicon_url
-      link(rel="shortcut icon", href= settings.favicon_url, type="image/vnd.microsoft.icon")
-      link(rel="icon", href= settings.favicon_url, type="image/vnd.microsoft.icon")
+    if meta.favicon_url
+      link(rel="shortcut icon", href= meta.favicon_url, type="image/vnd.microsoft.icon")
+      link(rel="icon", href= meta.favicon_url, type="image/vnd.microsoft.icon")
 
     //- IEで「互換モード」で表示されるのを防ぐための指定
     meta(http-equiv="X-UA-Compatible", content="IE=Edge")
       
     // smartphone meta
     meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no")
-    if settings.webclipicon_url
+    if meta.webclipicon_url
       meta(name="apple-mobile-web-app-capable", content='yes')
-      meta(name="apple-mobile-web-app-status-bar-style", content= settings.ios_status_bar || 'default')
+      meta(name="apple-mobile-web-app-status-bar-style", content= meta.ios_status_bar || 'default')
       link(rel="apple-touch-icon", href=webclipicon_url)
 
     // ogp
-    if settings.facebook_app_id
-      meta(property="fb:app_id", content= settings.facebook_app_id)
+    //- if meta.facebook_app_id
+      meta(property="fb:app_id", content= meta.facebook_app_id)
     if url
       if path === '/'
         meta(property="og:url", content= `${url}`)
       else
         meta(property="og:url", content= `${url}${path}`)
-    if settings.ogp_image_url
-      meta(property="og:image", content= settings.ogp_image_url)
-    if settings.ogp_image_width
-      meta(property="og:image:width", content= settings.ogp_image_width)
-    if settings.ogp_image_height
-      meta(property="og:image:height", content= settings.ogp_image_height)
-    meta(property="og:type", content= settings.ogp_type || "website")
+    if meta.ogp_image_url
+      meta(property="og:image", content= meta.ogp_image_url)
+    if meta.ogp_image_width
+      meta(property="og:image:width", content= meta.ogp_image_width)
+    if meta.ogp_image_height
+      meta(property="og:image:height", content= meta.ogp_image_height)
+    meta(property="og:type", content= meta.ogp_type || "website")
     meta(property="og:title", content= title)
-    meta(property="og:site_name", content= settings.site_name)
+    meta(property="og:site_name", content= meta.site_name)
     meta(property="og:description", content= description)
     meta(property="og:locale", content=ogp_locale || "ja_JP")
 
     // twitter card
-    meta(property="twitter:card", content= (settings.ogp_image_url ? 'summary_large_image' : 'summary'))
+    meta(property="twitter:card", content= (meta.ogp_image_url ? 'summary_large_image' : 'summary'))
     meta(property="twitter:title", content= title)
     meta(property="twitter:description", content= description)
-    if settings.ogp_image_url
-      meta(property="twitter:image", content= settings.ogp_image_url)
+    if meta.ogp_image_url
+      meta(property="twitter:image", content= meta.ogp_image_url)
     if twitter_card_owner
-      meta(property="twitter:site", content= settings.twitter_card_owner)
-      meta(property="twitter:creator", content= settings.twitter_card_owner)
+      meta(property="twitter:site", content= meta.twitter_card_owner)
+      meta(property="twitter:creator", content= meta.twitter_card_owner)
 
     if url
       // canonical url

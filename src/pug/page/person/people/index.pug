@@ -2,6 +2,10 @@ extends /_layout/_default-layout
 
 include /_mixin/_person-relation
 
+prepend config-block
+  - rootPath = "../../"
+  - path = 'person/people/'
+
 append config-block
   - title = '関連人物'
 

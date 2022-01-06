@@ -24,7 +24,12 @@ const htmlTemplates = routeDataMapper({
         {},
         constants,
         {
-            meta: readConfig(`${SRC}/pug/meta.yml`)
+            meta: readConfig(`${SRC}/pug/meta.yml`),
+            bib: readConfig(`${SRC}/config/bib.yml`),
+            interest: readConfig(`${SRC}/config/interest.yml`),
+            people: readConfig(`${SRC}/config/people.json`),
+            works: readConfig(`${SRC}/config/works.json`),
+            dataPageSymbol: readConfig(`${SRC}/config/symbol.yml`),
         }
     )
 })

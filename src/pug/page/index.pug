@@ -57,13 +57,6 @@ block content-block
           +icon('hanjukugo.png', '半熟語', `${rootPath}project/hanjukugo/`)
           +icon('nandemo-magic.png', 'なんでも魔法。', `${rootPath}works/nandemo-magic/`)
 
-      section.section-feed#feed
-        +section-title
-          | Feed
-
-        .inner-block
-          .butchi-feed
-
       section.section-news#news
         +section-title
           | News
@@ -92,6 +85,7 @@ block content-block
             li
               time(datetime="2012-04") 2012年4月
               | ～ 
+              time(datetime="2020-02") 2020年2月
               a(href="http://www.kayac.com/", target="_blank")
                 | 面白法人カヤック
 
@@ -235,7 +229,7 @@ block content-block
                 .appendix
                   a(href='documents/yugen20120826') [発表スライド(HTMLページ)]
 
-      section.section-institution#institution
+      //- section.section-institution#institution
         +section-title
           | 所属学会
 
@@ -254,8 +248,8 @@ block content-block
               | 所属
             ul
               li
-                a(href="http://www.kayac.com/", target="_blank")
-                  | 面白法人カヤック
+                a(href="https://mathcafe.net/", target="_blank")
+                  | 数学カフェ
               li
                 a(href="http://wbawakate.jp/", target="_blank")
                   | 全脳アーキテクチャ若手の会
@@ -288,6 +282,9 @@ block content-block
               li
                 a(href="http://www.geocities.jp/kinndai_art/", target="_blank")
                   | 金沢大学美術部
+              li
+                a(href="https://www.kayac.com/", target="_blank")
+                  | 面白法人カヤック
 
           section.sec-link
             +heading(5)
@@ -303,19 +300,19 @@ block content-block
 
               +link-item({
                 title: '岩淵 勇樹',
-                href: 'https://www.facebook.com/yuuki.iwabuchi.9',
+                href: 'https://www.facebook.com/iwabuchi.yuki.butchi',
               })
                 i.mdi.mdi-facebook-box
 
               +link-item({
                 icon: 'mdi mdi-twitter-box',
-                title: 'butchi_y （公式アカウント）',
+                title: 'butchi_y （Twitter趣味アカウント）',
                 href: 'https://twitter.com/butchi_y',
               })
                 i.mdi.mdi-twitter-box
 
               +link-item({
-                title: 'butchi_x（半公式アカウント）',
+                title: 'butchi_x（Twitterサブアカウント）',
                 href: 'https://twitter.com/butchi_x',
               })
                 i.mdi.mdi-twitter-box
@@ -370,31 +367,13 @@ block content-block
 
               +link-item({
                 title: '数学カフェ',
-                href: 'https://www.facebook.com/mathcafejapan/',
+                href: 'https://mathcafe.net/',
               })
                 i.material-icons web
 
               +link-item({
                 title: '日曜数学会',
                 href: `https://twitter.com/hashtag/${encodeURIComponent('日曜数学会')}`,
-              })
-                i.material-icons web
-
-              +link-item({
-                title: 'プログラマのための数学勉強会',
-                href: 'http://maths4pg.connpass.com/',
-              })
-                i.material-icons web
-
-              +link-item({
-                title: '伝道師になろう',
-                href: `https://twitter.com/search?q=${encodeURIComponent('伝道師になろう')}`,
-              })
-                i.material-icons web
-
-              +link-item({
-                title: 'もうやん文京',
-                href: 'https://mouyanbunkyo.jimdo.com/',
               })
                 i.material-icons web
 
@@ -415,7 +394,7 @@ block content-block
           p.address
             i.material-icons email
             | e-mail:
-            | k38647
+            | butchiyu+mailer-1
             span.delete-me (deleteme:スパム対策)
             | @gmail.com
           p.attention (テキストコピー時注意↑)

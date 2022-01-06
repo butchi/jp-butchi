@@ -2,6 +2,10 @@ extends /_layout/_default-layout
 
 include /_mixin/_person-relation
 
+prepend config-block
+  - rootPath = "../../"
+  - path = 'person/profile/'
+
 append config-block
   - title = '生い立ち'
 
@@ -56,8 +60,8 @@ block content-block
           | 福井県立大野高等学校 入学
           ul
             li パソコン部
-            li 放送部(2001年～)
-            li 合唱部(2001年～)
+            li 放送部(<time datetime="2001">2001年</time>～)
+            li 合唱部(<time datetime="2001">2001年</time>～)
         li.item-history
           +heading(4)
             time(datetime="2003") 2003年
@@ -65,7 +69,7 @@ block content-block
           ul
             li アカペラサークル"MeloMelo"
             li 美術部
-            li ICT教材作成支援室（金沢大学FD・ICT教育推進室）(2005年～)
+            li ICT教材作成支援室（金沢大学FD・ICT教育推進室）(<time datetime="2005">2005年</time>～)
         li.item-history
           +heading(4)
             time(datetime="2007") 2007年
@@ -102,6 +106,11 @@ block content-block
               | （
               time(datetime="2014") 2014年
               | 〜）
+            li
+              | 総務部
+              | （
+              time(datetime="2019") 2019年
+              | 〜）
         li.item-history
           +heading(4)
             time(datetime="2015-10") 2015年
@@ -109,6 +118,15 @@ block content-block
           a(href="http://wbawakate.jp/", target="_blank")
             | 全脳アーキテクチャ若手の会
           |  社会人支部
+        li.item-history
+          +heading(4)
+            time(datetime="2020-02") 2020年
+          a(href="http://wbawakate.jp/", target="_blank")
+            | 面白法人カヤック 退職
+        li.item-history
+          +heading(4)
+            time(datetime="2021-03") 2021年3月
+          | 人生二度目の転機
 
   section
     +section-title
@@ -116,8 +134,8 @@ block content-block
 
     .inner-block
       ul
-        li 大野市開成中学校 漢字博士(2000年)(1997度入学生としては単独での認定)
-        li 漢字検定2級(2000年ごろ)
+        li 大野市開成中学校 漢字博士(2000年3月15日)(1997年度入学生としては単独での認定)
+        li 漢字検定2級(2000年7月7日)
         li 数学検定準1級(2002年)
         li パソコン検定3級(2002年)
         li 金沢大学副学長表彰(2007年／ICT教材作成支援室学生クルーキャプテンとして)
@@ -159,7 +177,7 @@ block content-block
                 - href = 'http://wbawakate.jp/';
               else
                 - type = 'google'
-                - href = `https://www.google.com/#q=${encodeURIComponent(item)}`
+                - href = `https://www.google.com/search?q=${encodeURIComponent(item)}`
 
               if type === 'google'
                 a.elm-a.google(href= href, target="_blank")
@@ -176,6 +194,9 @@ block content-block
       | 興味キーワード
 
     .inner-block
+      section.sec-interest-technology
+        +interest-list('技術')
+
       section.sec-interest-research
         +interest-list('研究')
 
