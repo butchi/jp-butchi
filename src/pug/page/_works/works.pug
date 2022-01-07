@@ -1,7 +1,7 @@
 extends /_layout/_default-layout
 
 prepend config-block
-  - const work = _.values(works).filter((work) => work.id === meta.id )[0] || {}
+  - const work = lodash.values(works).filter((work) => work.id === meta.id )[0] || {}
   - page_name = meta.title
 
 append config-block
@@ -42,7 +42,7 @@ block content-block
     if body
       .desc
         -
-          const bodyHtml = _.template(unescape(body), {
+          const bodyHtml = lodash.template(unescape(body), {
             interpolate: /\$\$\$([\s\S]+?)\$\$\$/g, // Markdownコマンド内でもテンプレートを書けるように "$$$ hoge $$$" のような記法を採用
           })({
             dataPath,

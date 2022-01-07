@@ -1,12 +1,16 @@
 extends /_layout/_works-category
 
+prepend config-block
+  - rootPath = '../../'
+  - path = `works/movie/`
+
 block works-index
   section
     h2
       | 映像
     .list
       -
-        workArr = _.values(works).filter((work) => (
+        workArr = Object.values(works.sheet).filter(work => (
           work.genreMovie
         ))
       each work in workArr

@@ -3,7 +3,13 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const routeDataMapper = require('webpack-route-data-mapper')
 const readConfig = require('read-config')
+const readFile = require('read-file');
 const path = require('path')
+const lodash = require('lodash')
+const moment = require('moment')
+const markdown = require('markdown-it')({
+    html: true,
+})
 
 // base config
 const SRC = './src'
@@ -24,6 +30,20 @@ const htmlTemplates = routeDataMapper({
         {},
         constants,
         {
+            require,
+            lodash,
+            moment,
+            markdown,
+            unescape: (body) => (
+                // from [JavaScript：unescapeHTMLの妥当な実装: Architect Note](http://blog.tojiru.net/article/211339637.html)
+                body
+                    .replace("&amp;", /&/g)
+                    .replace(/&lt;/g, '<')
+                    .replace(/&gt;/g, '>')
+                    .replace(/&amp;/g, '&')
+                    .replace(/&quot;/g, '"')
+                    .replace(/&#39;/g, "'")
+            ),
             meta: readConfig(`${SRC}/pug/meta.yml`),
             bib: readConfig(`${SRC}/config/bib.yml`),
             interest: readConfig(`${SRC}/config/interest.yml`),
@@ -92,7 +112,7 @@ module.exports = {
                         {
                             loader: 'sass-loader',
                             options: {
-                                includePaths: [ `${SRC}/scss` ],
+                                includePaths: [`${SRC}/scss`],
                             },
                         }
                     ]

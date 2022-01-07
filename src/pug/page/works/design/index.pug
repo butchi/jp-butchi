@@ -1,13 +1,17 @@
 extends /_layout/_works-category
 
+prepend config-block
+  - rootPath = '../../'
+  - path = `works/design/`
+
 block works-index
   section
     h2
       | デザイン
     .list
       -
-        workArr = _.values(works).filter((work) => work.genreDesign)
-          .filter((work) => (
+        workArr = Object.values(works.sheet).filter(work => work.genreDesign)
+          .filter(work => (
             !hasTag(work, 'character')
             &&
             !hasTag(work, 'logo')
@@ -23,10 +27,10 @@ block works-index
       | キャラクター
     .list
       -
-        workArr = _.values(works).filter((work) => (
+        workArr = Object.values(works).filter(work => (
           work.genreDesign
         ))
-          .filter((work) => hasTag(work, 'character'))
+          .filter(work => hasTag(work, 'character'))
         ;
       each work in workArr
         +work-item(work)
@@ -36,10 +40,10 @@ block works-index
       | 年賀状
     .list
       -
-        workArr = _.values(works).filter((work) => (
+        workArr = Object.values(works).filter(work => (
           work.genreDesign
         ))
-          .filter((work) => hasTag(work, 'newyear'))
+          .filter(work => hasTag(work, 'newyear'))
         ;
       each work in workArr
         +work-item(work)
@@ -49,10 +53,10 @@ block works-index
       | ロゴ
     .list
       -
-        workArr = _.values(works).filter((work) => (
+        workArr = Object .values(works.sheet).filter(work => (
           work.genreDesign
         ))
-          .filter((work) => hasTag(work, 'logo'))
+          .filter(work => hasTag(work, 'logo'))
         ;
       each work in workArr
         +work-item(work)

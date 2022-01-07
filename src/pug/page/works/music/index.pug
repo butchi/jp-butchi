@@ -1,12 +1,16 @@
 extends /_layout/_works-category
 
+prepend config-block
+  - rootPath = '../../'
+  - path = `works/music/`
+
 block works-index
   section
     h2
       | 作品
     .list
       -
-        workArr = _.values(works).filter((work) => (
+        workArr = Object.values(works.sheet).filter((work) => (
           work.genreMusic
         ))
       each work in workArr

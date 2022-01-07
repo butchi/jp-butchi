@@ -5,6 +5,8 @@ include /_mixin/_mathjax
 include /_mixin/_markdown
 
 block config-block
+  - rootPath = Array(($route.match(/\//g) || []).length).fill('../').join('')
+  - path = $route.replace(/\/index\.html/, '/')
   - imgPath = `${rootPath}img/${path}`
   - dataPath = `${rootPath}data/${path}`
   - description = meta.discription

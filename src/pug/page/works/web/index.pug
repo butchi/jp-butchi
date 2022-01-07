@@ -1,12 +1,16 @@
 extends /_layout/_works-category
 
+prepend config-block
+  - rootPath = '../../'
+  - path = `works/web/`
+
 block works-index
   section
     h2
       | Web
     .list
       -
-        workArr = _.values(works).filter((work) => (
+        workArr = Object.values(works.sheet).filter((work) => (
           work.genreWeb
         ))
           .filter((work) => (
@@ -21,7 +25,7 @@ block works-index
       | 年賀サイト
     .list
       -
-        workArr = _.values(works).filter((work) => (
+        workArr = Object.values(works.sheet).filter((work) => (
           work.genreWeb
         ))
           .filter((work) => hasTag(work, 'newyear'))
