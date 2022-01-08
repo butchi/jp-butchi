@@ -1,13 +1,17 @@
+import lodash from "lodash"
+import $ from "jquery"
+
 export default class BtcSpreadSheet {
-  constructor(opts = {}) {
-    this.initialize(opts);
+  constructor(...optArr) {
+    this.initialize(...optArr);
   }
 
   initialize(opts = {}) {
     this.sheetId = opts.sheetId;
-    this.callback = opts.callback || _.noop;
-    this.failed = opts.failed || _.noop;
+    this.callback = opts.callback || lodash.noop;
+    this.failed = opts.failed || lodash.noop;
 
+    // The Sheets v3 API has been turned down.
     $.ajax({
       url: `https://spreadsheets.google.com/feeds/list/${this.sheetId}/od6/public/basic?alt=json-in-script`,
       type: 'GET',
@@ -23,7 +27,7 @@ export default class BtcSpreadSheet {
 
         rowArr.forEach((row) => {
           let keyVal = (row.split(': '));
-          obj[keyVal[0]] = keyVal.slice(1); 
+          obj[keyVal[0]] = keyVal.slice(1);
         });
 
         ret.push(obj);

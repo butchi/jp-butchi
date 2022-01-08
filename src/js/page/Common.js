@@ -1,33 +1,34 @@
-import ns from '../module/ns';
-import Hashaby from 'hashaby';
+import $ from "jquery"
+import ns from "../module/ns"
+import Hashaby from "hashaby"
 
-export default () => {
-  console.log('page common');
+export default _ => {
+  console.log("page common")
 
-  setEnvClass();
+  setEnvClass()
 
-  document.addEventListener('mdl-componentupgraded', (_evt) => {
+  document.addEventListener("mdl-componentupgraded", _evt => {
     ns.hashaby = new Hashaby({
-      sweetScrollContainer: '.mdl-layout__content',
+      sweetScrollContainer: ".mdl-layout__content",
       immediate: true,
-    });
-  });
-};
+    })
+  })
+}
 
-function setEnvClass() {
-  const $html = $('html');
+const setEnvClass = _ => {
+  const $html = $("html")
 
-  ns.isSp = false;
-  ns.isPc = false;
-  ns.isTab = false;
+  ns.isSp = false
+  ns.isPc = false
+  ns.isTab = false
 
-  if($html.hasClass('is-sp')) {
-    ns.isSp = true;
+  if ($html.hasClass("is-sp")) {
+    ns.isSp = true
   }
-  if($html.hasClass('is-pc')) {
-    ns.isPc = true;
+  if ($html.hasClass("is-pc")) {
+    ns.isPc = true
   }
-  if($html.hasClass('is-tab')) {
-    ns.isTab = true;
+  if ($html.hasClass("is-tab")) {
+    ns.isTab = true
   }
 }

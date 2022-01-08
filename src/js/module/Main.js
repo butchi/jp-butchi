@@ -1,16 +1,17 @@
-import Router from './Router';
+import $ from "jquery"
+import Router from "./Router"
 
 export default class Main {
-  constructor(opts = {}) {
-    console.log('Hello, world!');
+  constructor(...optArr) {
+    console.log("Hello, world!")
 
     this.initialize();
 
-    console.log('Thanks, world!');
+    console.log("Thanks, world!");
   }
 
   initialize() {
-    $(() => {
+    $(_ => {
       this.router = new Router();
     });
   }

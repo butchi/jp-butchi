@@ -1,12 +1,13 @@
-import ns from '../../module/ns';
-import BtcAnalyticSignalViewer from '../../module/BtcAnalyticSignalViewer';
+import $ from "jquery"
+import ns from "../../module/ns"
+import BtcAnalyticSignalViewer from "../../module/BtcAnalyticSignalViewer"
 
-export default () => {
-  console.log('page analytic-signal');
+export default _ => {
+  console.log("page analytic-signal")
 
-  $('.item-as').each((i, elm) => {
+  $(".item-as").each((i, elm) => {
     ns.page.btcAnalyticSignalViewer = new BtcAnalyticSignalViewer({
-      elm: elm.querySelector('.btc-analytic-signal-viewer'),
-    });
-  });
-};
+      elm: elm.querySelector(".btc-analytic-signal-viewer"),
+    })
+  })
+}

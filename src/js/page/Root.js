@@ -1,8 +1,8 @@
-import ns from '../module/ns';
-import BtcNews from '../module/BtcNews';
+// import ns from "../module/ns"
+// import BtcNews from "../module/BtcNews"
 
-export default () => {
-  console.log('index page');
+export default _ => {
+  console.log("index page")
 
-  ns.page.btcNews = new BtcNews();
-};
+  // ns.page.btcNews = new BtcNews()
+}

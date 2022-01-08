@@ -3,6 +3,6 @@
  * ネームスペース以下の変数にアクセスしたいときは各クラスでこれをimportする
  */
 
-window.Btc = window.Btc || {};
-const ns = window.Btc;
-export default ns;
+window.Btc = window.Btc || {}
+const ns = window.Btc
+export default ns
