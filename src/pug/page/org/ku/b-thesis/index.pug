@@ -3,9 +3,6 @@ extends /_layout/_default-layout
 append config-block
   - title = '学位論文'
 
-prepend javascript-block
-  script(src=`${rootPath}js/lib/swfobject.js`)
-
 block content-block
   +page-title
     | 岩淵勇樹 学位論文
@@ -29,7 +26,7 @@ block content-block
       +heading(4)
         | 発表資料（PC限定）
 
-      .btc-swf-object(data-src=`${dataPath}b-thesis.swf`, data-width="640", data-height="480")
+      //- .btc-swf-object(data-src=`${dataPath}b-thesis.swf`, data-width="640", data-height="480")
 
     section.sec-reference
       a(name="reference")

@@ -1,11 +1,8 @@
 extends /_layout/_default-layout
 
-prepend javascript-block
-  script(src=`${rootPath}js/lib/swfobject.js`)
-
 mixin card-media(fileName)
   .mdl-card__media
-    .btc-swf-object(data-src=`${dataPath}${fileName}.swf`, data-width="610", data-height="377")
+    //- .btc-swf-object(data-src=`${dataPath}${fileName}.swf`, data-width="610", data-height="377")
 
 mixin card-link(file, type= 'data', title= null)
   a.mdl-button.mdl-button--colored.mdl-js-button.mdl-js-ripple-effect(href= `${dataPath}${file}`)
