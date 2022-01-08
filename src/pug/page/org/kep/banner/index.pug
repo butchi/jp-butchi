@@ -1,13 +1,8 @@
-extends /_layout/_default-layout
-
-prepend javascript-block
-  script(src=`${rootPath}js/lib/swfobject.js`)
+extends /_layout/_swf-page
 
 append config-block
-  - title = '金沢電子出版広告バナー'
+  - swfFileName = 'banner-05.swf'
 
-block content-block
-  +page-title
-
-  .inner-block
-    .btc-swf-object(data-src=`${dataPath}banner-05.swf`, data-width="529", data-height="110")
+block head
+  title
+    | 金沢電子出版広告バナー
