@@ -1,6 +1,5 @@
 import ns from '../module/ns';
 import Hashaby from 'hashaby';
-import BtcSwfObject from '../module/BtcSwfObject';
 
 export default () => {
   console.log('page common');
