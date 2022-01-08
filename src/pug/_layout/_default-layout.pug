@@ -9,7 +9,7 @@ block config-block
   - path = $route.replace(/\/index\.html/, '/')
   - imgPath = `${rootPath}img/${path}`
   - dataPath = `${rootPath}data/${path}`
-  - description = meta.discription
+  - description = meta.description
   - keywords = meta.keywords
   - url = meta.url
 
@@ -20,7 +20,10 @@ html(lang="ja")
     // meta
     title
       block title
-        = title
+        if title
+          = `${title} | ${meta.site_name}`
+        else
+          = meta.site_name
     if description
       meta(name="description", content= description)
     if keywords && keywords.length
@@ -99,7 +102,10 @@ html(lang="ja")
             .mdl-layout__header-row
               //- Title
               span.mdl-layout-title
-                = title
+                if title
+                  = `${title} | ${meta.site_name}`
+                else
+                  = meta.site_name
               //- Add spacer, to align navigation to the right
               .mdl-layout-spacer
               //- Navigation. We hide it in small screens.
@@ -158,8 +164,6 @@ html(lang="ja")
 
     // javascript
     block javascript-block
-      script(src= rootPath + 'js/lib/jquery.min.js')
-      script(src= rootPath + 'js/lib/lodash.min.js')
       script(src= rootPath + 'js/lib/material.min.js')
       script(src= rootPath + 'js/script.js')
 
