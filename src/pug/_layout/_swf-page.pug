@@ -1,0 +1,15 @@
+extends /_layout/_blank-page
+
+block head
+  style.
+    body {
+      margin: 0;
+      background: black;
+    }
+
+append javascript-block
+  script(src=`${rootPath}js/lib/swf2js.js`)
+  script
+    | var el = document.querySelector(".swf-object");
+    | swf2js.load("#{dataPath}#{swfFileName}");
+
