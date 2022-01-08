@@ -148,10 +148,8 @@ html(lang="ja")
                   script.
                     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
                 .item-share.line
-                  span
-                    script(type='text/javascript', src='//media.line.me/js/line-button.js?v=20140411')
-                    script(type='text/javascript')
-                      | new media_line_me.LineButton({"pc":false,"lang":"ja","type":"a","text": "#{title}","withUrl":true});
+                  .line-it-button(data-lang="ja", data-type="share-a", data-env="REAL", data-url="https://www.butchi.jp/", data-color="default", data-size="small", data-count="true", data-ver="3", style="display: none;")
+                  script(src="https://www.line-website.com/social-plugins/js/thirdparty/loader.min.js", async="async", defer="defer")
 
         main.mdl-layout__content
           block content-block
