@@ -152,8 +152,6 @@ html(lang="ja")
                     script(type='text/javascript', src='//media.line.me/js/line-button.js?v=20140411')
                     script(type='text/javascript')
                       | new media_line_me.LineButton({"pc":false,"lang":"ja","type":"a","text": "#{title}","withUrl":true});
-                .item-share.gplus
-                  .g-plusone(data-size='medium')
 
         main.mdl-layout__content
           block content-block
@@ -166,8 +164,6 @@ html(lang="ja")
     block javascript-block
       script(src= rootPath + 'js/lib/material.min.js')
       script(src= rootPath + 'js/script.js')
-
-    include /_partial/gplus-platform.html
 
     //- トラッキングID指定を忘れないように
     include /_partial/ga.html
