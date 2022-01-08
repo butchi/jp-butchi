@@ -3,9 +3,10 @@ import $ from "jquery"
 // from [Web Audio APIを利用してオーディオビジュアライザを作成する ~その2 再生中の音から波形データを取得して描画する~ - Qiita](http://qiita.com/soarflat/items/4aa001dac115a4af6dbe)
 
 // AudioNodeを管理するAudioContextの生成
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)()
+const AudioCtx = window.AudioContext || window.webkitAudioContext
+const audioCtx = new AudioCtx()
 
-function inv(n) {
+const inv = n => {
   if (n === 0) {
     return 0
   } else {
@@ -38,9 +39,9 @@ class Loader {
 
     let _this = this
 
-    request.onload = function () {
+    request.onload = _ => {
       // 取得したデータをデコードする。
-      audioCtx.decodeAudioData(this.response, function (buffer) {
+      audioCtx.decodeAudioData(this.response, buffer => {
         if (!buffer) {
           console.log("error")
           return
@@ -51,12 +52,12 @@ class Loader {
 
           loader.playSound(buffer)  // デコードされたデータを再生する。
         })
-      }, function (error) {
+      }, _err => {
         console.log("decodeAudioData error")
       })
     }
 
-    request.onerror = function () {
+    request.onerror = _ => {
       console.log("Loader: XHR error")
     }
 
@@ -103,7 +104,7 @@ class Visualizer {
     this.sourceNode.start(0);                         // 再生開始
     this.draw();                                      // 描画開始
 
-    this.sourceNode.onended = () => {
+    this.sourceNode.onended = _ => {
       $(this.elm).removeClass("is-play")
 
       this.playFlag = false

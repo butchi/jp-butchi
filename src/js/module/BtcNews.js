@@ -34,7 +34,7 @@ export default class BtcNews {
         })
 
         $elm.append($list)
-      }
+      },
     })
   }
 }
