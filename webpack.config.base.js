@@ -45,7 +45,7 @@ const htmlTemplates = routeDataMapper({
                     .replace(/&quot;/g, "\"")
                     .replace(/&#39;/g, "'")
             ),
-            meta: readConfig(`${SRC}/pug/meta.yml`),
+            meta: readConfig(`${SRC}/config/meta.yml`),
             bib: readConfig(`${SRC}/config/bib.yml`),
             interest: readConfig(`${SRC}/config/interest.yml`),
             people: readConfig(`${SRC}/config/people.json`),
