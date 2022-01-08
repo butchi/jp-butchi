@@ -1,0 +1,19 @@
+{
+  "strict": true,
+  "esversion": 6,
+  "asi": true,
+  "indent": 4,
+  "maxlen": 80,
+  "unused": true,
+  "undef": true,
+  "trailingcomma": true,
+  "quotmark": "double",
+  "browser": true,
+  "devel": true,
+  "debug": true,
+  "globals": {
+    "_": false,
+    "Backbone": false
+  },
+  "eqnull": true
+}
