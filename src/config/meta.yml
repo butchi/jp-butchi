@@ -1,13 +1,18 @@
 site_name: butchi.jp
-url: 'http://butchi.jp/'
+url: https://www.butchi.jp/
 title: butchi.jp
-description: 岩淵勇樹の個人による公式サイトです。
+description: 岩淵勇樹物智の個人による公式サイトです。
 keywords:
+  - 岩淵勇樹物智
+  - 岩淵夕希物智
   - 岩淵勇樹
+  - 岩淵夕希
   - 岩淵
   - 勇樹
+  - 夕希
   - ぶっち
   - ブッチ
+  - 物智
   - butchi_y
   - butchi
   - bucchi
@@ -19,7 +24,7 @@ keywords:
 favicon_url: /favicon.ico
 webclipicon_url: null
 facebook_app_id: 1539136399715307
-ogp_image_url: http://butchi.jp/ogp.png
+ogp_image_url: https://www.butchi.jp/ogp.png
 ogp_image_width: 128
 ogp_image_height: 128
 ogp_type: website
