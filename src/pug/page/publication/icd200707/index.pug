@@ -3,9 +3,6 @@ extends /_layout/_default-layout
 append config-block
   - title = '非周期的な画素配置を持つCMOSイメージセンサの基礎検討'
 
-prepend javascript-block
-  script(src=`${rootPath}js/lib/swfobject.js`)
-
 block content-block
   +page-title
 
@@ -46,8 +43,9 @@ block content-block
       p
         a(href="http://ci.nii.ac.jp/naid/110006380829/", target="_blank") CiNii 論文 -  非周期的な画素配置を持つCMOSイメージセンサの基礎検討(アナログ・デジアナ・センサ,通信用LSI)
 
-    section
-      +heading(4)
-        | 発表資料（PC限定）
-
-      .btc-swf-object(data-src=`${dataPath}icd200707presentation.swf`, data-width="640", data-height="480")
+      p
+        a(href="presentation/")
+          | 発表資料（PC限定）
+        |  
+        a.mdl-button.mdl-button--raised(href=`${dataPath}presentation/icd200707presentation.swf`)
+          | ダウンロード(SWF)

@@ -3,9 +3,6 @@ extends /_layout/_default-layout
 append config-block
   - title = 'WISS2008デモ'
 
-prepend javascript-block
-  script(src=`${rootPath}js/lib/swfobject.js`)
-
 block content-block
   +page-title
 
@@ -25,7 +22,7 @@ block content-block
     +heading(4)
       | デモプログラム
 
-    .btc-swf-object(data-src=`${dataPath}wiss2008demo.swf`, data-width="610", data-height="377")
+    //- .btc-swf-object(data-src=`${dataPath}wiss2008demo.swf`, data-width="610", data-height="377")
 
     p
       a(href=`${dataPath}wiss2008demo.swf`) swfファイル

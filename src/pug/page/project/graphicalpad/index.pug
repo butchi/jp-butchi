@@ -3,14 +3,11 @@ extends /_layout/_default-layout
 append config-block
   - title = 'GraphiCalPad'
 
-prepend javascript-block
-  script(src=`${rootPath}js/lib/swfobject.js`)
-
 block content-block
   +page-title
 
   .inner-block
-    .btc-swf-object(data-src=`${dataPath}calc.swf`, data-width="640", data-height="480")
+    //- .btc-swf-object(data-src=`${dataPath}calc.swf`, data-width="640", data-height="480")
 
     p
       a(href= `${dataPath}06.fla`) flaファイル
