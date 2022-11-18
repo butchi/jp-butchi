@@ -3,7 +3,7 @@
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
 const routeDataMapper = require("webpack-route-data-mapper")
 const readConfig = require("read-config")
-const readFile = require("read-file");
+const readFile = require("read-file")
 const path = require("path")
 
 const lodash = require("lodash")
