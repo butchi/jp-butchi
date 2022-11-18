@@ -35,7 +35,8 @@ block content-block
           | Icon
 
         mixin icon(src, title, href)
-          a.icon(href= href)
+          - isExternal = (href || "").match(/^https:\/\//)
+          a.icon(href= href, target= (isExternal ? "_blank" : null) data-is-link= !!href)
             img(width='128', height='128', src= rootPath + 'img/icon/' + src, alt= title, title= title)
 
         .inner-block
@@ -43,9 +44,9 @@ block content-block
           +icon('chinese-character.png', 'Butchi')
           +icon('music.png', '♪', `${rootPath}works/music/`)
           +icon('butchi-number.png', '平面的2進数（物智数）', `${rootPath}documents/butchi-number/`)
-          +icon('bit-reversal-plane.png', 'ビット逆転平面', 'http://ci.nii.ac.jp/naid/110006380829/')
+          +icon('bit-reversal-plane.png', 'ビット逆転平面', 'https://cir.nii.ac.jp/crid/1520853832070446080')
           +icon('dragon-tapestry--red.png', 'ドラゴン曲線のタペストリー', `${rootPath}documents/fractal/`)
-          +icon('bitwise-xor.png', 'ビット毎の排他的論理和', 'http://reference.wolfram.com/mathematica/ref/BitXor.html')
+          +icon('bitwise-xor.png', 'ビット毎の排他的論理和', 'https://reference.wolfram.com/language/ref/BitXor.html')
           +icon('bion.png', 'bion (両対数極座標)', `${rootPath}works/bion/`)
           +icon('gray-code-counter.gif', 'グレイコードカウンタ', `${rootPath}works/gray-code-counter-song/`)
           +icon('fractal.png', 'フラクタル', `${rootPath}documents/fractal`)
