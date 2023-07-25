@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>意味ないシリーズ | 作品紹介 | butchi.jp</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="module">
+        import { BtcDefaultLayout } from "/js/module/btc-default-layout.js"
+        import { BtcMediaCard } from "/js/module/btc-media-card.js"
+
+        console.log("works page")
+
+        customElements.define('btc-default-layout', BtcDefaultLayout)
+        customElements.define('btc-media-card', BtcMediaCard)
+    </script>
+</head>
+
+<body data-path="works/">
+    <btc-default-layout>
+        <main>
+            <article>
+                <h1>年賀ページ</h1>
+
+                <section>
+                    <h1>2004年年賀状</h1>
+
+                    <picture>
+                        <img src="/img/works/thumb/newyear-2008.png" alt="">
+                    </picture>
+                </section>
+
+                <section>
+                    <h1>2008年年賀画像</h1>
+
+                    <picture>
+                        <img src="/img/works/thumb/newyear-2011.png" alt="">
+                    </picture>
+                </section>
+
+                <section>
+                    <h1>2011年年賀状</h1>
+
+                    <picture>
+                        <img src="/img/works/thumb/newyear-2011.png" alt="">
+                    </picture>
+                </section>
+
+                <section>
+                    <h1>2012年年賀状</h1>
+
+                    <picture>
+                        <img src="/img/works/thumb/newyear-2012.png" alt="">
+                    </picture>
+                </section>
+
+                <section>
+                    <h1>2013年年賀状</h1>
+
+                    <picture>
+                        <img src="/img/works/thumb/newyear-2013.png" alt="">
+                    </picture>
+                </section>
+            </article>
+        </main>
+    </btc-default-layout>
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第85回音楽情報科学研究会デモ | butchi.jp</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="module">
+        import { BtcDefaultLayout } from "/js/module/btc-default-layout.js"
+
+        console.log("publication page")
+
+        customElements.define('btc-default-layout', BtcDefaultLayout)
+    </script>
+</head>
+
+<body data-path="publication/math-soft-intro/">
+    <btc-default-layout title="第85回音楽情報科学研究会デモ | butchi.jp">
+        <main>
+            <article>
+                <h1>第85回音楽情報科学研究会デモ</h1>
+                <header>
+                    <h1>概要</h1>
+                    <p>第85回音楽情報科学研究会のデモ用に制作したプログラムを掲載しています。</p>
+                    <p>「解析信号」を複素平面上で操作することにより、それに応じた音色を生成します。</p>
+                    <p>プログラム実行には<a href="http://get.adobe.com/jp/flashplayer/" target="_blank">Adobe Flash
+                            Player</a>が必要です。
+                    </p>
+                    <p>開発環境: Adobe Flash CS4 / ActionScript 3.0</p>
+                </header>
+                <section>
+                    <h4>デモプログラム</h4>
+                    <p><a
+                            href="../../data/publication/sigmus85/analytic_signal_synthesizer10.fla">flaファイル</a>（MIDIキーボード接続機能付き。エラーが出るときは"//
+                        Max/MSPとの接続"以降27行を削除してください。）</p>
+                    <p><a href="../../data/publication/sigmus85/mus85demo.swf">swfファイル</a></p>
+                    <h4>操作説明</h4>
+                    <ul>
+                        <li>円形は黒い点（制御点）が集まって構成されています。制御点をドラッグすると音が変化します。（点が外れすぎると音割れが生じるので注意してください。）</li>
+                        <li>左上のOscillatorのプルダウンメニューから音色を選択することができます。</li>
+                        <li>右側の青い線が実際生成される音の時間波形（2周期分）です。左側の図形の縦座標と一致します。</li>
+                        <li>CtrlModeのプルダウンメニューを選択するか、ドラッグ中にマウスのホイールを操作すると、ctrlModeが変わってドラッグ時の影響が変化します。</li>
+                        <li>右上のAmplifierの黒い点（あるいは太い棒）をドラッグするとADSRエンベロープを制御できます。</li>
+                        <li>キー入力はマウスで鍵盤を押すか、キーボード入力をすると可能です。キーボード入力をする際は一度プログラム画面をクリックしてください。</li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>特徴</h4>
+                    <ul>
+                        <li>試せる方は、波形表示ソフトで生波形を見てみてください。
+                            「リサジュー」で両チャンネルの波形をプロットすると、VCOで操作している閉曲線図形と同じ形が見えると思います。
+                        </li>
+                        <li>
+                            これは実際に音声のLチャンネルとRチャンネルにそれぞれの軸の波形を割り当てているからなのですが、横軸の波形と縦軸の波形は「ヒルベルト変換」という変換の関係にあるため、片方の波形はもう片方の波形に依存します。
+                            （プログラムの右側の青い波形は、今回Lチャンネルに割り当てられています。）
+                        </li>
+                        <li>
+                            また、両波形はパワースペクトルは同じである（位相だけ90度ずれている）ため、波形が全く違うように見えても聞こえる音はほとんど同じです。
+                            （そのため、出力としてはLチャンネルだけでよいのですが、便宜上「虚」の波形も出力している次第です。）
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>終わりに</h4>
+                    <p>「解析信号」を複素平面上で操作するという、波形編集の新たな方法を提案しました。
+                        これを応用すれば、今までにない新しい音作りが期待できます。</p>
+                    <p>ご意見・ご質問があれば著者にお気軽に連絡ください。</p>
+                </section>
+                <section>
+                    <h4>参考文献</h4>
+                    <ol>
+                        <li>
+                            岩淵 勇樹, 秋田 純一, 北川 章夫. 閉曲線図形に基づいた音色生成方法の検討.
+                            <a href="http://www.dc-meiji.jp/ec2008/">エンタテインメントコンピューティング2008</a>論文集.
+                            pp. 143--146,
+                            <time>2008-10</time>.
+                        </li>
+                        <li>
+                            岩淵 勇樹, 秋田 純一, 北川 章夫. 閉曲線図形の特性に基づいた音色生成の一手法.
+                            <a href="http://www.wiss.org/WISS2008/">第16回インタラクティブシステムとソフトウェアに関するワークショップ（WISS2008）</a>論文集.
+                            pp. 149--150,
+                            <time>2008-11</time>.
+                        </li>
+                        <li>
+                            岩淵勇樹, 秋田純一, 北川章夫. 閉曲線を利用した音色操作方法の検討と実装.
+                            <a href="http://www.sigmus.jp/SIG/sig201005program.html">第85回音楽情報科学研究会</a>.
+                            <time>2010-05</time>.
+                        </li>
+                        <li>
+                            岩淵勇樹, 秋田純一, 北川章夫. 閉曲線を利用した音色の操作方法.
+                            <a href="http://www.interaction-ipsj.org/2011/">インタラクション2011</a>.
+                            <time>2011-03</time>.
+                        </li>
+                        <li>
+                            岩淵勇樹, 秋田純一, 北川章夫. 閉曲線を利用した音色の操作法.
+                            <a href="http://art-science.org/journal/">芸術科学会論文誌</a>.
+                            Vol.10, No.3, pp. 157--166,
+                            <time>2011-09</time>.
+                        </li>
+                        <li>博士論文「図形と音声の変換手法とその応用に関する研究」(2012)</li>
+                    </ol>
+                </section>
+                <aside>
+                    注1:
+                    本著作物の著作権は（社）情報処理学会に帰属します。本著作物は著作権者である情報処理学会の許可のもとに掲載するものです。
+                    ご利用に当たっては「著作権法」ならびに「<a href="http://www.ipsj.or.jp/ipsjcode.html">情報処理学会倫理綱領</a>」に従うことをお願いいたします。
+                </aside>
+            </article>
+        </main>
+    </btc-default-layout>
+</body>
+
+</html>

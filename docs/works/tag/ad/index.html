@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>広告・ポスター | 作品紹介 | butchi.jp</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="module">
+        import { BtcDefaultLayout } from "/js/module/btc-default-layout.js"
+        import { BtcMediaCard } from "/js/module/btc-media-card.js"
+
+        console.log("works page")
+
+        customElements.define('btc-default-layout', BtcDefaultLayout)
+        customElements.define('btc-media-card', BtcMediaCard)
+    </script>
+</head>
+
+<body data-path="works/">
+    <btc-default-layout title="作品紹介 | butchi.jp">
+        <main>
+            <article>
+                <section>
+                    <h1>2003年度美術部新人展ポスター</h1>
+                    <picture>
+                        <img src="/img/works/thumb/newcomer-exhibition-poster-2003.png" alt="">
+                    </picture>
+                </section>
+
+                <section>
+                    <h1>2003年度美術部新人展立看板</h1>
+                    <picture>
+                        <img src="/img/works/thumb/newcomer-exhibition-sign-2003.png" alt="">
+                    </picture>
+                </section>
+
+                <section>
+                    <h1>2004年度美術部新歓展ポスター</h1>
+                    <picture>
+                        <img src="/img/works/thumb/welcome-2004.png" alt="">
+                    </picture>
+                </section>
+
+                <section>
+                    <h1>「ぼくたち一体なにがしたい！？」フライヤー</h1>
+                    <picture>
+                        <img src="/img/works/thumb/nanigashitai-flier-2008.png" alt="">
+                    </picture>
+                </section>
+
+                <section>
+                    <h1>花見フライヤー</h1>
+                    <picture>
+                        <img src="/img/works/thumb/hanami-flier.png" alt="">
+                    </picture>
+                </section>
+
+                <section>
+                    <h1>Fine CharActors</h1>
+                    <picture>
+                        <img src="/img/works/thumb/fine-char-actors.png" alt="">
+                    </picture>
+                </section>
+
+                <section>
+                    <h1>四角展ロゴ</h1>
+                    <picture>
+                        <img src="/img/works/thumb/shikakuten-logo.png" alt="">
+                    </picture>
+                </section>
+            </article>
+        </main>
+    </btc-default-layout>
+</body>
+
+</html>

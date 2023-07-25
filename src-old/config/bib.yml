@@ -1,0 +1,655 @@
+# iwabuchi-yuki--2016-10-03:
+#   author:
+#     Yuuki IWABUCHI
+#   title:
+#     Title
+#   journal:
+#     Butchi conference
+#   volume:
+#     1
+#   number:
+#     1
+#   pages: [
+#     101,
+#     102
+#   ]
+#   place:
+#     "Kanazawa, Japan"
+#   date:
+#     "2010-06"
+
+# :
+#   author:
+#   title:
+#   journal:
+#   volume:
+#   number:
+#   pages:
+#   place
+#   date:
+#     ""
+
+
+# reading-seminar
+wang--2001--unified:
+  author:
+    - Yuke WANG
+    - K. K. PARHI
+  title:
+    A unified adder design
+  journal:
+    "IEEE Conference Record of the Thirty-Fifth Asilomar Conference on"
+  volume:
+    1
+  pages: [
+    177,
+    182
+  ]
+  date:
+    "2011"
+
+siggraph--hybrid-images:
+  author:
+    - Aude OLIVA
+    - Antonio TORRALBA
+    - Philippe G SCHYNS
+  title:
+    Hybrid Images
+  journal:
+    ACM Transactions on Graphics, ACM Siggraph
+  volume:
+    25
+  number:
+    3
+  pages: [
+    527,
+    530
+  ]
+  date:
+    "2006"
+
+spie--random-sampling:
+  author:
+    - Ahumada
+    - et al
+  title:
+    Reduction of Display Artifacts by Random Sampling
+  journal:
+    "Proceedings of SPIE-The International Soc. for Optical Engineering"
+  volume:
+    432,
+  number:
+    8
+  pages: [
+    216,
+    221
+  ]
+  date:
+    "1983"
+
+japanese-psychological-research--tilt-illusions--kitaoka-akiyoshi:
+  author:
+    KITAOKA Akiyoshi
+  title:
+    "Tilt illusions after Oyama (1960): A review"
+  journal:
+    Japanese Psychological Research
+  volume:
+    49
+  number:
+    1
+  pages: [
+    7,
+    19
+  ]
+  date:
+    "2007"
+
+ieee--gha:
+  author:
+    - TERADA, T.
+    - et al
+  title:
+    Nonstationary waveform analysis and synthesis using generalizedharmonic analysis
+  journal:
+    "Proceedings of IEEE-SP International Symposium on Time-Frequency and Time-Scale Analysis TFSA-94"
+  pages: [
+    429,
+    432
+  ]
+  date:
+    "1994"
+
+nime--tenori-on:
+  author:
+    - NISHIBORI Yu
+    - IWAI Toshio
+  title:
+    "TENORI-ON"
+  journal:
+    Proceedings of 6th International Conference on New Interfaces for Musical Expression, Paris, France
+  volume:
+  number:
+  pages: [
+    172,
+    175
+  ]
+  date:
+    "2006"
+
+nime--manual-input-sessions--levin-golan:
+  author:
+    - Golan LEVIN
+    - Zachary LIEBERMAN
+  title:
+    "Sounds from Shapes: Audiovisual Performance with Hand Silhouette Contours in The Manual Input Sessions"
+  journal:
+    "Proceedings of NIME '05"
+  pages: [
+    26,
+    28
+  ]
+  place:
+    "Vancouver, BC, Canada"
+  date:
+    "2005"
+
+ipsj--voice-interface--eto-koichiro:
+  author:
+    江渡浩一郎
+  title:
+    アート・エンターテインメントにおける音インタフェース
+  journal:
+    "情報処理学会研究報告. SLP, 音声言語情報処理"
+  volume:
+    2004
+  number:
+    74
+  pages: [
+    53,
+    58
+  ]
+  date:
+    "2004"
+
+upic:
+  author:
+    H. Solís
+  title:
+    Improvisatory music and painting interface
+  journal:
+    Masters thesis, Massachusetts Institute of Technology
+  date:
+    "2004"
+
+kaossilator:
+  author:
+    KORG
+  title:
+    KAOSSILATOR
+  url:
+    "http://www.korg.co.jp/Product/Dance/kaossilator/"
+
+aphex-face:
+  author:
+    "bastwood.com"
+  title:
+    The Aphex Face
+  url:
+    "http://www.bastwood.com/aphex.php"
+
+mam:
+  author:
+    S. Malinowski
+  title:
+    The Music Animation Machine
+  url:
+    "http://www.musanim.com/"
+
+rsj--transforming-image-into-sound:
+  author:
+    - 港隆史
+    - 関戸智史
+    - 石黒浩
+    - 河原英紀
+  title:
+    全方位視覚の特性を利用した画像から音信号への変換
+  journal:
+    日本ロボット学会第20回学術講演会予稿集
+  date:
+    "2002"
+
+nime--lifegorch:
+  author:
+    - OGAWA K.
+    - KUHARA Y.
+  title:
+    Life Game Orchestra as an Interactive Music Composition System Translating Cellular Patterns of Automata into Musical Scales
+  journal:
+    The 9th International Conference on New Interfaces for Musical Expression
+  pages: [
+    50,
+    51
+  ]
+  place: 
+    "Pittsburgh, Pennsylvania, USA"
+  date:
+    "2009"
+
+ieee--room-acoustics--miyoshi-masato:
+  author:
+    - MIYOSHI Masato
+    - KANEDA Yutaka
+  title:
+    Inverse Filtering of Room Acoustics
+  journal:
+    IEEE Transactions on Acoustics, Speech and Signal Processing
+  volume:
+    36
+  number:
+    2
+  pages: [
+    145,
+    152
+  ]
+  date:
+    "1988"
+
+ipsj--voice-drummer--nakano-tomoyasu:
+  author:
+    - 中野倫靖
+    - 緒方淳
+    - 後藤真孝
+    - 平賀譲
+  title:
+    口ドラム認識手法とそのドラム譜入力システムへの応用
+  journal:
+    情報処理学会論文誌
+  volume:
+    48
+  number:
+    1
+  pages: [
+    386,
+    397
+  ]
+  date:
+    "2007"
+
+asj--music-information-processing:
+  author:
+    - 後藤真孝
+    - 平田圭二
+  title:
+    音楽情報処理の最近の研究
+  journal:
+    日本音響学会誌
+  volume:
+    60
+  number:
+    11
+  pages: [
+    675,
+    681
+  ]
+  date:
+    "2004"
+
+iswc--wearable-musical-instruments:
+  author:
+    - NISHIMOTO K.
+    - MAEKAWA T.
+    - TADA Y.
+    - MASE K.
+    - NAKATSU R.
+  title:
+    Networked wearable musical instruments will bring a new musical culture
+  journal:
+    Proc. ISWC 2001
+  pages: [
+    55,
+    62
+  ]
+  date:
+    "2001"
+
+interaction--electrical-finger-rub-instrument:
+  author:
+    - 安藤大地
+    - 馬場哲晃
+  title:
+    マルチタッチディスプレイを利用した電子擦弦楽器とエフェクトコントローラ
+  journal:
+    インタラクション2010論文集
+  date:
+    "2010"
+
+make--ano-gakki-imakoko--nojiri-hosuke:
+  author:
+    野尻抱介
+  title:
+    "「あの楽器」―いまここ。"
+  journal:
+    "Make: Technology on Your Time"
+  volume:
+    7
+  pages: [
+    82,
+    85
+  ]
+  date:
+    "2009"
+
+make--ano-gakki-kasuga-model:
+  author:
+    野田陽
+  title:
+    LED パネルと探知センサーを使った「あの楽器」春日モデル
+  journal:
+    "Make: Technology on Your Time"
+  volume:
+    7
+  pages: [
+    90,
+    93
+  ]
+  date:
+    "2009"
+
+make--ano-gakki-sasao-model--sasao-kazuhiro:
+  author:
+    笹尾和宏
+  title:
+    小型プロジェクターでマルチタッチを実現した「あの楽器」笹尾モデル
+  journal:
+    "Make: Technology on Your Time"
+  volume:
+    7
+  pages: [
+    86,
+    89
+  ]
+  date:
+    "2009"
+
+make--ano-gakki-guiter:
+  author:
+    小倉敏彦
+  title:
+    GainerとProcessingでギター風「あの楽器」
+  journal:
+    "Make: Technology on Your Time"
+  volume:
+    7
+  pages: [
+    86,
+    89
+  ]
+  date:
+    "2009"
+
+icmc--scanned-synthesis:
+  author:
+    - R. BOULANGER
+    - P. SMARAGDIS
+    - J. FFITCH
+  title:
+    "Scanned Synthesis: An introduction and demonstration of a new synthesis and signal processing technique"
+  journal:
+    Proceedings of the 2000 International Computer Music Conference
+  pages: [
+    372,
+    375
+  ]
+  date:
+    "2000"
+
+icmc--compath:
+  author:
+    - S. PARK
+    - S. KIM
+    - S. LEE
+    - W. S. YEO
+  title:
+    "Composition with path: Musical sonification of geo-referenced data with online map interface"
+  journal:
+    "Proceedings of the International Computer Music Conference (ICMC)"
+  volume:
+  number:
+  pages:
+  place:
+    "New York"
+  date:
+    "2010"
+
+dae--raster-scanning-sonification:
+  author:
+    - W. S. Yeo
+    - J. Berger
+  title:
+    "Application of raster scanning method to image sonification, sound visualization, sound analysis and synthesis"
+  journal:
+    "Proc of the 9th Int. Conference on Digital Audio Effects"
+  volume:
+  number:
+  pages:
+  place:
+    "Montreal, Canada"
+  date:
+    "2006"
+
+icad--auditory-display:
+  author:
+    T. HERMANN
+  title:
+    Taxonomy and definitions for sonification and auditory display
+  journal:
+    Proc. of the 14th ICAD
+  place:
+    Paris
+  date:
+    "2008"
+
+
+# self
+b-thesis--iwabuchi-yuki:
+  author:
+    - 岩淵勇樹
+  title:
+    2進数の平面的表現に関する考察
+  journal:
+    学士論文
+  date:
+    '2007-03'
+  site:
+    'org/kanazawa-univ/b-thesis/'
+
+icd--2007-07--iwabuchi-yuki:
+  author:
+    - 岩淵 勇樹
+    - 秋田 純一
+  title:
+    '<a href="http://ci.nii.ac.jp/naid/110006380829/" target="_blank">非周期的な画素配置を持つCMOSイメージセンサの基礎検討</a>'
+  journal:
+    電子情報通信学会技術研究報告
+  volume:
+    107
+  number:
+    163
+  pages: [
+    165,
+    170
+  ]
+  date:
+    "2007-07"
+  site:
+    'publication/icd200707/'
+
+ec--2008--iwabuchi-yuki:
+  author:
+    - 岩淵 勇樹
+    - 秋田 純一
+    - 北川 章夫
+  title:
+    閉曲線図形に基づいた音色生成方法の検討
+  journal:
+    '<a href="http://ec2008.entcomp.org/" target="_blank">エンタテインメントコンピューティング2008</a>論文集'
+  pages: [
+    143,
+    146
+  ]
+  date:
+    "2008-10"
+  site:
+    'publication/ec2008/'
+
+wiss--2008--iwabuchi-yuki:
+  author:
+    - 岩淵 勇樹
+    - 秋田 純一
+    - 北川 章夫
+  title:
+    閉曲線図形の特性に基づいた音色生成の一手法
+  journal: 
+    '<a href="http://www.wiss.org/WISS2008/" target="_blank">第16回インタラクティブシステムとソフトウェアに関するワークショップ（WISS2008）</a>論文集'
+  pages: [
+    149,
+    150
+  ]
+  date:
+    "2008-11"
+  site:
+    'publication/wiss2008/'
+
+ite--2008--maeda-yui:
+  author:
+    - 前田 唯
+    - 岩淵 勇樹
+    - 秋田 純一
+  title:
+    '<a href="http://ci.nii.ac.jp/naid/40016434231">空間スペクトルを用いたジャギー評価に関する一考察～擬似的不規則画素配置によるジャギーの解消効果～</a>'
+  journal:
+    映像情報メディア学会技術報告
+  volume:
+    32
+  number:
+    57
+  pages: [
+    29,
+    32
+  ]
+  date:
+    "2008-12"
+  site:
+    'publication/ite2008/'
+
+m-thesis--iwabuchi-yuki:
+  author:
+    - 岩淵勇樹
+  title:
+    閉曲線図形を利用した音色生成法
+  journal:
+    修士論文
+  date:
+    '2009-03'
+  site:
+    'org/kanazawa-univ/b-thesis/'
+
+mus-85--iwabuchi-yuki:
+  author:
+    - 岩淵勇樹
+    - 秋田純一
+    - 北川章夫
+  title:
+    閉曲線を利用した音色操作方法の検討と実装
+  journal:
+    '<a href="http://www.sigmus.jp/SIG/sig201005program.html" target="_blank">第85回音楽情報科学研究会</a>'
+  date:
+    '2010-05'
+  site:
+    'publication/sigmus85/'
+
+butchi-number--2010-06--iwabuchi-yuki:
+  author:
+    - IWABUCHI Yuuki
+    - AKITA Junichi
+  title:
+    Properties of “Planar Binary (Butchi Number)”
+  journal:
+    'Unconventional Computation (UC)'
+  date:
+    "2010-06"
+  site:
+    'publication/uc2010/'
+
+interaction--2011--iwabuchi-yuki:
+  author:
+    - 岩淵勇樹
+    - 秋田純一
+    - 北川章夫
+  title:
+    閉曲線を利用した音色の操作方法
+  journal:
+    '<a href="http://www.interaction-ipsj.org/2011/" target="_blank">インタラクション2011</a>'
+  date:
+    '2011-03'
+  site:
+    'publication/interaction2011/'
+
+art-science--2011--iwabuchi-yuki:
+  author:
+    - 岩淵勇樹
+    - 秋田純一
+    - 北川章夫
+  title:
+    閉曲線を利用した音色の操作法
+  journal:
+    '<a href="http://art-science.org/journal/" target="_blank">芸術科学会論文誌</a>'
+  volume:
+    10
+  number:
+    3
+  pages: [
+    157,
+    166
+  ]
+  date:
+    '2011-09'
+  site:
+    'publication/art-science--v10n3/'
+
+d-thesis--iwabuchi-yuki:
+  author:
+    - 岩淵勇樹
+  title:
+    図形と音声の変換手法とその応用に関する研究
+  journal:
+    博士論文
+  date:
+    '2012-03'
+  site:
+    'org/kanazawa-univ/d-thesis/'
+
+lams--2013--iwabuchi-yuki:
+  author:
+    岩淵勇樹
+  title:
+    GraphiCalPad
+  journal:
+    '<a href="http://imi.kyushu-u.ac.jp/~waki/lams/" target="_blank">数学ソフトウェア紹介</a>'
+  date:
+    '2013'
+  site:
+    'publication/lams-2013/'
+
+mus-105--iwabuchi-yuki:
+  author:
+    - 岩淵勇樹
+  title:
+    カーペットフラクタルの可聴化と音楽生成
+  journal:
+    '<a href="http://www.sigmus.jp/?page_id=2843" target="_blank">第105回音楽情報科学研究会</a>'
+  date:
+    '2014-11'
+  site:
+    'publication/sigmus105/'

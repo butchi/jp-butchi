@@ -1,462 +1,451 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <!-- meta-->
-    <title>物智数
-    </title>
-    <meta name="description" content="物智数（平面的2進数）">
-    <meta name="keywords" content="2進数,記数法">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
-    <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <!-- smartphone meta-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no">
-    <!-- ogp-->
-    <meta property="fb:app_id" content="1539136399715307">
-    <meta property="og:url" content="http://butchi.jp/documents/butchi-number/">
-    <meta property="og:image" content="http://butchi.jp/ogp.png">
-    <meta property="og:image:width" content="128">
-    <meta property="og:image:height" content="128">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="物智数">
-    <meta property="og:site_name" content="butchi.jp">
-    <meta property="og:description" content="物智数（平面的2進数）">
-    <meta property="og:locale" content="ja_JP">
-    <!-- twitter card-->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="物智数">
-    <meta property="twitter:description" content="物智数（平面的2進数）">
-    <meta property="twitter:image" content="http://butchi.jp/ogp.png">
-    <!-- canonical url-->
-    <link rel="canonical" href="http://butchi.jp/documents/butchi-number/">
-    <script src="../../js/ua-switch.js"></script>
-    <!-- stylesheet-->
-    <link rel="stylesheet" href="../../css/material.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="../../css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="../../css/style.css">
-  </head>
-  <body data-path="documents/butchi-number/">
-    <!-- 岩淵勇樹のホームページへようこそ！-->
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.8&appId=1539136399715307";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 
-    <div class="wrapper">
-      <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-        <header class="mdl-layout__header">
-          <div class="mdl-layout__header-row"><span class="mdl-layout-title">物智数</span>
-            <div class="mdl-layout-spacer"></div>
-          </div>
-        </header>
-        <div class="mdl-layout__drawer"><span class="mdl-layout-title">メニュー</span>
-          <nav class="mdl-navigation"><a class="mdl-navigation__link" href="../../">ホーム</a><a class="mdl-navigation__link" href="../../person/">About me</a><a class="mdl-navigation__link" href="../../works/">作品</a><a class="mdl-navigation__link" href="../../publication/">発表文献</a><a class="mdl-navigation__link" href="../../documents/">解説記事</a>
-            <div class="list-share mdl-textfield--align-right">
-              <div class="item-share facebook">
-                <div class="fb-like" data-href="http://butchi.jp/" data-layout="box_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
-              </div>
-              <div class="item-share twitter"><a class="twitter-share-button" href="https://twitter.com/share" data-lang="ja" data-url="http://butchi.jp/">ツイート</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-              </div>
-              <div class="item-share line"><span>
-                  <script type="text/javascript" src="//media.line.me/js/line-button.js?v=20140411"></script>
-                  <script type="text/javascript">new media_line_me.LineButton({"pc":false,"lang":"ja","type":"a","text": "物智数","withUrl":true});</script></span></div>
-              <div class="item-share gplus">
-                <div class="g-plusone" data-size="medium"></div>
-              </div>
-            </div>
-          </nav>
-        </div>
-        <main class="mdl-layout__content">
-          <h2 class="btc-page-title">物智数
-          </h2>
-          <div class="inner-block">
-            <p>2進数は以下のような繰り上がり規則をもつ。</p>
-            <p>$1_2 + 1_2 = 10_2$</p>
-            <p>これを平面的に拡張して、以下のような繰り上がり規則を考える。</p>
-            <div class="paragraph">
-              <table class="butchi-number">
-                <tr>
-                  <td>$1$</td>
-                </tr>
-              </table> + 
-              <table class="butchi-number">
-                <tr>
-                  <td>$1$</td>
-                </tr>
-              </table> = 
-              <table class="butchi-number">
-                <tr>
-                  <td>$0$</td>
-                  <td>$1$</td>
-                </tr>
-                <tr>
-                  <td>$1$</td>
-                  <td>$0$</td>
-                </tr>
-              </table>
-            </div>
-            <p>こうすると、例えば $4$ は以下のように表される。</p>
-            <div class="paragraph">
-              <table class="butchi-number">
-                <tr>
-                  <td>$4$</td>
-                </tr>
-              </table> = 
-              <table class="butchi-number">
-                <tr>
-                  <td>$3$</td>
-                </tr>
-              </table> + 
-              <table class="butchi-number">
-                <tr>
-                  <td>$1$</td>
-                </tr>
-              </table> = 
-              <table class="butchi-number">
-                <tr>
-                  <td>$0$</td>
-                  <td>$1$</td>
-                </tr>
-                <tr>
-                  <td>$1$</td>
-                  <td>$1$</td>
-                </tr>
-              </table> + 
-              <table class="butchi-number">
-                <tr>
-                  <td>$1$</td>
-                </tr>
-              </table> = 
-              <table class="butchi-number">
-                <tr>
-                  <td>$0$</td>
-                  <td>$1$</td>
-                </tr>
-                <tr>
-                  <td>$1$</td>
-                  <td>$\bf{2}$</td>
-                </tr>
-              </table> = 
-              <table class="butchi-number">
-                <tr>
-                  <td>$0$</td>
-                  <td>$2$</td>
-                </tr>
-                <tr>
-                  <td>$\bf{2}$</td>
-                  <td>$0$</td>
-                </tr>
-              </table> = 
-              <table class="butchi-number">
-                <tr>
-                  <td>$0$</td>
-                  <td>$1$</td>
-                  <td>$\bf{2}$</td>
-                </tr>
-                <tr>
-                  <td>$1$</td>
-                  <td>$0$</td>
-                  <td>$0$</td>
-                </tr>
-              </table> = 
-              <table class="butchi-number">
-                <tr>
-                  <td>$0$</td>
-                  <td>$0$</td>
-                  <td>$1$</td>
-                </tr>
-                <tr>
-                  <td>$0$</td>
-                  <td>$\bf{2}$</td>
-                  <td>$0$</td>
-                </tr>
-                <tr>
-                  <td>$1$</td>
-                  <td>$0$</td>
-                  <td>$0$</td>
-                </tr>
-              </table> = 
-              <table class="butchi-number">
-                <tr>
-                  <td>$0$</td>
-                  <td>$1$</td>
-                  <td>$1$</td>
-                </tr>
-                <tr>
-                  <td>$1$</td>
-                  <td>$0$</td>
-                  <td>$0$</td>
-                </tr>
-                <tr>
-                  <td>$1$</td>
-                  <td>$0$</td>
-                  <td>$0$</td>
-                </tr>
-              </table>
-            </div>
-            <p>このようにして表される数を<i>物智数（平面的2進数）</i>と呼ぶ。</p>
-            <p>$0$ から $10$ までの物智数を以下に示す。</p>
-            <div class="paragraph">$0$ = 
-              <table class="butchi-number">
-                <tr>
-                  <td>$0$</td>
-                </tr>
-              </table>
-              , 
-              $1$ = 
-              <table class="butchi-number">
-                <tr>
-                  <td>$1$</td>
-                </tr>
-              </table>
-              , 
-              $2$ = 
-              <table class="butchi-number">
-                <tr>
-                  <td>$0$</td>
-                  <td>$1$</td>
-                </tr>
-                <tr>
-                  <td>$1$</td>
-                  <td>$0$</td>
-                </tr>
-              </table>
-              , 
-              $3$ = 
-              <table class="butchi-number">
-                <tr>
-                  <td>$0$</td>
-                  <td>$1$</td>
-                </tr>
-                <tr>
-                  <td>$1$</td>
-                  <td>$1$</td>
-                </tr>
-              </table>
-              , 
-              $4$ = 
-              <table class="butchi-number">
-                <tr>
-                  <td>$0$</td>
-                  <td>$1$</td>
-                  <td>$1$</td>
-                </tr>
-                <tr>
-                  <td>$1$</td>
-                  <td>$0$</td>
-                  <td>$0$</td>
-                </tr>
-                <tr>
-                  <td>$1$</td>
-                  <td>$0$</td>
-                  <td>$0$</td>
-                </tr>
-              </table>
-              , 
-              $5$ = 
-              <table class="butchi-number">
-                <tr>
-                  <td>$0$</td>
-                  <td>$1$</td>
-                  <td>$1$</td>
-                </tr>
-                <tr>
-                  <td>$1$</td>
-                  <td>$0$</td>
-                  <td>$0$</td>
-                </tr>
-                <tr>
-                  <td>$1$</td>
-                  <td>$0$</td>
-                  <td>$1$</td>
-                </tr>
-              </table>
-              , 
-              $6$ = 
-              <table class="butchi-number">
-                <tr>
-                  <td>$0$</td>
-                  <td>$1$</td>
-                  <td>$1$</td>
-                </tr>
-                <tr>
-                  <td>$1$</td>
-                  <td>$0$</td>
-                  <td>$1$</td>
-                </tr>
-                <tr>
-                  <td>$1$</td>
-                  <td>$1$</td>
-                  <td>$0$</td>
-                </tr>
-              </table>
-              , 
-              $7$ = 
-              <table class="butchi-number">
-                <tr>
-                  <td>$0$</td>
-                  <td>$1$</td>
-                  <td>$1$</td>
-                </tr>
-                <tr>
-                  <td>$1$</td>
-                  <td>$0$</td>
-                  <td>$1$</td>
-                </tr>
-                <tr>
-                  <td>$1$</td>
-                  <td>$1$</td>
-                  <td>$1$</td>
-                </tr>
-              </table>
-              , 
-              $8$ = 
-              <table class="butchi-number">
-                <tr>
-                  <td>$0$</td>
-                  <td>$1$</td>
-                  <td>$1$</td>
-                  <td>$1$</td>
-                </tr>
-                <tr>
-                  <td>$1$</td>
-                  <td>$0$</td>
-                  <td>$1$</td>
-                  <td>$0$</td>
-                </tr>
-                <tr>
-                  <td>$1$</td>
-                  <td>$1$</td>
-                  <td>$0$</td>
-                  <td>$0$</td>
-                </tr>
-                <tr>
-                  <td>$1$</td>
-                  <td>$0$</td>
-                  <td>$0$</td>
-                  <td>$0$</td>
-                </tr>
-              </table>
-              , 
-              $9$ = 
-              <table class="butchi-number">
-                <tr>
-                  <td>$0$</td>
-                  <td>$1$</td>
-                  <td>$1$</td>
-                  <td>$1$</td>
-                </tr>
-                <tr>
-                  <td>$1$</td>
-                  <td>$0$</td>
-                  <td>$1$</td>
-                  <td>$0$</td>
-                </tr>
-                <tr>
-                  <td>$1$</td>
-                  <td>$1$</td>
-                  <td>$0$</td>
-                  <td>$0$</td>
-                </tr>
-                <tr>
-                  <td>$1$</td>
-                  <td>$0$</td>
-                  <td>$0$</td>
-                  <td>$1$</td>
-                </tr>
-              </table>
-              , 
-              $10$ = 
-              <table class="butchi-number">
-                <tr>
-                  <td>$0$</td>
-                  <td>$1$</td>
-                  <td>$1$</td>
-                  <td>$1$</td>
-                </tr>
-                <tr>
-                  <td>$1$</td>
-                  <td>$0$</td>
-                  <td>$1$</td>
-                  <td>$0$</td>
-                </tr>
-                <tr>
-                  <td>$1$</td>
-                  <td>$1$</td>
-                  <td>$0$</td>
-                  <td>$1$</td>
-                </tr>
-                <tr>
-                  <td>$1$</td>
-                  <td>$0$</td>
-                  <td>$1$</td>
-                  <td>$0$</td>
-                </tr>
-              </table>
-            </div>
-            <div class="paragraph">なお、
-              <table class="butchi-number">
-                <tr>
-                  <td>$1$</td>
-                  <td>$0$</td>
-                </tr>
-              </table> や
-              <table class="butchi-number">
-                <tr>
-                  <td>$1$</td>
-                  <td>$1$</td>
-                </tr>
-                <tr>
-                  <td>$1$</td>
-                  <td>$1$</td>
-                </tr>
-              </table> など、自然数としては意味を持たないものも物智数として考える。
-            </div>
-            <h3 class="btc-heading" data-heading-level="3">物智数ビューワー
-            </h3>
-            <div class="btc-butchi-number-viewer"></div>
-            <h3 class="btc-heading" data-heading-level="3">文献
-            </h3>
-            <ol>
-              <li><span class="btc-bib">岩淵勇樹. 2進数の平面的表現に関する考察. 学士論文. 
-                  <time class="date">2007-03
-                  </time>. <a href="../../org/ku/b-thesis/">[詳細ページ]</a></span>
-              </li>
-              <li><span class="btc-bib">IWABUCHI Yuuki, AKITA Junichi. Properties of “Planar Binary (Butchi Number)”. Unconventional Computation (UC). 
-                  <time class="date">2010-06
-                  </time>. <a href="../../publication/uc2010/">[詳細ページ]</a></span>
-              </li>
-            </ol>
-          </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>物智数 | butchi.jp</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="module">
+        import { BtcDefaultLayout } from "/js/module/btc-default-layout.js"
+        import { BtcButchiNumberTable } from "/js/module/btc-butchi-number-table.js"
+
+        customElements.define('btc-default-layout', BtcDefaultLayout)
+        customElements.define('btc-butchi-number-table', BtcButchiNumberTable)
+    </script>
+</head>
+
+<body>
+    <btc-default-layout>
+        <main>
+            <article>
+                <h1>物智数</h1>
+                <p>2進数は以下のような繰り上がり規則をもつ。</p>
+                <p>1<sub>2</sub> + 1<sub>2</sub> = 10<sub>2</sub></p>
+                <p>これを平面的に拡張して、以下のような繰り上がり規則を考える。</p>
+                <section>
+                    <btc-butchi-number-table>
+                        <table>
+                            <tr>
+                                <td>1</td>
+                            </tr>
+                        </table>
+                    </btc-butchi-number-table> +
+                    <btc-butchi-number-table>
+                        <table>
+                            <tr>
+                                <td>1</td>
+                            </tr>
+                        </table>
+                    </btc-butchi-number-table> =
+                    <btc-butchi-number-table>
+                        <table>
+                            <tr>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                            </tr>
+                        </table>
+                    </btc-butchi-number-table>
+                </section>
+
+                <section>
+                    <p>こうすると、例えば 4 は以下のように表される。</p>
+
+                    <btc-butchi-number-table>
+                        <table>
+                            <tr>
+                                <td>4</td>
+                            </tr>
+                        </table>
+                    </btc-butchi-number-table> =
+                    <btc-butchi-number-table>
+                        <table>
+                            <tr>
+                                <td>3</td>
+                            </tr>
+                        </table>
+                    </btc-butchi-number-table> +
+                    <btc-butchi-number-table>
+                        <table>
+                            <tr>
+                                <td>1</td>
+                            </tr>
+                        </table>
+                    </btc-butchi-number-table> =
+                    <btc-butchi-number-table>
+                        <table>
+                            <tr>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                        </table>
+                    </btc-butchi-number-table> +
+                    <btc-butchi-number-table>
+                        <table>
+                            <tr>
+                                <td>1</td>
+                            </tr>
+                        </table>
+                    </btc-butchi-number-table> =
+                    <btc-butchi-number-table>
+                        <table>
+                            <tr>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><b>2</b></td>
+                            </tr>
+                        </table>
+                    </btc-butchi-number-table> =
+                    <btc-butchi-number-table>
+                        <table>
+                            <tr>
+                                <td>0</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td><b>2</b></td>
+                                <td>0</td>
+                            </tr>
+                        </table>
+                    </btc-butchi-number-table> =
+                    <btc-butchi-number-table>
+                        <table>
+                            <tr>
+                                <td>0</td>
+                                <td>1</td>
+                                <td><b>2</b></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                        </table>
+                    </btc-butchi-number-table> =
+                    <btc-butchi-number-table>
+                        <table>
+                            <tr>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td><b>2</b></td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                        </table>
+                    </btc-butchi-number-table> =
+                    <btc-butchi-number-table>
+                        <table>
+                            <tr>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                        </table>
+                    </btc-butchi-number-table>
+                </section>
+
+                <section>
+                    <p>このようにして表される数を<i>物智数（平面的2進数）</i>と呼ぶ。</p>
+                    <p>0 から 10 までの物智数を以下に示す。</p>
+
+                    <btc-butchi-number-table>
+                        <table>
+                            <tr>
+                                <td>0</td>
+                            </tr>
+                        </table>
+                    </btc-butchi-number-table>
+                    ,
+                    1 =
+                    <btc-butchi-number-table>
+                        <table>
+                            <tr>
+                                <td>1</td>
+                            </tr>
+                        </table>
+                    </btc-butchi-number-table>
+                    ,
+                    2 =
+                    <btc-butchi-number-table>
+                        <table>
+                            <tr>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                            </tr>
+                        </table>
+                    </btc-butchi-number-table>
+                    ,
+                    3 =
+                    <btc-butchi-number-table>
+                        <table>
+                            <tr>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                        </table>
+                    </btc-butchi-number-table>
+                    ,
+                    4 =
+                    <btc-butchi-number-table>
+                        <table>
+                            <tr>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                        </table>
+                    </btc-butchi-number-table>
+                    ,
+                    5 =
+                    <btc-butchi-number-table>
+                        <table>
+                            <tr>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                        </table>
+                    </btc-butchi-number-table>
+                    ,
+                    6 =
+                    <btc-butchi-number-table>
+                        <table>
+                            <tr>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>0</td>
+                            </tr>
+                        </table>
+                    </btc-butchi-number-table>
+                    ,
+                    7 =
+                    <btc-butchi-number-table>
+                        <table>
+                            <tr>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                        </table>
+                    </btc-butchi-number-table>
+                    ,
+                    8 =
+                    <btc-butchi-number-table>
+                        <table>
+                            <tr>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                        </table>
+                    </btc-butchi-number-table>
+                    ,
+                    9 =
+                    <btc-butchi-number-table>
+                        <table>
+                            <tr>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                        </table>
+                    </btc-butchi-number-table>
+                    ,
+                    10 =
+                    <btc-butchi-number-table>
+                        <table>
+                            <tr>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>0</td>
+                            </tr>
+                        </table>
+                    </btc-butchi-number-table>
+                </section>
+
+                <section>
+                    なお、
+                    <btc-butchi-number-table>
+                        <table>
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                            </tr>
+                        </table>
+                    </btc-butchi-number-table> や
+                    <btc-butchi-number-table>
+                        <table>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                        </table>
+                    </btc-butchi-number-table> など、自然数としては意味を持たないものも物智数として考える。
+                </section>
+            </article>
+
+            <aside>
+                <h1 class="btc-heading" data-heading-level="3">物智数ビューワー</h1>
+                <btc-butchi-number-viewer></btc-butchi-number-viewer>
+            </aside>
+
+            <aside>
+                <h1 class="btc-heading" data-heading-level="3">文献</h1>
+                <ol>
+                    <li>
+                        岩淵勇樹. 2進数の平面的表現に関する考察. 学士論文.
+                        <time>2007-03</time>.
+                        <a href="../../org/kanazawa-univ/b-thesis/">[詳細ページ]</a>
+                    </li>
+                    <li>
+                        IWABUCHI Yuuki, AKITA Junichi. Properties of “Planar Binary (Butchi Number)”.
+                        Unconventional Computation (UC).
+                        <time>2010-06</time>.
+                        <a href="../../publication/uc2010/">[詳細ページ]</a>
+                    </li>
+                </ol>
+            </aside>
         </main>
-        <footer><a href="../../">Home</a></footer>
-      </div>
-    </div>
-    <!-- javascript-->
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
-    <script type="text/javascript" async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"></script>
-    <script src="../../js/lib/jquery.min.js"></script>
-    <script src="../../js/lib/lodash.min.js"></script>
-    <script src="../../js/lib/material.min.js"></script>
-    <script src="../../js/script.js"></script>
-<script src="https://apis.google.com/js/platform.js" async defer>
-  {lang: 'ja'}
-</script>
-    
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-2779957-5', 'auto');
-  ga('send', 'pageview');
-</script>
-  </body>
+    </btc-default-layout>
+</body>
+
 </html>

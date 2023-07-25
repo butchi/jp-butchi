@@ -1,1088 +1,696 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <!-- meta-->
-    <title>記号辞典〜コンピューターにおける記号の意味と使われ方〜
-    </title>
-    <meta name="description" content="岩淵勇樹の個人による公式サイトです。">
-    <meta name="keywords" content="岩淵勇樹,岩淵,勇樹,ぶっち,ブッチ,butchi_y,butchi,bucchi,butti,buchi,butchy,butchiy,岩渕">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
-    <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <!-- smartphone meta-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no">
-    <!-- ogp-->
-    <meta property="fb:app_id" content="1539136399715307">
-    <meta property="og:url" content="http://butchi.jp/documents/symbol/">
-    <meta property="og:image" content="http://butchi.jp/ogp.png">
-    <meta property="og:image:width" content="128">
-    <meta property="og:image:height" content="128">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="記号辞典〜コンピューターにおける記号の意味と使われ方〜">
-    <meta property="og:site_name" content="butchi.jp">
-    <meta property="og:description" content="岩淵勇樹の個人による公式サイトです。">
-    <meta property="og:locale" content="ja_JP">
-    <!-- twitter card-->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="記号辞典〜コンピューターにおける記号の意味と使われ方〜">
-    <meta property="twitter:description" content="岩淵勇樹の個人による公式サイトです。">
-    <meta property="twitter:image" content="http://butchi.jp/ogp.png">
-    <!-- canonical url-->
-    <link rel="canonical" href="http://butchi.jp/documents/symbol/">
-    <script src="../../js/ua-switch.js"></script>
-    <!-- stylesheet-->
-    <link rel="stylesheet" href="../../css/material.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="../../css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="../../css/style.css">
-  </head>
-  <body data-path="documents/symbol/">
-    <!-- 岩淵勇樹のホームページへようこそ！-->
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.8&appId=1539136399715307";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 
-    <div class="wrapper">
-      <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-        <header class="mdl-layout__header">
-          <div class="mdl-layout__header-row"><span class="mdl-layout-title">記号辞典〜コンピューターにおける記号の意味と使われ方〜</span>
-            <div class="mdl-layout-spacer"></div>
-          </div>
-        </header>
-        <div class="mdl-layout__drawer"><span class="mdl-layout-title">メニュー</span>
-          <nav class="mdl-navigation"><a class="mdl-navigation__link" href="../../">ホーム</a><a class="mdl-navigation__link" href="../../person/">About me</a><a class="mdl-navigation__link" href="../../works/">作品</a><a class="mdl-navigation__link" href="../../publication/">発表文献</a><a class="mdl-navigation__link" href="../../documents/">解説記事</a>
-            <div class="list-share mdl-textfield--align-right">
-              <div class="item-share facebook">
-                <div class="fb-like" data-href="http://butchi.jp/" data-layout="box_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
-              </div>
-              <div class="item-share twitter"><a class="twitter-share-button" href="https://twitter.com/share" data-lang="ja" data-url="http://butchi.jp/">ツイート</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-              </div>
-              <div class="item-share line"><span>
-                  <script type="text/javascript" src="//media.line.me/js/line-button.js?v=20140411"></script>
-                  <script type="text/javascript">new media_line_me.LineButton({"pc":false,"lang":"ja","type":"a","text": "記号辞典〜コンピューターにおける記号の意味と使われ方〜","withUrl":true});</script></span></div>
-              <div class="item-share gplus">
-                <div class="g-plusone" data-size="medium"></div>
-              </div>
-            </div>
-          </nav>
-        </div>
-        <main class="mdl-layout__content">
-          <h2 class="btc-page-title">記号辞典〜コンピューターにおける記号の意味と使われ方〜
-          </h2>
-          <div class="inner-block">
-            <h4 class="btc-heading" data-heading-level="4">はじめに
-            </h4>
-            <p>キーボードではアルファベットの他に、記号が約30種類打てるようになっています。それらは元々は文書での特定の役割を持っていましたが、プログラミング言語などに用いられるようになってから意味合いが変化しています。このページでは、それぞれの記号の意味・使われ方を説明します。</p>
-            <section class="sec-dictionary">
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">-（マイナス記号、ハイフン）
-                </h5>
-                <ul>
-                  <li>マイナス記号として: 減算の演算子。二項演算子として使われる場合（2-1など）と、単項演算子として使われる場合（-1など）がある
-                  </li>
-                  <li>ハイフンとして: 一つの単語を複数の行に分けて書くとき、前の行の最後に置かれる
-                  </li>
-                  <li>ハイフンとして: 英語で、複数の語から成る形容詞の、構成する語の間に置かれる（ten‐year‐old girlなど）
-                  </li>
-                  <li>ハイフンとして: 電話番号や住所の数字部分などの区切りとして使われる
-                  </li>
-                  <li>日本語入力時、長音（ー）の入力に用いられる
-                  </li>
-                  <li>長音（ー）は語尾に使われる（「私はあざみちゃんなのー。」など）
-                  </li>
-                  <li>よく使われる"-"はハイフンマイナスと呼ぶ
-                  </li>
-                  <li>「−」を変形させた￢は、否定を表す
-                  </li>
-                  <li>差集合の二項演算記号としても使われる。\（バックスラッシュ）を用いることもある
-                  </li>
-                  <li>C言語などでは--をデクリメント演算子に使う
-                  </li>
-                  <li>Wikiでは箇条書きに使う（--でもう1段階下の階層）
-                  </li>
-                  <li>HTMLなどでは&lt;!--と--&gt;で囲むとコメントアウトできる
-                  </li>
-                  <li>Mathematicaで-&gt;はルールを表す（{x,x^2,a,b} /.x->3で{3,9,a,b}など）
-                  </li>
-                  <li>--や--------などいくつか並べて段落の区切りに使う（メールの署名など）
-                  </li>
-                  <li>全角の－（マイナス）、―（ダッシュ）、‐（ハイフン）、ー（長音）との違いに注意
-                  </li>
-                  <li>顔文字として口の部分や目の部分として使う（(-_-)、(^-^)など）
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">+（プラス記号）
-                </h5>
-                <ul>
-                  <li>数学においての加算の演算子。二項演算子として使われる場合（2+1など）と、単項演算子として明示的に使われる場合（+1など）がある
-                  </li>
-                  <li>数学において論理和として使う場合もある
-                  </li>
-                  <li>「+」を円で囲んだ記号は、直和集合や排他的論理和に使われる
-                  </li>
-                  <li>C言語などでは++をインクリメント演算子に使う
-                  </li>
-                  <li>文字列の連結にも使われる（"a" + "b" = "ab"など）
-                  </li>
-                  <li>Wikiで番号付きリストを作るときに使う
-                  </li>
-                  <li>Gmailなどではユーザー名の後に付ける+以降に任意の英数字を記して複数のメールアドレスとして利用できる（ユーザー名がhogeの場合、hoge+piyo@gmail.com など）
-                  </li>
-                  <li>顔文字として目の部分を表す（(+_+)など）
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">*（アスタリスク）
-                </h5>
-                <ul>
-                  <li>多くのプログラミング言語では乗算に使う
-                  </li>
-                  <li>正規表現などでファイル名のワイルドカードとして使う（*.txtなど）
-                  </li>
-                  <li>押しボタン式電話機には、数字に加えて#と*のボタンが置かれ、特殊な用途に使われる
-                  </li>
-                  <li>Wikiでは見出しを作るときに使う（**でもう1段階下の階層）
-                  </li>
-                  <li>C言語ではポインタを表す
-                  </li>
-                  <li>C言語などでは"/*"と"*/"で囲むとコメントアウトになる
-                  </li>
-                  <li>Mathematicaでは"(*"と"*)"で囲むとコメントアウトになる
-                  </li>
-                  <li>顔文字として目の部分を表す（(*_*)など）
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">/（スラッシュ）
-                </h5>
-                <ul>
-                  <li>日付で、算用数字で表した月日または年月日を分ける。ただし、順序は国によって異なる（2010/11/22（→2010年11月22日）など）
-                  </li>
-                  <li>分数、あるいは、学術書などで通常は割り算を分数形式で書く文脈で、縦のスペースを節約したいときや、分数形式だと式が読みづらくなるときなど、「1/3」「a/b」のように書くことがある。ほとんどのプログラミング言語でも除算として用いる
-                  </li>
-                  <li>UNIXオペレーティングシステムにおいて、パス区切り記号として、ディレクトリ（パーソナルコンピュータのフォルダと類似の概念）を表し、ディレクトリ名の後（ないし、ネットワーク内のコンピュータ名の後）に置かれる（Windowsにおける"\"と同等）
-                  </li>
-                  <li>URLにおいてディレクトリーのパス区切り記号として使われる
-                  </li>
-                  <li>C言語などでは"/*"と"*/"で囲むとコメントアウトになる
-                  </li>
-                  <li>C言語やWikiなどでは//を使うと行末までコメントアウトになる
-                  </li>
-                  <li>Mathematicaでは"引数//関数"で"関数[引数]"を示す（Pi//N(=3.14159)など）
-                  </li>
-                  <li>Mathematicaでf/@exprはMap関数を表し、exprの第1レベルにある各要素にfを適用する（f /@ {a,b,c,d,e}で{f[a],f[b],f[c],f[d],f[e]}など）
-                  </li>
-                  <li>Mathematicaでは、expr/.rulesで式exprの下位区分のそれぞれを変換しようとするとき、規則または規則のリストを適用する（{x,x^2,y,z}/.x->aで{a,a^2,y,z}など）
-                  </li>
-                  <li>顔文字として、手を挙げることを表す（(^-^)/など）
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">^（ハット記号、サーカムフレックス）
-                </h5>
-                <ul>
-                  <li>元来はダイアクリティカルマークの一種
-                  </li>
-                  <li>LaTeXなどで上付き文字を指定する記号
-                  </li>
-                  <li>Excelなどでべき乗を示す演算子（Gnuplotなどでは**と書く）
-                  </li>
-                  <li>C言語において「ビットごとの排他的論理和」の意味
-                  </li>
-                  <li>^^で笑顔を表す顔文字
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">\（円記号、バックスラッシュ）
-                </h5>
-                <ul>
-                  <li>円記号として: 日本の通貨単位の円や中国の人民元(Yuan)などを表す通貨記号である（¥1,980など）
-                  </li>
-                  <li>円記号とバックスラッシュはキーが同じでシステムによって表示が異なるので問題視されている
-                  </li>
-                  <li>バックスラッシュとして: 集合論で差集合の演算子として使う
-                  </li>
-                  <li>Windowsのパスのディレクトリー名のパス区切り記号（"C:\hoge\piyo.txt"など）
-                  </li>
-                  <li>LaTeXで命令を表す記号（\sectionなど）
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">@（アットマーク）
-                </h5>
-                <ul>
-                  <li>正式名称は単価記号
-                  </li>
-                  <li>元来は、単価を示すのに使われた
-                  </li>
-                  <li>電子メールのアドレスにおいて、個人名とドメイン名を分けるのに使われる（hoge@piyo.co.jpなど）
-                  </li>
-                  <li>Twitterではユーザーを指定するツイートでユーザー名の前に@を付ける（<a href="http://twitter.com/butchi_y">@butchi_y</a>など）
-                  </li>
-                  <li>Mathematicaでf@@exprは、式exprの頭部をfで置換する（f @@ {a,b,c,d}でf[a,b,c,d]など）
-                  </li>
-                  <li>Mathematicaでf/@exprはMap関数を表し、exprの第1レベルにある各要素にfを適用する（f /@ {a,b,c,d,e}で{f[a],f[b],f[c],f[d],f[e]}など）
-                  </li>
-                  <li>顔文字として目の部分を表す（(@_@)など）
-                  </li>
-                  <li>喪＠CェNｺ瑠ｦｭWｧ（「喪興瑠怒(ソーコールド)(仮)」）という曲がある
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">;（セミコロン）
-                </h5>
-                <ul>
-                  <li>英語では、基本的に「強いコンマ( , )」ないし「弱い終止符( . )」である
-                  </li>
-                  <li>多くのプログラミング言語で命令の区切りに使われる
-                  </li>
-                  <li>MATLABで配列内に新しい行が作成する（[5,8;3,4]など）
-                  </li>
-                  <li>汗を示す顔文字として使われる（(^_^;)など）
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">:（コロン）
-                </h5>
-                <ul>
-                  <li>時刻や経過・所要時間を表す。時と分、分と秒を区切る（5:38（→5時38分）など）
-                  </li>
-                  <li>[object Object]
-                  </li>
-                  <li>テレビ番組やDVDの字幕表示、チャットなどにおいて会話している人名とその内容を表す（A:ありがとうございます B:どういたしまして など）
-                  </li>
-                  <li>数学において比を表す（3:9=1:3など）
-                  </li>
-                  <li>C言語などでの3項演算子で、if文におけるelseにあたる部分を示す（X>0?1:0など）
-                  </li>
-                  <li>MATLABで数列を生成する（3:8で[3,4,5,6,7,8]、3:2:8で[3,5,7]など）
-                  </li>
-                  <li>Wikiで定義リストを作るときに使う
-                  </li>
-                  <li>MS-DOSおよびWindowsでは、ドライブレターの後に置かれる。(Cドライブ→C:)
-                  </li>
-                  <li>URLを記述する際にスキームの後に記述する。（http://butchi.jp/ , ftp: , mailto: など）
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">,（コンマ、読点）
-                </h5>
-                <ul>
-                  <li>文の途中の区切りに打たれる点
-                  </li>
-                  <li>単語を並べるときにも使う（Aさん、Bさん、Cさんと食事をした）
-                  </li>
-                  <li>縦書きに用いる"、"と同等である
-                  </li>
-                  <li>全角"，"は論文などでよく使われる
-                  </li>
-                  <li>桁区切りに使う（1,980円など）
-                  </li>
-                  <li>タグの区切り
-                  </li>
-                  <li>CSVで列を区切るときに使う
-                  </li>
-                  <li>Wikiで表組みを作るときに使う
-                  </li>
-                  <li>「藤岡弘、」という芸能人がいる
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">.（ピリオド、ドット、終止符、句点）
-                </h5>
-                <ul>
-                  <li>文の終わりに打たれる点
-                  </li>
-                  <li>縦書きに用いる"。"と同等である
-                  </li>
-                  <li>全角"．"は論文などでよく使われる
-                  </li>
-                  <li>英語など多くの言語で、略語や略記語の最後に終止符と同じ点を打つ
-                  </li>
-                  <li>数学において小数点を意味する
-                  </li>
-                  <li>現在のフォルダーを示す（./index.htmlなど）
-                  </li>
-                  <li>..は、現在のフォルダーの親を示す（../index.htmlなど）
-                  </li>
-                  <li>ファイル名（拡張子の前）やインターネットのホスト名（ドメイン名）やIPアドレスなどの区切り記号（readme.txt、butchi.jp、192.168.0.1など）
-                  </li>
-                  <li>Mathematicaなどで、ベクトルや行列、テンソルの積を与える（\{a,b,c\}.\{x,y,z\}でa x+b y+c zなど）
-                  </li>
-                  <li>Mathematicaでは、expr/.rulesで式exprの下位区分のそれぞれを変換しようとするとき、規則または規則のリストを適用する（{x,x^2,y,z}/.x->aで{a,a^2,y,z}など）
-                  </li>
-                  <li>顔文字では口の部分として用いられることがある（(^.^)など）
-                  </li>
-                  <li>「本田美奈子.」「KABA.ちゃん」という芸能人がいる
-                  </li>
-                  <li>「モーニング娘。」「ミニモニ。」というグループがある
-                  </li>
-                  <li>「ほっしゃん。 」「ハッピハッピー。」「なか。たつや」という芸能人がいる
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5"> （スペース）
-                </h5>
-                <ul>
-                  <li>語と語の区切りを表すために空ける空白
-                  </li>
-                  <li>姓と名の間にスペースを入れることがある。ミュージシャンの「大塚 愛」は姓と名の間に半角スペースを入れるのが正しい
-                  </li>
-                  <li>全角スペース"　"は段落のインデントなどに用いる
-                  </li>
-                  <li>HTMLでは&amp;nbsp;（ノーブレークスペース）と書く
-                  </li>
-                  <li>Wikiにおいて整形済みテキストを表す。行頭が半角空白で始まる行は整形済みテキストとなり、行の自動折り返しは行なわれない。
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">!（感嘆符）
-                </h5>
-                <ul>
-                  <li>エクスクラメーションマーク、雨垂れ、または俗にビックリマークとも呼ばれる
-                  </li>
-                  <li>視覚的な表現として、注意や危険であることを表現するために用いられる
-                  </li>
-                  <li>感嘆や命令など、普通よりも大きな声で発音される文の最後に、終止符に換えて置かれる
-                  </li>
-                  <li>数学では階乗を表す（3!=3×2×1=6など）
-                  </li>
-                  <li>!!は二重階乗と呼ばれる
-                  </li>
-                  <li>C言語などでは単独で否定を表し（!a（→aの論理否定）など）、!=で左辺と右辺が等しくないことを表す
-                  </li>
-                  <li>HTMLなどでは<!--と-->で囲むとコメントアウトできる
-                  </li>
-                  <li>『けいおん!』という作品がある
-                  </li>
-                  <li>「もってけ!セーラーふく」「かえして!ニーソックス」という曲がある
-                  </li>
-                  <li>「ハロー!プロジェクト」という集団がある
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">?（疑問符）
-                </h5>
-                <ul>
-                  <li>クエスチョンマーク、耳垂れ、はてなマーク、インテロゲーションマークとも呼ばれる
-                  </li>
-                  <li>携帯電話などで文字化けしたときに使われる
-                  </li>
-                  <li>C言語などでの3項演算子（条件判定）で、条件の終わりを示す（<code>X &gt; 0 ? 1 : 0</code>など）
-                  </li>
-                  <li>phpでは、HTML構文と区別するためのデリミタに用いられる（<code>&lt;?php 本文 ?&gt;</code>）
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">&quot;（二重引用符）
-                </h5>
-                <ul>
-                  <li>日本語の「」と同じ意味で使われることが多い
-                  </li>
-                  <li>様々な表記方法があり、“”を使う場合も多い
-                  </li>
-                  <li>多くのプログラミング言語では文字列を示す。JavaScriptなどの言語では'も同様の役割をすることが多い
-                  </li>
-                  <li>HTMLでは&amp;quot;と書く
-                  </li>
-                  <li>濁音ﾞと似ている（IPデータ通信サービスに「エッジ」（H"）というものがある）
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">'（シングルクォーテーション、ダッシュ、引用符）
-                </h5>
-                <ul>
-                  <li>英語では、音の省略に伴い文字を省略したことを表す
-                  </li>
-                  <li>類似の記号としてプライム（′）、アキュート・アクセント（´）などがあるが、それぞれ別のものである
-                  </li>
-                  <li>‘’を使う場合も多い
-                  </li>
-                  <li>分を表す記号として′が使われることもあるが、これは角度の単位の分にも用いられる
-                  </li>
-                  <li>数学では微分演算を示す（f'(x)など）
-                  </li>
-                  <li>いくつかのプログラミング言語では文字列を示す。JavaScriptなどの言語では"も同様の役割をすることが多い
-                  </li>
-                  <li>顔文字として目の部分を表す（('3')など）
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">#（シャープ、ナンバー、井桁）
-                </h5>
-                <ul>
-                  <li>井桁として: 番号を示す数字の前に置かれる記号
-                  </li>
-                  <li>シャープとして: 音楽で音を半音上げること、または上げた音、または楽譜上でそれを指示する記号
-                  </li>
-                  <li>押しボタン式電話機には、数字に加えて#と*のボタンが置かれ、特殊な用途に使われる
-                  </li>
-                  <li>URIにおいてfragmentとその他の部分のセパレータに使われる。たとえばHTMLではページ内の（a要素のname属性やid属性で定義された）箇所を示すのに使う（http://butchi.jp/documents/planar_binary/index.html#quatenary_tile など）
-                  </li>
-                  <li>Mathematicaでは純関数に与えられる第1引数を示す（(3 + #) &[x]で3+xなど）
-                  </li>
-                  <li>Unixのシェルスクリプト、またそれが影響しているPerlやPythonなどのスクリプト言語や設定ファイル等で、行末までのコメントを表すのに使われる
-                  </li>
-                  <li>メールなどでもコメントを書くときに使われる（全角＃の場合もある）
-                  </li>
-                  <li>「ベッキー♪♯」という歌手がいる
-                  </li>
-                  <li>顔文字として怒りマークとして使われることもある（゛(｀ヘ´#)など）
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">$（ドル記号）
-                </h5>
-                <ul>
-                  <li>ドルとペソの通貨記号（$2.00など）
-                  </li>
-                  <li>正規表現で、文字列の終わりを表す
-                  </li>
-                  <li>BASICで、変数の後につけて文字列変数を表す
-                  </li>
-                  <li>Perlで、変数の前に付けてスカラー変数を表す
-                  </li>
-                  <li>PascalやDelphiで、定数の前に付けて16進定数を表す
-                  </li>
-                  <li>phpで、定数の前に付けて変数を表す
-                  </li>
-                  <li>シェルスクリプトで、環境変数を表す
-                  </li>
-                  <li>表計算ソフト「Microsoft Excel」で、セルの絶対参照（参照するセルの番号を固定させる指示。セル番号「B5」とした場合、行・列の移動や挿入によって相対的に番号が変化するが、「$B$5」では強制的に参照先のセル番号が「B5」に固定される）を表す
-                  </li>
-                  <li>TeXでは、数式モードの区切りを示す
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">%（パーセント記号）
-                </h5>
-                <ul>
-                  <li>割合を示す単位で、全体を百として示すものである
-                  </li>
-                  <li>同じような記号にパーミル記号 (‰) もあり、この記号は千分率を表し、1000 分の 1 を意味する
-                  </li>
-                  <li>ほとんど見かけることはないが、10000 分の 1 を意味するパーミリアド記号（‱）も存在する
-                  </li>
-                  <li>C言語などで剰余の演算子として使用する（8%3で2（8を3で割ったときの余り）など）
-                  </li>
-                  <li>C言語などの書式付入出力関数（printf など）では書式指定を示す。たとえば、%dで整数、%cで 1 文字などの出力となる
-                  </li>
-                  <li>MATLABにおいて、%{および%}の記号で囲むと1行以上のコメントアウトができる
-                  </li>
-                  <li>LaTeXやMATLABなどで行末までのコメントアウトとして使う
-                  </li>
-                  <li>Wikiでは、行中のインライン要素を%%ではさむと、インライン要素に取消線が付く
-                  </li>
-                  <li>MS-DOSやMicrosoft Windowsなどでは、標準のコマンドラインインタプリタにおいて環境変数を表す記号として使用されている（echo %PATH% など）
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">&amp;（アンド、アンパサンド）
-                </h5>
-                <ul>
-                  <li>「〜と…」を意味する記号
-                  </li>
-                  <li>英語の "and" に相当するラテン語の "et" の合字
-                  </li>
-                  <li>C言語などで&&は論理ANDを表し（1&&1（→1）など）、&はビットANDを表す（0x12345678 & 0x0f0f0f0f（→0x02040608）など）
-                  </li>
-                  <li>HTMLでは&amp;amp;と書く
-                  </li>
-                  <li>LaTeXでは表組みの列を区切る記号として使われる（国名 & 人口(百万人) & 首都 \\日本 & 120 & 東京 \\ など）
-                  </li>
-                  <li>BASIC 系列の言語では文字列の連結演算子として使用される（"foo"&"bar"（→"foobar"）など）
-                  </li>
-                  <li>Mathematicaでは純関数の終わりを示す（(3 + #)&[x]で3+xなど）
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">=（イコール、等号）
-                </h5>
-                <ul>
-                  <li>ハールーン・アッ＝ラシード (Hārūn al-Rashīd) のように名前の読みがリエゾンする場合に「＝」を用いる事もあるが、正しくはこれは「゠」のダブルハイフンを使用するのが正しい
-                  </li>
-                  <li>等号の左右が等価であることを表す
-                  </li>
-                  <li>ほぼ等しいことを示す記号として「∼」「≃」「≈」「≒」がある
-                  </li>
-                  <li>似た記号に合同記号≡がある
-                  </li>
-                  <li>等しくないということを示す記号として等号否定≠がある
-                  </li>
-                  <li>ある記号Aが意味するものを、ある記号Bが意味するものと同じであると定義するには、「:=」を用いて「A:=B」と書く。このほかにも、「＝」の上に小さく"def"や"△"などを書いた記号が用いられることともある
-                  </li>
-                  <li>多くのプログラム言語では、「=」は右辺の値を左辺の変数へ代入することを表す代入演算子である
-                  </li>
-                  <li>多くのプログラミング言語では、数学での「=」に当たる等価演算子（多くの場合、比較演算子の一種とされる）は「=」を2つ続けた「==」（ダブルイコール）である
-                  </li>
-                  <li>プログラミング言語では、「≠」にあたる不等価演算子には、「!=」（等価演算子に「==」を使う言語の多く）、「<>」（等価演算子に「=」を使う言語の多く）、「/=」、「^=」などが使われる
-                  </li>
-                  <li>C言語、perl、Javaなどでは、通常の代入演算子以外に、加算代入演算子「+=」、減算代入演算子「-=」、乗算代入演算子「*=」、除算代入演算子「/=」などを備える（「a」が変数のとき、「a += 5;」は「a = a + 5;」と同じ など）
-                  </li>
-                  <li>異なる意味合いの比較に、別の演算子を用意している言語もある。たとえばPerlでは「==」「!=」は数値としての比較、「eq」「ne」は文字列としての比較をする演算子である
-                  </li>
-                  <li>顔文字として眠い時などの目の部分に使われる（(=_=)など）
-                  </li>
-                  <li>『らき☆すた』の泉こなたを表す顔文字として使われる（(＝ω＝．)、(≡ω≡．)）
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">（チルダ）
-                </h5>
-                <ul>
-                  <li>鼻音に関する音をあらわすダイアクリティカルマークの一種として使われる
-                  </li>
-                  <li>UNIX系オペレーティングシステムでは、チルダはホームディレクトリを表す文字として用いられる（“~”単体で自身のホームディレクトリ、“~ユーザ名”でそのユーザのホームディレクトリ）
-                  </li>
-                  <li>URLではしばしばユーザ別ホームディレクトリを表す記号として用いられる（http://merl.ec.t.kanazawa-u.ac.jp/~iwabuchi/ など）
-                  </li>
-                  <li>C言語、およびそれに影響を受けた言語の多くでは、ビットごとのNOTを取る単項演算子として定義されている
-                  </li>
-                  <li>Perlなどいくつかの言語においては、正規表現マッチングを行う =~  演算子と、その否定として !~ 演算子が用意されている
-                  </li>
-                  <li>Wikiで段落を明示するときに使う
-                  </li>
-                  <li>「Jｪﾁ~ｯじo™ｳ」（「同じ夜」）という曲がある
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">|（縦線、バーティカルバー）
-                </h5>
-                <ul>
-                  <li>バーティカルバーの中央が切断されている記号はブロークンバー（英語:Broken bar）といい、「¦」と書き表せる
-                  </li>
-                  <li>数学において|x|の形で、絶対値の記号として用いる
-                  </li>
-                  <li>数学において{x|x<2}の形で、定義を表す
-                  </li>
-                  <li>UNIXやMS-DOSではパイプの記号として用いる
-                  </li>
-                  <li>SQLではバーティカルバーを二つ合わせることにより(||)文字列の連結を意味する
-                  </li>
-                  <li>C言語などの多くのプログラム言語では、単なる論理和は「||」、ビット単位の論理和は「|」 で表される
-                  </li>
-                  <li>Wikiで表組みを作るときに使う
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">`（グレイヴ・アクセント）
-                </h5>
-                <ul>
-                  <li>フランス語、カタルーニャ語、イタリア語、ベトナム語などのラテン文字を用いる言語の表記に用いられるアクセント符号で、ダイアクリティカルマークの一種
-                  </li>
-                  <li>重アクセント、低アクセントなどとも
-                  </li>
-                  <li>いくつかのシェルスクリプトやperlなどでは、`……` と文字列を囲むと、文字列をコマンドとして実行し、実行結果の標準出力を文字列として返す
-                  </li>
-                  <li>LaTeXにおいて開き引用符を``、閉じ引用符''として用いる
-                  </li>
-                  <li>Mathematicaでパッケージを読み込むときに使う（"<< DiscreteMath`CombinatorialFunctions`"など）
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">&gt;, &lt;（大なり、小なり、不等号）
-                </h5>
-                <ul>
-                  <li>実数などの大小を表すための数学記号である
-                  </li>
-                  <li>複号同順を使った式で「≶」「≷」「≦」「≧」もしくは「≶」「≷」「⋚」「⋛」「≤」「≥」「⋜」「⋝」などの記号がある
-                  </li>
-                  <li>比が極度に大きいことを示すために、通常の不等号ではなく、「≪」「≫」が使用される
-                  </li>
-                  <li>「≲」は「小さいかほぼ等しい」、「≳」は「大きいかほぼ等しい」を意味する。近似計算で使われる
-                  </li>
-                  <li>ほとんどの言語で、等号付き不等号は
-                  </li>
-                  <li>Pascal、SQLなどでは、<> が否定等号（≠）として使われる
-                  </li>
-                  <li>Perlでは、
-                  </li>
-                  <li>>はメールやコメント、Wikiで引用やコメント先を表すときに使う（「>Butchiさん 例の件お願いします」など）
-                  </li>
-                  <li>プログラミング言語で括弧としても使われる（"#include <stdio.h>"など）
-                  </li>
-                  <li>XMLやHTMLなどのSGML言語では、
-                  </li>
-                  <li>HTMLでは&amp;gt;、&amp;lt;と書く
-                  </li>
-                  <li>C言語などにおいて<<と>>はビットシフトを表す
-                  </li>
-                  <li>C++では<<と>>はストリーム入出力も表す
-                  </li>
-                  <li>Mathematicaで->はルールを表す（{x,x^2,a,b} /.x->3で{3,9,a,b}など）
-                  </li>
-                  <li>Mathematicaでパッケージを読み込むときに使う（"<< DiscreteMath`CombinatorialFunctions`"など）
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">_（アンダースコア）
-                </h5>
-                <ul>
-                  <li>アンダーバーは和製英語である
-                  </li>
-                  <li>JIS X 0201では「アンダライン」となっている
-                  </li>
-                  <li>インターネットのURLやメールアドレスのようなスペースが使えないところで、かわりにアンダースコアを置くことが行われる。ただし、それらのうちドメイン名部分にはアンダースコアを用いることはできず、用いることができるのはハイフンマイナスである
-                  </li>
-                  <li>顔文字として口の部分を表すときに使われる（(=_=)など）
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">()（括弧、丸括弧）
-                </h5>
-                <ul>
-                  <li>小説等の文学作品では、会話に表れない心中表現であることを示すのに用いることがある
-                  </li>
-                  <li>数式においては、式をグループ化して演算の優先順位の明示・変更を行うときに用いる。プログラミング言語でも同様の用途で使用する言語が多い
-                  </li>
-                  <li>幾何学で座標を示す場合に1座標の定義を示す（(x,y)=(1,2)など）
-                  </li>
-                  <li>数学やプログラミング言語で、関数の引数を明示するのに用いる
-                  </li>
-                  <li>数学の区間において、開いていることを示す（[0,1)など）
-                  </li>
-                  <li>Mathematicaでは"(*"と"*)"で囲むとコメントアウトになる
-                  </li>
-                  <li>顔文字として顔の輪郭を表すときに使われる（(^-^)など）
-                  </li>
-                  <li>Wikiでは、行中でインライン要素を (( と )) ではさむと、注釈が作成され、行中に注釈へのリンクが貼られる
-                  </li>
-                  <li>BASICなどの一部のプログラミング言語やスクリプト言語では配列の要素を指定するのにも用いる
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">[]（角括弧）
-                </h5>
-                <ul>
-                  <li>数式においては、丸括弧()を入れ子にする場合に外側の括弧を角括弧とするほか、丸括弧の代わりに角括弧を用いる様式もある
-                  </li>
-                  <li>数学の区間において、閉じていることを示す（[0,1)など）
-                  </li>
-                  <li>Webサービスなどでタグを記すときに使う
-                  </li>
-                  <li>Wikiではリンクを貼るときに[[と]]を使う（[[エイリアス名:http://www.example.com/]]など）
-                  </li>
-                  <li>LaTeXで\[と\]で囲まれた部分は数式として扱われる
-                  </li>
-                  <li>Mathematicaで関数の引数を入れる部分に使う（f[x]など）
-                  </li>
-                  <li>Mathematicaで[[と]]を使ってリストの要素を指定する（{5,3,8}[[2]](=3)など）
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">{}（波括弧）
-                </h5>
-                <ul>
-                  <li>ブレース・ブレイス (brace) およびカーリーブラケット(curly bracket)・カール (curl)とも言う
-                  </li>
-                  <li>数式においては、角括弧 [] を入れ子にするときに外側の括弧を波括弧とする
-                  </li>
-                  <li>数学において集合を定義するときに使う（{x|xは3の倍数と10進法で3が付く数}など）
-                  </li>
-                  <li>C言語を始めとした多くのプログラミング言語やスクリプト言語では関数やif文・for文などの構文・命令等や変数のローカルスコープを表現する（if(x
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">「」（鉤括弧）
-                </h5>
-                <ul>
-                  <li>題目（題名・表題・外題・箇条・主題・問題・名目）などを特に提示する場合に用いる
-                  </li>
-                  <li>「いわゆる」「いわば」という、言葉を文字通りに受け取ってはいけないということを示す際に用いる。鉤括弧を付けた相手に、「相手はそう自称しているが、自分は認めない」という意思表示になる
-                  </li>
-                  <li>似た記号として二重鉤括弧『』がある
-                  </li>
-                  <li>ある作品が複数の作品から成り立っている場合、個々の作品の名称に鉤括弧「」を、作品全体ないし作品集の名称に二重鉤括弧『』を、それぞれ用いる（アルバム『A Journey To Freedom』から「My Favorite Swing」をお聞きください。など）
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">【】（隅付き括弧）
-                </h5>
-                <ul>
-                  <li>隅付きパーレン（すみつきパーレン）・太亀甲（ふときっこう）・黒亀甲（くろきっこう）・墨付き括弧（すみつきかっこ）とも言う
-                  </li>
-                  <li>タイトルの最初と最後に付けてアピールポイントを強調する（「【痩せ過ぎ】BMI24当たりが最も長生き【注意】」など）。2ちゃんねるやニコニコ動画のタイトルなどで散見される
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">～（全角チルダ、波線、波ダッシュ）
-                </h5>
-                <ul>
-                  <li>波ダッシュは、範囲を表すために用いられる<ul><li>場所に対して: 東京〜大阪</li><li>時間に対して: 5時〜6時</li><li>数量に対して: 100人〜150人</li></ul>
-                  </li>
-                  <li>副題を示すときに使われる（「空間スペクトルを用いたジャギー評価に関する一考察〜擬似的不規則画素配置によるジャギーの解消効果〜」など）
-                  </li>
-                  <li>「〜する」「〜からの」のように前に記載されている言葉を省略する場合や、「寿限無寿限無〜」のように後ろが長いために省略する場合などに使う
-                  </li>
-                  <li>表示システムによっては波が反転している場合もある
-                  </li>
-                  <li>長音（ー）の砕けた使い方（「へ～。」など）で、これと同じようなものに「〰」などがある
-                  </li>
-                  <li>顔文字として口の部分を表すときに使われる（(^～^)など）
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">・（中黒）
-                </h5>
-                <ul>
-                  <li>中ぽつ、中ポツ（なかぽつ）、中ぽち、中点（なかてん）、中テン、黒丸なども呼ばれる
-                  </li>
-                  <li>箇条書き（ただしこの場合はビュレットという）
-                  </li>
-                  <li>乗算
-                  </li>
-                  <li>顔文字として目の部分を表すときに使われる（(`・ω・´)など）
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">…（三点リーダー）
-                </h5>
-                <ul>
-                  <li>省略を示す
-                  </li>
-                  <li>あまりのあるわり算の「あまり」（14÷3＝4…2など）
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">々、ヽ、ゝ（踊り字）
-                </h5>
-                <ul>
-                  <li>同じ字の繰り返しを表す約物である
-                  </li>
-                  <li>おどり、繰り返し符号（くりかえしふごう）、重ね字（かさねじ）、送り字（おくりじ）、揺すり字（ゆすりじ）、重字（じゅうじ）、重点（じゅうてん）、畳字（じょうじ）などとも呼ぶ
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">〃（ノノ字点、同じく記号）
-                </h5>
-                <ul>
-                  <li>表などで上または左の内容と同一の場合の省略文字として使用される約物のひとつである
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">°（ど、デグリー）
-                </h5>
-                <ul>
-                  <li>角度の単位の度に使われる。
-                  </li>
-                  <li>温度の単位の度に使われる。単独ではなく、次のようにラテン文字1〜2文字と組み合わせて使う（℃など）
-                  </li>
-                  <li>半濁音（ﾟ）と似ている
-                  </li>
-                  <li>顔文字として目の部分を表すときに使われる（(°д°)など）
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">←、↑、→、↓（矢印）
-                </h5>
-                <ul>
-                  <li>←は直前の文の説明に用いる
-                  </li>
-                  <li>↑は1つ上の文の説明に用いる
-                  </li>
-                  <li>→は直前の文から導出されることを示す
-                  </li>
-                  <li>↓は1つ上の文から導出されることを示す
-                  </li>
-                  <li>Mathematicaで→はルールを表す（{x,x^2,a,b} /.x→3で{3,9,a,b}など）。->と同様である
-                  </li>
-                  <li>「まっがーれ↓スペクタクル」という曲がある
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">●○■□◆◇★☆▲△▼▽（箇条書き記号）
-                </h5>
-                <ul>
-                  <li>箇条書き記号として行頭に用いられる
-                  </li>
-                  <li>★、☆はお茶目な感じを出すために文末に使われることがある（やったね☆ など）
-                  </li>
-                  <li>◆は2chにおいてトリップを示す記号。（「ほげ◆Ig9vRBfuyA」など）
-                  </li>
-                  <li>一部の文書処理ソフトでは■、□などを箇条書き記号として使うことができる
-                  </li>
-                  <li>「つのだ☆ひろ」という芸能人がいる
-                  </li>
-                  <li>「漫☆画太郎」という漫画家がいる
-                  </li>
-                  <li>長島☆自演乙☆雄一郎というキックボクサーがいる
-                  </li>
-                  <li>『らき☆すた』という作品がある
-                  </li>
-                  <li>「まほろば○△」（まほろばまるやま）という曲がある
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">♪、♫、♬、♩（音符）
-                </h5>
-                <ul>
-                  <li>文末に使われ、気分の高揚を表す（「ラッキー♪」など）
-                  </li>
-                  <li>「みくみくにしてあげる♪【してやんよ】」という曲がある
-                  </li>
-                  <li>「ベッキー♪♯」という歌手がいる
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">×（かける、ばつ）
-                </h5>
-                <ul>
-                  <li>他の読み方として、「ぺけ」「ばってん」「ちょめ」「クロス」「バイ」など
-                  </li>
-                  <li>筆記時の乗算（主に初等教育）
-                  </li>
-                  <li>クロス積（ベクトル積）
-                  </li>
-                  <li>バツ
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">x（エックス）
-                </h5>
-                <ul>
-                  <li>乗算
-                  </li>
-                  <li>XXXでキス
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">2（に）
-                </h5>
-                <ul>
-                  <li>英語のtoの意味
-                  </li>
-                  <li>変換ツールの名前として使われることが多い（LaTeX2HTMLなど）
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">4（よん）
-                </h5>
-                <ul>
-                  <li>英語のforの意味
-                  </li>
-                  <li>ソフトウェアの名前に使われる場合がある（TeX4htなど）
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">∀（全称記号）
-                </h5>
-                <ul>
-                  <li>全称記号。数理論理学において「すべての」（全称量化）を表す記号である
-                  </li>
-                  <li>顔文字として、口を表す（（・∀・）ｲｲ！ など）
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">∃（存在記号）
-                </h5>
-                <ul>
-                  <li>存在記号。数理論理学（特に述語論理）において、少なくとも1つのメンバーが述語の特性や関係を満たすことを表す記号である
-                  </li>
-                  <li>数理論理学において∃!で唯一つ存在することを表すことがある
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">∴、∵（ゆえに、なぜならば）
-                </h5>
-                <ul>
-                  <li>「∴」は「ゆえに」、又は「すなわち」と読み、数学などでそれまでの内容から誘導できる結論に使用される学術記号である
-                  </li>
-                  <li>「∵」は「なぜならば」と読み、数学などでそれまでの内容から誘導できる結論に使用される学術記号である
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">⊥（垂直記号）
-                </h5>
-                <ul>
-                  <li>垂直記号。幾何学で用いられる記号である。下線の中央上に接する縦線を引く図形を書く。垂直記号の前後が垂直であることを示す
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">∠（角記号）
-                </h5>
-                <ul>
-                  <li>角記号。幾何学で用いられる記号である。下線の左に接し、右上方向に伸びる斜線を引く図形を書く
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">∟（直角記号）
-                </h5>
-                <ul>
-                  <li>直角記号。幾何学で用いられる記号である。下線の左に接する縦線を引く図形を書く。角を表す角記号「∠」の直角の場合に用いられる記号である
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">д、Д（デー）
-                </h5>
-                <ul>
-                  <li>顔文字として、口を表す（(゜Д゜)ウマー など）
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">∞（無限大）
-                </h5>
-                <ul>
-                  <li>数学において無限大を表す
-                  </li>
-                  <li>「関ジャニ∞」（かんじゃにエイト）というグループが存在する
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">¶（段落記号）
-                </h5>
-                <ul>
-                  <li>段落記号。段落を表す約物である。一般には、段落の区切りを表す目的で、段落の始めあるいは段落の終りのいずれか一方に置かれる
-                  </li>
-                  <li>図形はラテン文字の「C」にスラッシュを書いた字形が元になっている
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">‖、∥（双柱、平行記号）
-                </h5>
-                <ul>
-                  <li>「‖」は双柱と呼ばれる。縦線であるバーティカルバーを横に2つ並べた記号である。文字列の区切りで使用されるほか、発音記号や数学においても使用される
-                  </li>
-                  <li>「∥」は平行記号と呼ばれる。平行記号の前後の線あるいは面などが平行であることを示す。日本では、一般に「//」のかたちで表記するが、欧米では「||」のかたちで表記することが多い
-                  </li>
-                  <li>平行の否定を表す記号は「∦」である。日本では、一般に「//」に「＼」を重ねた図形で表記されるが、欧米では「||」に「／」を重ねた図形で表記する
-                  </li>
-                  <li>文字化けで||で表示されるシステムと//と表示されるシステムがある
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">v（ブイ）
-                </h5>
-                <ul>
-                  <li>ハートを表す
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h5 class="btc-heading" data-heading-level="5">ｗ（草、ダブル）
-                </h5>
-                <ul>
-                  <li>（笑）の略。ニコニコ動画などで笑いを表すときに使う（「きめぇｗｗｗｗ」など）
-                  </li>
-                </ul>
-              </section>
-            </section>
-            <h4 class="btc-heading" data-heading-level="4">固有名詞への利用
-            </h4>
-            <ul>
-              <li>本田美奈子.</li>
-              <li>KABA.ちゃん</li>
-              <li>モーニング娘。</li>
-              <li>ミニモニ。</li>
-              <li>ほっしゃん。 </li>
-              <li>ハッピハッピー。</li>
-              <li>なか。たつや</li>
-              <li>藤岡弘、</li>
-              <li>Jｪﾁ~ｯじo™ｳ</li>
-              <li>喪＠CェNｺ瑠ｦｭWｧ</li>
-              <li>ハロー!プロジェクト</li>
-              <li>けいおん!</li>
-              <li>もってけ!セーラーふく</li>
-              <li>かえして!ニーソックス</li>
-              <li>つのだ☆ひろ</li>
-              <li>漫☆画太郎</li>
-              <li>長島☆自演乙☆雄一郎</li>
-              <li>らき☆すた</li>
-              <li>みくみくにしてあげる♪【してやんよ】</li>
-              <li>ベッキー♪♯</li>
-              <li>まっがーれ↓スペクタクル</li>
-              <li>つんく♂</li>
-            </ul>
-            <section class="sec-reference">
-              <h4 class="btc-heading" data-heading-level="4">参考文献
-              </h4>
-              <ul>
-                <li><a href="http://hiramatu-hifuka.com/onyak/onyak2/kigo-1.html" target="_blank">記号の読み方辞典（音訳の部屋）</a></li>
-                <li><a href="http://www.geocities.jp/k1_kazamax/kigou2.html" target="_blank">特殊記号一覧</a></li>
-              </ul>
-            </section>
-          </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>記号辞典 | butchi.jp</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="module">
+        import { BtcDefaultLayout } from "/js/module/btc-default-layout.js"
+
+        customElements.define('btc-default-layout', BtcDefaultLayout)
+    </script>
+</head>
+
+<body data-path="works/">
+    <btc-default-layout title="作品紹介 | butchi.jp">
+        <main>
+            <h1>記号辞典</h1>
+            <h2>～コンピューターにおける記号の意味と使われ方～</h2>
+            <article>
+                <header>
+                    <h1>はじめに</h1>
+                    <p>
+                        キーボードではアルファベットの他に、記号が約30種類打てるようになっています。それらは元々は文書での特定の役割を持っていましたが、プログラミング言語などに用いられるようになってから意味合いが変化しています。このページでは、それぞれの記号の意味・使われ方を説明します。
+                    </p>
+                </header>
+                <section>
+                    <h1>-（マイナス記号、ハイフン）</h1>
+                    <ul>
+                        <li>マイナス記号として: 減算の演算子。二項演算子として使われる場合（2-1など）と、単項演算子として使われる場合（-1など）がある</li>
+                        <li>ハイフンとして: 一つの単語を複数の行に分けて書くとき、前の行の最後に置かれる</li>
+                        <li>ハイフンとして: 英語で、複数の語から成る形容詞の、構成する語の間に置かれる（ten‐year‐old girlなど）</li>
+                        <li>ハイフンとして: 電話番号や住所の数字部分などの区切りとして使われる</li>
+                        <li>日本語入力時、長音（ー）の入力に用いられる</li>
+                        <li>長音（ー）は語尾に使われる（「私はあざみちゃんなのー。」など）</li>
+                        <li>よく使われる"-"はハイフンマイナスと呼ぶ</li>
+                        <li>「−」を変形させた￢は、否定を表す</li>
+                        <li>差集合の二項演算記号としても使われる。\（バックスラッシュ）を用いることもある</li>
+                        <li>C言語などでは--をデクリメント演算子に使う</li>
+                        <li>Wikiでは箇条書きに使う（--でもう1段階下の階層）</li>
+                        <li>HTMLなどでは&lt;!--と--&gt;で囲むとコメントアウトできる</li>
+                        <li>Mathematicaで-&gt;はルールを表す（{x,x^2,a,b} /.x->3で{3,9,a,b}など）</li>
+                        <li>--や--------などいくつか並べて段落の区切りに使う（メールの署名など）</li>
+                        <li>全角の－（マイナス）、―（ダッシュ）、‐（ハイフン）、ー（長音）との違いに注意</li>
+                        <li>顔文字として口の部分や目の部分として使う（(-_-)、(^-^)など）</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>+（プラス記号）</h1>
+                    <ul>
+                        <li>数学においての加算の演算子。二項演算子として使われる場合（2+1など）と、単項演算子として明示的に使われる場合（+1など）がある</li>
+                        <li>数学において論理和として使う場合もある</li>
+                        <li>「+」を円で囲んだ記号は、直和集合や排他的論理和に使われる</li>
+                        <li>C言語などでは++をインクリメント演算子に使う</li>
+                        <li>文字列の連結にも使われる（"a" + "b" = "ab"など）</li>
+                        <li>Wikiで番号付きリストを作るときに使う</li>
+                        <li>Gmailなどではユーザー名の後に付ける+以降に任意の英数字を記して複数のメールアドレスとして利用できる（ユーザー名がhogeの場合、hoge+piyo@gmail.com
+                            など）</li>
+                        <li>顔文字として目の部分を表す（(+_+)など）</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>*（アスタリスク）</h1>
+                    <ul>
+                        <li>多くのプログラミング言語では乗算に使う</li>
+                        <li>正規表現などでファイル名のワイルドカードとして使う（*.txtなど）</li>
+                        <li>押しボタン式電話機には、数字に加えて#と*のボタンが置かれ、特殊な用途に使われる</li>
+                        <li>Wikiでは見出しを作るときに使う（**でもう1段階下の階層）</li>
+                        <li>C言語ではポインタを表す</li>
+                        <li>C言語などでは"/*"と"*/"で囲むとコメントアウトになる</li>
+                        <li>Mathematicaでは"(*"と"*)"で囲むとコメントアウトになる</li>
+                        <li>顔文字として目の部分を表す（(*_*)など）</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>/（スラッシュ）</h1>
+                    <ul>
+                        <li>日付で、算用数字で表した月日または年月日を分ける。ただし、順序は国によって異なる（2010/11/22（→2010年11月22日）など）</li>
+                        <li>
+                            分数、あるいは、学術書などで通常は割り算を分数形式で書く文脈で、縦のスペースを節約したいときや、分数形式だと式が読みづらくなるときなど、「1/3」「a/b」のように書くことがある。ほとんどのプログラミング言語でも除算として用いる
+                        </li>
+                        <li>
+                            UNIXオペレーティングシステムにおいて、パス区切り記号として、ディレクトリ（パーソナルコンピュータのフォルダと類似の概念）を表し、ディレクトリ名の後（ないし、ネットワーク内のコンピュータ名の後）に置かれる（Windowsにおける"\"と同等）
+                        </li>
+                        <li>URLにおいてディレクトリーのパス区切り記号として使われる</li>
+                        <li>C言語などでは"/*"と"*/"で囲むとコメントアウトになる</li>
+                        <li>C言語やWikiなどでは//を使うと行末までコメントアウトになる</li>
+                        <li>Mathematicaでは"引数//関数"で"関数[引数]"を示す（Pi//N(=3.14159)など）</li>
+                        <li>Mathematicaでf/@exprはMap関数を表し、exprの第1レベルにある各要素にfを適用する（f /@
+                            {a,b,c,d,e}で{f[a],f[b],f[c],f[d],f[e]}など）
+                        </li>
+                        <li>
+                            Mathematicaでは、expr/.rulesで式exprの下位区分のそれぞれを変換しようとするとき、規則または規則のリストを適用する（{x,x^2,y,z}/.x->aで{a,a^2,y,z}など）
+                        </li>
+                        <li>顔文字として、手を挙げることを表す（(^-^)/など）</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>^（ハット記号、サーカムフレックス）</h1>
+                    <ul>
+                        <li>元来はダイアクリティカルマークの一種</li>
+                        <li>LaTeXなどで上付き文字を指定する記号</li>
+                        <li>Excelなどでべき乗を示す演算子（Gnuplotなどでは**と書く）</li>
+                        <li>C言語において「ビットごとの排他的論理和」の意味</li>
+                        <li>^^で笑顔を表す顔文字</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>\（円記号、バックスラッシュ）</h1>
+                    <ul>
+                        <li>円記号として: 日本の通貨単位の円や中国の人民元(Yuan)などを表す通貨記号である（¥1,980など）</li>
+                        <li>円記号とバックスラッシュはキーが同じでシステムによって表示が異なるので問題視されている</li>
+                        <li>バックスラッシュとして: 集合論で差集合の演算子として使う</li>
+                        <li>Windowsのパスのディレクトリー名のパス区切り記号（"C:\hoge\piyo.txt"など）</li>
+                        <li>LaTeXで命令を表す記号（\sectionなど）</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>@（アットマーク）</h1>
+                    <ul>
+                        <li>正式名称は単価記号</li>
+                        <li>元来は、単価を示すのに使われた</li>
+                        <li>電子メールのアドレスにおいて、個人名とドメイン名を分けるのに使われる（hoge@piyo.co.jpなど）</li>
+                        <li>Twitterではユーザーを指定するツイートでユーザー名の前に@を付ける（<a href="http://twitter.com/butchi_y">@butchi_y</a>など）
+                        </li>
+                        <li>Mathematicaでf@@exprは、式exprの頭部をfで置換する（f @@ {a,b,c,d}でf[a,b,c,d]など）</li>
+                        <li>Mathematicaでf/@exprはMap関数を表し、exprの第1レベルにある各要素にfを適用する（f /@
+                            {a,b,c,d,e}で{f[a],f[b],f[c],f[d],f[e]}など）
+                        </li>
+                        <li>顔文字として目の部分を表す（(@_@)など）</li>
+                        <li>喪＠CェNｺ瑠ｦｭWｧ（「喪興瑠怒(ソーコールド)(仮)」）という曲がある</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>;（セミコロン）</h1>
+                    <ul>
+                        <li>英語では、基本的に「強いコンマ( , )」ないし「弱い終止符( . )」である</li>
+                        <li>多くのプログラミング言語で命令の区切りに使われる</li>
+                        <li>MATLABで配列内に新しい行が作成する（[5,8;3,4]など）</li>
+                        <li>汗を示す顔文字として使われる（(^_^;)など）</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>:（コロン）</h1>
+                    <ul>
+                        <li>時刻や経過・所要時間を表す。時と分、分と秒を区切る（5:38（→5時38分）など）</li>
+                        <li>[object Object]</li>
+                        <li>テレビ番組やDVDの字幕表示、チャットなどにおいて会話している人名とその内容を表す（A:ありがとうございます B:どういたしまして など）</li>
+                        <li>数学において比を表す（3:9=1:3など）</li>
+                        <li>C言語などでの3項演算子で、if文におけるelseにあたる部分を示す（X>0?1:0など）</li>
+                        <li>MATLABで数列を生成する（3:8で[3,4,5,6,7,8]、3:2:8で[3,5,7]など）</li>
+                        <li>Wikiで定義リストを作るときに使う</li>
+                        <li>MS-DOSおよびWindowsでは、ドライブレターの後に置かれる。(Cドライブ→C:)</li>
+                        <li>URLを記述する際にスキームの後に記述する。（http://butchi.jp/ , ftp: , mailto: など）</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>,（コンマ、読点）</h1>
+                    <ul>
+                        <li>文の途中の区切りに打たれる点</li>
+                        <li>単語を並べるときにも使う（Aさん、Bさん、Cさんと食事をした）</li>
+                        <li>縦書きに用いる"、"と同等である</li>
+                        <li>全角"，"は論文などでよく使われる</li>
+                        <li>桁区切りに使う（1,980円など）</li>
+                        <li>タグの区切り</li>
+                        <li>CSVで列を区切るときに使う</li>
+                        <li>Wikiで表組みを作るときに使う</li>
+                        <li>「藤岡弘、」という芸能人がいる</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>.（ピリオド、ドット、終止符、句点）</h1>
+                    <ul>
+                        <li>文の終わりに打たれる点</li>
+                        <li>縦書きに用いる"。"と同等である</li>
+                        <li>全角"．"は論文などでよく使われる</li>
+                        <li>英語など多くの言語で、略語や略記語の最後に終止符と同じ点を打つ</li>
+                        <li>数学において小数点を意味する</li>
+                        <li>現在のフォルダーを示す（./index.htmlなど）</li>
+                        <li>..は、現在のフォルダーの親を示す（../index.htmlなど）</li>
+                        <li>ファイル名（拡張子の前）やインターネットのホスト名（ドメイン名）やIPアドレスなどの区切り記号（readme.txt、butchi.jp、192.168.0.1など）</li>
+                        <li>Mathematicaなどで、ベクトルや行列、テンソルの積を与える（\{a,b,c\}.\{x,y,z\}でa x+b y+c zなど）</li>
+                        <li>
+                            Mathematicaでは、expr/.rulesで式exprの下位区分のそれぞれを変換しようとするとき、規則または規則のリストを適用する（{x,x^2,y,z}/.x->aで{a,a^2,y,z}など）
+                        </li>
+                        <li>顔文字では口の部分として用いられることがある（(^.^)など）</li>
+                        <li>「本田美奈子.」「KABA.ちゃん」という芸能人がいる</li>
+                        <li>「モーニング娘。」「ミニモニ。」というグループがある</li>
+                        <li>「ほっしゃん。 」「ハッピハッピー。」「なか。たつや」という芸能人がいる</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1> （スペース）</h1>
+                    <ul>
+                        <li>語と語の区切りを表すために空ける空白</li>
+                        <li>姓と名の間にスペースを入れることがある。ミュージシャンの「大塚 愛」は姓と名の間に半角スペースを入れるのが正しい</li>
+                        <li>全角スペース"　"は段落のインデントなどに用いる</li>
+                        <li>HTMLでは&amp;nbsp;（ノーブレークスペース）と書く</li>
+                        <li>Wikiにおいて整形済みテキストを表す。行頭が半角空白で始まる行は整形済みテキストとなり、行の自動折り返しは行なわれない。</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>!（感嘆符）</h1>
+                    <ul>
+                        <li>エクスクラメーションマーク、雨垂れ、または俗にビックリマークとも呼ばれる</li>
+                        <li>視覚的な表現として、注意や危険であることを表現するために用いられる</li>
+                        <li>感嘆や命令など、普通よりも大きな声で発音される文の最後に、終止符に換えて置かれる</li>
+                        <li>数学では階乗を表す（3!=3×2×1=6など）</li>
+                        <li>!!は二重階乗と呼ばれる</li>
+                        <li>C言語などでは単独で否定を表し（!a（→aの論理否定）など）、!=で左辺と右辺が等しくないことを表す</li>
+                        <li>HTMLなどでは<!--と-->で囲むとコメントアウトできる</li>
+                        <li>『けいおん!』という作品がある</li>
+                        <li>「もってけ!セーラーふく」「かえして!ニーソックス」という曲がある</li>
+                        <li>「ハロー!プロジェクト」という集団がある</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>?（疑問符）</h1>
+                    <ul>
+                        <li>クエスチョンマーク、耳垂れ、はてなマーク、インテロゲーションマークとも呼ばれる</li>
+                        <li>携帯電話などで文字化けしたときに使われる</li>
+                        <li>C言語などでの3項演算子（条件判定）で、条件の終わりを示す（<code>X &gt; 0 ? 1 : 0</code>など）</li>
+                        <li>phpでは、HTML構文と区別するためのデリミタに用いられる（<code>&lt;?php 本文 ?&gt;</code>）</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>&quot;（二重引用符）</h1>
+                    <ul>
+                        <li>日本語の「」と同じ意味で使われることが多い</li>
+                        <li>様々な表記方法があり、“”を使う場合も多い</li>
+                        <li>多くのプログラミング言語では文字列を示す。JavaScriptなどの言語では'も同様の役割をすることが多い</li>
+                        <li>HTMLでは&amp;quot;と書く</li>
+                        <li>濁音ﾞと似ている（IPデータ通信サービスに「エッジ」（H"）というものがある）</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>'（シングルクォーテーション、ダッシュ、引用符）</h1>
+                    <ul>
+                        <li>英語では、音の省略に伴い文字を省略したことを表す</li>
+                        <li>類似の記号としてプライム（′）、アキュート・アクセント（´）などがあるが、それぞれ別のものである</li>
+                        <li>‘’を使う場合も多い</li>
+                        <li>分を表す記号として′が使われることもあるが、これは角度の単位の分にも用いられる</li>
+                        <li>数学では微分演算を示す（f'(x)など）</li>
+                        <li>いくつかのプログラミング言語では文字列を示す。JavaScriptなどの言語では"も同様の役割をすることが多い</li>
+                        <li>顔文字として目の部分を表す（('3')など）</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>#（シャープ、ナンバー、井桁）</h1>
+                    <ul>
+                        <li>井桁として: 番号を示す数字の前に置かれる記号</li>
+                        <li>シャープとして: 音楽で音を半音上げること、または上げた音、または楽譜上でそれを指示する記号</li>
+                        <li>押しボタン式電話機には、数字に加えて#と*のボタンが置かれ、特殊な用途に使われる</li>
+                        <li>
+                            URIにおいてfragmentとその他の部分のセパレータに使われる。たとえばHTMLではページ内の（a要素のname属性やid属性で定義された）箇所を示すのに使う（http://butchi.jp/documents/planar_binary/index.html#quatenary_tile
+                            など）</li>
+                        <li>Mathematicaでは純関数に与えられる第1引数を示す（(3 + #) &[x]で3+xなど）</li>
+                        <li>Unixのシェルスクリプト、またそれが影響しているPerlやPythonなどのスクリプト言語や設定ファイル等で、行末までのコメントを表すのに使われる</li>
+                        <li>メールなどでもコメントを書くときに使われる（全角＃の場合もある）</li>
+                        <li>「ベッキー♪♯」という歌手がいる</li>
+                        <li>顔文字として怒りマークとして使われることもある（゛(｀ヘ´#)など）</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>$（ドル記号）</h1>
+                    <ul>
+                        <li>ドルとペソの通貨記号（$2.00など）</li>
+                        <li>正規表現で、文字列の終わりを表す</li>
+                        <li>BASICで、変数の後につけて文字列変数を表す</li>
+                        <li>Perlで、変数の前に付けてスカラー変数を表す</li>
+                        <li>PascalやDelphiで、定数の前に付けて16進定数を表す</li>
+                        <li>phpで、定数の前に付けて変数を表す</li>
+                        <li>シェルスクリプトで、環境変数を表す</li>
+                        <li>表計算ソフト「Microsoft
+                            Excel」で、セルの絶対参照（参照するセルの番号を固定させる指示。セル番号「B5」とした場合、行・列の移動や挿入によって相対的に番号が変化するが、「$B$5」では強制的に参照先のセル番号が「B5」に固定される）を表す
+                        </li>
+                        <li>TeXでは、数式モードの区切りを示す</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>%（パーセント記号）</h1>
+                    <ul>
+                        <li>割合を示す単位で、全体を百として示すものである</li>
+                        <li>同じような記号にパーミル記号 (‰) もあり、この記号は千分率を表し、1000 分の 1 を意味する</li>
+                        <li>ほとんど見かけることはないが、10000 分の 1 を意味するパーミリアド記号（‱）も存在する</li>
+                        <li>C言語などで剰余の演算子として使用する（8%3で2（8を3で割ったときの余り）など）</li>
+                        <li>C言語などの書式付入出力関数（printf など）では書式指定を示す。たとえば、%dで整数、%cで 1 文字などの出力となる</li>
+                        <li>MATLABにおいて、%{および%}の記号で囲むと1行以上のコメントアウトができる</li>
+                        <li>LaTeXやMATLABなどで行末までのコメントアウトとして使う</li>
+                        <li>Wikiでは、行中のインライン要素を%%ではさむと、インライン要素に取消線が付く</li>
+                        <li>MS-DOSやMicrosoft Windowsなどでは、標準のコマンドラインインタプリタにおいて環境変数を表す記号として使用されている（echo %PATH% など）
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>&amp;（アンド、アンパサンド）</h1>
+                    <ul>
+                        <li>「〜と…」を意味する記号</li>
+                        <li>英語の "and" に相当するラテン語の "et" の合字</li>
+                        <li>C言語などで&&は論理ANDを表し（1&&1（→1）など）、&はビットANDを表す（0x12345678 & 0x0f0f0f0f（→0x02040608）など）</li>
+                        <li>HTMLでは&amp;amp;と書く</li>
+                        <li>LaTeXでは表組みの列を区切る記号として使われる（国名 & 人口(百万人) & 首都 \\日本 & 120 & 東京 \\ など）</li>
+                        <li>BASIC 系列の言語では文字列の連結演算子として使用される（"foo"&"bar"（→"foobar"）など）</li>
+                        <li>Mathematicaでは純関数の終わりを示す（(3 + #)&[x]で3+xなど）</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>=（イコール、等号）</h1>
+                    <ul>
+                        <li>ハールーン・アッ＝ラシード (Hārūn al-Rashīd)
+                            のように名前の読みがリエゾンする場合に「＝」を用いる事もあるが、正しくはこれは「゠」のダブルハイフンを使用するのが正しい</li>
+                        <li>等号の左右が等価であることを表す</li>
+                        <li>ほぼ等しいことを示す記号として「∼」「≃」「≈」「≒」がある</li>
+                        <li>似た記号に合同記号≡がある</li>
+                        <li>等しくないということを示す記号として等号否定≠がある</li>
+                        <li>
+                            ある記号Aが意味するものを、ある記号Bが意味するものと同じであると定義するには、「:=」を用いて「A:=B」と書く。このほかにも、「＝」の上に小さく"def"や"△"などを書いた記号が用いられることともある
+                        </li>
+                        <li>多くのプログラム言語では、「=」は右辺の値を左辺の変数へ代入することを表す代入演算子である</li>
+                        <li>多くのプログラミング言語では、数学での「=」に当たる等価演算子（多くの場合、比較演算子の一種とされる）は「=」を2つ続けた「==」（ダブルイコール）である</li>
+                        <li>プログラミング言語では、「≠」にあたる不等価演算子には、「!=」（等価演算子に「==」を使う言語の多く）、「<>
+                                」（等価演算子に「=」を使う言語の多く）、「/=」、「^=」などが使われる</li>
+                        <li>C言語、perl、Javaなどでは、通常の代入演算子以外に、加算代入演算子「+=」、減算代入演算子「-=」、乗算代入演算子「*=」、除算代入演算子「/=」などを備える（「a」が変数のとき、「a
+                            +=
+                            5;」は「a = a + 5;」と同じ など）</li>
+                        <li>異なる意味合いの比較に、別の演算子を用意している言語もある。たとえばPerlでは「==」「!=」は数値としての比較、「eq」「ne」は文字列としての比較をする演算子である
+                        </li>
+                        <li>顔文字として眠い時などの目の部分に使われる（(=_=)など）</li>
+                        <li>『らき☆すた』の泉こなたを表す顔文字として使われる（(＝ω＝．)、(≡ω≡．)）</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>（チルダ）</h1>
+                    <ul>
+                        <li>鼻音に関する音をあらわすダイアクリティカルマークの一種として使われる</li>
+                        <li>UNIX系オペレーティングシステムでは、チルダはホームディレクトリを表す文字として用いられる（“~”単体で自身のホームディレクトリ、“~ユーザ名”でそのユーザのホームディレクトリ）
+                        </li>
+                        <li>URLではしばしばユーザ別ホームディレクトリを表す記号として用いられる（http://merl.ec.t.kanazawa-u.ac.jp/~iwabuchi/ など）
+                        </li>
+                        <li>C言語、およびそれに影響を受けた言語の多くでは、ビットごとのNOTを取る単項演算子として定義されている</li>
+                        <li>Perlなどいくつかの言語においては、正規表現マッチングを行う =~ 演算子と、その否定として !~ 演算子が用意されている</li>
+                        <li>Wikiで段落を明示するときに使う</li>
+                        <li>「Jｪﾁ~ｯじo™ｳ」（「同じ夜」）という曲がある</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>|（縦線、バーティカルバー）</h1>
+                    <ul>
+                        <li>バーティカルバーの中央が切断されている記号はブロークンバー（英語:Broken bar）といい、「¦」と書き表せる</li>
+                        <li>数学において|x|の形で、絶対値の記号として用いる</li>
+                        <li>数学において{x|x<2}の形で、定義を表す </li>
+                        <li>UNIXやMS-DOSではパイプの記号として用いる</li>
+                        <li>SQLではバーティカルバーを二つ合わせることにより(||)文字列の連結を意味する</li>
+                        <li>C言語などの多くのプログラム言語では、単なる論理和は「||」、ビット単位の論理和は「|」 で表される</li>
+                        <li>Wikiで表組みを作るときに使う</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>`（グレイヴ・アクセント）</h1>
+                    <ul>
+                        <li>フランス語、カタルーニャ語、イタリア語、ベトナム語などのラテン文字を用いる言語の表記に用いられるアクセント符号で、ダイアクリティカルマークの一種</li>
+                        <li>重アクセント、低アクセントなどとも</li>
+                        <li>いくつかのシェルスクリプトやperlなどでは、`……` と文字列を囲むと、文字列をコマンドとして実行し、実行結果の標準出力を文字列として返す</li>
+                        <li>LaTeXにおいて開き引用符を``、閉じ引用符''として用いる</li>
+                        <li>Mathematicaでパッケージを読み込むときに使う（"<< DiscreteMath`CombinatorialFunctions`"など） </li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>&gt;, &lt;（大なり、小なり、不等号）</h1>
+                    <ul>
+                        <li>実数などの大小を表すための数学記号である</li>
+                        <li>複号同順を使った式で「≶」「≷」「≦」「≧」もしくは「≶」「≷」「⋚」「⋛」「≤」「≥」「⋜」「⋝」などの記号がある</li>
+                        <li>比が極度に大きいことを示すために、通常の不等号ではなく、「≪」「≫」が使用される</li>
+                        <li>「≲」は「小さいかほぼ等しい」、「≳」は「大きいかほぼ等しい」を意味する。近似計算で使われる</li>
+                        <li>ほとんどの言語で、等号付き不等号は</li>
+                        <li>Pascal、SQLなどでは、<> が否定等号（≠）として使われる</li>
+                        <li>Perlでは、</li>
+                        <li>>はメールやコメント、Wikiで引用やコメント先を表すときに使う（「>Butchiさん 例の件お願いします」など）</li>
+                        <li>プログラミング言語で括弧としても使われる（"#include <stdio.h>"など）</li>
+                        <li>XMLやHTMLなどのSGML言語では、</li>
+                        <li>HTMLでは&amp;gt;、&amp;lt;と書く</li>
+                        <li>C言語などにおいて<<と>>はビットシフトを表す</li>
+                        <li>C++では<<と>>はストリーム入出力も表す</li>
+                        <li>Mathematicaで->はルールを表す（{x,x^2,a,b} /.x->3で{3,9,a,b}など）</li>
+                        <li>Mathematicaでパッケージを読み込むときに使う（"<< DiscreteMath`CombinatorialFunctions`"など） </li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>_（アンダースコア）</h1>
+                    <ul>
+                        <li>アンダーバーは和製英語である</li>
+                        <li>JIS X 0201では「アンダライン」となっている</li>
+                        <li>
+                            インターネットのURLやメールアドレスのようなスペースが使えないところで、かわりにアンダースコアを置くことが行われる。ただし、それらのうちドメイン名部分にはアンダースコアを用いることはできず、用いることができるのはハイフンマイナスである
+                        </li>
+                        <li>顔文字として口の部分を表すときに使われる（(=_=)など）</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>()（括弧、丸括弧）</h1>
+                    <ul>
+                        <li>小説等の文学作品では、会話に表れない心中表現であることを示すのに用いることがある</li>
+                        <li>数式においては、式をグループ化して演算の優先順位の明示・変更を行うときに用いる。プログラミング言語でも同様の用途で使用する言語が多い</li>
+                        <li>幾何学で座標を示す場合に1座標の定義を示す（(x,y)=(1,2)など）</li>
+                        <li>数学やプログラミング言語で、関数の引数を明示するのに用いる</li>
+                        <li>数学の区間において、開いていることを示す（[0,1)など）</li>
+                        <li>Mathematicaでは"(*"と"*)"で囲むとコメントアウトになる</li>
+                        <li>顔文字として顔の輪郭を表すときに使われる（(^-^)など）</li>
+                        <li>Wikiでは、行中でインライン要素を (( と )) ではさむと、注釈が作成され、行中に注釈へのリンクが貼られる</li>
+                        <li>BASICなどの一部のプログラミング言語やスクリプト言語では配列の要素を指定するのにも用いる</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>[]（角括弧）</h1>
+                    <ul>
+                        <li>数式においては、丸括弧()を入れ子にする場合に外側の括弧を角括弧とするほか、丸括弧の代わりに角括弧を用いる様式もある</li>
+                        <li>数学の区間において、閉じていることを示す（[0,1)など）</li>
+                        <li>Webサービスなどでタグを記すときに使う</li>
+                        <li>Wikiではリンクを貼るときに[[と]]を使う（[[エイリアス名:http://www.example.com/]]など）</li>
+                        <li>LaTeXで\[と\]で囲まれた部分は数式として扱われる</li>
+                        <li>Mathematicaで関数の引数を入れる部分に使う（f[x]など）</li>
+                        <li>Mathematicaで[[と]]を使ってリストの要素を指定する（{5,3,8}[[2]](=3)など）</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>{}（波括弧）</h1>
+                    <ul>
+                        <li>ブレース・ブレイス (brace) およびカーリーブラケット(curly bracket)・カール (curl)とも言う</li>
+                        <li>数式においては、角括弧 [] を入れ子にするときに外側の括弧を波括弧とする</li>
+                        <li>数学において集合を定義するときに使う（{x|xは3の倍数と10進法で3が付く数}など）</li>
+                        <li>C言語を始めとした多くのプログラミング言語やスクリプト言語では関数やif文・for文などの構文・命令等や変数のローカルスコープを表現する（if(x</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>「」（鉤括弧）</h1>
+                    <ul>
+                        <li>題目（題名・表題・外題・箇条・主題・問題・名目）などを特に提示する場合に用いる</li>
+                        <li>「いわゆる」「いわば」という、言葉を文字通りに受け取ってはいけないということを示す際に用いる。鉤括弧を付けた相手に、「相手はそう自称しているが、自分は認めない」という意思表示になる
+                        </li>
+                        <li>似た記号として二重鉤括弧『』がある</li>
+                        <li>ある作品が複数の作品から成り立っている場合、個々の作品の名称に鉤括弧「」を、作品全体ないし作品集の名称に二重鉤括弧『』を、それぞれ用いる（アルバム『A Journey To
+                            Freedom』から「My
+                            Favorite Swing」をお聞きください。など）</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>【】（隅付き括弧）</h1>
+                    <ul>
+                        <li>隅付きパーレン（すみつきパーレン）・太亀甲（ふときっこう）・黒亀甲（くろきっこう）・墨付き括弧（すみつきかっこ）とも言う</li>
+                        <li>タイトルの最初と最後に付けてアピールポイントを強調する（「【痩せ過ぎ】BMI24当たりが最も長生き【注意】」など）。2ちゃんねるやニコニコ動画のタイトルなどで散見される
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>～（全角チルダ、波線、波ダッシュ）</h1>
+                    <ul>
+                        <li>波ダッシュは、範囲を表すために用いられる<ul>
+                                <li>場所に対して: 東京〜大阪</li>
+                                <li>時間に対して: 5時〜6時</li>
+                                <li>数量に対して: 100人〜150人</li>
+                            </ul>
+                        </li>
+                        <li>副題を示すときに使われる（「空間スペクトルを用いたジャギー評価に関する一考察〜擬似的不規則画素配置によるジャギーの解消効果〜」など）</li>
+                        <li>「〜する」「〜からの」のように前に記載されている言葉を省略する場合や、「寿限無寿限無〜」のように後ろが長いために省略する場合などに使う</li>
+                        <li>表示システムによっては波が反転している場合もある</li>
+                        <li>長音（ー）の砕けた使い方（「へ～。」など）で、これと同じようなものに「〰」などがある</li>
+                        <li>顔文字として口の部分を表すときに使われる（(^～^)など）</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>・（中黒）</h1>
+                    <ul>
+                        <li>中ぽつ、中ポツ（なかぽつ）、中ぽち、中点（なかてん）、中テン、黒丸なども呼ばれる</li>
+                        <li>箇条書き（ただしこの場合はビュレットという）</li>
+                        <li>乗算</li>
+                        <li>顔文字として目の部分を表すときに使われる（(`・ω・´)など）</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>…（三点リーダー）</h1>
+                    <ul>
+                        <li>省略を示す</li>
+                        <li>あまりのあるわり算の「あまり」（14÷3＝4…2など）</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>々、ヽ、ゝ（踊り字）</h1>
+                    <ul>
+                        <li>同じ字の繰り返しを表す約物である</li>
+                        <li>おどり、繰り返し符号（くりかえしふごう）、重ね字（かさねじ）、送り字（おくりじ）、揺すり字（ゆすりじ）、重字（じゅうじ）、重点（じゅうてん）、畳字（じょうじ）などとも呼ぶ
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>〃（ノノ字点、同じく記号）</h1>
+                    <ul>
+                        <li>表などで上または左の内容と同一の場合の省略文字として使用される約物のひとつである</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>°（ど、デグリー）</h1>
+                    <ul>
+                        <li>角度の単位の度に使われる。</li>
+                        <li>温度の単位の度に使われる。単独ではなく、次のようにラテン文字1〜2文字と組み合わせて使う（℃など）</li>
+                        <li>半濁音（ﾟ）と似ている</li>
+                        <li>顔文字として目の部分を表すときに使われる（(°д°)など）</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>←、↑、→、↓（矢印）</h1>
+                    <ul>
+                        <li>←は直前の文の説明に用いる</li>
+                        <li>↑は1つ上の文の説明に用いる</li>
+                        <li>→は直前の文から導出されることを示す</li>
+                        <li>↓は1つ上の文から導出されることを示す</li>
+                        <li>Mathematicaで→はルールを表す（{x,x^2,a,b} /.x→3で{3,9,a,b}など）。->と同様である</li>
+                        <li>「まっがーれ↓スペクタクル」という曲がある</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>●○■□◆◇★☆▲△▼▽（箇条書き記号）</h1>
+                    <ul>
+                        <li>箇条書き記号として行頭に用いられる</li>
+                        <li>★、☆はお茶目な感じを出すために文末に使われることがある（やったね☆ など）</li>
+                        <li>◆は2chにおいてトリップを示す記号。（「ほげ◆Ig9vRBfuyA」など）</li>
+                        <li>一部の文書処理ソフトでは■、□などを箇条書き記号として使うことができる</li>
+                        <li>「つのだ☆ひろ」という芸能人がいる</li>
+                        <li>「漫☆画太郎」という漫画家がいる</li>
+                        <li>長島☆自演乙☆雄一郎というキックボクサーがいる</li>
+                        <li>『らき☆すた』という作品がある</li>
+                        <li>「まほろば○△」（まほろばまるやま）という曲がある</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>♪、♫、♬、♩（音符）</h1>
+                    <ul>
+                        <li>文末に使われ、気分の高揚を表す（「ラッキー♪」など）</li>
+                        <li>「みくみくにしてあげる♪【してやんよ】」という曲がある</li>
+                        <li>「ベッキー♪♯」という歌手がいる</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>×（かける、ばつ）</h1>
+                    <ul>
+                        <li>他の読み方として、「ぺけ」「ばってん」「ちょめ」「クロス」「バイ」など</li>
+                        <li>筆記時の乗算（主に初等教育）</li>
+                        <li>クロス積（ベクトル積）</li>
+                        <li>バツ</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>x（エックス）</h1>
+                    <ul>
+                        <li>乗算</li>
+                        <li>XXXでキス</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>2（に）</h1>
+                    <ul>
+                        <li>英語のtoの意味</li>
+                        <li>変換ツールの名前として使われることが多い（LaTeX2HTMLなど）</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>4（よん）</h1>
+                    <ul>
+                        <li>英語のforの意味</li>
+                        <li>ソフトウェアの名前に使われる場合がある（TeX4htなど）</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>∀（全称記号）</h1>
+                    <ul>
+                        <li>全称記号。数理論理学において「すべての」（全称量化）を表す記号である</li>
+                        <li>顔文字として、口を表す（（・∀・）ｲｲ！ など）</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>∃（存在記号）</h1>
+                    <ul>
+                        <li>存在記号。数理論理学（特に述語論理）において、少なくとも1つのメンバーが述語の特性や関係を満たすことを表す記号である</li>
+                        <li>数理論理学において∃!で唯一つ存在することを表すことがある</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>∴、∵（ゆえに、なぜならば）</h1>
+                    <ul>
+                        <li>「∴」は「ゆえに」、又は「すなわち」と読み、数学などでそれまでの内容から誘導できる結論に使用される学術記号である</li>
+                        <li>「∵」は「なぜならば」と読み、数学などでそれまでの内容から誘導できる結論に使用される学術記号である</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>⊥（垂直記号）</h1>
+                    <ul>
+                        <li>垂直記号。幾何学で用いられる記号である。下線の中央上に接する縦線を引く図形を書く。垂直記号の前後が垂直であることを示す</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>∠（角記号）</h1>
+                    <ul>
+                        <li>角記号。幾何学で用いられる記号である。下線の左に接し、右上方向に伸びる斜線を引く図形を書く</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>∟（直角記号）</h1>
+                    <ul>
+                        <li>直角記号。幾何学で用いられる記号である。下線の左に接する縦線を引く図形を書く。角を表す角記号「∠」の直角の場合に用いられる記号である</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>д、Д（デー）</h1>
+                    <ul>
+                        <li>顔文字として、口を表す（(゜Д゜)ウマー など）</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>∞（無限大）</h1>
+                    <ul>
+                        <li>数学において無限大を表す</li>
+                        <li>「関ジャニ∞」（かんじゃにエイト）というグループが存在する</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>¶（段落記号）</h1>
+                    <ul>
+                        <li>段落記号。段落を表す約物である。一般には、段落の区切りを表す目的で、段落の始めあるいは段落の終りのいずれか一方に置かれる</li>
+                        <li>図形はラテン文字の「C」にスラッシュを書いた字形が元になっている</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>‖、∥（双柱、平行記号）</h1>
+                    <ul>
+                        <li>「‖」は双柱と呼ばれる。縦線であるバーティカルバーを横に2つ並べた記号である。文字列の区切りで使用されるほか、発音記号や数学においても使用される</li>
+                        <li>「∥」は平行記号と呼ばれる。平行記号の前後の線あるいは面などが平行であることを示す。日本では、一般に「//」のかたちで表記するが、欧米では「||」のかたちで表記することが多い
+                        </li>
+                        <li>平行の否定を表す記号は「∦」である。日本では、一般に「//」に「＼」を重ねた図形で表記されるが、欧米では「||」に「／」を重ねた図形で表記する</li>
+                        <li>文字化けで||で表示されるシステムと//と表示されるシステムがある</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>v（ブイ）</h1>
+                    <ul>
+                        <li>ハートを表す</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>ｗ（草、ダブル）</h1>
+                    <ul>
+                        <li>（笑）の略。ニコニコ動画などで笑いを表すときに使う（「きめぇｗｗｗｗ」など）</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h1>固有名詞への利用</h1>
+                    <ul>
+                        <li>本田美奈子.</li>
+                        <li>KABA.ちゃん</li>
+                        <li>モーニング娘。</li>
+                        <li>ミニモニ。</li>
+                        <li>ほっしゃん。 </li>
+                        <li>ハッピハッピー。</li>
+                        <li>なか。たつや</li>
+                        <li>藤岡弘、</li>
+                        <li>Jｪﾁ~ｯじo™ｳ</li>
+                        <li>喪＠CェNｺ瑠ｦｭWｧ</li>
+                        <li>ハロー!プロジェクト</li>
+                        <li>けいおん!</li>
+                        <li>もってけ!セーラーふく</li>
+                        <li>かえして!ニーソックス</li>
+                        <li>つのだ☆ひろ</li>
+                        <li>漫☆画太郎</li>
+                        <li>長島☆自演乙☆雄一郎</li>
+                        <li>らき☆すた</li>
+                        <li>みくみくにしてあげる♪【してやんよ】</li>
+                        <li>ベッキー♪♯</li>
+                        <li>まっがーれ↓スペクタクル</li>
+                        <li>つんく♂</li>
+                    </ul>
+                </section>
+
+                <aside>
+                    <h1>参考文献</h1>
+                    <ul>
+                        <li><a href="http://hiramatu-hifuka.com/onyak/onyak2/kigo-1.html">記号の読み方辞典（音訳の部屋）</a></li>
+                        <li><a href="http://www.geocities.jp/k1_kazamax/kigou2.html">特殊記号一覧</a></li>
+                    </ul>
+                </aside>
+            </article>
         </main>
-        <footer><a href="../../">Home</a></footer>
-      </div>
-    </div>
-    <!-- javascript-->
-    <script src="../../js/lib/jquery.min.js"></script>
-    <script src="../../js/lib/lodash.min.js"></script>
-    <script src="../../js/lib/material.min.js"></script>
-    <script src="../../js/script.js"></script>
-<script src="https://apis.google.com/js/platform.js" async defer>
-  {lang: 'ja'}
-</script>
-    
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-2779957-5', 'auto');
-  ga('send', 'pageview');
-</script>
-  </body>
+    </btc-default-layout>
+</body>
+
 </html>

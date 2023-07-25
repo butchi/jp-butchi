@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>岩淵勇樹 | butchi.jp</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="module">
+        import { BtcDefaultLayout } from "/js/module/btc-default-layout.js"
+        import { BtcMediaCard } from "/js/module/btc-media-card.js"
+
+        console.log("works page")
+
+        customElements.define('btc-default-layout', BtcDefaultLayout)
+        customElements.define('btc-media-card', BtcMediaCard)
+    </script>
+</head>
+
+<body data-path="works/web/">
+    <btc-default-layout title="岩淵勇樹 | butchi.jp">
+        <main>
+            <btc-media-card>
+                <article>
+                    <h1>Bad Apple Curve!!</h1>
+                    <a href="../bad-apple-curve/">
+                        <img src="/img/works/thumb/bad-apple-curve.png">
+                    </a>
+                </article>
+            </btc-media-card>
+            <btc-media-card>
+                <article>
+                    <h1>なんでも魔法。</h1>
+                    <a href="../nandemo-magic/">
+                        <img src="/img/works/thumb/greeting-man.png">
+                    </a>
+                </article>
+            </btc-media-card>
+            <btc-media-card>
+                <article>
+                    <h1>ポポポポケモン！</h1>
+                    <a href="../po3pokemon/">
+                        <img src="/img/works/thumb/pikachu-usagi.png">
+                    </a>
+                </article>
+            </btc-media-card>
+            <btc-media-card>
+                <article>
+                    <h1>2014年年賀状</h1>
+                    <a href="../newyear-2014/">
+                        <img src="/img/works/thumb/newyear-2014.png">
+                    </a>
+                </article>
+            </btc-media-card>
+            <btc-media-card>
+                <article>
+                    <h1>2015年年賀状</h1>
+                    <a href="../newyear-2015/">
+                        <img src="/img/works/thumb/newyear-2015.png">
+                    </a>
+                </article>
+            </btc-media-card>
+            <btc-media-card>
+                <article>
+                    <h1>2016年年賀状</h1>
+                    <a href="../newyear-2016/">
+                        <img src="/img/works/thumb/newyear-2016.png">
+                    </a>
+                </article>
+            </btc-media-card>
+            <btc-media-card>
+                <article>
+                    <h1>2017年年賀状</h1>
+                    <a href="../newyear-2017/">
+                        <img src="/img/works/thumb/newyear-2017.png">
+                    </a>
+                </article>
+            </btc-media-card>
+        </main>
+    </btc-default-layout>
+</body>
+
+</html>

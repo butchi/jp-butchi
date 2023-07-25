@@ -1,0 +1,58 @@
+@include with-page("/") {
+  .btc-heading {
+    &[data-heading-level="3"] {
+      @extend .is-uppercase;
+    }
+  }
+
+  .section-icon {
+    .icon {
+      display: inline-block;
+
+      margin: 3px;
+      border: 3px solid #999;
+
+      &[data-is-link] {
+        border: 3px solid #009;
+      }
+    }
+  }
+
+  .e-mail {
+    text-align: right;
+
+    .material-icons {
+      vertical-align: middle;
+    }
+
+    .delete-me {
+      display: inline-block;
+
+      position: absolute;
+
+      width: 1px;
+      height: 1px;
+
+      left: -9999px;
+      top: 0;
+
+      opacity: 0;
+    }
+  }
+
+  .sec-link {
+    ul {
+      padding-left: px(20);
+    }
+
+    li {
+      list-style: none;
+    }
+
+    .mdi, .material-icons {
+      vertical-align: middle;
+
+      font-size: px(18);
+    }
+  }
+}
