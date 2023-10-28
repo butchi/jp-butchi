@@ -1,6 +1,1 @@
----
-id:
-  'gray-code-counter-song'
-title:
-  'グレイコードカウンタの歌'
----
+# グレイコードカウンタの歌

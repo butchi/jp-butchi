@@ -1,6 +1,1 @@
----
-id:
-  'logo-blade'
-title:
-  'Blade'
----
+# Blade

@@ -1,9 +1,4 @@
----
-id:
-  'newyear-2017'
-title:
-  '2017年年賀状'
----
+# 2017年年賀状
 
 別名『The Large Follower』（大友人）
 

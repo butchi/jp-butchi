@@ -1,6 +1,1 @@
----
-id:
-  'selection'
-title:
-  'selection(仮)'
----
+# selection(仮)

@@ -1,6 +1,1 @@
----
-id:
-  'suzumi'
-title:
-  'suz(仮)'
----
+# suz(仮)

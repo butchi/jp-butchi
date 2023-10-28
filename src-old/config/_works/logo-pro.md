@@ -1,6 +1,1 @@
----
-id:
-  'logo-pro'
-title:
-  'Pro'
----
+# Pro

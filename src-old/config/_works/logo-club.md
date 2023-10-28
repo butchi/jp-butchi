@@ -1,6 +1,1 @@
----
-id:
-  'logo-club'
-title:
-  'Club'
----
+# Club

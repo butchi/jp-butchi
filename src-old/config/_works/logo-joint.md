@@ -1,6 +1,1 @@
----
-id:
-  'logo-joint'
-title:
-  'Joint'
----
+# Joint

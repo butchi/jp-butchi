@@ -1,6 +1,1 @@
----
-id:
-  'logo-dream'
-title:
-  'Dream'
----
+# Dream

@@ -1,9 +1,4 @@
----
-id:
-  'po3pokemon'
-title:
-  'ポポポポケモン！'
----
+# ポポポポケモン！
 
 [![ポポポポケモン！Botロゴ](../../img/works/thumb/pikachu-usagi.png)](../pikachu-usagi/)
 

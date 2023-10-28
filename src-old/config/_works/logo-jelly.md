@@ -1,6 +1,1 @@
----
-id:
-  'logo-jelly'
-title:
-  'Jelly'
----
+# Jelly

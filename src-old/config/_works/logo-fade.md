@@ -1,6 +1,1 @@
----
-id:
-  'logo-fade'
-title:
-  'Fade'
----
+# Fade

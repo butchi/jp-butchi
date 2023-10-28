@@ -1,9 +1,4 @@
----
-id:
-  'nandemo-magic'
-title:
-  'なんでも魔法。'
----
+# なんでも魔法。
 
 [![なんでも魔法。！Botロゴ](../../img/works/thumb/greeting-man.png)](../greeting-man/)
 

@@ -1,6 +1,1 @@
----
-id:
-  'logo-treatment'
-title:
-  'Treatment'
----
+# Treatment

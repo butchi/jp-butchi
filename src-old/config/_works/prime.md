@@ -1,6 +1,1 @@
----
-id:
-  'prime'
-title:
-  'prime(仮)'
----
+# prime(仮)

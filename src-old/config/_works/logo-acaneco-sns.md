@@ -1,8 +1,3 @@
----
-id:
-  'logo-acaneco-sns'
-title:
-  'AcaNeCoロゴ'
----
+# AcaNeCoロゴ
 
 AcaNeCo（金沢大学SNS）ロゴ（SNS版）。

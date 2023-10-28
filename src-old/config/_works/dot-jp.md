@@ -1,6 +1,1 @@
----
-id:
-  'dot-jp'
-title:
-  'dot jp(仮)'
----
+# dot jp(仮)

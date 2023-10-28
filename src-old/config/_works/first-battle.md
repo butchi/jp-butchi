@@ -1,6 +1,1 @@
----
-id:
-  'first-battle'
-title:
-  'First Battle(仮)'
----
+# First Battle(仮)

@@ -1,9 +1,4 @@
----
-id:
-  'bad-apple-curve'
-title:
-  'Bad Apple Curve!!'
----
+# Bad Apple Curve!!
 
 デモページ:
 <a href="https://butchi.github.io/bad-apple-curve/" style="text-decoration: none;"><div class="link-box"><div class="img-box"><div style="background-image: url('http://butchi.github.io/bad-apple-curve/ogp.png');"></div></div><div class="text-box"><p class="title">Bad Apple Curve!!</p><p class="description">数式でBad Apple!!をアニメーションさせてみた</p></div></div></a>
