@@ -1,4 +1,4 @@
-import tagNameArr from "./tag-name-array.mjs"
+import tagNameArr from "./tag-name-array.js"
 
 const htmlElement = tagName => {
     return (txtArr, ...attrArr) => {

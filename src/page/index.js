@@ -1,7 +1,7 @@
-import "./matra-vanilla.mjs"
-import { $q, objectArray, ulElement, aElement, comment } from "./matra-vanilla-helper.mjs"
+import "../lib/matra-vanilla.js"
+import { $q, objectArray, ulElement, aElement, comment } from "../lib/matra-vanilla-helper.js"
 
-import bibObj from "./bib.mjs"
+import bibObj from "../asset/bib.js"
 
 const metaArr = [{
     charset: "UTF-8"
@@ -33,9 +33,9 @@ const rubyName = ([kanjiArr, yomiArr]) => {
     const elmArr = kanjiArr.map((kanji, idx) => {
         return [
             kanji,
-            rpTag`${"("}`,
+            rpTag`(`,
             rtTag`${yomiArr[idx]}`,
-            rpTag`${")"}`,
+            rpTag`)`,
         ].join("")
     })
 
@@ -87,7 +87,7 @@ const secDocBlock = sectionTag`${$q(".section-document#document")}${[
             ]}`.map(({ url: href, text: content }) => aElement({ href, content })))
         ]}`,
         sectionTag`${[
-            h4Tag`${$q(".btc-heading")}${"研究"}`,
+            h4Tag`${$q(".btc-heading")}研究`,
             ulElement(objectArray`${["slug", "text", "url"]}${[
                 ["butchi-number", "物智数", "documents/butchi-number/"],
                 ["analytic-signal", "解析信号", "documents/analytic-signal/"],
@@ -95,13 +95,13 @@ const secDocBlock = sectionTag`${$q(".section-document#document")}${[
             ]}`.map(({ url: href, text: content }) => aElement({ href, content })))
         ]}`,
         sectionTag`${[
-            h4Tag`${$q(".btc-heading")}${"執筆"}`,
+            h4Tag`${$q(".btc-heading")}執筆`,
             ulElement([
                 aElement("documents/symbol/", "記号辞典 ～コンピューターにおける記号の意味と使われ方～"),
             ]),
         ]} `,
         sectionTag`${[
-            h4Tag`${$q(".btc-heading")}${"プログラム"}`,
+            h4Tag`${$q(".btc-heading")}プログラム`,
             ulElement(objectArray`${["slug", "text", "url"]}${[
                 ["graphicalpad", "GraphiCalPad", "documents/graphicalpad/"],
                 ["webclappad", "WebClapPad", "documents/webclappad/"],
@@ -139,13 +139,13 @@ const secPublishBlock = sectionTag`${$q(".section-publication#publication")}${[
     h3Tag`${$q(".btc-section-title")}発表文献`,
     divTag`${$q(".inner-block")}${[
         sectionTag`${[
-            h4Tag`${$q(".btc-heading")}${"国際発表"}`,
+            h4Tag`${$q(".btc-heading")}国際発表`,
             ulElement([
                 bibItem("butchi-number--2010-06--iwabuchi-yuki"),
             ]),
         ]}`,
         sectionTag`${[
-            h4Tag`${$q(".btc-heading")}${"国内発表"}`,
+            h4Tag`${$q(".btc-heading")}国内発表`,
             ulElement([
                 bibItem("icd--2007-07--iwabuchi-yuki"),
                 bibItem("ec--2008--iwabuchi-yuki"),
@@ -159,7 +159,7 @@ const secPublishBlock = sectionTag`${$q(".section-publication#publication")}${[
             ]),
         ]}`,
         sectionTag`${[
-            h4Tag`${$q(".btc-heading")}${"学内発表・講義関連"}`,
+            h4Tag`${$q(".btc-heading")}学内発表・講義関連`,
             ulElement([
                 [
                     "自主課題研究「偏角関数を用いた曲線の研究」(2006)",
@@ -221,7 +221,7 @@ const secLinkBlock = sectionTag`${$q(".section-link#link")}${[
             ]}`.map(({ url: href, text: content }) => aElement({ href, content })))
         ]}`,
         sectionTag`${[
-            h5Tag`${$q(".btc-heading")}${"関連リンク"}`,
+            h5Tag`${$q(".btc-heading")}関連リンク`,
             ulElement(objectArray`${["slug", "icon", "text", "url"]}${[
                 ["fb", facebookIco, "岩淵 勇樹", "https://www.facebook.com/iwabuchi.yuki.butchi"],
                 ["twitter-y", twitterIco, "butchi_y （趣味アカウント）", "https://twitter.com/butchi_y"],
@@ -240,17 +240,17 @@ const footerBlock = footerTag`${[
         divTag`${$q(".e-mail")}${[
             pTag`${$q(".address")}${[
                 iTag`${$q(".material-icons")}email`,
-                spanTag`${"butchiyu"}`,
-                spanTag`${"+mailer-1"}`,
-                spanTag`${"-jp-butchi"}`,
-                spanTag`${"@gmail.com"}`,
+                spanTag`butchiyu`,
+                spanTag`+mailer-1`,
+                spanTag`-jp-butchi`,
+                spanTag`@gmail.com`,
             ]}`,
         ]}`
     ]}`,
 ]}`
 
 
-const htmlTxt = htmlTag`${{ lang: "ja" }}${[
+const indexHtmlTxt = htmlTag`${{ lang: "ja" }}${[
     headBlock,
 
     comment("岩淵勇樹物智のホームページへようこそ！"),
@@ -268,4 +268,4 @@ const htmlTxt = htmlTag`${{ lang: "ja" }}${[
     ]}`,
 ]}`
 
-console.log(htmlTxt)
+export default indexHtmlTxt

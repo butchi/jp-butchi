@@ -1,5 +1,5 @@
-import "./matra-vanilla.mjs"
-import { aElement } from "./matra-vanilla-helper.mjs"
+import "../lib/matra-vanilla.js"
+import { aElement } from "../lib/matra-vanilla-helper.js"
 
 const bibObj = {
     "b-thesis--iwabuchi-yuki": {
