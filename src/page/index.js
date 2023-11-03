@@ -1,33 +1,13 @@
 import "../lib/matra-vanilla.js"
 import { $q, objectArray, ulElement, aElement, comment } from "../lib/matra-vanilla-helper.js"
 
+import defaultLayout from "../layout/default-layout.js"
+
+import headFunc from "../mixin/head.js"
+
 import bibObj from "../asset/bib.js"
 
-const metaArr = [{
-    charset: "UTF-8"
-}, {
-    name: "viewport", content: "width=device-width, initial-scale=1.0"
-}]
-
 const ttlTxt = "岩淵勇樹 | butchi.jp"
-
-const btcDefaultLayoutTag = htmlElement("btc-default-layout")
-
-const litScript = `
-import { BtcDefaultLayout } from "./js/module/btc-default-layout.js"
-
-customElements.define("btc-default-layout", BtcDefaultLayout)
-`
-
-const headBlock = headTag`${[
-    titleTag`${ttlTxt}`,
-    linkTag`${{ rel: "stylesheet", href: "https://fonts.googleapis.com/icon?family=Material+Icons" }}`,
-    linkTag`${{ rel: "stylesheet", href: "css/style.css" }}`,
-    scriptTag`${{ type: "module", src: "js/script.js" }}`,
-    scriptTag`${{ type: "module" }}${litScript}`,
-
-    ...metaArr.map(m => metaTag`${m}`),
-]}`
 
 const rubyName = ([kanjiArr, yomiArr]) => {
     const elmArr = kanjiArr.map((kanji, idx) => {
@@ -43,7 +23,7 @@ const rubyName = ([kanjiArr, yomiArr]) => {
 }
 
 const headerBlock = headerTag`${[
-    h1Tag`${$q(".btc-site-title")}${[
+    h1Tag`${[
         spanTag`${{ lang: "ja" }}${rubyName([["岩淵", "勇樹", "物智"], ["いわぶち", "ゆうき", "ぶつち"]])}`,
         "/",
         spanTag`${{ lang: "en" }}IWABUCHI Yu(u)ki (butchi)`,
@@ -51,8 +31,8 @@ const headerBlock = headerTag`${[
 ]}`
 
 const secBibBlock = sectionTag`${$q(".section-bibliography#bibliography")}${[
-    h3Tag`${$q("btc-section-title")}略歴`,
-    divTag`${$q(".inner-block")}${[
+    h3Tag`略歴`,
+    divTag`${[
         ulElement(objectArray`${["date-time", "time-text", "event-text"]}${[
             ["1984", "1984年", "福井県大野市生まれ"],
             ["2007", "2007年", "金沢大学 工学部 情報システム工学科 卒業"],
@@ -66,7 +46,7 @@ const secBibBlock = sectionTag`${$q(".section-bibliography#bibliography")}${[
         "<br>",
         aElement("person/people/", "→ 関連人物"),
         sectionTag`${$q("#research-theme")}${[
-            h4Tag`${$q(".btc-heading")}研究テーマ`,
+            h4Tag`研究テーマ`,
             pTag`数学的特性に基づくインターフェースや、美しい画像表現のためのハードウェア、効率的な処理を行う演算器など。`,
             pTag`数学モデルの集積回路・インタラクティブシステムなどへの応用に関する研究に従事。`,
         ]}`,
@@ -74,10 +54,10 @@ const secBibBlock = sectionTag`${$q(".section-bibliography#bibliography")}${[
 ]}`
 
 const secDocBlock = sectionTag`${$q(".section-document#document")}${[
-    h3Tag`${$q(".btc-section-title")}諸々`,
-    divTag`${$q(".inner-block")}${[
+    h3Tag`諸々`,
+    divTag`${[
         sectionTag`${[
-            h4Tag`${$q(".btc-heading")}作品`,
+            h4Tag`作品`,
             ulElement(objectArray`${["slug", "text", "url"]}${[
                 ["web", "Web", "works/web/"],
                 ["movie", "映像", "works/movie/"],
@@ -87,7 +67,7 @@ const secDocBlock = sectionTag`${$q(".section-document#document")}${[
             ]}`.map(({ url: href, text: content }) => aElement({ href, content })))
         ]}`,
         sectionTag`${[
-            h4Tag`${$q(".btc-heading")}研究`,
+            h4Tag`研究`,
             ulElement(objectArray`${["slug", "text", "url"]}${[
                 ["butchi-number", "物智数", "documents/butchi-number/"],
                 ["analytic-signal", "解析信号", "documents/analytic-signal/"],
@@ -95,13 +75,13 @@ const secDocBlock = sectionTag`${$q(".section-document#document")}${[
             ]}`.map(({ url: href, text: content }) => aElement({ href, content })))
         ]}`,
         sectionTag`${[
-            h4Tag`${$q(".btc-heading")}執筆`,
+            h4Tag`執筆`,
             ulElement([
                 aElement("documents/symbol/", "記号辞典 ～コンピューターにおける記号の意味と使われ方～"),
             ]),
         ]} `,
         sectionTag`${[
-            h4Tag`${$q(".btc-heading")}プログラム`,
+            h4Tag`プログラム`,
             ulElement(objectArray`${["slug", "text", "url"]}${[
                 ["graphicalpad", "GraphiCalPad", "documents/graphicalpad/"],
                 ["webclappad", "WebClapPad", "documents/webclappad/"],
@@ -136,16 +116,16 @@ const bibItem = slug => {
 }
 
 const secPublishBlock = sectionTag`${$q(".section-publication#publication")}${[
-    h3Tag`${$q(".btc-section-title")}発表文献`,
-    divTag`${$q(".inner-block")}${[
+    h3Tag`発表文献`,
+    divTag`${[
         sectionTag`${[
-            h4Tag`${$q(".btc-heading")}国際発表`,
+            h4Tag`国際発表`,
             ulElement([
                 bibItem("butchi-number--2010-06--iwabuchi-yuki"),
             ]),
         ]}`,
         sectionTag`${[
-            h4Tag`${$q(".btc-heading")}国内発表`,
+            h4Tag`国内発表`,
             ulElement([
                 bibItem("icd--2007-07--iwabuchi-yuki"),
                 bibItem("ec--2008--iwabuchi-yuki"),
@@ -159,7 +139,7 @@ const secPublishBlock = sectionTag`${$q(".section-publication#publication")}${[
             ]),
         ]}`,
         sectionTag`${[
-            h4Tag`${$q(".btc-heading")}学内発表・講義関連`,
+            h4Tag`学内発表・講義関連`,
             ulElement([
                 [
                     "自主課題研究「偏角関数を用いた曲線の研究」(2006)",
@@ -188,7 +168,7 @@ const secPublishBlock = sectionTag`${$q(".section-publication#publication")}${[
             ]),
         ]}`,
     ]}`,
-]} `
+]}`
 
 const mdi = icoName => iTag`${$q(`.mdi.mdi-${icoName}`)}`
 const materialIcon = icoName => iTag`${$q(".material-icons")}${icoName}`
@@ -198,10 +178,10 @@ const twitterIco = mdi("twitter-box")
 const webIco = materialIcon("web")
 
 const secLinkBlock = sectionTag`${$q(".section-link#link")}${[
-    h3Tag`${$q(".btc-section-title")}リンク`,
-    divTag`${$q(".inner-block")}${[
+    h3Tag`リンク`,
+    divTag`${[
         sectionTag`${[
-            h4Tag`${$q(".btc-heading")}所属`,
+            h4Tag`所属`,
             ulElement(objectArray`${["slug", "text", "url"]}${[
                 ["pzkn", "パズル懇話会", "https://pzkn.seesaa.net/"],
                 ["yugen", "湧源クラブ", "https://www.yugen.org/"],
@@ -211,7 +191,7 @@ const secLinkBlock = sectionTag`${$q(".section-link#link")}${[
             ]}`.map(({ url: href, text: content }) => aElement({ href, content })))
         ]}`,
         sectionTag`${[
-            h5Tag`${$q(".btc-heading")}過去の所属`,
+            h5Tag`過去の所属`,
             ulElement(objectArray`${["slug", "text", "url"]}${[
                 ["ku", "金沢大学", "https://www.kanazawa-u.ac.jp/"],
                 ["merl", "金沢大学 工学部 情報システム工学科 集積回路工学研究室", "https://www.merl.jp/"],
@@ -221,7 +201,7 @@ const secLinkBlock = sectionTag`${$q(".section-link#link")}${[
             ]}`.map(({ url: href, text: content }) => aElement({ href, content })))
         ]}`,
         sectionTag`${[
-            h5Tag`${$q(".btc-heading")}関連リンク`,
+            h5Tag`関連リンク`,
             ulElement(objectArray`${["slug", "icon", "text", "url"]}${[
                 ["fb", facebookIco, "岩淵 勇樹", "https://www.facebook.com/iwabuchi.yuki.butchi"],
                 ["twitter-y", twitterIco, "butchi_y （趣味アカウント）", "https://twitter.com/butchi_y"],
@@ -236,7 +216,7 @@ const secLinkBlock = sectionTag`${$q(".section-link#link")}${[
 ]} `
 
 const footerBlock = footerTag`${[
-    divTag`${$q(".inner-block")}${[
+    divTag`${[
         divTag`${$q(".e-mail")}${[
             pTag`${$q(".address")}${[
                 iTag`${$q(".material-icons")}email`,
@@ -250,12 +230,12 @@ const footerBlock = footerTag`${[
 ]}`
 
 
-const indexHtmlTxt = htmlTag`${{ lang: "ja" }}${[
-    headBlock,
+export default htmlTag`${{ lang: "ja" }}${[
+    headFunc({ ttlTxt }),
 
     comment("岩淵勇樹物智のホームページへようこそ！"),
     bodyTag`${[
-        btcDefaultLayoutTag`${{ title: "岩淵勇樹 | butchi.jp" }}${[
+        defaultLayout`${{ ttlTxt }}${[
             headerBlock,
             mainTag`${[
                 secBibBlock,
@@ -267,5 +247,3 @@ const indexHtmlTxt = htmlTag`${{ lang: "ja" }}${[
         ]}`,
     ]}`,
 ]}`
-
-export default indexHtmlTxt

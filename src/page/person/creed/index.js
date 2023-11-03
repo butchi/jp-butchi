@@ -1,22 +1,18 @@
-<!DOCTYPE html>
-<html lang="ja">
+import "../../../lib/matra-vanilla.js"
+import { comment } from "../../../lib/matra-vanilla-helper.js"
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>者是 | butchi.jp</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
-    <script type="module">
-        import { BtcDefaultLayout } from "/js/module/btc-default-layout.js"
+import defaultLayout from "../../../layout/default-layout.js"
 
-        customElements.define('btc-default-layout', BtcDefaultLayout)
-    </script>
-</head>
+import headFunc from "../../../mixin/head.js"
 
-<body>
-    <btc-default-layout>
-        <main>
+const ttlTxt = "者是 | butchi.jp"
+
+export default htmlTag`${{ lang: "ja" }}${[
+    headFunc({ ttlTxt }),
+
+    comment("岩淵勇樹物智のホームページへようこそ！"),
+    bodyTag`${[
+        defaultLayout`${{ ttlTxt }}${[`<main>
             <article>
                 <h1>者是</h1>
 
@@ -58,8 +54,6 @@
                     </ul>
                 </section>
             </article>
-        </main>
-    </btc-default-layout>
-</body>
-
-</html>
+        </main>`]}`,
+    ]}`,
+]}`
