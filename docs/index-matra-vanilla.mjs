@@ -128,11 +128,11 @@ const bibItem = slug => {
 
     const pagesTxt = pages ? (pages instanceof Array ? `pp. ${pages?.join("--")}, ` : `p. ${pages}, `) : ""
 
-    const dateTxt = date ? `${date}.` : "."
+    const dateTxt = date ? `${date}` : ""
 
-    const siteTxt = site ? ` ${aElement(site, "[詳細ページ]")}` : ""
+    const siteTxt = site ? ` ${aElement(site, " [詳細ページ]")}` : ""
 
-    return `${authorTxt}, ${title}, ${journalTxt}${volumeTxt}${numberTxt}${pagesTxt}${dateTxt}${siteTxt}`
+    return `${authorTxt}, ${title}, ${journalTxt}${volumeTxt}${numberTxt}${pagesTxt}${dateTxt}.${siteTxt}`
 }
 
 const secPublishBlock = sectionTag`${$q(".section-publication#publication")}${[
