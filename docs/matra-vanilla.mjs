@@ -3,8 +3,7 @@ import tagNameArr from "./tag-name-array.mjs"
 const htmlElement = tagName => {
     return (txtArr, ...attrArr) => {
         const childArr = []
-        const propObj = {
-        }
+        const propObj = {}
 
         childArr.push(...txtArr)
 
