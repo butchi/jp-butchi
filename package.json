@@ -2,8 +2,10 @@
   "name": "butchi.jp",
   "version": "0.3.0",
   "description": "IWABUCHI Yu(u)ki (butchi) Official Website.",
+  "type": "module",
   "scripts": {
-    "start": "http-server docs"
+    "dev": "node app",
+    "start": "npm run dev"
   },
   "keywords": [
     "website"
