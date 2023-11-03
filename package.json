@@ -11,5 +11,10 @@
     "website"
   ],
   "author": "IWABUCHI Yuki butchi",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@koa/router": "^12.0.1",
+    "koa": "^2.14.2",
+    "koa-static": "^5.0.0"
+  }
 }
