@@ -1,4 +1,3 @@
-butchi.jp
-=========
+# butchi.jp
 
-IWABUCHI Yu(u)ki official website
+IWABUCHI Yu(u)ki (butchi) official website.
