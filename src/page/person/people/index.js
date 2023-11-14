@@ -1,18 +1,18 @@
-import "../../../lib/matra-vanilla.js"
-import { comment } from "../../../lib/matra-vanilla-helper.js"
+import "#root/src/lib/matra-vanilla.js"
+import { comment } from "#root/src/lib/matra-vanilla-helper.js"
 
-import defaultLayout from "../../../layout/default-layout.js"
+import defaultLayout from "#root/src/layout/default-layout.js"
 
-import headFunc from "../../../mixin/head.js"
+import headFunc from "#root/src/mixin/head.js"
 
-const ttlTxt = "関連人物 | butchi.jp"
+const ttlTxt = "関連人物"
 
 export default htmlTag`${{ lang: "ja" }}${[
-    headFunc({ ttlTxt }),
+    headFunc({ title: ttlTxt }),
 
     comment("岩淵勇樹物智のホームページへようこそ！"),
     bodyTag`${[
-        defaultLayout`${{ ttlTxt }}${[`<main>
+        defaultLayout`${{ title: ttlTxt }}${[`<main>
             <article>
                 <h1>岩淵勇樹の関連人物</h1>
 

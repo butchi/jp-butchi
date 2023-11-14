@@ -1,18 +1,18 @@
-import "../../../lib/matra-vanilla.js"
-import { comment } from "../../../lib/matra-vanilla-helper.js"
+import "#root/src/lib/matra-vanilla.js"
+import { comment } from "#root/src/lib/matra-vanilla-helper.js"
 
-import defaultLayout from "../../../layout/default-layout.js"
+import defaultLayout from "#root/src/layout/default-layout.js"
 
-import headFunc from "../../../mixin/head.js"
+import headFunc from "#root/src/mixin/head.js"
 
-const ttlTxt = "生い立ち | butchi.jp"
+const ttlTxt = "生い立ち"
 
 export default htmlTag`${{ lang: "ja" }}${[
-    headFunc({ ttlTxt }),
+    headFunc({ title: ttlTxt }),
 
     comment("岩淵勇樹物智のホームページへようこそ！"),
     bodyTag`${[
-        defaultLayout`${{ ttlTxt }}${[`<main class="mdl-layout__content">
+        defaultLayout`${{ title: ttlTxt }}${[`<main class="mdl-layout__content">
             <h2 class="btc-page-title"><span lang="ja"></span>
                 <ruby>岩淵
                     <rp>(</rp>

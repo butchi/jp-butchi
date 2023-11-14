@@ -1,13 +1,13 @@
-import "../lib/matra-vanilla.js"
-import { $q, objectArray, ulElement, aElement, comment } from "../lib/matra-vanilla-helper.js"
+import "#root/src/lib/matra-vanilla.js"
+import { $q, objectArray, ulElement, aElement, comment } from "#root/src/lib/matra-vanilla-helper.js"
 
-import defaultLayout from "../layout/default-layout.js"
+import defaultLayout from "#root/src/layout/default-layout.js"
 
-import headFunc from "../mixin/head.js"
+import headFunc from "#root/src/mixin/head.js"
 
-import bibObj from "../asset/bib.js"
+import bibObj from "#root/src/asset/bib.js"
 
-const ttlTxt = "岩淵勇樹 | butchi.jp"
+const ttlTxt = "岩淵勇樹"
 
 const rubyName = ([kanjiArr, yomiArr]) => {
     const elmArr = kanjiArr.map((kanji, idx) => {
@@ -231,11 +231,11 @@ const footerBlock = footerTag`${[
 
 
 export default htmlTag`${{ lang: "ja" }}${[
-    headFunc({ ttlTxt }),
+    headFunc({ title: ttlTxt }),
 
     comment("岩淵勇樹物智のホームページへようこそ！"),
     bodyTag`${[
-        defaultLayout`${{ ttlTxt }}${[
+        defaultLayout`${{ title: ttlTxt }}${[
             headerBlock,
             mainTag`${[
                 secBibBlock,
