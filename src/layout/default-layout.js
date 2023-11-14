@@ -1,33 +1,47 @@
+const listDrawer = ({ href, iconName, label, tabIndex, isActivated, isCurrent }) => `<a class="mdc-deprecated-list-item${isActivated ? " mdc-deprecated-list-item--activated" : ''}" href="${href}"${isCurrent ? ' aria-current="page"' : ""} tabindex="${tabIndex}">
+    <span class="mdc-deprecated-list-item__ripple"></span>
+    <i class="material-icons mdc-deprecated-list-item__graphic" aria-hidden="true">${iconName}</i>
+    <span class="mdc-deprecated-list-item__text">${label}</span>
+</a>`
+
+const listItemArr = [
+    {
+        href: "/",
+        iconName: "inbox",
+        label: "ホーム",
+        isActivated: true,
+        isCurrent: true,
+    },
+    {
+        href: "/person/",
+        iconName: "person",
+        label: "About me",
+    },
+    {
+        href: "/works/",
+        iconName: "draw",
+        label: "作品紹介",
+    },
+    {
+        href: "/publication/",
+        iconName: "drafts",
+        label: "発表文献",
+    },
+    {
+        href: "/documents/",
+        iconName: "drafts",
+        label: "解説記事",
+    },
+]
+
+const siteName = "butchi.jp"
+
 const defaultLayout = (_, propObj, ...slotArr) => `<aside class="mdc-drawer mdc-drawer--modal">
-    <div class="mdc-drawer__content">
-        <nav class="mdc-deprecated-list">
-            <a class="mdc-deprecated-list-item mdc-deprecated-list-item--activated" href="/" aria-current="page" tabindex="0">
-                <span class="mdc-deprecated-list-item__ripple"></span>
-                <i class="material-icons mdc-deprecated-list-item__graphic" aria-hidden="true">inbox</i>
-                <span class="mdc-deprecated-list-item__text">ホーム</span>
-            </a>
-            <a class="mdc-deprecated-list-item" href="/person/">
-                <span class="mdc-deprecated-list-item__ripple"></span>
-                <i class="material-icons mdc-deprecated-list-item__graphic" aria-hidden="true">person</i>
-                <span class="mdc-deprecated-list-item__text">About me</span>
-            </a>
-            <a class="mdc-deprecated-list-item" href="/works/">
-                <span class="mdc-deprecated-list-item__ripple"></span>
-                <i class="material-icons mdc-deprecated-list-item__graphic" aria-hidden="true">draw</i>
-                <span class="mdc-deprecated-list-item__text">作品紹介</span>
-            </a>
-            <a class="mdc-deprecated-list-item" href="/publication/">
-                <span class="mdc-deprecated-list-item__ripple"></span>
-                <i class="material-icons mdc-deprecated-list-item__graphic" aria-hidden="true">drafts</i>
-                <span class="mdc-deprecated-list-item__text">発表文献</span>
-            </a>
-            <a class="mdc-deprecated-list-item" href="/documents/">
-                <span class="mdc-deprecated-list-item__ripple"></span>
-                <i class="material-icons mdc-deprecated-list-item__graphic" aria-hidden="true">drafts</i>
-                <span class="mdc-deprecated-list-item__text">解説記事</span>
-            </a>
-        </nav>
-    </div>
+<div class="mdc-drawer__content">
+<nav class="mdc-deprecated-list">
+${listItemArr.map((item, idx) => listDrawer({ ...item, tabIndex: idx })).join("")}
+</nav>
+</div>
 </aside>
 
 <div class="mdc-drawer-scrim"></div>
@@ -38,7 +52,7 @@ const defaultLayout = (_, propObj, ...slotArr) => `<aside class="mdc-drawer mdc-
             <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
                 <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button"
                     aria-label="Open navigation menu">menu</button>
-                <span class="mdc-top-app-bar__title">${propObj.ttlTxt}</span>
+                <span class="mdc-top-app-bar__title">${propObj.title} | ${siteName}</span>
             </section>
             <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
                 <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button"
