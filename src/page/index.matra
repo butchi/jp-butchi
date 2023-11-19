@@ -1,0 +1,290 @@
+file.setup.matra {
+    import`#root/src/lib/matra-vanilla.js`
+    import[comment="comment"]`#root/src/lib/matra-vanilla-helper.js`
+
+    import[default-layout="default-layout"]`#root/src/layout/default-layout.js`
+
+    import[head-func="head-func"]`#root/src/mixin/head.js`
+
+    import[bib-obj="bib-obj"]`#root/src/asset/bib.js`
+
+    set[ttl-txt="岩淵勇樹"]
+}
+
+file.header-block.matra {
+    header {
+        h1-tag {
+            span[lang="ja"]`岩淵勇樹物智 (いわぶち ゆうき ぶつち)`
+            "/"
+            span[lang="en"]`IWABUCHI Yu(u)ki (butchi)`
+        }
+    }
+}
+
+file.sec-bib-block.matra {
+    section#bibliography {
+        h3-tag`略歴`
+        article {
+            ul-tag {
+                file.table.md`
+                    | date-time | time-text         | event-text                                                                |
+                    | --------- | ----------------- | ------------------------------------------------------------------------- |
+                    | 1984      | 1984年            | 福井県大野市生まれ                                                        |
+                    | 2007      | 2007年            | 金沢大学 工学部 情報システム工学科 卒業                                       |
+                    | 2009      | 2009年            | 金沢大学大学院 自然科学研究科 電子情報工学専攻 博士前期課程修了               |
+                    | 2012      | 2012年            | 金沢大学大学院 自然科学研究科 電子情報科学専攻 博士後期課程修了・博士（工学） |
+                    | 2012-04   | 2012年4月～2020年 | ${li-tag[href="https://www.kayac.com/"]`面白法人カヤック`}                |
+                `
+                => li-tag {
+                    time[datetime=`${date-time}`]`${time-text}`
+                    `${event-text}`
+                }
+            }
+            li-tag[href="person/profile/"]`→ 略さない歴`
+            br-tag 
+            li-tag[href="person/creed/"]`→ 者是`
+            br-tag 
+            li-tag[href="person/people/"]`→ 関連人物`
+            br-tag 
+            section#research-theme {
+                h4-tag`研究テーマ`
+                p-tag`数学的特性に基づくインターフェースや、美しい画像表現のためのハードウェア、効率的な処理を行う演算器など。`
+                p-tag`数学モデルの集積回路・インタラクティブシステムなどへの応用に関する研究に従事。`
+            }
+        }
+    }
+}
+
+file.sec-doc-block.matra {
+    section#document {
+        h3-tag`諸々`
+        article {
+            section {
+                h4-tag`作品`
+                file.table.md`
+                    | slug              | text          | url               |
+                    | ----------------- | ------------- | ----------------- |
+                    | web               | Web           | works/web/        |
+                    | movie             | 映像          | works/movie/      |
+                    | design            | デザイン      | works/design/     |
+                    | music             | 音楽          | works/music/      |
+                    | writing           | 詩・執筆      | works/writing/    |
+                `
+                => a-tag[href=`${url}`]`${text}`
+            }
+            section {
+                h4-tag`研究`
+                file.table.md`
+                    | slug              | text          | url                           |
+                    | ----------------- | ------------- | ----------------------------- |
+                    | butchi-number     | 物智数        | documents/butchi-number/      |
+                    | analytic-signal   | 解析信号      | documents/analytic-signal/    |
+                    | fractal           | フラクタル    | documents/fractal/            |
+                `
+                => a-tag[href=`${url}`]`${text}`
+            }
+            section {
+                h4-tag`執筆`
+                ul-tag {
+                    li-tag {
+                        li-tag[href="documents/symbol/"]`記号辞典 ～コンピューターにおける記号の意味と使われ方～`
+                    }
+                }
+            }
+            section {
+                h4-tag { "プログラム" }
+                file.table.md`
+                    | slug              | text              | url                                       |
+                    | ----------------- | ----------------- | ----------------------------------------- |
+                    | graphicalpad      | GraphiCalPad      | documents/graphicalpad/                   |
+                    | webclappad        | WebClapPad        | documents/webclappad/                     |
+                    | nandemo-magic     | なんでも魔法。    | documents/nandemo-magic/                  |
+                    | popopopokemon     | ポポポポケモン！  | documents/po3pokemon/                     |
+                    | secondly-happy    | 秒刊ハッピー      | https://butchi.github.io/secondly-happy/  |
+                `
+                => a-tag[href=`${url}`]`${text}`
+            }
+        }
+    }
+}
+
+file.bib-item.js {
+    slug => {
+        const obj = bibObj[slug]
+
+        const { author, title, journal, volume, number, pages, date, site } = obj
+
+        const authorTxt = typeof author === "string" ? author : author.join(", ")
+
+        const journalTxt = journal ? `${journal}, ` : ""
+
+        const volumeTxt = volume ? `Vol.${volume}, ` : ""
+
+        const numberTxt = number ? `No.${number}, ` : ""
+
+        const pagesTxt = pages ? (pages instanceof Array ? `pp. ${pages?.join("--")}, ` : `p. ${pages}, `) : ""
+
+        const dateTxt = date ? `${date}` : ""
+
+        const siteTxt = site ? ` ${aElement(site, " [詳細ページ]")}` : ""
+
+        return `${authorTxt}, ${title}, ${journalTxt}${volumeTxt}${numberTxt}${pagesTxt}${dateTxt}.${siteTxt}`
+    }
+}
+
+file.sec-publish-block.matra {
+    section#publication
+        h3-tag`発表文献`
+        article {
+            section {
+                h4-tag`国際発表`
+                ul-tag {
+                    li-tag { bib-item`butchi-number--2010-06--iwabuchi-yuki` }
+                }
+            }
+            section {
+                h4-tag`国内発表`
+                ul-tag {
+                    li-tag { bib-item`icd--2007-07--iwabuchi-yuki` }
+                    li-tag { bib-item`ec--2008--iwabuchi-yuki` }
+                    li-tag { bib-item`wiss--2008--iwabuchi-yuki` }
+                    li-tag { bib-item`ite--2008--maeda-yui` }
+                    li-tag { bib-item`mus-85--iwabuchi-yuki` }
+                    li-tag { bib-item`interaction--2011--iwabuchi-yuki` }
+                    li-tag { bib-item`art-science--2011--iwabuchi-yuki` }
+                    li-tag { bib-item`lams--2013--iwabuchi-yuki` }
+                    li-tag { bib-item`mus-105--iwabuchi-yuki` }
+                }
+            }
+            section {
+                h4-tag`学内発表・講義関連`
+                ul-tag {
+                    li-tag {
+                        "自主課題研究「偏角関数を用いた曲線の研究」(2006)"
+                        a-tag[href="org/kanazawa-univ/b3-research/b3-research.pdf"] { "[レポート(PDF)]" }
+                        a-tag[href="org/kanazawa-univ/b3-research/b3-research.ppt"] { "[発表スライド(.ppt)]" }
+                    }
+                    li-tag {
+                        "卒業論文「2進数の平面的表現に関する考察」(2007)"
+                        a-tag[href="org/kanazawa-univ/b-thesis/"] { "[詳細ページ]" }
+                    }
+                    li-tag {
+                        "カオスとその応用「研究紹介 ～フラクタルと絡めて～」(2007)"
+                        a-tag[href="org/kanazawa-univ/chaos/chaotic-dynamics-and-its-applications.ppt"] { "[発表スライド(.ppt)]" }
+                    }
+                    li-tag {
+                        "修士論文「閉曲線図形を利用した音色生成法」(2009)"
+                        a-tag[href="org/kanazawa-univ/m-thesis.ppt"] { "[発表スライド(.ppt)]" }
+                    }
+                    li-tag {
+                        "博士論文「図形と音声の変換手法とその応用に関する研究」(2012)"
+                        a-tag[href="org/kanazawa-univ/d-thesis/"] { "[詳細ページ]" }
+                    }
+                    li-tag { a-tag[href="org/kanazawa-univ/reading-seminar/"] { "論文輪講" } }
+                    li-tag { a-tag[href="org/kanazawa-univ/tte/"] { "テクノロジトレンド工学" } }
+                    li-tag { a-tag[href="org/kanazawa-univ/cubic-puzzle/"] { "キュービックパズルの迷宮" } }
+                    li-tag {
+                        "記数法のさまざまな拡張～2進数からButchi数まで～（2012年）"
+                        a-tag[href="documents/yugen20120826"] { "[発表スライド(HTMLページ)]" }
+                    }
+                }
+            }
+        }
+    }
+}
+
+file.matra {
+    mdi = ico-name => matra`i-tag.mdi.mdi-${ico-name}`
+
+    material-icon = ico-name => matra`i-tag.material-icons.${ico-name}`
+
+    facebook-ico = mdi"facebook-box"`
+    twitter-ico = mdi"twitter-box"`
+    web-ico = material-icon"web"`
+}
+
+file.sec-link-block.matra {
+    section#link {
+        h3-tag`リンク`
+        article {
+            section {
+                h4-tag`所属`
+                file.table.md`
+                    | slug          | text                          | url                       |
+                    | ------------- | ----------------------------- | ------------------------- |
+                    | pzkn          | パズル懇話会                  | https://pzkn.seesaa.net/  |
+                    | yugen         | 湧源クラブ                    | https://www.yugen.org/    |
+                    | mathcafe      | 数学カフェ                    | https://mathcafe.net/     |
+                    | image-club    | Image Club                    | https://image.club/       |
+                    | wbawakate     | 全脳アーキテクチャ若手の会    | https://wbawakate.jp/     |
+                `
+                => a-tag[href=`${url}`]`${text}`
+            }
+            section {
+                h5-tag`過去の所属`
+                file.table.md`
+                    | slug          | text                                                  | url                               |
+                    | ------------- | ----------------------------------------------------- | --------------------------------- |
+                    | kanazawa-u    | 金沢大学                                              | https://www.kanazawa-u.ac.jp/     |
+                    | merl          | 金沢大学 工学部 情報システム工学科 集積回路工学研究室     | https://www.merl.jp/              |
+                    | fd-ict        | 金沢大学 FD・ICT教育推進                              | https://fdict.el.kanazawa-u.ac.jp/    |
+                    | melomelo      | 金沢大学アカペラサークル “MeloMelo”                   | https://melomelo.main.jp/             |
+                    | fackanazawa   | 金沢大学美術部                                        | https://www.geocities.jp/kinndai_art/ |
+                `
+                => a-tag[href=`${url}`]`${text}`
+            }
+            section {
+                h5-tag`関連リンク`
+                file.table.md`
+                    | slug          | icon              | text                          | url                                           |
+                    | ------------- | ----------------- | ----------------------------- | --------------------------------------------- |
+                    | fb            | ${facebook-ico}   | 岩淵 勇樹                     | https://www.facebook.com/iwabuchi.yuki.butchi |
+                    | twitter-y     | ${twitter-ico}    | butchi_y （趣味アカウント）   | https://twitter.com/butchi_y                  |
+                    | twitter-x     | ${twitter-ico}    | butchi_x（サブアカウント）    | https://twitter.com/butchi_x                  |
+                    | qiita         | ${web-ico}        | Qiita (ID: butchi_y)          | https://qiita.com/butchi_y                    |
+                    | pixiv         | ${web-ico}        | pixiv (id=119)                | https://www.pixiv.net/member.php?id=119       |
+                    | geek-house    | ${web-ico}        | ギークハウス横浜              | https://geek-house-yokohama.webnode.jp/       |
+                    | nichimath     | ${web-ico}        | 日曜数学会                    | https://twitter.com/nichimath                 |
+                `
+                => {
+                    `${icon}`
+                    a-tag[href=`${url}`]`${text}`
+                }
+            }
+        }
+    }
+}
+
+file.footer-block.matra {
+    footer {
+        div.e-mail {
+            p-tag.address {
+                i-tag.material-icons`email`
+                span`butchiyu`
+                span`+mailer-1`
+                span`-jp-butchi`
+                span`@gmail.com`
+            }
+        }
+    }
+}
+
+file.export.matra {
+    html-tag[lang="ja"] {
+        head-func[title=`${ttl-txt}`]
+
+        comment"岩淵勇樹物智のホームページへようこそ！"
+        body {
+            default-layout[title=`${ttl-txt}`] {
+                header-block
+                main-tag {
+                    sec-bib-block
+                    sec-doc-block
+                    sec-publish-block
+                    sec-link-block
+                }
+                footer-block
+            }
+        }
+    }
+}
