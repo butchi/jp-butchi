@@ -1,3 +1,9 @@
+import { unified } from "unified"
+import remarkGfm from "remark-gfm"
+import remarkParse from "remark-parse"
+import { toHast } from "mdast-util-to-hast"
+import { toHtml } from "hast-util-to-html"
+
 export const $q = str => {
     const [cStr, idStr] = str.split("#")
 
@@ -13,6 +19,8 @@ export const $q = str => {
         return { class: cArr.join(" "), id: idStr }
     }
 }
+
+export const $enc = str => encodeURIComponent(str)
 
 export const objectTable = (_, [header, ...cellTbl]) => {
     return Object.fromEntries(cellTbl.map(cellArr => {
@@ -42,6 +50,23 @@ export const objectArray = (_, header, rowArr) => {
 
         return obj
     })
+}
+
+export const md = (txtArr, ...attrArr) => {
+    const rawStr = (attrArr.map((attr, i) => txtArr[i] + attr).join("") + txtArr.at(-1)) || txtArr.raw[0]
+
+    const mdStr = rawStr?.replaceAll(/\n[\s\n]+/g, "\n").replaceAll(/[\s\n]+\n$/g, "\n")
+
+    console.log(mdStr)
+
+    const htmlStr = unified()
+        .use(remarkParse)
+        .use(remarkGfm)
+        .parse(mdStr)
+
+    const ret = toHtml(toHast(htmlStr))
+
+    return ret
 }
 
 export const mdTbl = (txtArr, ...attrArr) => {
@@ -108,7 +133,7 @@ export const aElement = (...argArr) => {
 
     const { href, content } = attrObj
 
-    if (href.match(/^https?:/)) {
+    if (href?.match(/^https?:/)) {
         const target = "_blank"
 
         return aTag`${{ href, target }}${content}`
