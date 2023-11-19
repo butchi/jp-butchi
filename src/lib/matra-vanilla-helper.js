@@ -44,6 +44,41 @@ export const objectArray = (_, header, rowArr) => {
     })
 }
 
+export const mdTbl = (txtArr, ...attrArr) => {
+    const rawStr = (attrArr.map((attr, i) => txtArr[i] + attr).join("") + txtArr.at(-1)) || txtArr.raw[0]
+
+    const mdTxt = rawStr?.replaceAll(/\n[\s\n]+/g, "\n").replaceAll(/[\s\n]+\n$/g, "\n")
+
+    const mdast = unified()
+        .use(remarkParse)
+        .use(remarkGfm)
+        .parse(mdTxt)
+
+    const tblAst = mdast.children[0]
+
+    const [headerAst, ...rowAstArr] = (tblAst?.type === "table") ? tblAst?.children : []
+
+    const headerArr = headerAst.children.map(headerAst => headerAst.children[0]?.value)
+    const rowArr = rowAstArr.map(rowAst => rowAst.children.map(cell => {
+        if (cell.children.length > 1) {
+            return cell.children.map(child => child.value).join("")
+        } else {
+            const child = cell.children[0]
+
+            // 自動リンク対処
+            if (child.type === "link") {
+                return child.url
+            }
+
+            return child.value
+        }
+    }))
+
+    const ret = rowArr.map(row => Object.fromEntries(row.map((cell, i) => [headerArr[i], cell])))
+
+    return ret
+}
+
 export const ulElement = arr => {
     return ulTag`${arr.map(item => liTag`${item}`)}`
 }

@@ -1,5 +1,5 @@
 import "#root/src/lib/matra-vanilla.js"
-import { $q, objectArray, ulElement, aElement, comment } from "#root/src/lib/matra-vanilla-helper.js"
+import { $q, ulElement, md, mdTbl, aElement, comment } from "#root/src/lib/matra-vanilla-helper.js"
 
 import defaultLayout from "#root/src/layout/default-layout.js"
 
@@ -30,16 +30,18 @@ const headerBlock = headerTag`${[
     ]}`,
 ]}`
 
-const secBibBlock = sectionTag`${$q(".section-bibliography#bibliography")}${[
+const secBibBlock = sectionTag`${$q("#bibliography")}${[
     h3Tag`略歴`,
     divTag`${[
-        ulElement(objectArray`${["date-time", "time-text", "event-text"]}${[
-            ["1984", "1984年", "福井県大野市生まれ"],
-            ["2007", "2007年", "金沢大学 工学部 情報システム工学科 卒業"],
-            ["2009", "2009年", "金沢大学大学院 自然科学研究科 電子情報工学専攻 博士前期課程修了"],
-            ["2012", "2012年", "金沢大学大学院 自然科学研究科 電子情報科学専攻 博士後期課程修了・博士（工学）"],
-            ["2012-04", "2012年4月～2020年", aElement("https://www.kayac.com/", "面白法人カヤック")],
-        ]}`.map(({ "date-time": datetime, "time-text": timeTxt, "event-text": evtTxt }) => [timeTag`${{ datetime }}${timeTxt}`, evtTxt])),
+        ulElement(mdTbl`
+            | date-time | time-text         | event-text                                                                |
+            | --------- | ----------------- | ------------------------------------------------------------------------- |
+            | 1984      | 1984年            | 福井県大野市生まれ                                                        |
+            | 2007      | 2007年            | 金沢大学 工学部 情報システム工学科 卒業                                       |
+            | 2009      | 2009年            | 金沢大学大学院 自然科学研究科 電子情報工学専攻 博士前期課程修了               |
+            | 2012      | 2012年            | 金沢大学大学院 自然科学研究科 電子情報科学専攻 博士後期課程修了・博士（工学） |
+            | 2012-04   | 2012年4月～2020年 | ${aElement("https://www.kayac.com/", "面白法人カヤック")}                 |
+        `.map(({ "date-time": datetime, "time-text": timeTxt, "event-text": evtTxt }) => [timeTag`${{ datetime }}${timeTxt}`, evtTxt])),
         aElement("person/profile/", "→ 略さない歴"),
         "<br>",
         aElement("person/creed/", "→ 者是"),
@@ -53,43 +55,49 @@ const secBibBlock = sectionTag`${$q(".section-bibliography#bibliography")}${[
     ]}`,
 ]}`
 
-const secDocBlock = sectionTag`${$q(".section-document#document")}${[
+const secDocBlock = sectionTag`${$q("#document")}${[
     h3Tag`諸々`,
     divTag`${[
         sectionTag`${[
             h4Tag`作品`,
-            ulElement(objectArray`${["slug", "text", "url"]}${[
-                ["web", "Web", "works/web/"],
-                ["movie", "映像", "works/movie/"],
-                ["design", "デザイン", "works/design/"],
-                ["music", "音楽", "works/music/"],
-                ["writing", "詩・執筆", "works/writing/"],
-            ]}`.map(({ url: href, text: content }) => aElement({ href, content })))
+            ulElement(mdTbl`
+                | slug              | text          | url               |
+                | ----------------- | ------------- | ----------------- |
+                | web               | Web           | works/web/        |
+                | movie             | 映像          | works/movie/      |
+                | design            | デザイン      | works/design/     |
+                | music             | 音楽          | works/music/      |
+                | writing           | 詩・執筆      | works/writing/    |
+            `.map(({ url: href, text: content }) => aElement({ href, content })))
         ]}`,
         sectionTag`${[
             h4Tag`研究`,
-            ulElement(objectArray`${["slug", "text", "url"]}${[
-                ["butchi-number", "物智数", "documents/butchi-number/"],
-                ["analytic-signal", "解析信号", "documents/analytic-signal/"],
-                ["fractal", "フラクタル", "documents/fractal/"],
-            ]}`.map(({ url: href, text: content }) => aElement({ href, content })))
+            ulElement(mdTbl`
+                | slug              | text          | url                           |
+                | ----------------- | ------------- | ----------------------------- |
+                | butchi-number     | 物智数        | documents/butchi-number/      |
+                | analytic-signal   | 解析信号      | documents/analytic-signal/    |
+                | fractal           | フラクタル    | documents/fractal/            |
+            `.map(({ url: href, text: content }) => aElement({ href, content })))
         ]}`,
         sectionTag`${[
             h4Tag`執筆`,
             ulElement([
                 aElement("documents/symbol/", "記号辞典 ～コンピューターにおける記号の意味と使われ方～"),
             ]),
-        ]} `,
+        ]}`,
         sectionTag`${[
             h4Tag`プログラム`,
-            ulElement(objectArray`${["slug", "text", "url"]}${[
-                ["graphicalpad", "GraphiCalPad", "documents/graphicalpad/"],
-                ["webclappad", "WebClapPad", "documents/webclappad/"],
-                ["nandemo-magic", "なんでも魔法。", "documents/nandemo-magic/"],
-                ["popopopokemon", "ポポポポケモン！", "documents/po3pokemon/"],
-                ["secondly-happy", "秒刊ハッピー", "https://butchi.github.io/secondly-happy/"],
-            ]}`.map(({ url: href, text: content }) => aElement({ href, content })))
-        ]} `,
+            ulElement(mdTbl`
+                | slug              | text              | url                                       |
+                | ----------------- | ----------------- | ----------------------------------------- |
+                | graphicalpad      | GraphiCalPad      | documents/graphicalpad/                   |
+                | webclappad        | WebClapPad        | documents/webclappad/                     |
+                | nandemo-magic     | なんでも魔法。    | documents/nandemo-magic/                  |
+                | popopopokemon     | ポポポポケモン！  | documents/po3pokemon/                     |
+                | secondly-happy    | 秒刊ハッピー      | https://butchi.github.io/secondly-happy/  |
+            `.map(({ url: href, text: content }) => aElement({ href, content })))
+        ]}`,
     ]}`,
 ]}`
 
@@ -115,7 +123,7 @@ const bibItem = slug => {
     return `${authorTxt}, ${title}, ${journalTxt}${volumeTxt}${numberTxt}${pagesTxt}${dateTxt}.${siteTxt}`
 }
 
-const secPublishBlock = sectionTag`${$q(".section-publication#publication")}${[
+const secPublishBlock = sectionTag`${$q("#publication")}${[
     h3Tag`発表文献`,
     divTag`${[
         sectionTag`${[
@@ -177,40 +185,46 @@ const facebookIco = mdi("facebook-box")
 const twitterIco = mdi("twitter-box")
 const webIco = materialIcon("web")
 
-const secLinkBlock = sectionTag`${$q(".section-link#link")}${[
+const secLinkBlock = sectionTag`${$q("#link")}${[
     h3Tag`リンク`,
     divTag`${[
         sectionTag`${[
             h4Tag`所属`,
-            ulElement(objectArray`${["slug", "text", "url"]}${[
-                ["pzkn", "パズル懇話会", "https://pzkn.seesaa.net/"],
-                ["yugen", "湧源クラブ", "https://www.yugen.org/"],
-                ["mathcafe", "数学カフェ", "https://mathcafe.net/"],
-                ["imageclub", "Image Club", "https://image.club/"],
-                ["wbawakate", "全脳アーキテクチャ若手の会", "https://wbawakate.jp/"],
-            ]}`.map(({ url: href, text: content }) => aElement({ href, content })))
+            ulElement(mdTbl`
+                | slug          | text                          | url                       |
+                | ------------- | ----------------------------- | ------------------------- |
+                | pzkn          | パズル懇話会                  | https://pzkn.seesaa.net/  |
+                | yugen         | 湧源クラブ                    | https://www.yugen.org/    |
+                | mathcafe      | 数学カフェ                    | https://mathcafe.net/     |
+                | image-club    | Image Club                    | https://image.club/       |
+                | wbawakate     | 全脳アーキテクチャ若手の会    | https://wbawakate.jp/     |
+            `.map(({ url: href, text: content }) => aElement({ href, content })))
         ]}`,
         sectionTag`${[
             h5Tag`過去の所属`,
-            ulElement(objectArray`${["slug", "text", "url"]}${[
-                ["ku", "金沢大学", "https://www.kanazawa-u.ac.jp/"],
-                ["merl", "金沢大学 工学部 情報システム工学科 集積回路工学研究室", "https://www.merl.jp/"],
-                ["ict", "金沢大学 FD・ICT教育推進", "https://fdict.el.kanazawa-u.ac.jp/"],
-                ["melomelo", "金沢大学アカペラサークル “MeloMelo”", "https://melomelo.main.jp/"],
-                ["fackanazawa", "金沢大学美術部", "https://www.geocities.jp/kinndai_art/"],
-            ]}`.map(({ url: href, text: content }) => aElement({ href, content })))
+            ulElement(mdTbl`
+                | slug          | text                                                  | url                               |
+                | ------------- | ----------------------------------------------------- | --------------------------------- |
+                | kanazawa-u    | 金沢大学                                              | https://www.kanazawa-u.ac.jp/     |
+                | merl          | 金沢大学 工学部 情報システム工学科 集積回路工学研究室     | https://www.merl.jp/              |
+                | fd-ict        | 金沢大学 FD・ICT教育推進                              | https://fdict.el.kanazawa-u.ac.jp/    |
+                | melomelo      | 金沢大学アカペラサークル “MeloMelo”                   | https://melomelo.main.jp/             |
+                | fackanazawa   | 金沢大学美術部                                        | https://www.geocities.jp/kinndai_art/ |
+            `.map(({ url: href, text: content }) => aElement({ href, content })))
         ]}`,
         sectionTag`${[
             h5Tag`関連リンク`,
-            ulElement(objectArray`${["slug", "icon", "text", "url"]}${[
-                ["fb", facebookIco, "岩淵 勇樹", "https://www.facebook.com/iwabuchi.yuki.butchi"],
-                ["twitter-y", twitterIco, "butchi_y （趣味アカウント）", "https://twitter.com/butchi_y"],
-                ["twitter-x", twitterIco, "butchi_x（サブアカウント）", "https://twitter.com/butchi_x"],
-                ["qiita", webIco, "Qiita (ID: butchi_y)", "https://qiita.com/butchi_y"],
-                ["pixiv", webIco, "pixiv (id=119)", "https://www.pixiv.net/member.php?id=119"],
-                ["geek-house", webIco, "ギークハウス横浜", "https://geek-house-yokohama.webnode.jp/"],
-                ["nichimath", webIco, "日曜数学会", "https://twitter.com/nichimath"],
-            ]}`.map(({ icon, url: href, text: content }) => [icon, aElement({ href, content })]))
+            ulElement(mdTbl`
+                | slug          | icon              | text                          | url                                           |
+                | ------------- | ----------------- | ----------------------------- | --------------------------------------------- |
+                | fb            | ${facebookIco}    | 岩淵 勇樹                     | https://www.facebook.com/iwabuchi.yuki.butchi |
+                | twitter-y     | ${twitterIco}     | butchi_y （趣味アカウント）   | https://twitter.com/butchi_y                  |
+                | twitter-x     | ${twitterIco}     | butchi_x（サブアカウント）    | https://twitter.com/butchi_x                  |
+                | qiita         | ${webIco}         | Qiita (ID: butchi_y)          | https://qiita.com/butchi_y                    |
+                | pixiv         | ${webIco}         | pixiv (id=119)                | https://www.pixiv.net/member.php?id=119       |
+                | geek-house    | ${webIco}         | ギークハウス横浜              | https://geek-house-yokohama.webnode.jp/       |
+                | nichimath     | ${webIco}         | 日曜数学会                    | https://twitter.com/nichimath                 |
+            `.map(({ icon, url: href, text: content }) => [icon, aElement({ href, content })]))
         ]}`,
     ]}`,
 ]} `
