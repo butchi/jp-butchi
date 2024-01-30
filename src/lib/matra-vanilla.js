@@ -25,7 +25,7 @@ const htmlElement = tagName => {
 
         const tagTxt = tagName
         const propTxt = Object.entries(propObj).map(([key, val]) => ` ${key}="${val}"`).join("")
-        const contentTxt = childArr.filter(child => child !== "").join("\n")
+        const contentTxt = childArr.filter(child => child !== "").join("")
 
         const htmlTxt = `<${tagTxt}${propTxt}>${contentTxt}</${tagTxt}>`
 
