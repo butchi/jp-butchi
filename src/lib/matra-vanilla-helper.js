@@ -91,11 +91,11 @@ export const mdTbl = (txtArr, ...attrArr) => {
             const child = cell.children[0]
 
             // 自動リンク対処
-            if (child.type === "link") {
-                return child.url
+            if (child?.type === "link") {
+                return child?.url
             }
 
-            return child.value
+            return child?.value
         }
     }))
 
