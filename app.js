@@ -1,6 +1,8 @@
 import Koa from "koa"
 import Router from "@koa/router"
 import serve from "koa-static"
+import fs from "fs"
+import path from "path"
 
 import rootHtmlTxt from "./src/page/index.js"
 import personHtmlTxt from "./src/page/person/index.js"
@@ -10,6 +12,14 @@ import personPeopleHtmlTxt from "./src/page/person/people/index.js"
 
 const app = new Koa()
 const router = new Router()
+
+router.get("/js/bundle.js", ctx => {
+    ctx.type = "text/javascript"
+
+    ctx.body = fs.readFileSync(
+        path.resolve("./vite-project/dist/assets/", "bundle.js")
+    )
+})
 
 router.get("/", ctx => {
   ctx.body = rootHtmlTxt
@@ -32,6 +42,6 @@ router.get("/person/people/", ctx => {
 })
 
 app.use(router.routes())
-app.use(serve("./docs")); // 公開したいディレクトリを指定
+app.use(serve("./docs")) // 公開したいディレクトリを指定
 
 app.listen(3000)
