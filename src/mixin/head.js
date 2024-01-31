@@ -7,15 +7,20 @@ export default (propObj, ...slot) => {
 
     return headTag`${[
         metaTag`${{ charset: "UTF-8" }}`,
-        metaTag`${{ name: "viewport", content: "width=device-width, initial-scale=1.0" }}`,
+        metaTag`${{
+            name: "viewport",
+            content: "width=device-width, initial-scale=1.0",
+        }}`,
 
         titleTag`${ttlTxt}`,
-        linkTag`${{ rel: "stylesheet", href: "https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" }}`,
-        linkTag`${{ rel: "stylesheet", href: "https://fonts.googleapis.com/icon?family=Material+Icons" }}`,
+        linkTag`${{
+            rel: "stylesheet",
+            href: "https://fonts.googleapis.com/icon?family=Material+Icons",
+        }}`,
         linkTag`${{ rel: "stylesheet", href: "/css/style.css" }}`,
         scriptTag`${{ type: "module", src: "/js/script.js" }}`,
-        scriptTag`${{ src: "https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js" }}`,
+        scriptTag`${{ type: "module", src: "/js/bundle.js" }}`,
 
-        ...slot
+        ...slot,
     ]}`
 }
