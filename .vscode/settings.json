@@ -1,0 +1,6 @@
+{
+    "prettier.tabWidth": 4,
+    "prettier.semi": false,
+    "editor.inlayHints.fontFamily": "",
+    "editor.fontFamily": "Consolas, 'Courier New', monospace"
+}
