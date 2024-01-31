@@ -3,7 +3,7 @@ import "#root/src/lib/matra-vanilla.js"
 const listItemArr = [
     {
         href: "/",
-        iconName: "inbox",
+        iconName: "home",
         label: "ホーム",
         isActivated: true,
         isCurrent: true,
